@@ -1,0 +1,35 @@
+// Задает ограничение по ширине, если не используется монитор во всю ширину
+.wrapper{
+  position: relative;
+  max-width: 1920px;
+  height: auto;
+  width: 100%;
+  padding: 0 25px;
+  margin: auto;
+  z-index: 1;
+}
+@media (min-width: 1200px){
+  .wrapper{
+    width: 90%;
+    padding: 0;
+  }
+}
+// Класс при открытии мобильного окна
+@media (max-width: 992px){
+  .mobile-menu-checked{
+    // Отключение прокрутки страницы
+    overflow: hidden;
+    .btn-open.mobile-menu-toggle{
+      // Скрытие кнопки открытия мобильного меню, если оно открыто
+      display: none;
+    }
+    .mobile-menu{
+      // Отображение мобильного меню
+      display: block;
+    }
+  }
+  // Костыльный "PERFORMANCE MODE" TODO
+  *{
+    animation: none!important;
+  }
+}

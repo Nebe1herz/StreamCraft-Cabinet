@@ -1,0 +1,38 @@
+// Bootstrap import
+/* @import 'bootstrap/bootstrap';*/
+
+// Основополагающие
+@import
+        'core/variables', // Переменные
+        'core/fonts', // Подключение шрифтов
+        'core/mixins', // Миксины и функции
+        'core/reset' // Сброс стилей элементов
+;
+
+// Страницы
+@import
+        'pages/index', // Главная страница
+        'pages/closed', // Страница технических работ
+        'pages/styleguide' // Палитра цветов и список элементов
+;
+
+// Библиотека компонентов
+@import
+        'components/wallpaper', // Основной контейнер сайта
+        'components/buttons', // Основной контейнер сайта
+
+        'components/nav', // Верхняя линия с навигацией
+        'components/header', // Основы хедера, шапки
+        'components/footer', // Футер, нижняя часть страницы
+
+        'components/games', // Список мини-игр, промо-раздел для главной
+        'components/ranking', // Рейтинг игроков на главной
+        'components/blog', // Элементы блога (ченджлогов)
+
+        'components/modal' // Модальные окна
+;
+
+// Плагины
+@import
+        'vendor/bootstrap.grid.css'
+;

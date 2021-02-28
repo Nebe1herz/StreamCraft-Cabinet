@@ -1,0 +1,8 @@
+# Catalogs
+.idea
+.git
+.sass-cache
+other
+# Files
+style.css
+*.map

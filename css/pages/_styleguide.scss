@@ -1,0 +1,77 @@
+.guidelines{
+  width: 100%;
+  margin: 0;
+
+  [class*=col] {
+    padding: 0 3px;
+  }
+  .chapter{
+    $py: 150px;
+    padding-top: $py;
+    padding-bottom: $py;
+    background: var(--white);
+  }
+  h1{
+    font-size: 64px;
+    color: var(--dark-900);
+  }
+  h2{
+    font-size: 36px;
+    margin: 0 0 20px;
+    color: var(--dark-800);
+  }
+  h3 {
+    color: var(--dark-700);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .row{
+    margin: 0 -3px;
+    &+.row{
+      margin-top: 25px;
+    }
+  }
+  section{
+    padding: 25px 0;
+    &.night{
+      background: var(--primary-10);
+      color: #fff;
+    }
+  }
+  .box{
+    border-radius: 8px;
+    height: 60px;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+.white{
+  background:var(--white);
+}
+.black{
+  background:var(--black);
+}
+.primary{
+  background: var(--primary);
+  @each $class, $value in $primary-palette-map {
+    &-#{$class} { background: var(--primary-#{$class}) }
+  }
+}
+.dark{
+  @each $class, $value in $dark-palette-map {
+    &-#{$class} { background: var(--dark-#{$class}) }
+  }
+}
+@each $color, $value in $general-palette-map{
+  .#{$color}{
+    background: var(--#{$color});
+    &-100{
+      background: var(--#{$color}-100)
+    }
+    &-50{
+      background: var(--#{$color}-50)
+    }
+  }
+}

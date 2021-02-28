@@ -1,0 +1,77 @@
+// FSElliotPro
+@font-face {
+  font-family: 'FSElliotPro';
+  src: url("#{$urlFonts}FSElliotPro.woff2") format("woff2"),
+  url("#{$urlFonts}FSElliotPro.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  src: url("#{$urlFonts}FSElliotPro-Italic.woff2") format("woff2"),
+  url("#{$urlFonts}FSElliotPro-Italic.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  src: url("#{$urlFonts}FSElliotPro-Bold.woff2") format("woff2"),
+  url("#{$urlFonts}FSElliotPro-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  src: url("#{$urlFonts}FSElliotPro-BoldItalic.woff2") format("woff2"),
+  url("#{$urlFonts}FSElliotPro-BoldItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'FSElliotPro';
+  src: url("#{$urlFonts}FSElliotPro-Heavy.woff2") format("woff2"),
+  url("#{$urlFonts}FSElliotPro-Heavy.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+
+// Minecraft Regular
+@font-face {
+  font-family: 'MinecraftRegular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$urlFonts}MinecraftRegular.woff2') format('woff2'),
+  url('#{$urlFonts}MinecraftRegular.woff') format('woff')
+}
+
+// Линейный шрифт-заполнитель
+@font-face {
+  font-family: 'FlowBlock';
+  src: url('#{$urlFonts}flow-block.woff2') format("woff2"),
+  url('#{$urlFonts}flow-block.woff') format("woff")
+}
+
+@font-face {
+  font-family: 'FlowRounded';
+  src: url('#{$urlFonts}flow-rounded.woff2') format("woff2"),
+  url('#{$urlFonts}flow-rounded.woff') format("woff")
+}
+
+@font-face {
+  font-family: 'FlowCircular';
+  src: url('#{$urlFonts}flow-circular.woff2') format("woff2"),
+  url('#{$urlFonts}flow-circular.woff') format("woff")
+}
+
+// FontAwesome
+@import "../vendor/fontawsome/all";
+
+// Конфигурация для шрифтов
+body {
+  font-kerning: none;
+  font-variant-ligatures: no-common-ligatures;
+}

@@ -1,0 +1,144 @@
+.btn{
+  // Переменные для работы
+  --shadow: -15px;
+  --first: var(--tertiary);
+  --second: var(--primary);
+  --text: var(--white);
+  // Основные стили
+  display: inline-block;
+  border: none;
+  background: var(--second) linear-gradient(0, var(--first), $none 150%) center top;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--text);
+  padding: 15px 20px;
+  transition: .1s ease-in-out;
+  box-shadow:
+          inset 6px 0 alpha(#fff, .2),
+          inset 0 6px alpha(#fff, .3),
+          inset -6px 0 alpha(#000, .5),
+          inset 0 -6px alpha(#000, .4),
+          0 0 30px var(--shadow) var(--first),
+          0 5px 50px var(--shadow) var(--second);
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  &:hover:not(:active){
+    --shadow: -10px;
+    filter: brightness(1.1);
+  }
+  &:active{
+    opacity:.6;
+  }
+  &-primary{
+    --first: var(--primary);
+    --second: var(--custom);
+  }
+  &-secondary{
+    --first: var(--info);
+    --second: var(--custom);
+  }
+  &-success{
+    --first: var(--tertiary);
+    --second: var(--success);
+    --text: #{alpha(#000, .6)};
+  }
+  &-danger{
+    --first: var(--danger);
+    --second: var(--dark-700);
+    --text: #{alpha(#000, .6)};
+  }
+  &-dark{
+    --first: var(--dark-600);
+    --second: var(--custom);
+  }
+  &-light{
+    --first: var(--primary-100);
+    --second: var(--primary-50);
+    --text: var(--dark-700);
+  }
+}
+
+.link{
+  // Переменные для работы кнопки
+  --step: 5px;
+  --style: var(--primary);
+  --drop: 5px;
+  // Основные стили
+  display: inline-block;
+  border-radius: 100px;
+  border: none;
+  background:
+          var(--style)
+          linear-gradient(
+                          0,
+                          alpha(#fff, .35),
+                          $none
+          ) 0 0;
+  background-size: 200% 200%;
+  font-weight: bold;
+  font-size: calc(var(--step) * 4 + 4px);
+  color: alpha(#fff, .9);
+  transform: none;
+  transition: .1s ease-in-out;
+  padding: calc(var(--step) * 4) calc(var(--step) * 6);
+  box-shadow:
+          0 var(--drop) 45px -15px alpha(#000, .2),
+          0 var(--drop) 35px -15px var(--style),
+          0 var(--drop) 35px -25px var(--style);
+  opacity: .86;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+
+  &:hover{
+    --drop: calc(var(--step) * 2);
+    transform: translateY(#{calc(var(--drop) * -1)});
+    opacity: 1;
+  }
+  &:active{
+    box-shadow: none;
+    transform: none;
+    opacity: .6;
+  }
+  // Цвета, для которых необходимо инвертировать цвет текста
+  $link-colors-invert: (
+          tertiary: '',
+          success: '',
+          alert: '',
+  );
+  // генерация всех состояний по палитре
+  @each $color, $value in $general-palette-map{
+    &-#{$color}{
+      --style: var(--#{$color});
+      @each $invert-value, $i in $link-colors-invert {
+        @if $color == $invert-value {
+          color: alpha(#000, .7);
+        }
+      }
+    }
+  }
+  &-dark{
+    --style: #333;
+    background:
+            var(--dark-900)
+            linear-gradient(
+                            180deg,
+                            $none 75%,
+                            var(--primary-100) 250%
+            );
+  }
+  &-light{
+    background:
+            #fff
+            linear-gradient(
+                            0,
+                            $none,
+                            var(--primary-50) 150%
+            );
+    color: var(--dark-800);
+  }
+}
