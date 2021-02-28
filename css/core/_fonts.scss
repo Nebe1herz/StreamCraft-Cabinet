@@ -1,74 +1,63 @@
-// FSElliotPro
-@font-face {
-  font-family: 'FSElliotPro';
-  src: url("#{$urlFonts}FSElliotPro.woff2") format("woff2"),
-  url("#{$urlFonts}FSElliotPro.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'FSElliotPro';
-  src: url("#{$urlFonts}FSElliotPro-Italic.woff2") format("woff2"),
-  url("#{$urlFonts}FSElliotPro-Italic.woff") format("woff");
-  font-style: italic;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'FSElliotPro';
-  src: url("#{$urlFonts}FSElliotPro-Bold.woff2") format("woff2"),
-  url("#{$urlFonts}FSElliotPro-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'FSElliotPro';
-  src: url("#{$urlFonts}FSElliotPro-BoldItalic.woff2") format("woff2"),
-  url("#{$urlFonts}FSElliotPro-BoldItalic.woff") format("woff");
-  font-style: italic;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'FSElliotPro';
-  src: url("#{$urlFonts}FSElliotPro-Heavy.woff2") format("woff2"),
-  url("#{$urlFonts}FSElliotPro-Heavy.woff") format("woff");
-  font-style: normal;
-  font-weight: 900;
-}
-
 // Minecraft Regular
 @font-face {
-  font-family: 'MinecraftRegular';
+  font-family: MinecraftRegular;
   font-style: normal;
   font-weight: normal;
-  src: url('#{$urlFonts}MinecraftRegular.woff2') format('woff2'),
-  url('#{$urlFonts}MinecraftRegular.woff') format('woff')
+  src:url('#{$urlFonts}MinecraftRegular.woff2') format('woff2'),
+      url('#{$urlFonts}MinecraftRegular.woff') format('woff')
 }
 
-// Линейный шрифт-заполнитель
+// Minecraft Five
 @font-face {
-  font-family: 'FlowBlock';
-  src: url('#{$urlFonts}flow-block.woff2') format("woff2"),
-  url('#{$urlFonts}flow-block.woff') format("woff")
+  font-family: MinecraftFive;
+  src:url('#{$urlFonts}/MinecraftFive-Regular.eot');
+  src:url('#{$urlFonts}/MinecraftFive-Regular.eot?#iefix') format("embedded-opentype"),
+  url('#{$urlFonts}/MinecraftFive-Regular.ttf') format("truetype"),
+  url('#{$urlFonts}/MinecraftFive-Regular.woff') format("woff"),
+  url('#{$urlFonts}/MinecraftFive-Regular.svg#MinecraftFive-Regular') format("svg");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering:optimizeLegibility;
 }
 
+// Minecraft Five Bold
 @font-face {
-  font-family: 'FlowRounded';
-  src: url('#{$urlFonts}flow-rounded.woff2') format("woff2"),
-  url('#{$urlFonts}flow-rounded.woff') format("woff")
+  font-family: MinecraftFive;
+  src:url('#{$urlFonts}/MinecraftFive-Bold.eot');
+  src:url('#{$urlFonts}/MinecraftFive-Bold.eot?#iefix') format("embedded-opentype"),
+      url('#{$urlFonts}/MinecraftFive-Bold.woff') format("woff"),
+      url('#{$urlFonts}/MinecraftFive-Bold.ttf') format("truetype"),
+      url('#{$urlFonts}/MinecraftFive-Bold.svg#MinecraftFive-Bold') format("svg");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering:optimizeLegibility;
 }
 
+// Minecraft Seven
 @font-face {
-  font-family: 'FlowCircular';
-  src: url('#{$urlFonts}flow-circular.woff2') format("woff2"),
-  url('#{$urlFonts}flow-circular.woff') format("woff")
+  font-family: MinecraftSeven;
+  src:url('#{$urlFonts}/MinecraftSeven.eot');
+  src:url('#{$urlFonts}/MinecraftSeven.eot?#iefix') format("embedded-opentype"),
+  url('#{$urlFonts}/MinecraftSeven.woff') format("woff"),
+  url('#{$urlFonts}/MinecraftSeven.ttf') format("truetype"),
+  url('#{$urlFonts}/MinecraftSeven.svg#MinecraftSeven') format("svg");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering:optimizeLegibility;
 }
 
-// FontAwesome
-@import "../vendor/fontawsome/all";
+// Minecraft Ten
+@font-face {
+  font-family: MinecraftTen;
+  src:url('#{$urlFonts}/MinecraftTen.eot');
+  src:url('#{$urlFonts}/MinecraftTen.eot?#iefix') format("embedded-opentype"),
+      url('#{$urlFonts}/MinecraftTen.woff') format("woff"),
+      url('#{$urlFonts}/MinecraftTen.ttf') format("truetype"),
+      url('#{$urlFonts}/MinecraftTen.svg#MinecraftTen') format("svg");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering:optimizeLegibility;
+}
 
 // Конфигурация для шрифтов
 body {
