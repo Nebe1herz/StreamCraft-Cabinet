@@ -1,18 +1,3 @@
-// Стандартный шрифт майнкрафта (пиксельный, для текста обычного)
-@mixin font-ms-regular{
-  font-family: 'MinecraftRegular', sans-serif;
-  font-weight: normal;
-}
-// Шрифт-заполнитель для заглушек (создание "видимости" текста)
-@mixin font-flow-block{
-  font-family: 'FlowBlock', sans-serif;
-}
-@mixin font-flow-rounded{
-  font-family: 'FlowRounded', sans-serif;
-}
-@mixin font-flow-circluar{
-  font-family: 'FlowCircular', sans-serif;
-}
 // Редкое свойство для отключеия размытия пиксельных картинок
 @mixin pixelated{
   image-rendering: pixelated;

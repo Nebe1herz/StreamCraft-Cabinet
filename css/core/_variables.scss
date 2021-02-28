@@ -2,111 +2,63 @@
 $none: transparent;
 
 // Директории картинок и шрифтов
-//$dir: '/StreamCraft-MG/'; // В проде
-$dir: '/[2021] SC MiniGames'; // В шаблоне
+$dir: '/[2021] SC Game Overlay';
 $url: $dir + '/images/'; // Уникальный путь картинок
 $urlFonts: $dir + '/font/'; // Уникальный путь шрифтов
 
-// Карта светлых оттенков для primary
-$primary-palette-map: (
-  // 20, 40, 50 etc — ширина шага для класса
-  // 98%, 96%, 94% etc — значение Lightness в HSL
-  20: 98%,
-  50: 96%,
-  100: 88%,
-  300: 78%
-);
-// Миксин для инициализации
-@mixin set-primary-palette($map: $primary-palette-map, $saturate: 95%) {
-  @each $class, $value in $map {
-    --primary-#{$class}: hsl(235, #{$saturate}, #{$value});
-  }
-}
-
-// Карта тёмных оттенков
-$dark-palette-map: (
-  // 500, 600, 700 etc — ширина шага для класса
-  // 50%, 40%, 30% etc — значение Lightness в HSL
-  600: 38%,
-  700: 28%,
-  800: 18%,
-  900: 8%,
-  950: 4%
-);
-// Миксин для инициализации
-@mixin set-dark-palette($map: $dark-palette-map, $saturate: 40%){
-  @each $class, $value in $map {
-    --dark-#{$class}: hsl(235, #{$saturate}, #{$value});
-  }
-  //hsl(235deg 40% 5%)
-}
-
-// Основная палитра цветов состояния
-$general-palette-map: (
-  // Розовый * второй цвет
-  'secondary': 325,
-  // Голубой * третий цвет
-  'tertiary': 175,
-  // Зелёный * состояние: УСПЕШНО
-  'success': 145,
-  // Красный * состояние: ОШИБКА
-  'danger': 355,
-  // Оранжевый * состояние: ПРЕДУПРЕЖДЕНИЕ
-  'warning': 25,
-  // Желтый * состояние: УВЕДОМЛЕНИЕ
-  'alert': 55,
-  // Фиолетовый * состояние: ИНФОРМИРОВАНИЕ
-  'info': 285,
-);
-// Миксин для инициализации
-@mixin set-general-palette($lightest: 96%, $light: 88%, $base: 70%) {
-  @each $name, $hue in $general-palette-map{
-    --#{$name}: hsl(#{$hue}, 95%, #{$base});
-    --#{$name}-50: hsl(#{$hue}, 95%, #{$lightest});
-    --#{$name}-100: hsl(#{$hue}, 95%, #{$light});
-  }
-}
-
 :root{
-  // Работа с масштабированием интерфейса
-  --font-size: 4px;
-  --indent: 8px;
-
-  // Просто белый, черный и primary цвета, чего тут комментировать то?:D
-  --white: #fff;
-  --black: #030307;
-  --primary:  hsl(235, 95%, 70%);
-  --custom: #3b0c76;
-
-  // Инициализация *** Расширенная карта цветов primary
-  @include set-primary-palette;
-
-  // Инициализация *** Расширенная карты цветов dark
-  @include set-dark-palette;
-
-  // Инициализация *** Карта цветов состояний
-  @include set-general-palette;
+  // Палитра интерфейса
+  --gray-100: #e0e0e0; // Светлый текст (почти белый) на кнопках итл
+  --gray-200: #c6c6c6; // Цвет фона интерфейса
+  --gray-400: #8b8b8b; // Цвет ячеек
+  --gray-700: #373737; // Тени у ячеек, текст
+  --gray-900: #030303; // Рамки
 }
+// Цвета текста и теней
+$black: #000; // Черный $0
+$black-shadow: #000;
 
-// Тёмная тема *** инвертирование карты цветов
-$night-mode__primary-palette-map: (
-  20: 4%,
-  50: 8%,
-  100: 18%,
-  300: 28%
-);
-$night-mode__dark-palette-map: (
-  600: 58%,
-  700: 68%,
-  800: 78%,
-  900: 96%,
-  950: 98%
-);
+$dark-blue: #0000AA; // Темно-синий $1
+$dark-blue-shadow: #00002A;
 
-// Тёмная тема *** инициализация
-.night-mode{
-  --white: var(--black);
-  @include set-primary-palette($night-mode__primary-palette-map, 40%);
-  @include set-dark-palette($night-mode__dark-palette-map, 95%);
-  @include set-general-palette(6%, 16%);
-}
+$dark-green: #00AA00; //Темно-зеленый $2
+$dark-green-shadow: #002A00;
+
+$dark-aqua: #00AAAA; // Бирюзовый $3
+$dark-aqua-shadow: #002A2A;
+
+$dark-red: #AA0000; // Темно-красный $4
+$dark-red-shadow: #2A0000;
+
+$dark-purple: #AA00AA; // Темно-фиолетовый $5
+$dark-purple-shadow: #2A002A;
+
+$gold: #FFAA00; // Золотой $6
+$gold-shadow: #2A2A00;
+
+$gray: #AAAAAA; // Серый $7
+$gray-shadow: #2A2A2A;
+
+$dark-gray: #555555; // Темно-серый $8
+$dark-gray-shadow: #151515;
+
+$blue: #5555FF; // Синий $9
+$blue-shadow: #15153F;
+
+$green: #55FF55; // Зеленый $a
+$green-shadow: #153F15;
+
+$aqua: #55FFFF; // Сине-еленый $b
+$aqua-shadow: #153F3F;
+
+$red: #FF5555; // Красный $c
+$red-shadow: #3F1515;
+
+$light-purple: #FF55FF; // Фиолетовый $d
+$light-purple-shadow: #3F153F;
+
+$yellow: #FFFF55; // Желтый $e
+$yellow-shadow: #3F3F15;
+
+$white: #FFFFFF; // Белый $f
+$white-shadow: #3F3F3F;
