@@ -11,25 +11,13 @@
 
 // Страницы
 @import
-        'pages/index', // Главная страница
-        'pages/closed', // Страница технических работ
-        'pages/styleguide' // Палитра цветов и список элементов
+        'pages/index' // Главная страница
 ;
 
 // Библиотека компонентов
 @import
         'components/wallpaper', // Основной контейнер сайта
-        'components/buttons', // Основной контейнер сайта
-
-        'components/nav', // Верхняя линия с навигацией
-        'components/header', // Основы хедера, шапки
-        'components/footer', // Футер, нижняя часть страницы
-
-        'components/games', // Список мини-игр, промо-раздел для главной
-        'components/ranking', // Рейтинг игроков на главной
-        'components/blog', // Элементы блога (ченджлогов)
-
-        'components/modal' // Модальные окна
+        'components/buttons' // Основной контейнер сайта
 ;
 
 // Плагины
