@@ -3,10 +3,21 @@ body{
   background-size: cover;
   min-height: 100vh;
   max-height: 100vh;
+
+  &.overlay-check{
+    #overlay{
+      opacity: 1;
+    }
+    .main-menu{
+      left: 0;
+    }
+  }
 }
 #overlay{
-  position: fixed;
-  background: alpha(#000, .5);
+  position: absolute;
+  background: #{alpha(#000, .5)};
   height: 100%;
   width: 100%;
+  transition: .15s ease-in-out;
+  opacity: 0;
 }

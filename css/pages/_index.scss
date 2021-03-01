@@ -6,8 +6,9 @@
   padding: 12px 0 12px #{$sideBarWidth + 8px}; // TODO
   height: 100%;
   width: 45%;
-  left: 0;
+  left: -50%;
   top: 0;
+  transition: .15s ease-in-out;
   box-shadow:
           // Тень на правой внешней границе
           20px 0 0 -12px var(--gray-600),
@@ -57,7 +58,7 @@
 
 // Левый сайдбар с кнопками настроек, выхода ачивок итд
 .sidebar{
-  position: fixed;
+  position: absolute;
   background: var(--gray-900);
   height: 100%;
   width: $sideBarWidth;
