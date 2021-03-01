@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: center 22px;
   background-size: 96px;
+  line-height: 1.2;
   font-size: 20px;
   font-weight: normal;
   padding: 15px;
@@ -26,66 +27,85 @@
   cursor: pointer;
   outline: none;
 
-  &:hover{
-    --color: var(--gray-400);
-    --background: var(--white);
-    --shadow: var(--gray-700);
-  }
-
-  &.gold,
-  &.gold-hover:hover{
-    --shadow: var(--gold-shadow);
-    --background: var(--gold-back);
-    --color: var(--gold);
-  }
-  &.green,
-  &.green-hover:hover{
-    --shadow: var(--green-shadow);
-    --background: var(--green-back);
-    --color: var(--dark-green);
-  }
-  &.blue,
-  &.blue-hover:hover{
-    --shadow: var(--blue-shadow);
-    --background: var(--blue-back);
-    --color: var(--blue);
-  }
-  &.light-purple,
-  &.light-purple-hover:hover{
-    --shadow: var(--light-purple-shadow);
-    --background: var(--light-purple-back);
-    --color: var(--light-purple);
-  }
-  &.dark-aqua,
-  &.dark-aqua-hover:hover{
-    --shadow: var(--dark-aqua-shadow);
-    --background: var(--dark-aqua-back);
-    --color: var(--dark-aqua);
-  }
-
-  &.gold,
-  &.green,
-  &.blue,
-  &.light-purple,
-  &.dark-aqua{
+  &:not(.disabled){
     &:hover{
-      --shadow: var(--color);
+      --color: var(--gray-400);
+      --background: var(--white);
+      --shadow: var(--gray-700);
+    }
 
-      //--background: var(--color);
-      //color: var(--white);
+    &.gold,
+    &.gold-hover:hover{
+      --shadow: var(--gold-shadow);
+      --background: var(--gold-back);
+      --color: var(--gold);
+    }
+    &.green,
+    &.green-hover:hover{
+      --shadow: var(--green-shadow);
+      --background: var(--green-back);
+      --color: var(--dark-green);
+    }
+    &.blue,
+    &.blue-hover:hover{
+      --shadow: var(--blue-shadow);
+      --background: var(--blue-back);
+      --color: var(--blue);
+    }
+    &.light-purple,
+    &.light-purple-hover:hover{
+      --shadow: var(--light-purple-shadow);
+      --background: var(--light-purple-back);
+      --color: var(--light-purple);
+    }
+    &.dark-aqua,
+    &.dark-aqua-hover:hover{
+      --shadow: var(--dark-aqua-shadow);
+      --background: var(--dark-aqua-back);
+      --color: var(--dark-aqua);
+    }
+
+    &.gold,
+    &.green,
+    &.blue,
+    &.light-purple,
+    &.dark-aqua{
+      &:hover{
+        --shadow: var(--color);
+      }
+    }
+
+    // Навигация
+    &.donate{
+      background-image: url('#{$url}/icon/donate.png');
+    }
+    &.shop{
+      background-image: url('#{$url}/icon/shop.png');
+    }
+    &.cases{
+      background-image: url('#{$url}/icon/cases.png');
+    }
+    &.kits{
+      background-image: url('#{$url}/icon/kits.png');
+    }
+
+    // Остальное
+    &.auction{
+      background-image: url('#{$url}/icon/auction.png');
+    }
+    &.banned{
+      background-image: url('#{$url}/icon/banned.png');
+    }
+    &.exchange{
+      background-image: url('#{$url}/icon/exchange.png');
     }
   }
 
-  &.donate{
-    background-image: url('#{$url}/icon/donate.png');
-  }
-  &.shop{
-    background-image: url('#{$url}/icon/shop.png');
-  }
-  &.cases{
-    background-image: url('#{$url}/icon/cases.png');
-  }
-  &.kits{
-    background-image: url('#{$url}/icon/kits.png');
+  &.disabled{
+    --background: var(--gray-600);
+    --color: var(--gray-700);
+    background-image: url('#{$url}/icon/disabled.png');
+    pointer-events: none;
+    cursor: default;
   }
 }

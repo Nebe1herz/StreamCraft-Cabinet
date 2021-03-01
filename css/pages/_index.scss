@@ -27,33 +27,23 @@
           inset #{$sideBarWidth + 8px} 0 var(--white)
   ;
 
-  //
-  h1{
-    border-bottom: 4px solid var(--gray-400);
-    font-size: 32px;
-    font-weight: normal;
-    padding: 40px 20px;
-  }
+  #overlayClose {
+    position: absolute;
+    border: none;
+    background: url('#{$url}/icon/close.png') no-repeat center;
+    background-size: 48px;
+    height: 64px;
+    width: 64px;
+    top: 32px;
+    right: 20px;
+    cursor: pointer;
+    outline: none;
+    image-rendering: pixelated;
 
-  .group-btn{
-    padding: 20px;
-
-    .btn{
-      padding: 135px 0 15px;
+    &:hover {
+      opacity: .5;
     }
   }
-  h2{
-    font-size: 28px;
-    font-weight: normal;
-    margin: 0 0 20px;
-  }
-  .row{
-    margin: 0 -10px;
-    [class*="col"]{
-      padding:0 10px;
-    }
-  }
-
 }
 
 // Левый сайдбар с кнопками настроек, выхода ачивок итд
@@ -64,4 +54,103 @@
   width: $sideBarWidth;
   top: 0;
   left: 0;
+
+  .row{
+    margin: 0;
+    height: 100%;
+  }
+  [class*="col"]{
+    padding: 10px 0;
+  }
+  button{
+    display: block;
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-size: 64px;
+    background-position: center;
+    border: none;
+    color: #fff;
+    padding: 80px 0 0;
+    cursor: pointer;
+    outline: none;
+    image-rendering: pixelated;
+    text-align: center;
+  }
+  .settings{
+    background-image: url('#{$url}/temp/settings.png');
+  }
+}
+
+.main-menu-general{
+  .row{
+    margin: 0 -10px;
+  }
+  [class*="col"]{
+    padding:10px;
+  }
+}
+
+.group-user{
+  padding: 35px 25px 0;
+  h1{
+    font-weight: normal;
+    font-size: 42px;
+    color: var(--gray-900);
+  }
+  p{
+    line-height: 1.5;
+    font-size: 18px;
+    color: var(--dark-gray);
+  }
+  span{
+    --shadow: transparent;
+    text-shadow: 2px 2px var(--shadow);
+  }
+  .deluxe{
+    --shadow: var(--light-purple-shadow);
+    color: var(--light-purple);
+  }
+  .btn{
+    background-repeat: no-repeat;
+    background-position: 4px 0;
+    background-size: 32px;
+    font-size: 18px;
+    padding: 8px 8px 8px 42px;
+    text-align: left;
+  }
+  .balance{
+    background-image: url('#{$url}/icon/balance.png');
+    background-position-y: 2px;
+  }
+  .user{
+    background-image: url('#{$url}/icon/user.png');
+  }
+}
+
+.group-btn{
+  padding: 0 25px;
+  margin: 20px 0 0;
+
+  .btn{
+    padding: 135px 0 15px;
+  }
+  h2{
+    position: relative;
+    color: var(--gray-700);
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0 0 5px;
+    overflow: hidden;
+
+    &::after{
+      content:'';
+      display: inline-block;
+      position: absolute;
+      background: var(--gray-400);
+      height: 4px;
+      width: 100%;
+      margin: 0 0 0 10px;
+      top: calc(50% - 2px);
+    }
+  }
 }
