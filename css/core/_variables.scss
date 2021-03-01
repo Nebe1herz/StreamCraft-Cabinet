@@ -6,59 +6,69 @@ $dir: '/[2021] SC Game Overlay';
 $url: $dir + '/images/'; // Уникальный путь картинок
 $urlFonts: $dir + '/font/'; // Уникальный путь шрифтов
 
+// Ширина сайдбара для централизированного рассчета паддингов, теней и прочего
+$sideBarWidth: 80px;
+
 :root{
   // Палитра интерфейса
   --gray-100: #e0e0e0; // Светлый текст (почти белый) на кнопках итл
   --gray-200: #c6c6c6; // Цвет фона интерфейса
   --gray-400: #8b8b8b; // Цвет ячеек
+  --gray-600: #555; // Тени у рамки
   --gray-700: #373737; // Тени у ячеек, текст
   --gray-900: #030303; // Рамки
+
+  // Цвета текста и теней
+  --black: #000; // Черный $0
+  --black-shadow: #000;
+
+  --dark-blue: #0000AA; // Темно-синий $1
+  --dark-blue-shadow: #00002A;
+
+  --dark-green: #00AA00; //Темно-зеленый $2
+  --dark-green-shadow: #002A00;
+
+  --dark-aqua: #00AAAA; // Бирюзовый $3
+  --dark-aqua-back: #e6ffff;
+  --dark-aqua-shadow: #002A2A;
+
+  --dark-red: #AA0000; // Темно-красный $4
+  --dark-red-shadow: #2A0000;
+
+  --dark-purple: #AA00AA; // Темно-фиолетовый $5
+  --dark-purple-shadow: #2A002A;
+
+  --gold: #ffaa00; // Золотой $6
+  --gold-back: #fff6e6;
+  --gold-shadow: #2a2a00;
+
+  --gray: #AAAAAA; // Серый $7
+  --gray-shadow: #2A2A2A;
+
+  --dark-gray: #555555; // Темно-серый $8
+  --dark-gray-shadow: #151515;
+
+  --blue: #5555FF; // Синий $9
+  --blue-back: #e6e6ff;
+  --blue-shadow: #15153F;
+
+  --green: #55FF55; // Зеленый $a
+  --green-back: #e6ffe6;
+  --green-shadow: #153F15;
+
+  --aqua: #55FFFF; // Сине-еленый $b
+  --aqua-shadow: #153F3F;
+
+  --red: #FF5555; // Красный $c
+  --red-shadow: #3F1515;
+
+  --light-purple: #FF55FF; // Фиолетовый $d
+  --light-purple-back: #ffefff;
+  --light-purple-shadow: #3F153F;
+
+  --yellow: #FFFF55; // Желтый $e
+  --yellow-shadow: #3F3F15;
+
+  --white: #FFFFFF; // Белый $f
+  --white-shadow: #3F3F3F;
 }
-// Цвета текста и теней
-$black: #000; // Черный $0
-$black-shadow: #000;
-
-$dark-blue: #0000AA; // Темно-синий $1
-$dark-blue-shadow: #00002A;
-
-$dark-green: #00AA00; //Темно-зеленый $2
-$dark-green-shadow: #002A00;
-
-$dark-aqua: #00AAAA; // Бирюзовый $3
-$dark-aqua-shadow: #002A2A;
-
-$dark-red: #AA0000; // Темно-красный $4
-$dark-red-shadow: #2A0000;
-
-$dark-purple: #AA00AA; // Темно-фиолетовый $5
-$dark-purple-shadow: #2A002A;
-
-$gold: #FFAA00; // Золотой $6
-$gold-shadow: #2A2A00;
-
-$gray: #AAAAAA; // Серый $7
-$gray-shadow: #2A2A2A;
-
-$dark-gray: #555555; // Темно-серый $8
-$dark-gray-shadow: #151515;
-
-$blue: #5555FF; // Синий $9
-$blue-shadow: #15153F;
-
-$green: #55FF55; // Зеленый $a
-$green-shadow: #153F15;
-
-$aqua: #55FFFF; // Сине-еленый $b
-$aqua-shadow: #153F3F;
-
-$red: #FF5555; // Красный $c
-$red-shadow: #3F1515;
-
-$light-purple: #FF55FF; // Фиолетовый $d
-$light-purple-shadow: #3F153F;
-
-$yellow: #FFFF55; // Желтый $e
-$yellow-shadow: #3F3F15;
-
-$white: #FFFFFF; // Белый $f
-$white-shadow: #3F3F3F;
