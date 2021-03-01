@@ -1,0 +1,66 @@
+// Главное меню (основной экран)
+.main-menu{
+  position: fixed;
+  //border-right: 4px solid var(--gray-900);
+  background: var(--gray-200);
+  padding: 12px 0 12px #{$sideBarWidth + 8px}; // TODO
+  height: 100%;
+  width: 45%;
+  left: 0;
+  top: 0;
+  box-shadow:
+          // Тень на правой внешней границе
+          20px 0 0 -12px var(--gray-600),
+          14px 2px 0 -10px var(--gray-600),
+          12px 0 0 -8px var(--gray-200),
+          // Правая внешняя граница (ЧЕРНАЯ)
+          8px 0 0 -4px var(--gray-900),
+          16px 0 0 -8px var(--gray-900),
+          24px 0 0 -12px var(--gray-900),
+          // Верхняя и нижняя внутренние границы
+          inset 0 4px var(--gray-900), // Верхняя граница
+          inset 0 12px var(--white), // Тень у верхней границы
+          inset 0 -4px var(--gray-900), // Нижняя граница
+          inset 0 -12px var(--gray-600), // Тень у нижней границы
+          // Левая внутренняя граница  *** прилегающая к сайдбару
+          inset #{$sideBarWidth + 8px} 0 var(--white)
+  ;
+
+  //
+  h1{
+    border-bottom: 4px solid var(--gray-400);
+    font-size: 32px;
+    font-weight: normal;
+    padding: 40px 20px;
+  }
+
+  .group-btn{
+    padding: 20px;
+
+    .btn{
+      padding: 135px 0 15px;
+    }
+  }
+  h2{
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+  .row{
+    margin: 0 -10px;
+    [class*="col"]{
+      padding:0 10px;
+    }
+  }
+
+}
+
+// Левый сайдбар с кнопками настроек, выхода ачивок итд
+.sidebar{
+  position: fixed;
+  background: var(--gray-900);
+  height: 100%;
+  width: $sideBarWidth;
+  top: 0;
+  left: 0;
+}

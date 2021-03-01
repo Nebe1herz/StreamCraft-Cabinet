@@ -1,0 +1,12 @@
+body{
+  background: url('#{$url}/game.png') no-repeat center bottom;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+#overlay{
+  position: fixed;
+  background: alpha(#000, .5);
+  height: 100%;
+  width: 100%;
+}
