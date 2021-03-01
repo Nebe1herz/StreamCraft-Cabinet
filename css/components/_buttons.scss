@@ -1,62 +1,91 @@
 .btn{
-  // Переменные для работы
-  --shadow: -15px;
-  --first: var(--tertiary);
-  --second: var(--primary);
-  --text: var(--white);
-  // Основные стили
-  display: inline-block;
+  --color: var(--gray-700);
+  --background: var(--gray-100);
+  --shadow: var(--gray-900);
+
+  //Основные стили
+  display: block;
   border: none;
-  background: var(--second) linear-gradient(0, var(--first), $none 150%) center top;
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--text);
-  padding: 15px 20px;
-  transition: .1s ease-in-out;
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-position: center 22px;
+  background-size: 96px;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 15px;
+  width: 100%;
+  color:var(--color);
   box-shadow:
-          inset 6px 0 alpha(#fff, .2),
-          inset 0 6px alpha(#fff, .3),
-          inset -6px 0 alpha(#000, .5),
-          inset 0 -6px alpha(#000, .4),
-          0 0 30px var(--shadow) var(--first),
-          0 5px 50px var(--shadow) var(--second);
+          4px 0 var(--shadow),
+          -4px 0 var(--shadow),
+          0 4px var(--shadow),
+          0 -4px var(--shadow);
+  image-rendering: pixelated;
+  letter-spacing: 1px;
+  text-align: center;
   cursor: pointer;
   outline: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 
-  &:hover:not(:active){
-    --shadow: -10px;
-    filter: brightness(1.1);
+  &:hover{
+    --color: var(--gray-400);
+    --background: var(--white);
+    --shadow: var(--gray-700);
   }
-  &:active{
-    opacity:.6;
+
+  &.gold,
+  &.gold-hover:hover{
+    --shadow: var(--gold-shadow);
+    --background: var(--gold-back);
+    --color: var(--gold);
   }
-  &-primary{
-    --first: var(--primary);
-    --second: var(--custom);
+  &.green,
+  &.green-hover:hover{
+    --shadow: var(--green-shadow);
+    --background: var(--green-back);
+    --color: var(--dark-green);
   }
-  &-secondary{
-    --first: var(--info);
-    --second: var(--custom);
+  &.blue,
+  &.blue-hover:hover{
+    --shadow: var(--blue-shadow);
+    --background: var(--blue-back);
+    --color: var(--blue);
   }
-  &-success{
-    --first: var(--tertiary);
-    --second: var(--success);
-    --text: #{alpha(#000, .6)};
+  &.light-purple,
+  &.light-purple-hover:hover{
+    --shadow: var(--light-purple-shadow);
+    --background: var(--light-purple-back);
+    --color: var(--light-purple);
   }
-  &-danger{
-    --first: var(--danger);
-    --second: var(--dark-700);
-    --text: #{alpha(#000, .6)};
+  &.dark-aqua,
+  &.dark-aqua-hover:hover{
+    --shadow: var(--dark-aqua-shadow);
+    --background: var(--dark-aqua-back);
+    --color: var(--dark-aqua);
   }
-  &-dark{
-    --first: var(--dark-600);
-    --second: var(--custom);
+
+  &.gold,
+  &.green,
+  &.blue,
+  &.light-purple,
+  &.dark-aqua{
+    &:hover{
+      --shadow: var(--color);
+
+      //--background: var(--color);
+      //color: var(--white);
+    }
   }
-  &-light{
-    --first: var(--primary-100);
-    --second: var(--primary-50);
-    --text: var(--dark-700);
+
+  &.donate{
+    background-image: url('#{$url}/icon/donate.png');
+  }
+  &.shop{
+    background-image: url('#{$url}/icon/shop.png');
+  }
+  &.cases{
+    background-image: url('#{$url}/icon/cases.png');
+  }
+  &.kits{
+    background-image: url('#{$url}/icon/kits.png');
   }
 }
