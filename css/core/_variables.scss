@@ -10,6 +10,61 @@ $urlFonts: $dir + '/font/'; // Уникальный путь шрифтов
 $sideBarWidth: 96px;
 $backdropFilter: true;
 
+// Палитра цветов SCSS
+// ========================== $0 === Черный
+$black: #000;
+$black-shadow: #000;
+// ========================== $1 === Тёмно-синий
+$dark-blue: #0000AA;
+$dark-blue-shadow: #00002A;
+// ========================== $2 === Тёмно-зелёный
+$dark-green: #00AA00;
+$dark-green-shadow: #002A00;
+// ========================== $3 === Бирюзовый
+$dark-aqua: #00AAAA;
+$dark-aqua-back: #e6ffff;
+$dark-aqua-shadow: #002A2A;
+// ========================== $4 === Тёмно-красный
+$dark-red: #AA0000;
+$dark-red-shadow: #2A0000;
+// ========================== $5 === Тёмно-фиолетовый
+$dark-purple: #AA00AA;
+$dark-purple-shadow: #2A002A;
+// ========================== $6 === Золотой
+$gold: #ffaa00;
+$gold-back: #fff6e6;
+$gold-shadow: #2a2a00;
+// ========================== $7 === Серый
+$gray: #AAAAAA;
+$gray-shadow: #2A2A2A;
+// ========================== $8 === Тёмно-серый
+$dark-gray: #555555;
+$dark-gray-shadow: #151515;
+// ========================== $9 === синий
+$blue: #5555FF;
+$blue-back: #e6e6ff;
+$blue-shadow: #15153F;
+// ========================== $a === Зеленый
+$green: #55FF55;
+$green-back: #e6ffe6;
+$green-shadow: #153F15;
+// ========================== $b === Сине-зеленый
+$aqua: #55FFFF;
+$aqua-shadow: #153F3F;
+// ========================== $1 === Красный
+$red: #FF5555;
+$red-shadow: #3F1515;
+// ========================== $c === Фиолетовый
+$light-purple: #FF55FF;
+$light-purple-back: #ffefff;
+$light-purple-shadow: #3F153F;
+// ========================== $e === Желтый
+$yellow: #FFFF55;
+$yellow-shadow: #3F3F15;
+// ========================== $f === Белый
+$white: #FFFFFF;
+$white-shadow: #3F3F3F;
+
 :root{
   // Палитра интерфейса
   --gray-100: #e0e0e0; // Светлый текст (почти белый) на кнопках итл
@@ -20,56 +75,56 @@ $backdropFilter: true;
   --gray-900: #030303; // Рамки
 
   // Цвета текста и теней
-  --black: #000; // Черный $0
-  --black-shadow: #000;
+  --black: $black;
+  --black-shadow: $black-shadow;
 
-  --dark-blue: #0000AA; // Темно-синий $1
-  --dark-blue-shadow: #00002A;
+  --dark-blue: $dark-blue; // Темно-синий $1
+  --dark-blue-shadow: $dark-blue-shadow;
 
-  --dark-green: #00AA00; //Темно-зеленый $2
-  --dark-green-shadow: #002A00;
+  --dark-green: $dark-green; //Темно-зеленый $2
+  --dark-green-shadow: $dark-green-shadow;
 
-  --dark-aqua: #00AAAA; // Бирюзовый $3
-  --dark-aqua-back: #e6ffff;
-  --dark-aqua-shadow: #002A2A;
+  --dark-aqua: $dark-aqua; // Бирюзовый $3
+  --dark-aqua-back: $dark-aqua-back;
+  --dark-aqua-shadow: $dark-aqua-shadow;
 
-  --dark-red: #AA0000; // Темно-красный $4
-  --dark-red-shadow: #2A0000;
+  --dark-red: $dark-red; // Темно-красный $4
+  --dark-red-shadow: $dark-red-shadow;
 
-  --dark-purple: #AA00AA; // Темно-фиолетовый $5
-  --dark-purple-shadow: #2A002A;
+  --dark-purple: $dark-purple; // Темно-фиолетовый $5
+  --dark-purple-shadow: $dark-purple-shadow;
 
-  --gold: #ffaa00; // Золотой $6
-  --gold-back: #fff6e6;
-  --gold-shadow: #2a2a00;
+  --gold: $gold; // Золотой $6
+  --gold-back: $gold-back;
+  --gold-shadow: $gold-shadow;
 
-  --gray: #AAAAAA; // Серый $7
-  --gray-shadow: #2A2A2A;
+  --gray: $gray; // Серый $7
+  --gray-shadow: $gray-shadow;
 
-  --dark-gray: #555555; // Темно-серый $8
-  --dark-gray-shadow: #151515;
+  --dark-gray: $dark-gray; // Темно-серый $8
+  --dark-gray-shadow: $dark-gray-shadow;
 
-  --blue: #5555FF; // Синий $9
-  --blue-back: #e6e6ff;
-  --blue-shadow: #15153F;
+  --blue: $blue; // Синий $9
+  --blue-back: $blue-back;
+  --blue-shadow: $blue-shadow;
 
-  --green: #55FF55; // Зеленый $a
-  --green-back: #e6ffe6;
-  --green-shadow: #153F15;
+  --green: $green; // Зеленый $a
+  --green-back: $green-back;
+  --green-shadow: $green-shadow;
 
-  --aqua: #55FFFF; // Сине-еленый $b
-  --aqua-shadow: #153F3F;
+  --aqua: $aqua; // Сине-еленый $b
+  --aqua-shadow: $aqua-shadow;
 
-  --red: #FF5555; // Красный $c
-  --red-shadow: #3F1515;
+  --red: $red; // Красный $c
+  --red-shadow: $red-shadow;
 
-  --light-purple: #FF55FF; // Фиолетовый $d
-  --light-purple-back: #ffefff;
-  --light-purple-shadow: #3F153F;
+  --light-purple: $light-purple; // Фиолетовый $d
+  --light-purple-back: $light-purple-back;
+  --light-purple-shadow: $light-purple-shadow;
 
-  --yellow: #FFFF55; // Желтый $e
-  --yellow-shadow: #3F3F15;
+  --yellow: $yellow; // Желтый $e
+  --yellow-shadow: $yellow-shadow;
 
-  --white: #FFFFFF; // Белый $f
-  --white-shadow: #3F3F3F;
+  --white: $white; // Белый $f
+  --white-shadow: $white-shadow;
 }
