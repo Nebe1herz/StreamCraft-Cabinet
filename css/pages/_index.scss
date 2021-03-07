@@ -3,7 +3,7 @@
   position: fixed;
   //border-right: 4px solid var(--gray-900);
   background: var(--gray-200);
-  padding: 12px 0 12px #{$sideBarWidth + 8px}; // TODO
+  padding: 12px 0 12px #{$sideBarWidth + 8px};
   height: 100%;
   width: 45%;
   left: -50%;
