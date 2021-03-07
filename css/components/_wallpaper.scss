@@ -1,9 +1,21 @@
 body{
-  background: url('#{$url}/game.png') no-repeat center bottom;
-  background-size: cover;
+  position: relative;
   min-height: 100vh;
   max-height: 100vh;
+  overflow: hidden;
 
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('#{$url}/game.png') no-repeat center bottom;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
   &.overlay-check{
     #overlay{
       opacity: 1;
@@ -18,6 +30,11 @@ body{
   background: #{alpha(#000, .5)};
   height: 100%;
   width: 100%;
-  transition: .15s ease-in-out;
   opacity: 0;
+  transition: .15s ease-in-out;
+  @if ($backdropFilter) {
+    backdrop-filter: brightness(.8) blur(10px);
+    -webkit-backdrop-filter: brightness(.8) blur(10px);
+  }
+  z-index: 1;
 }
