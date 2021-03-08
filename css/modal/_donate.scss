@@ -1,3 +1,24 @@
 .modal-donate{
-
+  .window{
+    @include windowConfig($blue);
+    height: 640px;
+    padding: 65px 35px;
+    &::after{
+      content:'';
+      display: block;
+      position: absolute;
+      background: url('#{$url}lololowka.png') no-repeat center top;
+      background-size: cover;
+      width: 60%;
+      height: 120%;
+      left: 50%;
+      bottom: 12px;
+    }
+  }
+  h1{
+    font-family: "MinecraftTen", sans-serif;
+    font-weight: normal;
+    font-size: 48px;
+    text-transform: uppercase;
+  }
 }
