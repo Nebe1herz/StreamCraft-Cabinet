@@ -49,38 +49,72 @@
 // Левый сайдбар с кнопками настроек, выхода ачивок итд
 .sidebar{
   position: absolute;
-  background: var(--gray-900);
   height: 100%;
   width: $sideBarWidth;
   top: 0;
   left: 0;
+  z-index: 1;
 
-  .row{
-    margin: 0;
+  // TODO
+  // один из вариантов стилизации сайдбара
+  // ховер-эффект выдвижения
+  /*&:hover{
+    &::before{
+      width: 400px;
+      box-shadow: -45px 0 45px 45px alpha(#000, .5);
+    }
+    &~{
+      .main-menu-general{
+        opacity: .4;
+      }
+    }
+  }*/
+
+  &::before{
+    content:'';
+    display: block;
+    position: absolute;
+    background: var(--gray-900);
+    width: $sideBarWidth;
     height: 100%;
+    top: 0;
+    left: 0;
+    transition: .1s ease-in-out;
+    z-index: 0;
   }
-  [class*="col"]{
-    padding: 25px 0;
+  .row{
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 12px 6px;
+    z-index: 1;
   }
   button{
-    display: block;
-    background-color: unset;
+    display: inline-block;
+    background-color: $dark-gray-shadow;
     background-repeat: no-repeat;
-    background-size: 48px;
+    background-size: 64px;
     background-position: center;
+    border-radius: 10px;
     border: none;
-    color: #fff;
-    font-size: 10px;
-    padding: 72px 0 0;
-    margin: 15px 0;
-    cursor: pointer;
+    width: 100%;
+    font-size: 0;
+    height: 86px;
+    margin: 0 0 12px;
     outline: none;
+    cursor: pointer;
     image-rendering: pixelated;
-    text-align: center;
+
+    &:hover{
+      background-color: $gray-shadow;
+    }
+  }
+  .user{
+    background-image: url('#{$url}/heads/head-3.png');
+    image-rendering: auto;
   }
   .settings{
     background-image: url('#{$url}/icon/settings.png');
-    background-size: 64px;
   }
   .stats{
     background-image: url('#{$url}/icon/stats.png');
@@ -95,6 +129,7 @@
 }
 
 .main-menu-general{
+  transition: .1s ease-in-out;
   .row{
     margin: 0 -10px;
   }
