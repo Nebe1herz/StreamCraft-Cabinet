@@ -75,56 +75,56 @@ $white-shadow: #3F3F3F;
   --gray-900: #030303; // Рамки
 
   // Цвета текста и теней
-  --black: $black;
-  --black-shadow: $black-shadow;
+  --black: #{$black};
+  --black-shadow: #{$black-shadow};
 
-  --dark-blue: $dark-blue; // Темно-синий $1
-  --dark-blue-shadow: $dark-blue-shadow;
+  --dark-blue: #{$dark-blue}; // Темно-синий $1
+  --dark-blue-shadow: #{$dark-blue-shadow};
 
-  --dark-green: $dark-green; //Темно-зеленый $2
-  --dark-green-shadow: $dark-green-shadow;
+  --dark-green: #{$dark-green}; //Темно-зеленый $2
+  --dark-green-shadow: #{$dark-green-shadow};
 
-  --dark-aqua: $dark-aqua; // Бирюзовый $3
-  --dark-aqua-back: $dark-aqua-back;
-  --dark-aqua-shadow: $dark-aqua-shadow;
+  --dark-aqua: #{$dark-aqua}; // Бирюзовый $3
+  --dark-aqua-back: #{$dark-aqua-back};
+  --dark-aqua-shadow: #{$dark-aqua-shadow};
 
-  --dark-red: $dark-red; // Темно-красный $4
-  --dark-red-shadow: $dark-red-shadow;
+  --dark-red: #{$dark-red}; // Темно-красный $4
+  --dark-red-shadow: #{$dark-red-shadow};
 
-  --dark-purple: $dark-purple; // Темно-фиолетовый $5
-  --dark-purple-shadow: $dark-purple-shadow;
+  --dark-purple: #{$dark-purple}; // Темно-фиолетовый $5
+  --dark-purple-shadow: #{$dark-purple-shadow};
 
-  --gold: $gold; // Золотой $6
-  --gold-back: $gold-back;
-  --gold-shadow: $gold-shadow;
+  --gold: #{$gold}; // Золотой $6
+  --gold-back: #{$gold-back};
+  --gold-shadow: #{$gold-shadow};
 
-  --gray: $gray; // Серый $7
-  --gray-shadow: $gray-shadow;
+  --gray: #{$gray}; // Серый $7
+  --gray-shadow: #{$gray-shadow};
 
-  --dark-gray: $dark-gray; // Темно-серый $8
-  --dark-gray-shadow: $dark-gray-shadow;
+  --dark-gray: #{$dark-gray}; // Темно-серый $8
+  --dark-gray-shadow: #{$dark-gray-shadow};
 
-  --blue: $blue; // Синий $9
-  --blue-back: $blue-back;
-  --blue-shadow: $blue-shadow;
+  --blue: #{$blue}; // Синий $9
+  --blue-back: #{$blue-back};
+  --blue-shadow: #{$blue-shadow};
 
-  --green: $green; // Зеленый $a
-  --green-back: $green-back;
-  --green-shadow: $green-shadow;
+  --green: #{$green}; // Зеленый $a
+  --green-back: #{$green-back};
+  --green-shadow: #{$green-shadow};
 
-  --aqua: $aqua; // Сине-еленый $b
-  --aqua-shadow: $aqua-shadow;
+  --aqua: #{$aqua}; // Сине-еленый $b
+  --aqua-shadow: #{$aqua-shadow};
 
-  --red: $red; // Красный $c
-  --red-shadow: $red-shadow;
+  --red: #{$red}; // Красный $c
+  --red-shadow: #{$red-shadow};
 
-  --light-purple: $light-purple; // Фиолетовый $d
-  --light-purple-back: $light-purple-back;
-  --light-purple-shadow: $light-purple-shadow;
+  --light-purple: #{$light-purple}; // Фиолетовый $d
+  --light-purple-back: #{$light-purple-back};
+  --light-purple-shadow: #{$light-purple-shadow};
 
-  --yellow: $yellow; // Желтый $e
-  --yellow-shadow: $yellow-shadow;
+  --yellow: #{$yellow}; // Желтый $e
+  --yellow-shadow: #{$yellow-shadow};
 
-  --white: $white; // Белый $f
-  --white-shadow: $white-shadow;
+  --white: #{$white}; // Белый $f
+  --white-shadow: #{$white-shadow};
 }
