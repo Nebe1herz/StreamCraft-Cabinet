@@ -93,17 +93,20 @@
     display: inline-block;
     background-color: $dark-gray-shadow;
     background-repeat: no-repeat;
-    background-size: 64px;
+    background-size: 48px;
     background-position: center;
     border-radius: 10px;
     border: none;
     width: 100%;
     font-size: 0;
     height: 86px;
-    margin: 0 0 12px;
     outline: none;
     cursor: pointer;
     image-rendering: pixelated;
+
+    &:not(:first-child){
+      margin-top: 12px;
+    }
 
     &:hover{
       background-color: $gray-shadow;
@@ -111,21 +114,34 @@
   }
   .user{
     background-image: url('#{$url}/heads/head-3.png');
+    background-size: 64px;
     image-rendering: auto;
-  }
-  .settings{
-    background-image: url('#{$url}/icon/settings.png');
-  }
-  .stats{
-    background-image: url('#{$url}/icon/stats.png');
   }
   .achievements{
     background-image: url('#{$url}/icon/achievements.png');
   }
-  .profile{
-    background-image: url('#{$url}/icon/profile.png');
+  .stats{
+    background-image: url('#{$url}/icon/stats.png');
   }
+  .settings{
+    background-image: url('#{$url}/icon/settings.png');
+  }
+  .globe{
+    background-image: url('#{$url}/icon/globe.png');
+    background-size: 56px;
+  }
+  .help{
+    background-image: url('#{$url}/icon/help.png');
+  }
+  .exit{
+    background-color: darken($red-shadow, 7%);
+    background-image: url('#{$url}/icon/exit.png');
+    margin-top: auto!important;
 
+    &:hover{
+      background-color: $red-shadow;
+    }
+  }
 }
 
 .main-menu-general{

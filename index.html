@@ -24,14 +24,73 @@
             <!-- Левый сайдбар с "опции", "выход" и прочее -->
             <div class="sidebar">
                 <div class="row align-items-center justify-content-start flex-column">
-                    <button class="user"></button>
-                    <button class="profile"></button>
+                    <button
+                            class="user tooltip-trigger"
+                            data-title="Профиль Nebelherz"
+                            data-meta="
+                                    Ваша группа:
+                                    <span class=gold>Premium</span>
+                                    <br>
+                                    <br>
+                                    Боевой пропуск:
+                                    <span class=green>5 уровень</span>
+                                    <br>
+                                    Получено
+                                    <span class=green>4 награды</span>
+                                    из 200
+                                    <br>
+                                    Выполнено
+                                    <span class=green>32 задания</span>
+                            "
+                            data-note="Кликните, чтобы открыть"
+                    ></button>
+                    <!-- Достижения -->
                     <button
                             class="achievements tooltip-trigger"
-                            data-title="Достижения"
+                            data-title="
+                                    <span class=gold>Список достижений</span>
+                            "
+                            data-meta="Все достижения из Minecraft и модификаций сервера"
+                            data-note="Кликните, чтобы открыть"
                     ></button>
-                    <button class="stats"></button>
-                    <button class="settings"></button>
+                    <!-- Статистика -->
+                    <button
+                            class="stats tooltip-trigger"
+                            data-title="Ваша статистика"
+                            data-meta="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
+                            data-note="Кликните, чтобы открыть"
+                    ></button>
+                    <!-- Настройки -->
+                    <button
+                            class="settings tooltip-trigger"
+                            data-title="Настройки игры"
+                            data-meta="Настройте графику, звук или управление — всё для Вашего комфорта в игре!"
+                            data-note="Кликните, чтобы открыть"
+                    ></button>
+                    <!-- Сайт проекта -->
+                    <button
+                            class="globe tooltip-trigger"
+                            data-title="
+                                    <span class=green>Перейти на сайт проекта</span>
+                            "
+                            data-meta="Всё самое важное, нужное и интересное публикуется на нашем сайте!"
+                            data-note="Кликните, чтобы открыть"
+                    ></button>
+                    <button
+                            class="help tooltip-trigger"
+                            data-title="
+                                    <span class=green>Вам нужна помощь?</span>
+                            "
+                            data-meta="Напишите в нашу техническую поддержку, мы Вам поможем! =)"
+                            data-note="Кликните, чтобы открыть"
+                    ></button>
+                    <!-- Выйти с сервера -->
+                    <button
+                            class="exit tooltip-trigger"
+                            data-title="
+                                    <span class=red>Выход с сервера<span>
+                            "
+                    ></button>
                 </div>
             </div>
             <!-- Основной контейнер -->
