@@ -36,8 +36,23 @@ item.forEach((item) =>{
     // Накидываем события при наведении
     item.addEventListener('mouseover', () =>{
         // Заменяем содержание тултпиа на нужное
-        const replaceText = (selector, value) =>
-            tooltip.getElementsByClassName(selector)[0].innerHTML = value
+        const replaceText = (selector, value) => {
+            // Для сокразения записи селектор элемента присваиваем переменной
+            const item = tooltip.getElementsByClassName(selector)[0];
+            // Проверка на отсутствие значения
+            if (value === undefined){
+                // Если значение отсутствует, то полностью скрываем элемент
+                // Чтобы в тексте не выводилось "undefined"
+                item.style.display = 'none';
+                // Сбарсываем переменную
+                return false;
+            }
+            // Иначе проставляем display block
+            // Чтобы отобразить элемент, если он был скрыт ранее
+            item.style.display = 'block';
+            // Присваиваем значение
+            item.innerHTML = value
+        }
         // Проставляем заголовок
         replaceText('title', item.dataset.title);
         // Описание (текст) в тултипе
