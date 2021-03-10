@@ -193,14 +193,13 @@
   }
 }
 
-
-
 .character{
   position: fixed;
-  height: 40%;
   width: 20%;
   left: 55%;
-  top: 30%;
+  top: calc(52% - (732px / 2));
+  transform: translateY(15%);
+  transition: .15s ease-in-out;
   text-align: center;
 
   h2{
@@ -222,7 +221,26 @@
     }
   }
   img{
-    margin: 25px 0 0;
+    margin: 25px 0 15px;
+  }
+  .btn{
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 48px;
+    padding-left: 64px;
+    text-align: left;
+    &+.btn{
+      margin-top: 10px;
+    }
+  }
+  .wardrobe{
+    background-image: url('#{$url}/icon/wardrobe.png');
+  }
+  .profile{
+    background-image: url('#{$url}/icon/profile.png');
+  }
+  .balance{
+    background-image: url('#{$url}/icon/balance.png');
   }
 }
 
