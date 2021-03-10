@@ -145,7 +145,7 @@
   }
 }
 
-.main-menu-general{
+.dashboard{
   transition: .1s ease-in-out;
   .row{
     margin: 0 -10px;
@@ -260,6 +260,166 @@
       width: 100%;
       margin: 0 0 0 10px;
       top: calc(50% - 2px);
+    }
+  }
+}
+
+.companions{
+  position: fixed;
+  background: alpha(#000, .3);
+  height: 100%;
+  width: 330px;
+  right: 0;
+  top: 0;
+  opacity: .5;
+  transform: translateX(calc(100% - 100px));
+
+  $duration:.15s;
+  transition: $duration ease-in-out;
+
+  &:hover{
+    background: alpha(#000, .7);
+    opacity: 1;
+    transform: translateX(0);
+    &::before{
+      width: 100%;
+    }
+  }
+  &:not(:hover){
+    h2, h3, .col{
+      opacity: 0;
+      transition: $duration ease-in-out;
+    }
+  }
+  &::before{
+    content:'';
+    position: absolute;
+    //background: alpha(#000, .7);
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    transition: $duration ease-in-out;
+    z-index: 0;
+  }
+  .column{
+    position: relative;
+    padding: 12px 18px;
+    max-height: 100%;
+    overflow: hidden scroll;
+    z-index: 1;
+
+    &::-webkit-scrollbar {
+      background: var(--gray-800);
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray-700);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-600);
+    }
+  }
+  .row{
+    margin:0;
+  }
+  .col{
+    padding: 0 10px;
+  }
+  .group{
+
+    &:not(:first-of-type){
+      margin-top: 25px;
+    }
+  }
+  .user{
+    --color: var(--white);
+    border-radius: 5px;
+    align-items: center;
+
+    &:hover{
+      background: var(--white);
+      --color: var(--black);
+    }
+    &:not(:first-child){
+      margin-top: 8px;
+    }
+    h4{
+      font-size: 16px;
+      color: var(--color);
+    }
+    p{
+      font-size: 14px;
+      color: var(--color);
+      margin: 5px 0 0;
+    }
+  }
+  .image{
+    display: inline-block;
+    background-color: alpha(#fff, .1);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 0;
+    width: 64px;
+    height: 64px;
+  }
+  img{
+    display: block;
+    object-position: center;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  h2{
+    padding: 15px 0;
+    color: $white;
+    text-transform: uppercase;
+  }
+  h3{
+    color: $gray;
+    margin: 0 0 15px;
+  }
+  .mark{
+    color: $aqua;
+  }
+  .online{
+    .user{
+      --color: var(--aqua);
+      &:hover{
+        background: var(--aqua);
+        --color: var(--aqua-shadow);
+      }
+    }
+    .image{
+      background-color: alpha($aqua, .15);
+    }
+  }
+  .offline{
+    .user{
+      --color: var(--dark-gray);
+    }
+    .mark{
+      color: $dark-gray;
+    }
+  }
+  .nearby{
+    .mark, p{
+      color: $gold;
+    }
+    .user{
+      --color: var(--gray);
+      &:hover{
+        background-color: $gold;
+        --color: var(--black);
+        p{
+          color:$black;
+        }
+      }
+    }
+    .image{
+      background-color: alpha($gold, .15);
     }
   }
 }
