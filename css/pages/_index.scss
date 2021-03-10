@@ -197,6 +197,49 @@
 
   .btn{
     padding: 135px 0 15px;
+    &:not(.disabled){
+      // Навигация
+      &.donate{
+        background-image: url('#{$url}/icon/donate.png');
+      }
+      &.shop{
+        background-image: url('#{$url}/icon/shop.png');
+      }
+      &.cases{
+        background-image: url('#{$url}/icon/cases.png');
+      }
+      &.kits{
+        background-image: url('#{$url}/icon/kits.png');
+      }
+
+      // Аукцион
+      &.auction{
+        background-image: url('#{$url}/icon/auction.png');
+      }
+      &.buy{
+        background-image: url('#{$url}/icon/buy.png');
+      }
+      &.sell{
+        background-image: url('#{$url}/icon/sell.png');
+      }
+      &.cart{
+        background-image: url('#{$url}/icon/cart.png');
+        &:hover{
+          color: var(--shadow);
+        }
+      }
+
+      // Помощь
+      &.vk{
+        background-image: url('#{$url}/icon/vk.png');
+      }
+      &.banned{
+        background-image: url('#{$url}/icon/banned.png');
+      }
+      &.exchange{
+        background-image: url('#{$url}/icon/exchange.png');
+      }
+    }
   }
   h2{
     position: relative;

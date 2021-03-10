@@ -40,6 +40,12 @@
       --background: var(--gold-back);
       --color: var(--gold);
     }
+    &.red,
+    &.red-hover:hover{
+      --shadow: var(--red-shadow);
+      --background: var(--red-back);
+      --color: var(--red);
+    }
     &.green,
     &.green-hover:hover{
       --shadow: var(--green-shadow);
@@ -51,6 +57,12 @@
       --shadow: var(--blue-shadow);
       --background: var(--blue-back);
       --color: var(--blue);
+    }
+    &.aqua,
+    &.aqua-hover:hover{
+      --shadow: var(--aqua-shadow);
+      --background: var(--aqua-back);
+      --color: var(--aqua);
     }
     &.light-purple,
     &.light-purple-hover:hover{
@@ -66,6 +78,7 @@
     }
 
     &.gold,
+    &.red,
     &.green,
     &.blue,
     &.light-purple,
@@ -73,31 +86,6 @@
       &:hover{
         --shadow: var(--color);
       }
-    }
-
-    // Навигация
-    &.donate{
-      background-image: url('#{$url}/icon/donate.png');
-    }
-    &.shop{
-      background-image: url('#{$url}/icon/shop.png');
-    }
-    &.cases{
-      background-image: url('#{$url}/icon/cases.png');
-    }
-    &.kits{
-      background-image: url('#{$url}/icon/kits.png');
-    }
-
-    // Остальное
-    &.auction{
-      background-image: url('#{$url}/icon/auction.png');
-    }
-    &.banned{
-      background-image: url('#{$url}/icon/banned.png');
-    }
-    &.exchange{
-      background-image: url('#{$url}/icon/exchange.png');
     }
   }
 

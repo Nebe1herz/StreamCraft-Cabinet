@@ -51,8 +51,16 @@
     color: $white;
     text-shadow: 2px 2px $white-shadow;
   }
+  .gray{
+    color: $gray;
+    text-shadow: 2px 2px $gray-shadow;
+  }
   .red{
     color: $red;
     text-shadow: 2px 2px $red-shadow;
+  }
+  .light-purple{
+    color: $light-purple;
+    text-shadow: 2px 2px $light-purple-shadow;
   }
 }

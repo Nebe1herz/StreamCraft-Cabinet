@@ -20,7 +20,12 @@
     <div id="overlay">
         <div class="main-menu">
             <!-- Кнопка закрытия окна *** справа сверху -->
-            <button id="overlayClose"></button>
+            <button
+                    id="overlayClose"
+                    class="tooltip-trigger"
+                    data-title="<span class=gray>Закрыть меню<span>"
+            >
+            </button>
             <!-- Левый сайдбар с "опции", "выход" и прочее -->
             <div class="sidebar">
                 <div class="row align-items-center justify-content-start flex-column">
@@ -76,6 +81,7 @@
                             data-meta="Всё самое важное, нужное и интересное публикуется на нашем сайте!"
                             data-note="Кликните, чтобы открыть"
                     ></button>
+                    <!-- Техническая поддержка -->
                     <button
                             class="help tooltip-trigger"
                             data-title="
@@ -96,7 +102,7 @@
             <!-- Основной контейнер -->
             <div class="main-menu-general">
                 <div class="group-user">
-                    <h1>Nebelherz</h1>
+                    <h1>Главное меню</h1>
                     <p>
                         Текущая группа: <span class="deluxe">Deluxe</span>
                     </p>
@@ -111,29 +117,54 @@
                                 Открыть профиль
                             </button>
                         </div>
-
                     </div>
                 </div>
                 <div class="group-btn">
                     <h2>Навигация</h2>
                     <div class="row">
                         <div class="col-3">
-                            <button class="btn donate gold">
+                            <button class="btn donate gold tooltip-trigger"
+                                    data-title="
+                                            <span class=gold>Наши привилегии</span>
+                            "
+                                    data-meta="
+                                            Хотите иметь больше приватов, команд и возможностей?
+                                            <br>
+                                            <span class=white>Наши Donate-группы воплотят Ваши мечты в реальности!</span>
+                            "
+                                    data-note="Кликните для перехода"
+                            >
                                 ДОНАТ
                             </button>
                         </div>
                         <div class="col-3">
-                            <button class="btn shop green">
+                            <button class="btn shop green tooltip-trigger"
+                                    data-title="
+                                    <span class=green>Магазин блоков</span>
+                            "
+                                    data-meta="Все самые необходимые ресурсы по бросовой цене, не проходи мимо!"
+                                    data-note="Кликните для перехода"
+                            >
                                 МАГАЗИН
                             </button>
                         </div>
                         <div class="col-3">
-                            <button class="btn cases">
+                            <button class="btn cases light-purple tooltip-trigger"
+                                    data-title="
+                                    <span class=light-purple>Наши кейсы</span>
+                            "
+                                    data-meta="Испытайте свою удачу и получите особо ценные награды!"
+                                    data-note="Кликните для перехода"
+                            >
                                 КЕЙСЫ
                             </button>
                         </div>
                         <div class="col-3">
-                            <button class="btn kits">
+                            <button class="btn kits blue tooltip-trigger"
+                                    data-title="Наборы ресурсов"
+                                    data-meta="Воплотите свои самые смелые фантазии в жизнь;)"
+                                    data-note="Кликните для перехода"
+                            >
                                 НАБОРЫ
                             </button>
                         </div>
@@ -143,11 +174,56 @@
                     <h2>Аукцион сервера</h2>
                     <div class="row">
                         <div class="col-3">
-                            <button class="btn auction gold">
+                            <button class="btn auction gold-hover tooltip-trigger"
+                                    data-title="
+                                            <span class=gold>Аукцион предметов</span>
+                                    "
+                                    data-meta="
+                                            Здесь можно продавать или покупать у других игроков любые предметы за <span class=gold>КОИНЫ</span>!
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
                                 АУКЦИОН
                             </button>
                         </div>
                         <div class="col-3">
+                            <button class="btn buy light-purple-hover tooltip-trigger"
+                                    data-title="
+                                            <span class=light-purple>Покупка предметов</span>
+                                    "
+                                    data-meta="
+                                            Здесь Вы можете покупать ценные ресурсы и многое другое за <span class=gold>КОИНЫ</span>!
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
+                                КУПИТЬ
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn sell green-hover tooltip-trigger"
+                                    data-title="
+                                            <span class=green>Продажа предметов</span>
+                                    "
+                                    data-meta="
+                                            Здесь Вы можете выставить на продажу любой игровой предмет за <span class=gold>КОИНЫ</span>
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
+                                ПРОДАТЬ
+                            </button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn cart aqua-hover tooltip-trigger"
+                                    data-title="Корзина покупок"
+                                    data-meta="
+                                            Здесь хранятся все Ваши покупки и киты — <span class=gold>/cart</span>
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
+                                КОРЗИНА
+                            </button>
+                        </div>
+                        <!--<div class="col-3">
                             <button class="btn exchange green">
                                 ОБМЕН
                             </button>
@@ -156,26 +232,48 @@
                             <button class="btn banned">
                                 ЗАПРЕТЫ
                             </button>
-                        </div>
+                        </div>-->
                         <div class="col-3"></div>
                     </div>
                 </div>
                 <div class="group-btn">
-                    <h2>Варпы</h2>
+                    <h2>Помощь</h2>
                     <div class="row">
                         <div class="col-3">
-                            <button class="btn disabled">
-                                СПИСОК ВАРПОВ
+                            <button class="btn vk blue-hover tooltip-trigger"
+                                    data-title="Последние новости"
+                                    data-meta="
+                                            Наша группа ВКонтакте, где публикуются самые последние и актуальные новости.
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
+                                НОВОСТИ
                             </button>
                         </div>
                         <div class="col-3">
-                            <button class="btn disabled">
-                                НАСТРОЙКИ ВАРПОВ
+                            <button class="btn exchange green-hover tooltip-trigger"
+                                    data-title="
+                                            <span class=green>Как работает обмен?</span>
+                                    "
+                                    data-meta="
+                                            Гайд по команде <span class=gold>/exchange</span> и как работает система обмена на наших серверах.
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
+                                ОБМЕН
                             </button>
                         </div>
                         <div class="col-3">
-                            <button class="btn disabled">
-                                УЛУЧШЕНИЕ ВАРПОВ
+                            <button class="btn banned red-hover tooltip-trigger"
+                                    data-title="
+                                            <span class=red>Запрещенные предметы</span>
+                                    "
+                                    data-meta="
+                                            Список предметов, которые запрещены на наших серверах.
+                                    "
+                                    data-note="Кликните, чтобы открыть"
+                            >
+                                ЗАПРЕТЫ
                             </button>
                         </div>
                     </div>

@@ -43,16 +43,18 @@ $dark-gray-shadow: #151515;
 // ========================== $9 === синий
 $blue: #5555FF;
 $blue-back: #e6e6ff;
-$blue-shadow: #15153F;
+$blue-shadow: #15153f;
 // ========================== $a === Зеленый
 $green: #55FF55;
 $green-back: #e6ffe6;
 $green-shadow: #153F15;
 // ========================== $b === Сине-зеленый
 $aqua: #55FFFF;
+$aqua-back: #e6ffff;
 $aqua-shadow: #153F3F;
 // ========================== $1 === Красный
 $red: #FF5555;
+$red-back: #ffe6e6;
 $red-shadow: #3F1515;
 // ========================== $c === Фиолетовый
 $light-purple: #FF55FF;
@@ -113,9 +115,11 @@ $white-shadow: #3F3F3F;
   --green-shadow: #{$green-shadow};
 
   --aqua: #{$aqua}; // Сине-еленый $b
+  --aqua-back: #{$aqua-back};
   --aqua-shadow: #{$aqua-shadow};
 
   --red: #{$red}; // Красный $c
+  --red-back: #{$red-back};
   --red-shadow: #{$red-shadow};
 
   --light-purple: #{$light-purple}; // Фиолетовый $d
