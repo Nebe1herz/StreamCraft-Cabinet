@@ -8,6 +8,7 @@
   width: 45%;
   left: -50%;
   top: 0;
+  pointer-events: none;
   transition: .15s ease-in-out;
   box-shadow:
           // Тень на правой внешней границе
@@ -99,7 +100,7 @@
     border: none;
     width: 100%;
     font-size: 0;
-    height: 86px;
+    height: 84px;
     outline: none;
     cursor: pointer;
     image-rendering: pixelated;
@@ -160,6 +161,7 @@
     font-weight: normal;
     font-size: 42px;
     color: var(--gray-900);
+    margin: 0 0 5px;
   }
   p{
     line-height: 1.5;
