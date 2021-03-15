@@ -161,86 +161,25 @@
     font-weight: normal;
     font-size: 42px;
     color: var(--gray-900);
-    margin: 0 0 5px;
-  }
-  p{
-    line-height: 1.5;
-    font-size: 18px;
-    color: var(--dark-gray);
-  }
-  span{
-    --shadow: transparent;
-    text-shadow: 2px 2px var(--shadow);
-  }
-  .deluxe{
-    --shadow: var(--light-purple-shadow);
-    color: var(--light-purple);
+    margin: 0 0 15px;
   }
   .btn{
+    display: inline-block;
+    background-image: url('#{$url}/icon/balance.png');
+    background-position: 6px center;
     background-repeat: no-repeat;
-    background-position: 4px 0;
-    background-size: 32px;
+    background-size: 36px;
+    padding: 10px 20px 10px 48px;
     font-size: 18px;
-    padding: 8px 8px 8px 42px;
+    width: unset;
+    //min-width: 33%;
+    margin-right: 12px;
     text-align: left;
-  }
-  .balance{
-    background-image: url('#{$url}/icon/balance.png');
-    background-position-y: 2px;
-  }
-  .user{
-    background-image: url('#{$url}/icon/user.png');
-  }
-}
+    image-rendering: pixelated;
 
-.character{
-  position: fixed;
-  width: 20%;
-  left: 55%;
-  top: calc(52% - (732px / 2));
-  transform: translateY(15%);
-  transition: .15s ease-in-out;
-  text-align: center;
-
-  h2{
-    font-weight: normal;
-    font-size: 36px;
-    color: $white;
-    text-shadow: 4px 4px $white-shadow;
-  }
-  p{
-    font-size: 24px;
-    margin: 10px 0 0;
-    .green{
-      color: $green;
-      text-shadow: 2px 2px $green-shadow;
+    &.coins{
+      background-image:url('#{$url}/icon/coins.png')
     }
-    .red{
-      color: $red;
-      text-shadow: 2px 2px $red-shadow;
-    }
-  }
-  img{
-    margin: 25px 0 15px;
-  }
-  .btn{
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    background-size: 48px;
-    padding-left: 64px;
-    text-align: left;
-    &+.btn{
-      margin-top: 10px;
-    }
-  }
-  .wardrobe{
-    background-image: url('#{$url}/icon/wardrobe.png');
-  }
-  .profile{
-    background-image: url('#{$url}/icon/profile.png');
-  }
-  .balance{
-    background-image: url('#{$url}/icon/balance.png');
   }
 }
 
@@ -312,6 +251,61 @@
       margin: 0 0 0 10px;
       top: calc(50% - 2px);
     }
+  }
+}
+
+.character{
+  position: fixed;
+  width: 20%;
+  left: 55%;
+  top: calc(55% - (732px / 2));
+  transform: translateY(15%);
+  transition: .15s ease-in-out;
+  text-align: center;
+
+  h2{
+    font-weight: normal;
+    font-size: 36px;
+    color: $white;
+    text-shadow: 4px 4px $white-shadow;
+  }
+  p{
+    font-size: 24px;
+    margin: 10px 0 0;
+    .green{
+      color: $green;
+      text-shadow: 2px 2px $green-shadow;
+    }
+    .red{
+      color: $red;
+      text-shadow: 2px 2px $red-shadow;
+    }
+  }
+  img{
+    margin: 25px 0 15px;
+  }
+  .btn{
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 48px;
+    padding-left: 64px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+
+    &+.btn{
+      margin-top: 10px;
+    }
+  }
+  .wardrobe{
+    background-image: url('#{$url}/icon/wardrobe.png');
+  }
+  .profile{
+    background-image: url('#{$url}/icon/profile.png');
+  }
+  .balance{
+    background-image: url('#{$url}/icon/balance.png');
   }
 }
 
