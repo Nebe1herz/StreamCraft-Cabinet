@@ -12,7 +12,7 @@ document.body.onclick = (e) => {
         case 'overlay':
             document.body.classList.toggle(checked);
             break;
-        case 'overlayClose':
+        case 'overlay_close':
             document.body.classList.remove(checked);
             break;
     }
