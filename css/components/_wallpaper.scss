@@ -20,7 +20,7 @@ body{
   }
   // Стиль, открывающий (инициилизирующий) #overlay
   &.overlay-check{
-    #overlay{
+    .overlay{
       opacity: 1;
     }
     .main-menu{
@@ -36,7 +36,7 @@ body{
 // Основной контейнер
 // Для модалок и экранов кабинета
 // С затемнением *** блюром фона
-#overlay{
+.overlay{
   position: absolute;
   background: #{alpha(#000, .7)};
   height: 100%;

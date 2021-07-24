@@ -8,11 +8,11 @@ const randomNum = (min, max) => Math.floor(Math.random()*(max-min+1)+min),
 
 // Обработчик кликов для открытия/закрытия главного меню
 document.body.onclick = (e) => {
-    switch(e.target.id){
-        case "overlay":
+    switch(e.target.className){
+        case 'overlay':
             document.body.classList.toggle(checked);
             break;
-        case "overlayClose":
+        case 'overlayClose':
             document.body.classList.remove(checked);
             break;
     }
