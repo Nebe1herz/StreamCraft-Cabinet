@@ -31,14 +31,14 @@ let item = document.querySelectorAll('.tooltip-trigger');
 // Работает хер знает как (с божьей помощью)
 // Реализацию взял со своего старого проекта, вникать времени нет :-(
 item.forEach((item) =>{
-    // Получаем контейнер тултипа по ID
-    let tooltip = document.getElementById('tooltip');
+    // Получаем контейнер тултипа
+    let tooltip = document.getElementsByClassName('tooltip')[0];
     // Накидываем события при наведении
     item.addEventListener('mouseover', () =>{
         // Заменяем содержание тултпиа на нужное
         const replaceText = (selector, value) => {
-            // Для сокразения записи селектор элемента присваиваем переменной
-            const item = tooltip.getElementsByClassName(selector)[0];
+            // Для сокращения записи селектор элемента присваиваем переменной
+            const item = tooltip.getElementsByClassName(`tooltip__${selector}`)[0];
             // Проверка на отсутствие значения
             if (value === undefined){
                 // Если значение отсутствует, то полностью скрываем элемент
@@ -56,9 +56,9 @@ item.forEach((item) =>{
         // Проставляем заголовок
         replaceText('title', item.dataset.title);
         // Описание (текст) в тултипе
-        replaceText('meta', item.dataset.meta);
+        replaceText('row', item.dataset.row);
         // Синяя "заметка", самая нижняя строчка
-        replaceText('note', item.dataset.note);
+        replaceText('meta', item.dataset.meta);
     });
     // Если мышь покинула элемент
     // Отключаем тултип
