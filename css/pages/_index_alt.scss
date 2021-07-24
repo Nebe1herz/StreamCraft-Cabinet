@@ -31,7 +31,7 @@
   .overlay_close {
     position: absolute;
     border: none;
-    background: url('#{$url}/icon/close.png') no-repeat center;
+    background: url('#{$url}/alt/close.png') no-repeat center;
     background-size: 48px;
     height: 64px;
     width: 64px;
@@ -119,24 +119,24 @@
     image-rendering: auto;
   }
   .achievements{
-    background-image: url('#{$url}/icon/achievements.png');
+    background-image: url('#{$url}/alt/achievements.png');
   }
   .stats{
-    background-image: url('#{$url}/icon/stats.png');
+    background-image: url('#{$url}/alt/stats.png');
   }
   .settings{
-    background-image: url('#{$url}/icon/settings.png');
+    background-image: url('#{$url}/alt/settings.png');
   }
   .globe{
-    background-image: url('#{$url}/icon/globe.png');
+    background-image: url('#{$url}/alt/globe.png');
     background-size: 56px;
   }
   .help{
-    background-image: url('#{$url}/icon/help.png');
+    background-image: url('#{$url}/alt/help.png');
   }
   .exit{
     background-color: darken($red-shadow, 7%);
-    background-image: url('#{$url}/icon/exit.png');
+    background-image: url('#{$url}/alt/exit.png');
     margin-top: auto!important;
 
     &:hover{
@@ -165,7 +165,7 @@
   }
   .btn{
     display: inline-block;
-    background-image: url('#{$url}/icon/balance.png');
+    background-image: url('#{$url}/alt/balance.png');
     background-position: 6px center;
     background-repeat: no-repeat;
     background-size: 36px;
@@ -178,7 +178,7 @@
     image-rendering: pixelated;
 
     &.coins{
-      background-image:url('#{$url}/icon/coins.png')
+      background-image:url('#{$url}/alt/coins.png')
     }
   }
 }
@@ -192,30 +192,30 @@
     &:not(.disabled){
       // Навигация
       &.donate{
-        background-image: url('#{$url}/icon/donate.png');
+        background-image: url('#{$url}/alt/donate.png');
       }
       &.shop{
-        background-image: url('#{$url}/icon/shop.png');
+        background-image: url('#{$url}/alt/shop.png');
       }
       &.cases{
-        background-image: url('#{$url}/icon/cases.png');
+        background-image: url('#{$url}/alt/cases.png');
       }
       &.kits{
-        background-image: url('#{$url}/icon/kits.png');
+        background-image: url('#{$url}/alt/kits.png');
       }
 
       // Аукцион
       &.auction{
-        background-image: url('#{$url}/icon/auction.png');
+        background-image: url('#{$url}/alt/auction.png');
       }
       &.buy{
-        background-image: url('#{$url}/icon/buy.png');
+        background-image: url('#{$url}/alt/buy.png');
       }
       &.sell{
-        background-image: url('#{$url}/icon/sell.png');
+        background-image: url('#{$url}/alt/sell.png');
       }
       &.cart{
-        background-image: url('#{$url}/icon/cart.png');
+        background-image: url('#{$url}/alt/cart.png');
         &:hover{
           color: var(--shadow);
         }
@@ -223,13 +223,13 @@
 
       // Помощь
       &.vk{
-        background-image: url('#{$url}/icon/vk.png');
+        background-image: url('#{$url}/alt/vk.png');
       }
       &.banned{
-        background-image: url('#{$url}/icon/banned.png');
+        background-image: url('#{$url}/alt/banned.png');
       }
       &.exchange{
-        background-image: url('#{$url}/icon/exchange.png');
+        background-image: url('#{$url}/alt/exchange.png');
       }
     }
   }
@@ -299,13 +299,13 @@
     }
   }
   .wardrobe{
-    background-image: url('#{$url}/icon/wardrobe.png');
+    background-image: url('#{$url}/alt/wardrobe.png');
   }
   .profile{
-    background-image: url('#{$url}/icon/profile.png');
+    background-image: url('#{$url}/alt/profile.png');
   }
   .balance{
-    background-image: url('#{$url}/icon/balance.png');
+    background-image: url('#{$url}/alt/balance.png');
   }
 }
 
