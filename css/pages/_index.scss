@@ -11,7 +11,9 @@
 
   // Группа кнопок
   &__group{
-    font-size: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 160px);
+    grid-gap: 24px;
 
     // Заголовок группы
     &-heading{
@@ -20,34 +22,48 @@
     // Кнопка
     &__btn{
       display: flex;
-      //border-radius: 20px;
-      background: alpha($black, .6);
       width: 160px;
       height: 130px;
-      //padding: 15px 0 20px;
-      box-shadow:
-              0 -20px 0 -10px alpha($black, .6),
-              0 20px 0 -10px alpha($black, .6);
+      @include index-menu__btn($black);
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      // Отступы между кнопками
-      &:not(:first-of-type) {
-        margin-right: 10px;
+      &:hover{
+        @include index-menu__btn($dark-gray, .4);
+      }
+
+      // Модификатор цвета
+      &_danger{
+        @include index-menu__btn($dark-red-shadow);
+
+        &:hover{
+          @include index-menu__btn($dark-red, .4);
+        }
       }
 
       // Картинка в кнопке
       &-img{
-        width: 70px;
-        image-rendering: high-quality;
+        width: 60px;
+        margin: auto;
+        image-rendering: pixelated;
+
+        // Модификатор размера
+        &_size{
+          // Голова скина
+          &_head{
+            width: 70px;
+            image-rendering: high-quality;
+          }
+        }
       }
+
       // Текст в кнопке
       &-text{
         display: block;
         font-size: 16px;
         color: $white;
-        margin: 10px 0 0;
+        margin: 0 0 15px;
         text-shadow: 3px 3px $white-shadow;
       }
     }

@@ -2,10 +2,12 @@
 @mixin pixelated{
   image-rendering: pixelated;
 }
+
 // Сокращение записи для обозначения альфа-канала
 @function alpha($color, $value) {
   @return transparentize($color, 1 - $value);
 }
+
 // Для тултипа
 @mixin bordered($color, $width: 5){
   box-shadow:
@@ -13,4 +15,12 @@
           0 $width+px $color,
           (-$width)+px 0 $color,
           $width+px 0 $color;
+}
+
+// Цветовой модификатор элемента
+@mixin index-menu__btn($color, $alpha: .6) {
+  background: alpha($color, $alpha);
+  box-shadow:
+          0 -20px 0 -10px alpha($color, $alpha),
+          0 20px 0 -10px alpha($color, $alpha);
 }
