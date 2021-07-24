@@ -33,6 +33,7 @@ let item = document.querySelectorAll('.tooltip-trigger');
 item.forEach((item) =>{
     // Получаем контейнер тултипа
     let tooltip = document.getElementsByClassName('tooltip')[0];
+
     // Накидываем события при наведении
     item.addEventListener('mouseover', () =>{
         // Заменяем содержание тултпиа на нужное
@@ -60,15 +61,26 @@ item.forEach((item) =>{
         // Синяя "заметка", самая нижняя строчка
         replaceText('meta', item.dataset.meta);
     });
+
     // Если мышь покинула элемент
     // Отключаем тултип
     item.addEventListener('mouseout', () =>{
         tooltip.style.display="none";
     });
+
     // Перемещение тултипа за мышью
     item.addEventListener('mousemove', (event) =>{
-        let y = event.clientY,
-            x = event.clientX + 15;
+        let // Ширина тултипа
+            tooltipWidth = tooltip.offsetWidth,
+            // Ширина окна
+            windowWidth = document.documentElement.clientWidth,
+            // Координаты
+            y = event.clientY,
+            // Проверка на выход за пределы окна
+            x = ((document.body.offsetWidth - event.clientX) > 350)
+                ? event.clientX + 15
+                : event.clientX - (tooltipWidth + 15);
+
         tooltip.style.cssText = `top:${y}px;left:${x}px`;
     });
 });
