@@ -1,0 +1,470 @@
+// Главное меню (основной экран)
+.main-menu{
+  position: fixed;
+  //border-right: 4px solid var(--gray-900);
+  background: var(--gray-200);
+  padding: 12px 0 12px #{$sideBarWidth + 8px};
+  height: 100%;
+  width: 45%;
+  left: -50%;
+  top: 0;
+  pointer-events: none;
+  transition: .15s ease-in-out;
+  box-shadow:
+          // Тень на правой внешней границе
+          20px 0 0 -12px var(--gray-600),
+          14px 2px 0 -10px var(--gray-600),
+          12px 0 0 -8px var(--gray-200),
+          // Правая внешняя граница (ЧЕРНАЯ)
+          8px 0 0 -4px var(--gray-900),
+          16px 0 0 -8px var(--gray-900),
+          24px 0 0 -12px var(--gray-900),
+          // Верхняя и нижняя внутренние границы
+          inset 0 4px var(--gray-900), // Верхняя граница
+          inset 0 12px var(--white), // Тень у верхней границы
+          inset 0 -4px var(--gray-900), // Нижняя граница
+          inset 0 -12px var(--gray-600), // Тень у нижней границы
+          // Левая внутренняя граница  *** прилегающая к сайдбару
+          inset #{$sideBarWidth + 8px} 0 var(--white)
+  ;
+
+  #overlayClose {
+    position: absolute;
+    border: none;
+    background: url('#{$url}/icon/close.png') no-repeat center;
+    background-size: 48px;
+    height: 64px;
+    width: 64px;
+    top: 32px;
+    right: 20px;
+    cursor: pointer;
+    outline: none;
+    image-rendering: pixelated;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+
+// Левый сайдбар с кнопками настроек, выхода ачивок итд
+.sidebar{
+  position: absolute;
+  height: 100%;
+  width: $sideBarWidth;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  // TODO
+  // один из вариантов стилизации сайдбара
+  // ховер-эффект выдвижения
+  /*&:hover{
+    &::before{
+      width: 400px;
+      box-shadow: -45px 0 45px 45px alpha(#000, .5);
+    }
+    &~{
+      .main-menu-general{
+        opacity: .4;
+      }
+    }
+  }*/
+
+  &::before{
+    content:'';
+    display: block;
+    position: absolute;
+    background: var(--gray-900);
+    width: $sideBarWidth;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: .1s ease-in-out;
+    z-index: 0;
+  }
+  .row{
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 12px 6px;
+    z-index: 1;
+  }
+  button{
+    display: inline-block;
+    background-color: $dark-gray-shadow;
+    background-repeat: no-repeat;
+    background-size: 48px;
+    background-position: center;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-size: 0;
+    height: 84px;
+    outline: none;
+    cursor: pointer;
+    image-rendering: pixelated;
+
+    &:not(:first-child){
+      margin-top: 12px;
+    }
+
+    &:hover{
+      background-color: $gray-shadow;
+    }
+  }
+  .user{
+    background-image: url('#{$url}/heads/head-3.png');
+    background-size: 64px;
+    image-rendering: auto;
+  }
+  .achievements{
+    background-image: url('#{$url}/icon/achievements.png');
+  }
+  .stats{
+    background-image: url('#{$url}/icon/stats.png');
+  }
+  .settings{
+    background-image: url('#{$url}/icon/settings.png');
+  }
+  .globe{
+    background-image: url('#{$url}/icon/globe.png');
+    background-size: 56px;
+  }
+  .help{
+    background-image: url('#{$url}/icon/help.png');
+  }
+  .exit{
+    background-color: darken($red-shadow, 7%);
+    background-image: url('#{$url}/icon/exit.png');
+    margin-top: auto!important;
+
+    &:hover{
+      background-color: $red-shadow;
+    }
+  }
+}
+
+.dashboard{
+  transition: .1s ease-in-out;
+  .row{
+    margin: 0 -10px;
+  }
+  [class*="col"]{
+    padding:10px;
+  }
+}
+
+.group-user{
+  padding: 35px 25px 0;
+  h1{
+    font-weight: normal;
+    font-size: 42px;
+    color: var(--gray-900);
+    margin: 0 0 15px;
+  }
+  .btn{
+    display: inline-block;
+    background-image: url('#{$url}/icon/balance.png');
+    background-position: 6px center;
+    background-repeat: no-repeat;
+    background-size: 36px;
+    padding: 10px 20px 10px 48px;
+    font-size: 18px;
+    width: unset;
+    //min-width: 33%;
+    margin-right: 12px;
+    text-align: left;
+    image-rendering: pixelated;
+
+    &.coins{
+      background-image:url('#{$url}/icon/coins.png')
+    }
+  }
+}
+
+.group-btn{
+  padding: 0 25px;
+  margin: 20px 0 0;
+
+  .btn{
+    padding: 135px 0 15px;
+    &:not(.disabled){
+      // Навигация
+      &.donate{
+        background-image: url('#{$url}/icon/donate.png');
+      }
+      &.shop{
+        background-image: url('#{$url}/icon/shop.png');
+      }
+      &.cases{
+        background-image: url('#{$url}/icon/cases.png');
+      }
+      &.kits{
+        background-image: url('#{$url}/icon/kits.png');
+      }
+
+      // Аукцион
+      &.auction{
+        background-image: url('#{$url}/icon/auction.png');
+      }
+      &.buy{
+        background-image: url('#{$url}/icon/buy.png');
+      }
+      &.sell{
+        background-image: url('#{$url}/icon/sell.png');
+      }
+      &.cart{
+        background-image: url('#{$url}/icon/cart.png');
+        &:hover{
+          color: var(--shadow);
+        }
+      }
+
+      // Помощь
+      &.vk{
+        background-image: url('#{$url}/icon/vk.png');
+      }
+      &.banned{
+        background-image: url('#{$url}/icon/banned.png');
+      }
+      &.exchange{
+        background-image: url('#{$url}/icon/exchange.png');
+      }
+    }
+  }
+  h2{
+    position: relative;
+    color: var(--gray-700);
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0 0 5px;
+    overflow: hidden;
+
+    &::after{
+      content:'';
+      display: inline-block;
+      position: absolute;
+      background: var(--gray-400);
+      height: 4px;
+      width: 100%;
+      margin: 0 0 0 10px;
+      top: calc(50% - 2px);
+    }
+  }
+}
+
+.character{
+  position: fixed;
+  width: 20%;
+  left: 55%;
+  top: calc(55% - (732px / 2));
+  transform: translateY(15%);
+  transition: .15s ease-in-out;
+  text-align: center;
+
+  h2{
+    font-weight: normal;
+    font-size: 36px;
+    color: $white;
+    text-shadow: 4px 4px $white-shadow;
+  }
+  p{
+    font-size: 24px;
+    margin: 10px 0 0;
+    .green{
+      color: $green;
+      text-shadow: 2px 2px $green-shadow;
+    }
+    .red{
+      color: $red;
+      text-shadow: 2px 2px $red-shadow;
+    }
+  }
+  img{
+    margin: 25px 0 15px;
+  }
+  .btn{
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 48px;
+    padding-left: 64px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+
+    &+.btn{
+      margin-top: 10px;
+    }
+  }
+  .wardrobe{
+    background-image: url('#{$url}/icon/wardrobe.png');
+  }
+  .profile{
+    background-image: url('#{$url}/icon/profile.png');
+  }
+  .balance{
+    background-image: url('#{$url}/icon/balance.png');
+  }
+}
+
+.companions{
+  position: fixed;
+  background: alpha(#000, .3);
+  height: 100%;
+  width: 330px;
+  right: 0;
+  top: 0;
+  opacity: .5;
+  transform: translateX(calc(100% - 100px));
+
+  $duration:.15s;
+  transition: $duration ease-in-out;
+
+  &:hover{
+    background: alpha(#000, .7);
+    opacity: 1;
+    transform: translateX(0);
+    &::before{
+      width: 100%;
+    }
+  }
+  &:not(:hover){
+    h2, h3, .col{
+      opacity: 0;
+      transition: $duration ease-in-out;
+    }
+  }
+  &::before{
+    content:'';
+    position: absolute;
+    //background: alpha(#000, .7);
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    transition: $duration ease-in-out;
+    z-index: 0;
+  }
+  .column{
+    position: relative;
+    padding: 12px 18px;
+    max-height: 100%;
+    overflow: hidden scroll;
+    z-index: 1;
+
+    &::-webkit-scrollbar {
+      background: var(--gray-800);
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray-700);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-600);
+    }
+  }
+  .row{
+    margin:0;
+  }
+  .col{
+    padding: 0 10px;
+  }
+  .group{
+
+    &:not(:first-of-type){
+      margin-top: 25px;
+    }
+  }
+  .user{
+    --color: var(--white);
+    border-radius: 5px;
+    align-items: center;
+
+    &:hover{
+      background: var(--white);
+      --color: var(--black);
+    }
+    &:not(:first-child){
+      margin-top: 8px;
+    }
+    h4{
+      font-size: 16px;
+      color: var(--color);
+    }
+    p{
+      font-size: 14px;
+      color: var(--color);
+      margin: 5px 0 0;
+    }
+  }
+  .image{
+    display: inline-block;
+    background-color: alpha(#fff, .1);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 0;
+    width: 64px;
+    height: 64px;
+  }
+  img{
+    display: block;
+    object-position: center;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  h2{
+    padding: 15px 0;
+    color: $white;
+    text-transform: uppercase;
+  }
+  h3{
+    color: $gray;
+    margin: 0 0 15px;
+  }
+  .mark{
+    color: $aqua;
+  }
+  .online{
+    .user{
+      --color: var(--aqua);
+      &:hover{
+        background: var(--aqua);
+        --color: var(--aqua-shadow);
+      }
+    }
+    .image{
+      background-color: alpha($aqua, .15);
+    }
+  }
+  .offline{
+    .user{
+      --color: var(--dark-gray);
+    }
+    .mark{
+      color: $dark-gray;
+    }
+  }
+  .nearby{
+    .mark, p{
+      color: $gold;
+    }
+    .user{
+      --color: var(--gray);
+      &:hover{
+        background-color: $gold;
+        --color: var(--black);
+        p{
+          color:$black;
+        }
+      }
+    }
+    .image{
+      background-color: alpha($gold, .15);
+    }
+  }
+}
