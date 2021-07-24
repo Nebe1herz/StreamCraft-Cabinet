@@ -1,0 +1,55 @@
+.index-menu{
+
+  // Заголовок h1
+  &__heading{
+    line-height: 4;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 5px 5px $white-shadow;
+    text-align: center;
+  }
+
+  // Группа кнопок
+  &__group{
+    font-size: 0;
+
+    // Заголовок группы
+    &-heading{
+
+    }
+    // Кнопка
+    &__btn{
+      display: flex;
+      //border-radius: 20px;
+      background: alpha($black, .6);
+      width: 160px;
+      height: 130px;
+      //padding: 15px 0 20px;
+      box-shadow:
+              0 -20px 0 -10px alpha($black, .6),
+              0 20px 0 -10px alpha($black, .6);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      // Отступы между кнопками
+      &:not(:first-of-type) {
+        margin-right: 10px;
+      }
+
+      // Картинка в кнопке
+      &-img{
+        width: 70px;
+        image-rendering: high-quality;
+      }
+      // Текст в кнопке
+      &-text{
+        display: block;
+        font-size: 16px;
+        color: $white;
+        margin: 10px 0 0;
+        text-shadow: 3px 3px $white-shadow;
+      }
+    }
+  }
+}

@@ -38,7 +38,7 @@ body{
 // С затемнением *** блюром фона
 .overlay{
   position: absolute;
-  background: #{alpha(#000, .7)};
+  background: #{alpha(#000, .8)};
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -50,6 +50,18 @@ body{
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
+}
+
+// Контейнер для ограничения по ширине
+.wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+
+  // TODO remove
+  //box-shadow: 0 0 1px #fff;
+  min-height: 100vh;
 }
 
 // Реализация со всеми тенями стиля стандартного GUI
