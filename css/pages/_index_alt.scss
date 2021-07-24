@@ -28,7 +28,7 @@
           inset #{$sideBarWidth + 8px} 0 var(--white)
   ;
 
-  #overlayClose {
+  .overlayClose {
     position: absolute;
     border: none;
     background: url('#{$url}/icon/close.png') no-repeat center;

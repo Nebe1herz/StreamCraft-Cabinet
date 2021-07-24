@@ -8,7 +8,7 @@ const randomNum = (min, max) => Math.floor(Math.random()*(max-min+1)+min),
 
 // Обработчик кликов для открытия/закрытия главного меню
 document.body.onclick = (e) => {
-    switch(e.target.className){
+    switch(e.target.classList[0]){
         case 'overlay':
             document.body.classList.toggle(checked);
             break;
