@@ -2,7 +2,7 @@
 .idea
 .git
 .sass-cache
-other
+temp
 # Files
 style.css
 *.map
