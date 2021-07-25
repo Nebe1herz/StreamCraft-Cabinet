@@ -20,7 +20,12 @@
 <div class="overlay">
     <div class="wrapper">
         <div class="index-menu">
-            <h1 class="index-menu__heading">ГЛАВНОЕ МЕНЮ</h1>
+            <h1 class="index-menu__heading">Главное меню</h1>
+            <button class="overlay_close
+                           tooltip-trigger"
+                    data-title="<span class=gray>Закрыть меню<span>"
+            >
+            </button>
             <!-- Основное -->
             <div class="index-menu__group">
                 <a href="#"
@@ -90,34 +95,10 @@
                          class="index-menu__group__btn-img">
                     <span class="index-menu__group__btn-text">Настройки</span>
                 </a>
-                <a href="#"
-                   class="index-menu__group__btn tooltip-trigger"
-                   data-title="
-                                    <span class=green>Вам нужна помощь?</span>
-                            "
-                   data-row="Напишите в нашу техническую поддержку, мы Вам поможем! =)"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/help.png" alt
-                         class="index-menu__group__btn-img">
-                    <span class="index-menu__group__btn-text">Помощь</span>
-                </a>
-                <a href="#"
-                   class="index-menu__group__btn
-                          index-menu__group__btn_red
-                          tooltip-trigger"
-                   data-title="
-                                    <span class=red>Выход с сервера<span>
-                            "
-                >
-                    <img src="images/icon/exit.png" alt
-                         class="index-menu__group__btn-img">
-                    <span class="index-menu__group__btn-text">Выход</span>
-                </a>
             </div>
             <!-- Второстепенное -->
             <div class="index-menu__group">
-                <h2 class="index-menu__group-heading">НАВИГАЦИЯ</h2>
+                <!--<h2 class="index-menu__group-heading">Второй заголовок</h2>-->
                 <a href="#"
                    class="index-menu__group__btn
                           index-menu__group__btn_gold
@@ -138,7 +119,7 @@
                 </a>
                 <a href="#"
                    class="index-menu__group__btn
-                          index-menu__group__btn_green
+                          index-menu__group__btn_green-hover
                           tooltip-trigger"
                    data-title="
                             <span class=green>Магазин блоков</span>
@@ -152,7 +133,7 @@
                 </a>
                 <a href="#"
                    class="index-menu__group__btn
-                          index-menu__group__btn_purple
+                          index-menu__group__btn_purple-hover
                           tooltip-trigger"
                    data-title="
                             <span class=light-purple>Наши кейсы</span>
@@ -166,7 +147,7 @@
                 </a>
                 <a href="#"
                    class="index-menu__group__btn
-                          index-menu__group__btn_aqua
+                          index-menu__group__btn_aqua-hover
                           tooltip-trigger"
                    data-title="Наборы ресурсов"
                    data-row="Воплотите свои самые смелые фантазии в жизнь;)"
@@ -176,14 +157,86 @@
                          class="index-menu__group__btn-img">
                     <span class="index-menu__group__btn-text">Наборы</span>
                 </a>
+                <a href="#"
+                   class="index-menu__group__btn
+                          index-menu__group__btn_green
+                          index-menu__group__btn_size-large
+                          tooltip-trigger"
+                   data-title="
+                            <span class=gold>Наши привилегии</span>
+                            "
+                   data-row="
+                            Хотите иметь больше приватов, команд и возможностей?
+                            <br>
+                            <span class=white>Наши Donate-группы воплотят Ваши мечты в реальности!</span>
+                            "
+                   data-meta="Кликните для перехода"
+                >
+                    <img src="images/icon/battlepass.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">
+                        БОЕВОЙ ПРОПУСК
+                        <span class="btn-text_green">5 УРОВЕНЬ</span>
+                    </span>
+                </a>
+                <a href="#" class="index-menu__group__btn
+                                   index-menu__group__btn_disabled">
+                    <img src="images/icon/disabled.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">Скоро</span>
+                </a>
+                <a href="#" class="index-menu__group__btn
+                                   index-menu__group__btn_disabled">
+                    <img src="images/icon/disabled.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">Скоро</span>
+                </a>
+                <a href="#" class="index-menu__group__btn
+                                   index-menu__group__btn_disabled">
+                    <img src="images/icon/disabled.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">Скоро</span>
+                </a>
+                <a href="#" class="index-menu__group__btn
+                                   index-menu__group__btn_disabled">
+                    <img src="images/icon/disabled.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">Скоро</span>
+                </a>
+            </div>
+
+            <div class="index-menu__group">
+                <a href="#"
+                   class="index-menu__group__btn tooltip-trigger"
+                   data-title="
+                            <span class=green>Вам нужна помощь?</span>
+                            "
+                   data-row="Напишите в нашу техническую поддержку, мы Вам поможем! =)"
+                   data-meta="Кликните, чтобы открыть"
+                >
+                    <img src="images/icon/help.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">Помощь</span>
+                </a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <a href="#"
+                   class="index-menu__group__btn
+                          index-menu__group__btn_red
+                          tooltip-trigger"
+                   data-title="
+                            <span class=red>Выход с сервера<span>
+                            "
+                >
+                    <img src="images/icon/exit.png" alt
+                         class="index-menu__group__btn-img">
+                    <span class="index-menu__group__btn-text">Выход</span>
+                </a>
             </div>
         </div>
     </div>
-    <button
-            class="overlay_close tooltip-trigger"
-            data-title="<span class=gray>Закрыть меню<span>"
-    >
-    </button>
 </div>
 <div class="tooltip" style="display: none">
     <div class="tooltip__content">

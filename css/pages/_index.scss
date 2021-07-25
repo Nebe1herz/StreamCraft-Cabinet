@@ -1,33 +1,37 @@
 .index-menu{
+  position: relative;
 
   // Заголовок h1
   &__heading{
     line-height: 1;
-    font-size: 36px;
+    font-size: 42px;
     color: #fff;
-    padding: 64px 0;
+    padding: 80px 0 48px;
     text-shadow: 5px 5px $white-shadow;
-    text-align: center;
+  }
+  // Закрытие окна
+  .overlay_close{
+    position: absolute;
+    top: 69px;
+    right: 0;
   }
 
   // Группа кнопок
   &__group{
     display: grid;
     grid-template-columns: repeat(6, 160px);
-    grid-gap: 24px;
+    grid-gap: 34px 24px;
 
     &:not(:first-of-type) {
-      margin-top: 50px;
+      margin-top: 80px;
     }
     // Заголовок группы
     &-heading{
       grid-column-start: 1;
       grid-column-end: 7;
-      margin-bottom: 15px;
-      font-size: 28px;
+      font-size: 24px;
       color: $gray;
       text-shadow: 4px 4px $gray-shadow;
-      text-align: center;
     }
     // Кнопка
     &__btn{
@@ -41,43 +45,6 @@
 
       &:hover{
         @include index-menu__btn($dark-gray, .4);
-      }
-
-      // Модификаторы цвета
-      &_red{
-        @include index-menu__btn($dark-red-shadow);
-
-        &:hover{
-          @include index-menu__btn($dark-red, .4);
-        }
-      }
-      &_gold{
-        @include index-menu__btn($gold, .4);
-
-        &:hover{
-          @include index-menu__btn($gold, .8);
-        }
-      }
-      &_green{
-        //@include index-menu__btn($green, .2);
-
-        &:hover{
-          @include index-menu__btn($green, .2);
-        }
-      }
-      &_purple{
-        //@include index-menu__btn($dark-purple, .2);
-
-        &:hover{
-          @include index-menu__btn($dark-purple, .2);
-        }
-      }
-      &_aqua{
-        //@include index-menu__btn($blue, .2);
-
-        &:hover{
-          @include index-menu__btn($aqua, .2);
-        }
       }
 
       // Картинка в кнопке
@@ -99,17 +66,93 @@
       // Текст в кнопке
       &-text{
         display: block;
-        font-size: 16px;
+        line-height: 1.4;
         color: $white;
-        margin: 0 0 15px;
+        margin: 0 0 10px;
         text-shadow: 3px 3px $white-shadow;
+        text-align: center;
+      }
+
+      // Модификаторы размера
+      &_size-large{
+        width: 344px;
+        height: unset;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        .index-menu__group__btn-img{
+          width: 300px;
+        }
+        .index-menu__group__btn-text{
+          font-size: 21px;
+        }
+        .btn-text_green{
+          display: block;
+          color: $green;
+          text-shadow: 3px 3px $gold-shadow;
+        }
+      }
+
+      // Модификаторы состояния
+      &_disabled{
+        @include index-menu__btn($black, .3);
+        pointer-events: none;
+
+        .index-menu__group__btn-text{
+          color: $dark-gray;
+          text-shadow: 3px 3px $dark-gray-shadow;
+        }
+      }
+
+      // Модификаторы цвета
+      &_red{
+        @include index-menu__btn($dark-red-shadow);
+
+        &-hover:hover,
+        &:hover{
+          @include index-menu__btn($dark-red, .4);
+        }
+      }
+      &_gold{
+        @include index-menu__btn($gold, .4);
+
+        &-hover:hover,
+        &:hover{
+          @include index-menu__btn($gold);
+        }
+      }
+      &_green{
+        @include index-menu__btn($green, .4);
+
+        &-hover:hover,
+        &:hover{
+          @include index-menu__btn($green);
+        }
+      }
+      &_purple{
+        @include index-menu__btn($dark-purple, .4);
+
+        &-hover:hover,
+        &:hover{
+          @include index-menu__btn($dark-purple);
+        }
+      }
+      &_aqua{
+        @include index-menu__btn($aqua, .4);
+
+        &-hover:hover,
+        &:hover{
+          @include index-menu__btn($aqua);
+        }
       }
     }
   }
 }
 
 .overlay_close {
-  position: absolute;
+  position: fixed;
   border: none;
   background: url('#{$url}/alt/close.png') no-repeat center;
   background-size: 48px;
