@@ -16,9 +16,18 @@
     grid-template-columns: repeat(6, 160px);
     grid-gap: 24px;
 
+    &:not(:first-of-type) {
+      margin-top: 50px;
+    }
     // Заголовок группы
     &-heading{
-
+      grid-column-start: 1;
+      grid-column-end: 7;
+      margin-bottom: 15px;
+      font-size: 28px;
+      color: $gray;
+      text-shadow: 4px 4px $gray-shadow;
+      text-align: center;
     }
     // Кнопка
     &__btn{
@@ -34,12 +43,40 @@
         @include index-menu__btn($dark-gray, .4);
       }
 
-      // Модификатор цвета
-      &_danger{
+      // Модификаторы цвета
+      &_red{
         @include index-menu__btn($dark-red-shadow);
 
         &:hover{
           @include index-menu__btn($dark-red, .4);
+        }
+      }
+      &_gold{
+        @include index-menu__btn($gold, .4);
+
+        &:hover{
+          @include index-menu__btn($gold, .8);
+        }
+      }
+      &_green{
+        //@include index-menu__btn($green, .2);
+
+        &:hover{
+          @include index-menu__btn($green, .2);
+        }
+      }
+      &_purple{
+        //@include index-menu__btn($dark-purple, .2);
+
+        &:hover{
+          @include index-menu__btn($dark-purple, .2);
+        }
+      }
+      &_aqua{
+        //@include index-menu__btn($blue, .2);
+
+        &:hover{
+          @include index-menu__btn($aqua, .2);
         }
       }
 
