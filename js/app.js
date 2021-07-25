@@ -18,6 +18,15 @@ document.body.onclick = (e) => {
     }
 };
 
+// Обработчик нажатия клавиши Escape для открытия/закрытия главного меню
+document.addEventListener('keydown', (e) => {
+    switch(e.key){
+        case "Escape":
+            document.getElementsByClassName('overlay')[0].click();
+            break;
+    }
+});
+
 // Реализация тултипов
 //
 // Элементу, на который хотим повесить тултип
