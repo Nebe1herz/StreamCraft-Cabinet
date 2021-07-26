@@ -26,28 +26,36 @@
       width: 100%;
     }
   }
+
+  // Анимация при отсутствии наведения
   &:not(:hover) {
+    // Скрыть заголовки разделов
     .sidebar-feed__section-heading{
       opacity: 0;
       transition: $duration ease-in-out;
     }
+    // Полностью скрыть прочитанные уведомления
     .sidebar-feed__notice-item_read{
       padding-top: 0;
       padding-bottom: 0;
       opacity: 0;
       height: 0;
     }
+    // Частично скрыть непрочитанные уведомления
     .sidebar-feed__notice-item:not(.sidebar-feed__notice-item_read){
       color: transparent;
       height: 100px;
       text-shadow: 3px 3px transparent;
 
+      // Отобразить превьюшки непрочитанных уведомлений
       &::before{
         opacity: .3;
       }
       &::after{
         opacity: 1;
       }
+
+      // Скрыть внутренние элементы
       span{
         opacity: 0;
         transition: $duration ease-in-out;
@@ -80,12 +88,13 @@
     z-index: 0;
   }
 
-  // Раздел сайдбара
+  // Секция сайдбара
   &__section{
     position: relative;
     padding: 40px 0 0;
     z-index: 1;
 
+    // Заголовок
     &-heading{
       padding: 0 30px;
       font-size: 21px;
@@ -108,6 +117,7 @@
     }
   }
 
+  // Всё что связано с уведомлениями
   &__notice{
     // Список уведомлений
     &-list{
@@ -133,6 +143,7 @@
       box-sizing: border-box;
       overflow: hidden;
 
+      // Превьюшки на сайдбаре, когда он скрыт
       &::before,
       &::after{
         content: '';
@@ -147,6 +158,7 @@
         opacity: 0;
         z-index: 1;
       }
+      // Значок "+1"
       &::after{
         content: '+1';
         background: unset;
@@ -194,6 +206,8 @@
       color: $gray;
       text-shadow: 2px 2px $gray-shadow;
     }
+
+    // Статус "прочитано"
     &-status{
       display: inline-block;
       background: $gray-shadow;
