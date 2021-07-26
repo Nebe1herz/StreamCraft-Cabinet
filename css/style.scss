@@ -18,8 +18,9 @@
 
 // Страницы
 @import
-        'pages/index_alt', // Первая версия главного меню (альтернативная)
-        'pages/index' // Главное меню
+        // Главное меню
+        'pages/index/_index-menu',
+        'pages/index/_sidebar-feed'
 ;
 
 // Модальные окна
