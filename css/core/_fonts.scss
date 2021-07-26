@@ -7,58 +7,6 @@
       url('#{$urlFonts}MinecraftRegular.woff') format('woff')
 }
 
-// Minecraft Five
-@font-face {
-  font-family: MinecraftFive;
-  src:url('#{$urlFonts}/MinecraftFive-Regular.eot');
-  src:url('#{$urlFonts}/MinecraftFive-Regular.eot?#iefix') format("embedded-opentype"),
-  url('#{$urlFonts}/MinecraftFive-Regular.ttf') format("truetype"),
-  url('#{$urlFonts}/MinecraftFive-Regular.woff') format("woff"),
-  url('#{$urlFonts}/MinecraftFive-Regular.svg#MinecraftFive-Regular') format("svg");
-  font-style: normal;
-  font-weight: 400;
-  text-rendering:optimizeLegibility;
-}
-
-// Minecraft Five Bold
-@font-face {
-  font-family: MinecraftFive;
-  src:url('#{$urlFonts}/MinecraftFive-Bold.eot');
-  src:url('#{$urlFonts}/MinecraftFive-Bold.eot?#iefix') format("embedded-opentype"),
-      url('#{$urlFonts}/MinecraftFive-Bold.woff') format("woff"),
-      url('#{$urlFonts}/MinecraftFive-Bold.ttf') format("truetype"),
-      url('#{$urlFonts}/MinecraftFive-Bold.svg#MinecraftFive-Bold') format("svg");
-  font-style: normal;
-  font-weight: 700;
-  text-rendering:optimizeLegibility;
-}
-
-// Minecraft Seven
-@font-face {
-  font-family: MinecraftSeven;
-  src:url('#{$urlFonts}/MinecraftSeven.eot');
-  src:url('#{$urlFonts}/MinecraftSeven.eot?#iefix') format("embedded-opentype"),
-  url('#{$urlFonts}/MinecraftSeven.woff') format("woff"),
-  url('#{$urlFonts}/MinecraftSeven.ttf') format("truetype"),
-  url('#{$urlFonts}/MinecraftSeven.svg#MinecraftSeven') format("svg");
-  font-style: normal;
-  font-weight: 400;
-  text-rendering:optimizeLegibility;
-}
-
-// Minecraft Ten
-@font-face {
-  font-family: MinecraftTen;
-  src:url('#{$urlFonts}/MinecraftTen.eot');
-  src:url('#{$urlFonts}/MinecraftTen.eot?#iefix') format("embedded-opentype"),
-      url('#{$urlFonts}/MinecraftTen.woff') format("woff"),
-      url('#{$urlFonts}/MinecraftTen.ttf') format("truetype"),
-      url('#{$urlFonts}/MinecraftTen.svg#MinecraftTen') format("svg");
-  font-style: normal;
-  font-weight: 400;
-  text-rendering:optimizeLegibility;
-}
-
 // Конфигурация для шрифтов
 body {
   font-kerning: none;
