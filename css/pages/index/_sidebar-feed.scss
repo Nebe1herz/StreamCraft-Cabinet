@@ -44,7 +44,7 @@
     // Частично скрыть непрочитанные уведомления
     .sidebar-feed__notice-item:not(.sidebar-feed__notice-item_read){
       color: transparent;
-      height: 100px;
+      height: 88px;
       text-shadow: 3px 3px transparent;
 
       // Отобразить превьюшки непрочитанных уведомлений
@@ -60,6 +60,25 @@
         opacity: 0;
         transition: $duration ease-in-out;
       }
+    }
+
+    .sidebar-feed__friend-list{
+      li:not(:first-of-type){
+        margin-top: 2px;
+      }
+    }
+    // Изменить отступы
+    .sidebar-feed__friend-item {
+      background: var(--background);
+      padding: 12px 18px;
+
+
+    }
+
+    // Скрыть блок с пользователем
+    .sidebar-feed__friend-item__user{
+      opacity: 0;
+      transition: $duration ease-in-out;
     }
   }
 
@@ -96,6 +115,7 @@
 
     // Заголовок
     &-heading{
+      margin: 0 0 20px;
       padding: 0 30px;
       font-size: 21px;
       color: $white;
@@ -121,7 +141,6 @@
   &__notice{
     // Список уведомлений
     &-list{
-      margin-top: 15px;
       list-style: none;
     }
 
@@ -143,6 +162,11 @@
       box-sizing: border-box;
       overflow: hidden;
 
+      // Отступы между уведомлениями
+      &:not(:first-of-type){
+        margin-top: 2px;
+      }
+
       // Превьюшки на сайдбаре, когда он скрыт
       &::before,
       &::after{
@@ -154,7 +178,7 @@
         height: 64px;
         width: 64px;
         left: 18px;
-        top: 18px;
+        top: 12px;
         opacity: 0;
         z-index: 1;
       }
@@ -213,6 +237,97 @@
       background: $gray-shadow;
       padding: 0 5px;
       text-transform: uppercase;
+    }
+  }
+
+  // Всё что связано с друзьями
+  &__friend{
+    // Список друзей
+    &-list{
+      list-style: none;
+      padding: 0 0 30px;
+
+      li:not(:first-of-type){
+        margin-top: 10px;
+      }
+    }
+    &-item{
+      --background: #{alpha($white, .1)};
+
+      display: grid;
+      background: transparent;
+      grid-template-columns: auto 1fr;
+      grid-gap: 15px;
+      padding: 0 30px;
+      transition: $duration ease-in-out;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      // Блок с аватаром пользователя
+      &__avatar{
+        border-radius: 5px;
+        background: var(--background);
+        padding: 4px;
+        width: 64px;
+        height: 64px;
+
+        // Голова скина
+        &-image{
+          display: block;
+          object-position: center;
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      // Блок с информацией о пользователе
+      &__user{
+        line-height: 22px;
+        font-size: 16px;
+        color: $dark-gray;
+        padding: 10px 0;
+        text-shadow: 3px 3px $dark-gray-shadow;
+
+        // Ник пользователя
+        &-nickname{
+
+        }
+
+        // Статус пользователя
+        &-status{
+
+        }
+      }
+
+      // Состояние "В сети"
+      &_online{
+        --background: #{alpha($aqua, .2)};
+
+        .sidebar-feed__friend-item__user-nickname{
+          color: $gray;
+          text-shadow: 3px 3px $gray-shadow;
+        }
+        .sidebar-feed__friend-item__user-status{
+          color: $aqua;
+          text-shadow: 3px 3px $aqua-shadow;
+        }
+      }
+      // Состояние "Поблизости"
+      &_near{
+        --background: #{alpha($gold, .2)};
+
+        .sidebar-feed__friend-item__user-nickname{
+          color: $gray;
+          text-shadow: 3px 3px $gray-shadow;
+        }
+        .sidebar-feed__friend-item__user-status{
+          color: $gold;
+          text-shadow: 3px 3px $gold-shadow;
+        }
+      }
     }
   }
 }
