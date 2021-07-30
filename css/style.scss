@@ -13,14 +13,16 @@
 @import
         'components/wallpaper', // Основной контейнер сайта
         'components/buttons', // Стилизация кнопок
-        'components/tooltip' // Подсказка при наведении на предмет
+        'components/tooltip', // Подсказка при наведении на предмет
+
+        // Боковая панель со списком уведомлений и друзей
+        'components/sidebar-feed/sidebar-feed'
 ;
 
 // Страницы
 @import
         // Главное меню
-        'pages/index/_index-menu',
-        'pages/index/_sidebar-feed'
+        'pages/index/_index-menu'
 ;
 
 // Модальные окна

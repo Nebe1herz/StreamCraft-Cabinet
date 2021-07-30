@@ -1,0 +1,101 @@
+.sidebar-feed__notice{
+  // Список уведомлений
+  &-list{
+    list-style: none;
+  }
+
+  // Уведомление
+  &-item{
+    --background: #{alpha($white, .1)};
+    --color: #{$white};
+    --shadow: #{$white-shadow};
+
+    position: relative;
+    background: var(--background);
+    height: 111px;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    color: var(--color);
+    transition: $sidebar-feed_transition-duration ease-in-out;
+    text-shadow: 2px 2px var(--shadow);
+    box-sizing: border-box;
+    overflow: hidden;
+
+    // Отступы между уведомлениями
+    &:not(:first-of-type){
+      margin-top: 2px;
+    }
+
+    // Превьюшки на сайдбаре, когда он скрыт
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 5px;
+      background: var(--shadow);
+      height: 64px;
+      width: 64px;
+      left: 18px;
+      top: 12px;
+      opacity: 0;
+      z-index: 1;
+    }
+    // Значок "+1"
+    &::after{
+      content: '+1';
+      background: unset;
+      line-height: 64px;
+      font-size: 28px;
+      color: var(--color);
+      text-shadow: 4px 4px var(--shadow);
+      text-align: center;
+      z-index: 2;
+    }
+
+    // Модификаторы цвета
+    &_primary{
+      --background: #{alpha($blue, .2)};
+      --color: #{$aqua};
+      --shadow: #{$blue};
+    }
+    &_success{
+      --background: #{alpha($green, .2)};
+      --color: #{$green};
+      --shadow: #{$green-shadow};
+    }
+    &_danger{
+      --background: #{alpha($red, .2)};
+      --color: #{$red};
+      --shadow: #{$red-shadow};
+    }
+
+    &_warning{
+      --background: #{alpha($gold, .2)};
+      --color: #{$gold};
+      --shadow: #{$gold-shadow};
+    }
+
+    // Модификаторы состояния
+    &_read{
+      opacity:.4;
+    }
+  }
+
+  // Время прибытия уведомления
+  &-meta{
+    display: block;
+    margin: 5px 0 0;
+    color: $gray;
+    text-shadow: 2px 2px $gray-shadow;
+  }
+
+  // Статус "прочитано"
+  &-status{
+    display: inline-block;
+    background: $gray-shadow;
+    padding: 0 5px;
+    text-transform: uppercase;
+  }
+}

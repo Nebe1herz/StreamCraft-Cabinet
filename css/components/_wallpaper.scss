@@ -52,7 +52,7 @@ body{
   z-index: 1;
 
   // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
-  @if ($backdropFilter) {
+  @if ($background-blur) {
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
