@@ -246,10 +246,6 @@
     &-list{
       list-style: none;
       padding: 0 0 30px;
-
-      li:not(:first-of-type){
-        margin-top: 10px;
-      }
     }
     &-item{
       --background: #{alpha($white, .1)};
@@ -258,11 +254,12 @@
       background: transparent;
       grid-template-columns: auto 1fr;
       grid-gap: 15px;
-      padding: 0 30px;
-      transition: $duration ease-in-out;
+      padding: 8px 30px;
+      //transition: $duration ease-in-out;
 
       &:hover{
         cursor: pointer;
+        background: var(--background);
       }
 
       // Блок с аватаром пользователя
