@@ -15,6 +15,8 @@
         'components/buttons', // Стилизация кнопок
         'components/tooltip', // Подсказка при наведении на предмет
 
+        // Навигация по всем страницам
+        'components/nav/nav',
         // Боковая панель со списком уведомлений и друзей
         'components/sidebar-feed/sidebar-feed'
 ;
@@ -22,7 +24,7 @@
 // Страницы
 @import
         // Главное меню
-        'pages/index/_index-menu'
+        'pages/index/index-menu'
 ;
 
 // Модальные окна

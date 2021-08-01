@@ -1,0 +1,23 @@
+.nav{
+  position: fixed;
+  background: alpha($black, .1);
+  padding: 10px 0;
+  height: 80px;
+  width: 100%;
+  color: #fff;
+
+  // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
+  @if ($background-blur) {
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  & ~ .wrapper{
+    padding-top: 80px;
+  }
+}
+
+@import
+        'global-nav', // Основной список навигации
+        'dropdown-nav' // Выпадающий список навигации
+;
