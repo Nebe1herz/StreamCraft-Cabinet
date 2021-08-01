@@ -10,11 +10,8 @@
   transform: translateX(calc(100% - 100px));
   overflow: hidden scroll;
 
-  // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
-  @if ($background-blur) {
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
+  // Инициализация размытия заднего фона
+  @include background-blur-init;
 
   // Анимации при наведении
   &:hover{

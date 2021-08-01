@@ -17,6 +17,16 @@
           $width+px 0 $color;
 }
 
+// Инициализация размытия заднего фона
+@mixin background-blur-init($blur: 10px) {
+
+  // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
+  @if ($background-blur) {
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+  }
+}
+
 // Цветовой модификатор элемента
 @mixin index-menu__btn($color, $alpha: .6) {
   background: alpha($color, $alpha);

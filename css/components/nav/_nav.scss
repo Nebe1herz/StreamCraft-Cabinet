@@ -6,11 +6,8 @@
   width: 100%;
   color: #fff;
 
-  // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
-  @if ($background-blur) {
-    backdrop-filter:blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
+  // Инициализация размытия заднего фона
+  @include background-blur-init;
 
   & ~ .wrapper{
     padding-top: 80px;

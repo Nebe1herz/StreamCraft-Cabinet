@@ -52,11 +52,8 @@ body{
   overflow: hidden;
   z-index: 1;
 
-  // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
-  @if ($background-blur) {
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
+  // Инициализация размытия заднего фона
+  @include background-blur-init;
 }
 
 // Контейнер для ограничения по ширине
