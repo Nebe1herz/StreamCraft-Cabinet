@@ -11,18 +11,20 @@
     color: $white;
     text-shadow: 3px 3px $white-shadow;
 
-    // Для цветового выделения
-    &-gray{
-      color: $gray;
-      text-shadow: 3px 3px $gray-shadow;
-    }
-    &-gold{
-      color: $gold;
-      text-shadow: 3px 3px $gold-shadow;
-    }
-    &-aqua{
-      color: $aqua;
-      text-shadow: 3px 3px $aqua-shadow;
+    // Модификаторы цветы
+    &_color{
+      &-gray{
+        color: $gray;
+        text-shadow: 3px 3px $gray-shadow;
+      }
+      &-gold{
+        color: $gold;
+        text-shadow: 3px 3px $gold-shadow;
+      }
+      &-aqua{
+        color: $aqua;
+        text-shadow: 3px 3px $aqua-shadow;
+      }
     }
   }
 }

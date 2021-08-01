@@ -55,26 +55,28 @@
     }
 
     // Модификаторы цвета
-    &_primary{
-      --background: #{alpha($blue, .2)};
-      --color: #{$aqua};
-      --shadow: #{$blue};
-    }
-    &_success{
-      --background: #{alpha($green, .2)};
-      --color: #{$green};
-      --shadow: #{$green-shadow};
-    }
-    &_danger{
-      --background: #{alpha($red, .2)};
-      --color: #{$red};
-      --shadow: #{$red-shadow};
-    }
+    &_role{
+      &-primary{
+        --background: #{alpha($blue, .2)};
+        --color: #{$aqua};
+        --shadow: #{$blue};
+      }
+      &-success{
+        --background: #{alpha($green, .2)};
+        --color: #{$green};
+        --shadow: #{$green-shadow};
+      }
+      &-danger{
+        --background: #{alpha($red, .2)};
+        --color: #{$red};
+        --shadow: #{$red-shadow};
+      }
 
-    &_warning{
-      --background: #{alpha($gold, .2)};
-      --color: #{$gold};
-      --shadow: #{$gold-shadow};
+      &-warning{
+        --background: #{alpha($gold, .2)};
+        --color: #{$gold};
+        --shadow: #{$gold-shadow};
+      }
     }
 
     // Модификаторы состояния
