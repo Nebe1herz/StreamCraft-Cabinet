@@ -35,16 +35,20 @@
     }
     // Кнопка
     &__btn{
+      --backdrop: #{alpha($black, .6)};
       display: flex;
       width: 160px;
       height: 130px;
-      @include index-menu__btn($black);
+      background: var(--backdrop);
+      box-shadow:
+              0 -20px 0 -10px var(--backdrop),
+              0 20px 0 -10px var(--backdrop);
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
       &:hover{
-        @include index-menu__btn($dark-gray, .4);
+        --backdrop: #{alpha($dark-gray, .4)};
       }
 
       // Картинка в кнопке
@@ -97,7 +101,7 @@
 
       // Модификаторы состояния
       &_disabled{
-        @include index-menu__btn($black, .3);
+        --backdrop: #{alpha($black, .3)};
         pointer-events: none;
 
         .index-menu__group__btn-text{
@@ -107,44 +111,46 @@
       }
 
       // Модификаторы цвета
-      &_red{
-        @include index-menu__btn($dark-red-shadow);
+      &_color{
+        &-red{
+          --backdrop: #{alpha($dark-red-shadow, .6)};
 
-        &-hover:hover,
-        &:hover{
-          @include index-menu__btn($dark-red, .4);
+          &-hover:hover,
+          &:hover{
+            --backdrop: #{alpha($dark-red, .4)};
+          }
         }
-      }
-      &_gold{
-        @include index-menu__btn($gold, .4);
+        &-gold{
+          --backdrop: #{alpha($gold, .4)};
 
-        &-hover:hover,
-        &:hover{
-          @include index-menu__btn($gold);
+          &-hover:hover,
+          &:hover{
+            --backdrop: #{alpha($gold, .6)};
+          }
         }
-      }
-      &_green{
-        @include index-menu__btn($green, .4);
+        &-green{
+          --backdrop: #{alpha($green, .4)};
 
-        &-hover:hover,
-        &:hover{
-          @include index-menu__btn($green);
+          &-hover:hover,
+          &:hover{
+            --backdrop: #{alpha($green, .6)};
+          }
         }
-      }
-      &_purple{
-        @include index-menu__btn($dark-purple, .4);
+        &-purple{
+          --backdrop: #{alpha($dark-purple, .4)};
 
-        &-hover:hover,
-        &:hover{
-          @include index-menu__btn($dark-purple);
+          &-hover:hover,
+          &:hover{
+            --backdrop: #{alpha($dark-purple, .6)};
+          }
         }
-      }
-      &_aqua{
-        @include index-menu__btn($aqua, .4);
+        &-aqua{
+          --backdrop: #{alpha($aqua, .4)};
 
-        &-hover:hover,
-        &:hover{
-          @include index-menu__btn($aqua);
+          &-hover:hover,
+          &:hover{
+            --backdrop: #{alpha($aqua, .6)};
+          }
         }
       }
     }
