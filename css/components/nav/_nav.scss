@@ -1,13 +1,14 @@
 .nav{
   position: fixed;
-  background: alpha($black, .1);
-  padding: 10px 0;
-  height: 80px;
+  padding-right: 100px;
+  //background: linear-gradient(to left, transparent, #{alpha(#000, .3)});
   width: 100%;
   color: #fff;
 
-  // Инициализация размытия заднего фона
-  @include background-blur-init;
+  .wrapper{
+    max-width: 100%;
+    min-height: unset;
+  }
 
   & ~ .wrapper{
     padding-top: 80px;
