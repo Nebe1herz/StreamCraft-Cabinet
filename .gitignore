@@ -3,6 +3,7 @@
 .git
 .sass-cache
 temp
+node_modules
 # Files
 style.css
 *.map
