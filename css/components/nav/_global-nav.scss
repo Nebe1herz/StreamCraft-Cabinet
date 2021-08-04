@@ -28,13 +28,37 @@
       --gradient: #{alpha($dark-gray, .3)};
       grid-template-columns: repeat(3, auto);
     }
-    // Компоненты профиля пользователя
-    &__user{
+    // Баланс
+    &_balance{
+      grid-template-columns: 32px auto;
+      grid-gap: 5px;
 
+      &-rubles{
+        --color: #{$red};
+      }
+      &-coins{
+        --color: #{$gold};
+      }
+    }
+    // Корзина
+    &_cart{
+      --color: #{$aqua};
+      grid-template-columns: 32px auto auto;
+      grid-gap: 5px;
+    }
+    // Боевой пропуск
+    &_battle-pass{
+      --color: #{$green};
+      grid-template-columns: auto auto;
+    }
+
+    // # КОМПОНЕНТЫ
+    // Пользователь
+    &__user{
       // Аватарка (голова скина)
       &-avatar{
         display: block;
-        height: 42px;
+        width: 32px;
       }
       // Никнейм
       &-nickname{
@@ -44,12 +68,18 @@
       &-group{
         display: inline-block;
         background: $dark-gray;
-        font-size: 14px;
         color: $white;
-        padding: 0 6px;
+        padding: 0 5px;
         text-shadow: 3px 3px $white-shadow;
         box-shadow: 3px 3px $dark-gray-shadow;
         text-transform: uppercase;
+      }
+    }
+    // Баланс
+    &__balance{
+      &-icon{
+        width: 32px;
+        image-rendering: pixelated;
       }
     }
 
@@ -69,13 +99,7 @@
         image-rendering: pixelated;
       }
     }
-
-    // Модификатор промо-ссылки
-    &_promo{
-      --gradient: #{alpha($dark-green, .3)};
-      grid-template-columns: auto auto;
-    }
-
+    // Боевой пропуск
     &__battle-pass-level{
       color: $green;
       text-shadow: 3px 3px $green-shadow;
