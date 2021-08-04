@@ -5,5 +5,9 @@
 temp
 node_modules
 # Files
-style.css
 *.map
+style.css
+gruntfile.js
+package.json
+package-lock.json
+{
