@@ -1,7 +1,7 @@
 .nav__global-nav{
   display: grid;
-  grid-template-columns: auto auto auto 1fr auto;
-  grid-column-gap: 3px;
+  grid-template-columns: repeat(3, auto) 1fr repeat(2, auto);
+  grid-column-gap: 5px;
   list-style: none;
 
   li{
@@ -10,22 +10,35 @@
 
   // Элемент списка
   &-item{
-    --gradient: transparent;
+    --color: transparent;
 
     display: grid;
-    background: linear-gradient(var(--gradient), transparent 75%);
+    position: relative;
     line-height: 1.4;
     font-size: 16px;
     color: $white;
-    height: 70px;
-    padding: 0 35px;
+    height: 55px;
+    padding: 5px 10px 0;
     text-shadow: 3px 3px $white-shadow;
     grid-column-gap: 10px;
     align-items: center;
 
-    // Модификатор профиля пользователя
+    &::before{
+      content:'';
+      position: absolute;
+      display: block;
+      background: var(--color);
+      width: 100%;
+      height: 3px;
+      top: 0;
+      left: 0;
+      @include background-blur-init();
+    }
+
+    // # МОДИФИКАТОРЫ
+    // Пользователь
     &_user{
-      --gradient: #{alpha($dark-gray, .3)};
+      --color: #{$white};
       grid-template-columns: repeat(3, auto);
     }
     // Баланс
@@ -82,21 +95,15 @@
         image-rendering: pixelated;
       }
     }
-
-    // Модификатор баланса
-    &_balance{
-      grid-template-columns: 32px auto;
-
-      &-rubles{
-        --gradient: #{alpha($dark-red, .3)};
-      }
-      &-coins{
-        --gradient: #{alpha($gold, .3)};
-      }
-
+    // Корзина
+    &__cart{
       &-icon{
         width: 32px;
         image-rendering: pixelated;
+      }
+      &--counter{
+        color: $aqua;
+        text-shadow: 3px 3px $aqua-shadow;
       }
     }
     // Боевой пропуск
