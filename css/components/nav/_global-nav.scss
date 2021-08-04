@@ -19,7 +19,7 @@
     color: $white;
     height: 55px;
     padding: 5px 10px 0;
-    text-shadow: 3px 3px $white-shadow;
+    text-shadow: 2px 2px $white-shadow;
     grid-column-gap: 10px;
     align-items: center;
 
@@ -32,13 +32,23 @@
       height: 3px;
       top: 0;
       left: 0;
+      opacity: .8;
+      transition: .1s ease-in-out;
       @include background-blur-init();
+      z-index: -1;
+    }
+
+    &:hover{
+      &::before{
+        height: 100%;
+        opacity: .6;
+      }
     }
 
     // # МОДИФИКАТОРЫ
     // Пользователь
     &_user{
-      --color: #{$white};
+      --color: #{$gray};
       grid-template-columns: repeat(3, auto);
     }
     // Баланс
