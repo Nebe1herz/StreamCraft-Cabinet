@@ -1,99 +1,79 @@
 .btn{
-  --color: var(--gray-700);
-  --background: var(--gray-100);
-  --shadow: var(--gray-900);
+  // Переменные
+  @include btn-var-init(darken($gray, 20));
+  --color: #{$white};
+  --color-shadow: #{$white-shadow};
 
-  //Основные стили
-  display: block;
-  border: none;
-  background-color: var(--background);
-  background-repeat: no-repeat;
-  background-position: center 22px;
-  background-size: 96px;
-  line-height: 1.2;
-  font-size: 20px;
-  font-weight: normal;
-  padding: 15px;
-  width: 100%;
-  color:var(--color);
-  box-shadow:
-          4px 0 var(--shadow),
-          -4px 0 var(--shadow),
-          0 4px var(--shadow),
-          0 -4px var(--shadow);
-  image-rendering: pixelated;
-  letter-spacing: 1px;
-  text-align: center;
+  // Основное
+  display: inline-block;
+  padding: 25px 40px;
+  transition: .1s ease-in-out;
   cursor: pointer;
   outline: none;
 
-  &:not(.disabled){
+  // Цвет блок
+  background: var(--background);
+  box-shadow:
+          0 -5px var(--border-top),
+          0 5px var(--border-bottom),
+          5px 0 var(--border-middle),
+          -5px 0 var(--border-middle),
+          5px 10px var(--shadow),
+          10px 5px var(--shadow);
+
+  // Настройки текста
+  color: var(--color);
+  text-shadow: 2px 2px var(--color-shadow);
+  text-transform: uppercase;
+  text-align: center;
+
+  // Модификаторы
+  &_success{
+    @include btn-var-init(
+        lighten(desaturate($dark-green, 45), 5)
+    );
+
     &:hover{
-      --color: var(--gray-400);
-      --background: var(--white);
-      --shadow: var(--gray-700);
-    }
-
-    &.gold,
-    &.gold-hover:hover{
-      --shadow: var(--gold-shadow);
-      --background: var(--gold-back);
-      --color: var(--gold);
-    }
-    &.red,
-    &.red-hover:hover{
-      --shadow: var(--red-shadow);
-      --background: var(--red-back);
-      --color: var(--red);
-    }
-    &.green,
-    &.green-hover:hover{
-      --shadow: var(--green-shadow);
-      --background: var(--green-back);
-      --color: var(--dark-green);
-    }
-    &.blue,
-    &.blue-hover:hover{
-      --shadow: var(--blue-shadow);
-      --background: var(--blue-back);
-      --color: var(--blue);
-    }
-    &.aqua,
-    &.aqua-hover:hover{
-      --shadow: var(--aqua-shadow);
-      --background: var(--aqua-back);
-      --color: var(--aqua);
-    }
-    &.light-purple,
-    &.light-purple-hover:hover{
-      --shadow: var(--light-purple-shadow);
-      --background: var(--light-purple-back);
-      --color: var(--light-purple);
-    }
-    &.dark-aqua,
-    &.dark-aqua-hover:hover{
-      --shadow: var(--dark-aqua-shadow);
-      --background: var(--dark-aqua-back);
-      --color: var(--dark-aqua);
-    }
-
-    &.gold,
-    &.red,
-    &.green,
-    &.blue,
-    &.light-purple,
-    &.dark-aqua{
-      &:hover{
-        --shadow: var(--color);
-      }
+      @include btn-var-init(
+        lighten(desaturate($dark-green, 45), 15)
+      );
     }
   }
+  &_danger{
+    @include btn-var-init(
+        lighten(desaturate($dark-red, 45), 10)
+    );
 
-  &.disabled{
-    --background: var(--gray-600);
-    --color: var(--gray-700);
-    background-image: url('#{$url}/icon/disabled.png');
-    pointer-events: none;
+    &:hover{
+      @include btn-var-init(
+        lighten(desaturate($dark-red, 45), 20)
+      );
+    }
+  }
+  &_primary{
+    @include btn-var-init(
+        lighten(desaturate($dark-purple, 45), 10)
+    );
+
+    &:hover{
+      @include btn-var-init(
+        lighten(desaturate($dark-purple, 45), 20)
+      );
+    }
+  }
+  &_dark{
+    @include btn-var-init(
+        lighten($black, 15)
+    );
+
+    &:hover{
+      @include btn-var-init(
+        lighten($black, 20)
+      );
+    }
+  }
+  &_disabled{
+    @include btn-var-init(darken($dark-gray, 10));
     cursor: default;
   }
 }
