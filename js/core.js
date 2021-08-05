@@ -9,15 +9,14 @@ const randomNum = (min, max) => Math.floor(Math.random()*(max-min+1)+min),
 // Обработчик кликов для открытия/закрытия главного меню
 document.body.onclick = (e) => {
     switch(e.target.classList[0]){
-        case 'overlay':
+        /*case 'overlay':
             document.body.classList.toggle(checked);
-            break;
+            break;*/
         case 'overlay_close':
             document.body.classList.remove(checked);
             break;
     }
 };
-
 
 // Обработчик нажатия клавиши Escape для открытия/закрытия главного меню
 document.addEventListener('keydown', (e) => {
