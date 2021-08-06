@@ -1,0 +1,33 @@
+.modal{
+  position: fixed;
+  background: alpha($black, .5);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  color: #fff;
+  @include background-blur-init();
+  z-index: 99;
+
+  &__content{
+    --border: #{$white-shadow};
+    --background: #{$gray};
+
+    background: var(--background);
+    height: 600px;
+    width: 70%;
+    padding: 35px;
+    box-shadow:
+            0 40px 0 -20px var(--background),
+            0 -40px 0 -20px var(--background),
+            40px 0 0 -20px var(--background),
+            -40px 0 0 -20px var(--background),
+
+            0 0 0 10px var(--border),
+            -40px 0 0 -10px var(--border),
+            40px 0 0 -10px var(--border),
+            0 -40px 0 -10px var(--border),
+            0 40px 0 -10px var(--border),
+  ;
+  }
+}
