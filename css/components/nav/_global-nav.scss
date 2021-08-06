@@ -33,7 +33,7 @@
       top: 0;
       left: 0;
       opacity: .8;
-      transition: .1s ease-in-out;
+      transition: .075s ease-in-out;
       @include background-blur-init();
       z-index: -1;
     }
