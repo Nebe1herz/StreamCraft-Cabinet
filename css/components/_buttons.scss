@@ -1,15 +1,16 @@
 .btn{
   // Переменные
-  @include btn-var-init(darken($gray, 20));
+  @include btn-var-init(transparent, transparent);
   --color: #{$white};
   --color-shadow: #{$white-shadow};
 
   // Основное
+  position: relative;
   display: inline-block;
   padding: 25px 40px;
-  transition: .1s ease-in-out;
   cursor: pointer;
   outline: none;
+  transition: .1s ease-in-out;
 
   // Цвет блок
   background: var(--background);
@@ -28,53 +29,39 @@
   text-align: center;
 
   // Модификаторы
+  &_primary{
+    @include btn-var-init($blue, $blue-shadow);
+  }
   &_success{
-    @include btn-var-init(
+    @include btn-var-init($dark-green, $green-shadow);
+    /*@include btn-var-init(
         lighten(desaturate($dark-green, 45), 5)
-    );
-
-    &:hover{
-      @include btn-var-init(
-        lighten(desaturate($dark-green, 45), 15)
-      );
-    }
+    );*/
   }
   &_danger{
-    @include btn-var-init(
-        lighten(desaturate($dark-red, 45), 10)
-    );
-
-    &:hover{
-      @include btn-var-init(
-        lighten(desaturate($dark-red, 45), 20)
-      );
-    }
+    @include btn-var-init($dark-red, $red-shadow);
+    /*@include btn-var-init(
+        lighten(desaturate($dark-red, 45), 15)
+    );*/
   }
-  &_primary{
-    @include btn-var-init(
+  &_warning{
+    @include btn-var-init($gold, $gold-shadow);
+  }
+  &_violet{
+    @include btn-var-init($dark-purple, $light-purple-shadow);
+    /*@include btn-var-init(
         lighten(desaturate($dark-purple, 45), 10)
-    );
-
-    &:hover{
-      @include btn-var-init(
-        lighten(desaturate($dark-purple, 45), 20)
-      );
-    }
+    );*/
+  }
+  &_info{
+    @include btn-var-init($dark-aqua, $aqua-shadow);
   }
   &_dark{
-    @include btn-var-init(
-        lighten($black, 15)
-    );
-
-    &:hover{
-      @include btn-var-init(
-        lighten($black, 20)
-      );
-    }
+    @include btn-var-init($dark-gray-shadow);
   }
   &_disabled{
-    @include btn-var-init(darken($dark-gray, 10));
-    cursor: default;
+    @include btn-var-init($gray-shadow);
+    cursor: default!important;
   }
 }
 
