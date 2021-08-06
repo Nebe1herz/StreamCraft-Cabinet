@@ -3,8 +3,9 @@
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // Генератор случайных чисел
-const randomNum = (min, max) => Math.floor(Math.random()*(max-min+1)+min),
-    checked = 'overlay-check'; // Класс открытия оверлея
+const
+    randomNum = (min, max) => Math.floor(Math.random()*(max-min+1)+min),
+    overlayChecked = 'overlay-checked'; // Класс открытия оверлея
 
 // Обработчик кликов для открытия/закрытия главного меню
 document.body.onclick = (e) => {
@@ -13,7 +14,7 @@ document.body.onclick = (e) => {
             document.body.classList.toggle(checked);
             break;*/
         case 'overlay_close':
-            document.body.classList.remove(checked);
+            document.body.classList.remove(overlayChecked);
             break;
     }
 };
