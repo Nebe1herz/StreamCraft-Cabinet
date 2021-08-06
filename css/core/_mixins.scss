@@ -34,3 +34,10 @@
   --border-bottom: #{darken($color, 16)};
   --shadow: #{alpha($shadow, .3)};
 }
+
+@mixin windowConfig($style){
+  --background: #{$style};
+  --border: #{$black};
+  --light: #{lighten($style, 15%)};
+  --shadow: #{desaturate(darken($style, 45%), 45%)};
+}
