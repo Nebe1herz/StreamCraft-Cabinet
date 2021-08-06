@@ -66,6 +66,13 @@ body{
   // TODO remove
   //box-shadow: 0 0 1px #fff;
   min-height: 100vh;
+
+  &_modal{
+    display: flex;
+    max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 // Реализация со всеми тенями стиля стандартного GUI
