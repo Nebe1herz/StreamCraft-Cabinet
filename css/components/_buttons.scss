@@ -1,13 +1,12 @@
 .btn{
   // Переменные
   @include btn-var-init(transparent, transparent);
-  --color: #{$white};
-  --color-shadow: #{$white-shadow};
+  --text-shadow: #{$white-shadow};
 
   // Основное
   position: relative;
   display: inline-block;
-  padding: 25px 40px;
+  padding: 15px 45px;
   cursor: pointer;
   outline: none;
   transition: .1s ease-in-out;
@@ -23,8 +22,9 @@
           10px 5px var(--shadow);
 
   // Настройки текста
-  color: var(--color);
-  text-shadow: 2px 2px var(--color-shadow);
+  font-size: 20px;
+  color: $white;
+  text-shadow: 3px 3px var(--text-shadow);
   text-transform: uppercase;
   text-align: center;
 
@@ -57,16 +57,16 @@
     @include btn-var-init($blue, $blue-shadow);
   }
   &_success{
-    @include btn-var-init($dark-green, $green-shadow);
-    /*@include btn-var-init(
-        lighten(desaturate($dark-green, 45), 5)
-    );*/
+    @include btn-var-init(
+                    lighten(desaturate($dark-green, 45), 10),
+                    $green-shadow
+    );
   }
   &_danger{
-    @include btn-var-init($dark-red, $red-shadow);
-    /*@include btn-var-init(
-        lighten(desaturate($dark-red, 45), 15)
-    );*/
+    @include btn-var-init(
+                    lighten(desaturate($dark-red, 45), 10),
+                    $red-shadow
+    );
   }
   &_warning{
     @include btn-var-init($gold, $gold-shadow);
