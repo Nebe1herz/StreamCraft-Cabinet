@@ -1,33 +1,62 @@
 .modal{
+  // Цвет затемнения
+  --blackout: #{alpha($black, .6)};
+
+  // Основные стили
   position: fixed;
-  background: alpha($black, .5);
+  background: var(--blackout);
   height: 100vh;
   width: 100vw;
   left: 0;
   top: 0;
   color: #fff;
-  @include background-blur-init();
+  opacity: 0;
+  pointer-events: none;
+  transition: .15s ease-in-out;
+  @include background-blur-init(35px);
   z-index: 99;
 
-  &__content{
-    --border: #{$white-shadow};
-    --background: #{$gray};
+  // Модификации
+  &_style-gold{
+    --blackout: #{alpha($gold, .4)};
+  }
 
+  // Стилизация окна
+  &__content{
+    // Цвет рамки и фона
+    --border: #{alpha($white, .2)};
+    --background: #{alpha($black, .8)};
+
+    // Основные стили
     background: var(--background);
     height: 600px;
-    width: 70%;
-    padding: 35px;
-    box-shadow:
-            0 40px 0 -20px var(--background),
-            0 -40px 0 -20px var(--background),
-            40px 0 0 -20px var(--background),
-            -40px 0 0 -20px var(--background),
+    width: 80%;
+    padding: 50px;
+    transition: .15s ease-in-out;
+    transform: scale(.5);
 
-            0 0 0 10px var(--border),
-            -40px 0 0 -10px var(--border),
-            40px 0 0 -10px var(--border),
-            0 -40px 0 -10px var(--border),
-            0 40px 0 -10px var(--border),
-  ;
+    @if $modal_simple-mode == false {
+      // Прямо лютый OVERTHINKING
+      box-shadow:
+              0 40px 0 -20px var(--background),
+              0 -40px 0 -20px var(--background),
+              40px 0 0 -20px var(--background),
+              -40px 0 0 -20px var(--background),
+
+              0 0 0 10px var(--border),
+              -40px 0 0 -10px var(--border),
+              40px 0 0 -10px var(--border),
+              0 -40px 0 -10px var(--border),
+              0 40px 0 -10px var(--border);
+    } @else {
+      // Альтернатива попроще
+      box-shadow:
+              10px 0 var(--border),
+              -10px 0 var(--border),
+              0 10px var(--border),
+              0 -10px var(--border),
+              0 0 0 30px var(--background);
+    }
+
   }
 }
