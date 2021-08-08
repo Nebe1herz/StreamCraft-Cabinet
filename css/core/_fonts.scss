@@ -6,6 +6,13 @@
   src:url('#{$urlFonts}MinecraftRegular.woff2') format('woff2'),
       url('#{$urlFonts}MinecraftRegular.woff') format('woff')
 }
+// Minecraft Title
+@font-face {
+  font-family: MinecraftTitle;
+  font-style: normal;
+  font-weight: normal;
+  src:url('#{$urlFonts}MinecraftTitle.woff') format('woff')
+}
 
 // Конфигурация для шрифтов
 body {
