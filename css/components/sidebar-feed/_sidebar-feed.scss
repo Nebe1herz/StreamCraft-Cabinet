@@ -1,26 +1,22 @@
 .sidebar-feed{
   position: fixed;
-  background: alpha($black, .3);
+  background: alpha($black, .7);
   height: 100vh;
   width: 400px;
   right: 0;
   top: 0;
-  opacity: .5;
+  opacity: .4;
   transition: $sidebar-feed_transition-duration ease-in-out;
   transform: translateX(calc(100% - 100px));
   overflow: hidden scroll;
 
   // Инициализация размытия заднего фона
-  @include background-blur-init;
+  @include background-blur-init(5px);
 
   // Анимации при наведении
   &:hover{
-    background: alpha($black, .7);
     opacity: 1;
     transform: translateX(0);
-    &::before{
-      width: 100%;
-    }
   }
 
   // Анимация при отсутствии наведения
@@ -90,18 +86,6 @@
     background: var(--gray-600);
   }
 
-  // Динамический задний фон
-  &::before{
-    content:'';
-    position: absolute;
-    //background: alpha(#000, .7);
-    height: 100%;
-    width: 0;
-    top: 0;
-    right: 0;
-    transition: $sidebar-feed_transition-duration ease-in-out;
-    z-index: 0;
-  }
 }
 
 @import
