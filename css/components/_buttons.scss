@@ -1,7 +1,9 @@
 .btn{
   // Переменные
   @include btn-var-init(transparent, transparent);
+  --color: #{$white};
   --text-shadow: #{$white-shadow};
+  --outline-color: #{$white};
 
   // Основное
   position: relative;
@@ -23,7 +25,7 @@
 
   // Настройки текста
   font-size: 20px;
-  color: $white;
+  color: var(--color);
   text-shadow: 3px 3px var(--text-shadow);
   text-transform: uppercase;
   text-align: center;
@@ -39,10 +41,10 @@
     opacity: 0;
     transition: top .15s ease-in-out;
     box-shadow:
-            5px 0 $white,
-            -5px 0 $white,
-            0 5px $white,
-            0 -5px $white;
+            5px 0 var(--outline-color),
+            -5px 0 var(--outline-color),
+            0 5px var(--outline-color),
+            0 -5px var(--outline-color);
   }
 
   &:not(&_disabled):hover{
@@ -73,12 +75,17 @@
   }
   &_violet{
     @include btn-var-init($dark-purple, $light-purple-shadow);
-    /*@include btn-var-init(
-        lighten(desaturate($dark-purple, 45), 10)
-    );*/
   }
   &_info{
     @include btn-var-init($dark-aqua, $aqua-shadow);
+  }
+  &_light{
+    @include btn-var-init(
+                    darken($white, 10)
+    );
+  }
+  &_secondary{
+    @include btn-var-init($dark-gray);
   }
   &_dark{
     @include btn-var-init($dark-gray-shadow);
