@@ -78,9 +78,9 @@ body{
   margin: 0 auto;
   padding: 0 60px;
 
-  // Модификатор контейнера на всю ширину
+  // Модификатор для широкого контейнера
   &_wide{
-    max-width: 100%;
+    max-width: 1600px;
     padding: 0 160px 0 60px;
   }
 

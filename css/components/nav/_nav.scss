@@ -6,6 +6,7 @@
 
   .wrapper_nav{
     background: linear-gradient(to right, transparent, alpha($black, .8) 5%, transparent);
+    max-width: 100%;
   }
 
   & ~ .wrapper{
