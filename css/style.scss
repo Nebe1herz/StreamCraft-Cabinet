@@ -21,8 +21,15 @@
 
 // Страницы
 @import
-        // Главное меню
-        'pages/index/index-menu'
+        'pages/index-menu', // Главное меню
+
+        'pages/donate', // Наши привилегии
+        'pages/cases', // Выбор и покупка кейса
+        'pages/kits', // Выбор набора ресурсов
+
+        'pages/shop', // Магазин блоков
+        'pages/shop__filter', // Фильтры и сортировка
+        'pages/shop__promo' // Специальное предложение
 ;
 
 // Модальные окна
