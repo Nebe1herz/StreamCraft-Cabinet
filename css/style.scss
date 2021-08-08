@@ -11,7 +11,10 @@
 
 // Библиотека компонентов
 @import
-        'components/wallpaper', // Основной контейнер сайта
+        'components/body', // Основной родитель
+        'components/page', // Контейнер для страницы
+        'components/wallpaper', // Контейнер для содержимого
+
         'components/buttons', // Стилизация кнопок
         'components/tooltip', // Подсказка при наведении на предмет
 

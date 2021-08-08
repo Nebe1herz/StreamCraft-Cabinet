@@ -1,0 +1,56 @@
+// Заголовок h1
+.heading{
+  background:
+          linear-gradient(
+                          to right,
+                          transparent,
+                          alpha($gold, .2) 5%,
+                          transparent
+          );
+  font-family: MinecraftTitle, sans-serif;
+  font-size: 48px;
+  color: #fff;
+  line-height: 80px;
+  text-shadow: 6px 6px $white-shadow;
+}
+
+// Реализация со всеми тенями стиля стандартного GUI
+.window{
+  --background: var(--gray-200);
+  --border: var(--gray-900);
+  --light: var(--white);
+  --shadow: var(--gray-600);
+
+  // Основные стили
+  background: var(--background);
+  padding: 25px 15px;
+  box-shadow:
+          // === ПРАВАЯ ГРАНИЦА ===
+          // Тень у границы
+          20px 0 0 -12px var(--shadow),
+          14px 2px 0 -10px var(--shadow),
+          12px 0 0 -8px var(--background),
+            // Черный контур
+          8px 0 0 -4px var(--border),
+          16px 0 0 -8px var(--border),
+          24px 0 0 -12px var(--border),
+
+            // === ЛЕВАЯ ГРАНИЦА ===
+            // Тень у границы
+          -20px 0 0 -12px var(--light),
+          -14px 2px 0 -10px var(--light),
+          -12px 0 0 -8px var(--light),
+            // Черный контур
+          -8px 0 0 -4px var(--border),
+          -16px 0 0 -8px var(--border),
+          -24px 0 0 -12px var(--border),
+
+            // === ВЕРХНЯЯ И НИЖНЯЯ ===
+            // Верхняя граница
+          inset 0 4px var(--border), // Черный контур
+          inset 0 12px var(--light), // Тень
+            // Нижняя граница
+          inset 0 -4px var(--border), // Черный контур
+          inset 0 -12px var(--shadow) // Тень
+;
+}
