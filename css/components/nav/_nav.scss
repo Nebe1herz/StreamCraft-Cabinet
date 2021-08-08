@@ -1,16 +1,15 @@
 .nav{
   position: fixed;
-  padding-right: 100px;
+  padding: 25px 0;
   width: 100%;
   color: #fff;
 
-  .wrapper{
-    max-width: 100%;
-    min-height: unset;
+  .wrapper_nav{
+    background: linear-gradient(to right, transparent, alpha($black, .8) 5%, transparent);
   }
 
   & ~ .wrapper{
-    padding-top: 80px;
+    padding-top: 125px;
   }
 }
 
