@@ -4,6 +4,8 @@
   --color: #{$white};
   --text-shadow: #{$white-shadow};
   --outline-color: #{$white};
+  --value: 5px;
+  --value-reverse: -5px;
 
   // Основное
   position: relative;
@@ -26,7 +28,7 @@
   // Настройки текста
   font-size: 20px;
   color: var(--color);
-  text-shadow: 3px 3px var(--text-shadow);
+  text-shadow: 2px 2px var(--text-shadow);
   text-transform: uppercase;
   text-align: center;
 
@@ -41,10 +43,10 @@
     opacity: 0;
     transition: top .15s ease-in-out;
     box-shadow:
-            5px 0 var(--outline-color),
-            -5px 0 var(--outline-color),
-            0 5px var(--outline-color),
-            0 -5px var(--outline-color);
+            var(--value) 0 var(--outline-color),
+            var(--value-reverse) 0 var(--outline-color),
+            0 var(--value) var(--outline-color),
+            0 var(--value-reverse) var(--outline-color);
   }
 
   &:not(&_disabled):hover{
