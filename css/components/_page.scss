@@ -1,17 +1,62 @@
-// Заголовок h1
-.heading{
-  background:
-          linear-gradient(
-                          to right,
-                          transparent,
-                          alpha($gold, .2) 5%,
-                          transparent
-          );
-  font-family: MinecraftTitle, sans-serif;
-  font-size: 48px;
-  color: #fff;
-  line-height: 80px;
-  text-shadow: 6px 6px $white-shadow;
+.page{
+  --gradient: #{alpha($white, .05)};
+  padding: 135px 0 35px;
+  max-height: 100vh;
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+
+    &-track {
+      background: alpha($black, .4);
+      @include background-blur-init();
+    }
+    &-thumb {
+      background: alpha($black, .6);
+
+      &:hover{
+        background: $white;
+      }
+    }
+  }
+
+  &_style-gold{
+    --gradient: #{alpha($gold, .2)};
+  }
+
+  // Заголовок h1
+  &__heading{
+    background:
+            linear-gradient(
+                            to right,
+                            transparent,
+                            var(--gradient) 5%,
+                            transparent 65%
+            );
+    font-size: 48px;
+    color: #fff;
+    line-height: 80px;
+    text-shadow: 6px 6px $white-shadow;
+
+    & *{
+      font-family: MinecraftTitle, sans-serif;
+    }
+  }
+
+  // Сгруппированный список привилегий
+  &__area{
+    padding: 25px 0;
+
+    // Заголовок 2-го уровня
+    &-heading{
+      margin: 0 0 25px;
+      color: $green;
+
+      &__timer{
+        color: $gold;
+      }
+    }
+  }
 }
 
 // Реализация со всеми тенями стиля стандартного GUI
