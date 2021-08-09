@@ -3,8 +3,7 @@
   font-family: MinecraftRegular;
   font-style: normal;
   font-weight: normal;
-  src:url('#{$urlFonts}MinecraftRegular.woff2') format('woff2'),
-      url('#{$urlFonts}MinecraftRegular.woff') format('woff')
+  src:url('#{$urlFonts}MinecraftRegular.woff') format('woff')
 }
 // Minecraft Title
 @font-face {
