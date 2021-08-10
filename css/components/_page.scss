@@ -1,5 +1,5 @@
 .page{
-  --gradient: #{alpha($white, .1)};
+  --gradient: #{alpha($white, .15)};
   padding: 135px 0 35px;
   max-height: 100vh;
   overflow: hidden auto;
@@ -31,7 +31,7 @@
                             to right,
                             transparent,
                             var(--gradient) 5%,
-                            transparent 65%
+                            transparent 80%
             );
     font-size: 48px;
     color: #fff;
