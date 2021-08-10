@@ -39,32 +39,13 @@
   }
 
   // Кастомные элементы для использования в тултипах
-  .gold{
-    color: $gold;
-    text-shadow: 2px 2px $gold-shadow;
+  span{
+    --color: inherit;
+    --shadow: inherit;
+    color: var(--color);
+    text-shadow: 2px 2px var(--shadow);
   }
-  .green{
-    color: $green;
-    text-shadow: 2px 2px $green-shadow;
-  }
-  .aqua{
-    color: $aqua;
-    text-shadow: 2px 2px $aqua-shadow;
-  }
-  .white{
-    color: $white;
-    text-shadow: 2px 2px $white-shadow;
-  }
-  .gray{
-    color: $gray;
-    text-shadow: 2px 2px $gray-shadow;
-  }
-  .red{
-    color: $red;
-    text-shadow: 2px 2px $red-shadow;
-  }
-  .light-purple{
-    color: $light-purple;
-    text-shadow: 2px 2px $light-purple-shadow;
+  @each $value in $colors-map {
+    @include tooltip-color($value);
   }
 }

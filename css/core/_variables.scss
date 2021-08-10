@@ -15,6 +15,26 @@ $modal_simple-mode: false;
 // Длительность переходов у боковой панели
 $sidebar-feed_transition-duration: .15s;
 
+// Карта цветов
+$colors-map: (
+  black,
+  dark-blue,
+  dark-green,
+  dark-aqua,
+  dark-red,
+  dark-purple,
+  gold,
+  gray,
+  dark-gray,
+  blue,
+  green,
+  aqua,
+  red,
+  light-purple,
+  yellow,
+  white
+);
+
 // Палитра цветов SCSS
 // ========================== $0 === Черный
 $black: #000;
