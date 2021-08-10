@@ -8,10 +8,14 @@
     // Элемент списка
     &-item{
       display: inline-block;
-      width: 270px;
-      height: 575px;
-      margin: 0 30px 0 0;
+      max-width: 275px;
+      width: 100%;
+      margin: 0;
       vertical-align: top;
+
+      &:not(:last-of-type){
+        margin-right: 30px;
+      }
     }
   }
 
@@ -25,8 +29,8 @@
     display: block;
     position: relative;
     background: var(--background);
-    padding: 20px;
-    height: 100%;
+    min-height: 560px;
+    padding: 0 20px 25px;
     @include bordered(var(--background), 7);
     text-transform: initial;
     text-align: center;
@@ -52,6 +56,7 @@
     // Иконка привилегии
     &-icon{
       display: block;
+      height: 160px;
       width: 160px;
       margin: 0 auto;
       //image-rendering: pixelated;
@@ -97,17 +102,30 @@
     }
 
     // Скидка
-    &-sale{
-      position: absolute;
-      display: block;
-      background: linear-gradient(90deg, $red 10%, alpha($red, .1));
+    &__tags{
+      display: none;
+      position: relative;
       color: $white;
-      left: -7px;
+      right: -27px;
+      left: -27px;
       top: 10px;
-      padding: 5px 10px;
+      width: calc(100% + 54px);
       white-space: nowrap;
       text-shadow: 3px 3px $white-shadow;
       text-align: center;
+
+      &-line{
+        display: block;
+        background:
+                linear-gradient(
+                                90deg,
+                                alpha($red, .2),
+                                $red 50%,
+                                alpha($red, .2)
+                );
+        padding: 5px 10px;
+        margin: 0 0 5px;
+      }
     }
 
     // Разделитель
