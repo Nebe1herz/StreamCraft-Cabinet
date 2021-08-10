@@ -1,0 +1,131 @@
+.donate{
+
+  // Список-контейнер привилегий
+  &__list{
+    font-size: 0;
+    list-style: none;
+
+    // Элемент списка
+    &-item{
+      display: inline-block;
+      max-width: 275px;
+      width: 100%;
+      margin: 0;
+      vertical-align: top;
+
+      &:not(:last-of-type){
+        margin-right: 30px;
+      }
+    }
+  }
+
+  // Карточка донат-группы
+  &-card{
+    --background: #{alpha($black, .5)};
+    --color: #{$white};
+    --value: 7px;
+    --value-reverse: -7px;
+
+    display: block;
+    position: relative;
+    background: var(--background);
+    min-height: 560px;
+    padding: 0 20px 25px;
+    @include bordered(var(--background), 7);
+    text-transform: initial;
+    text-align: center;
+
+    // Модификаторы цвета
+    &_success{
+      --background: #{alpha($green, .1)};
+      --color: #{$green};
+    }
+    &_primary{
+      --background: #{alpha($blue, .1)};
+      --color: #{$blue};
+    }
+    &_violet{
+      --background: #{alpha($light-purple, .1)};
+      --color: #{$light-purple};
+    }
+    &_warning{
+      --background: #{alpha($gold, .1)};
+      --color: #{$gold};
+    }
+
+    // Иконка привилегии
+    &__icon{
+      display: block;
+      height: 160px;
+      width: 160px;
+      margin: 0 auto;
+      //image-rendering: pixelated;
+    }
+
+    // Наименование привилегии
+    &__title{
+      font-family: MinecraftTitle, sans-serif;
+      font-size: 36px;
+      color: var(--color);
+      padding: 0 10px;
+      text-shadow: 4px 4px alpha($black, .6);
+    }
+
+    // Стоимость привилегии
+    &__price{
+      line-height: 24px;
+      font-size: 24px;
+      color: $white;
+      text-shadow: 4px 4px $white-shadow;
+
+      &-strike{
+        display: inline-block;
+        position: relative;
+        color: alpha($gray, .7);
+        padding: 0 4px;
+        text-shadow: 4px 4px $dark-gray-shadow;
+        clear: both;
+
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          background: $red;
+          height: 3px;
+          width: 100%;
+          top: 13px;
+          left: 0;
+          opacity: .8;
+          box-shadow: 3px 3px $red-shadow;
+        }
+      }
+    }
+
+    // Скидка
+    &__tags{
+      display: none;
+      position: relative;
+      color: $white;
+      right: -27px;
+      left: -27px;
+      top: 10px;
+      width: calc(100% + 54px);
+      white-space: nowrap;
+      text-shadow: 3px 3px $white-shadow;
+      text-align: center;
+
+      &-line{
+        display: block;
+        background:
+                linear-gradient(
+                                90deg,
+                                alpha($red, .2),
+                                $red 50%,
+                                alpha($red, .2)
+                );
+        padding: 5px 10px;
+        margin: 0 0 5px;
+      }
+    }
+  }
+}
