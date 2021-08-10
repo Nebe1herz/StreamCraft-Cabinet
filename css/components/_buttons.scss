@@ -96,6 +96,7 @@
   &_disabled{
     @include btn-var-init($gray-shadow);
     cursor: default!important;
+    pointer-events: none;
   }
 }
 
