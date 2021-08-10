@@ -13,8 +13,8 @@
       margin: 0;
       vertical-align: top;
 
-      &:not(:last-of-type){
-        margin-right: 30px;
+      &:not(:nth-child(4n+1)){
+        margin-left: 30px;
       }
     }
   }
@@ -29,8 +29,8 @@
     display: block;
     position: relative;
     background: var(--background);
-    min-height: 560px;
-    padding: 0 20px 25px;
+    min-height: 585px;
+    padding: 25px 0;
     @include bordered(var(--background), 7);
     text-transform: initial;
     text-align: center;
@@ -51,6 +51,34 @@
     &_warning{
       --background: #{alpha($gold, .1)};
       --color: #{$gold};
+    }
+
+    // Плашка для отображения скидки или специального предложения
+    &__tags{
+      display: block;
+      position: absolute;
+      color: $white;
+      right: -7px;
+      left: -7px;
+      top: 10px;
+      width: calc(100% + 14px);
+      white-space: nowrap;
+      text-shadow: 3px 3px $white-shadow;
+      text-align: center;
+
+      // Поддержка нескольких строк
+      &-line{
+        display: block;
+        background:
+                linear-gradient(
+                                90deg,
+                                alpha($red, .2),
+                                $red 50%,
+                                alpha($red, .2)
+                );
+        padding: 5px 10px;
+        margin: 0 0 5px;
+      }
     }
 
     // Иконка привилегии
@@ -78,6 +106,7 @@
       color: $white;
       text-shadow: 4px 4px $white-shadow;
 
+      // Зачеркнутая цена (для отображения разницы при скидке)
       &-strike{
         display: inline-block;
         position: relative;
@@ -86,6 +115,7 @@
         text-shadow: 4px 4px $dark-gray-shadow;
         clear: both;
 
+        // Зачеркивающая полоса
         &::before{
           content: '';
           display: block;
@@ -98,33 +128,6 @@
           opacity: .8;
           box-shadow: 3px 3px $red-shadow;
         }
-      }
-    }
-
-    // Скидка
-    &__tags{
-      display: none;
-      position: relative;
-      color: $white;
-      right: -27px;
-      left: -27px;
-      top: 10px;
-      width: calc(100% + 54px);
-      white-space: nowrap;
-      text-shadow: 3px 3px $white-shadow;
-      text-align: center;
-
-      &-line{
-        display: block;
-        background:
-                linear-gradient(
-                                90deg,
-                                alpha($red, .2),
-                                $red 50%,
-                                alpha($red, .2)
-                );
-        padding: 5px 10px;
-        margin: 0 0 5px;
       }
     }
   }
