@@ -47,6 +47,7 @@
             var(--value-reverse) 0 var(--outline-color),
             0 var(--value) var(--outline-color),
             0 var(--value-reverse) var(--outline-color);
+    z-index: 1;
   }
 
   &:not(&_disabled):hover{
