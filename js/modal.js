@@ -19,10 +19,31 @@ const modalToggle = (action, content = null) => {
             break;
 
         case 'show':
-            modalWrapper.insertAdjacentHTML('afterend', content);
-            modalWrapper.remove();
-            setTimeout(() => document.body.classList.add(modalChecked), 10);
-            modalTrigger = document.querySelectorAll('.modal-trigger');
+            let request = new XMLHttpRequest();
+
+            // Открываем запрос
+            request.open('GET', `/StreamCraft Cabinet/${content}.html`);
+            // Отслеживание
+            request.onload = (e) => {
+                // Проверка на готовность загрузки страницы
+                if (request.readyState === 4) {
+                    // Проверка успешности GET-запроса
+                    switch(request.status) {
+                        case 200:
+                            modalWrapper.insertAdjacentHTML('afterend', request.responseText);
+                            modalWrapper.remove();
+                            setTimeout(() => document.body.classList.add(modalChecked), 10);
+                            modalTrigger = document.querySelectorAll('.modal-trigger');
+                            break;
+                        default:
+                            console.error(request.statusText)
+                    }
+                }
+            };
+
+            // Ловим ошибки
+            request.onerror = () => console.error(request.statusText);
+            request.send(null);
             break;
     }
 }
@@ -41,28 +62,10 @@ modalTrigger.forEach((item) =>{
             return false;
         }
 
-        let request = new XMLHttpRequest(),
-            modalName = i.target.getAttribute('data-modal-name');
+        let modalName = i.target.getAttribute('data-modal-name');
+        modalToggle('show', modalName)
 
-        // Открываем запрос
-        request.open('GET', `/[2021] SC Game Overlay/${modalName}.html`);
-        // Отслеживание
-        request.onload = (e) => {
-            // Проверка на готовность загрузки страницы
-            if (request.readyState === 4) {
-                // Проверка успешности GET-запроса
-                switch(request.status) {
-                    case 200:
-                        modalToggle('show', request.responseText)
-                        break;
-                    default:
-                        console.error(request.statusText)
-                }
-            }
-        };
-
-        // Ловим ошибки
-        request.onerror = () => console.error(request.statusText);
-        request.send(null);
     };
 });
+
+//document.addEventListener("DOMContentLoaded", modalToggle('show', 'modal.privilege.legend'));
