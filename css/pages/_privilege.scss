@@ -28,4 +28,22 @@
       }
     }
   }
+
+  // Вместо модификаторов
+  .donate-card{
+    height: 609px;
+
+    &__icon{
+      margin: 0 auto;
+    }
+    &__price-strike{
+      display: inline-block;
+      margin: 0;
+    }
+  }
+  .donate-card__title{
+    font-size: 36px;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
 }

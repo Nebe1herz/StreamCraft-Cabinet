@@ -16,6 +16,9 @@
       &:not(:nth-child(4n+1)){
         margin-left: 30px;
       }
+      &:nth-child(n+5){
+        margin-top: 30px;
+      }
     }
   }
 
@@ -29,34 +32,65 @@
     display: block;
     position: relative;
     background: var(--background);
-    min-height: 585px;
     padding: 25px 0;
     @include bordered(var(--background), 7);
     text-transform: initial;
     text-align: center;
 
+    // Отключен
+    &_disabled{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+
+      &__icon{
+        width: 160px;
+        opacity: .3;
+        image-rendering: pixelated;
+      }
+    }
+
     // Модификаторы цвета
-    &_success{
-      --background: #{alpha($green, .1)};
-      --color: #{$green};
-    }
-    &_primary{
-      --background: #{alpha($blue, .1)};
-      --color: #{$blue};
-    }
-    &_violet{
-      --background: #{alpha($light-purple, .1)};
-      --color: #{$light-purple};
-    }
-    &_warning{
-      --background: #{alpha($gold, .1)};
-      --color: #{$gold};
+    &_style{
+      &-green{
+        --background: #{alpha($green, .1)};
+        --color: #{$green};
+      }
+      &-red{
+        --background: #{alpha($red, .1)};
+        --color: #{$red};
+      }
+      &-blue{
+        --background: #{alpha($blue, .1)};
+        --color: #{$blue};
+      }
+      &-aqua{
+        --background: #{alpha($aqua, .1)};
+        --color: #{$aqua};
+      }
+      &-light-purple{
+        --background: #{alpha($light-purple, .1)};
+        --color: #{$light-purple};
+      }
+      &-gold{
+        --background: #{alpha($gold, .1)};
+        --color: #{$gold};
+      }
     }
 
     // Плашка для отображения скидки или специального предложения
-    &__tags{
+    &__sale{
       display: block;
       position: absolute;
+      background:
+              linear-gradient(
+                              90deg,
+                              transparent,
+                              $red,
+                              transparent
+              );
+      line-height: 28px;
+      font-size: 18px;
       color: $white;
       right: -7px;
       left: -7px;
@@ -65,53 +99,41 @@
       white-space: nowrap;
       text-shadow: 3px 3px $white-shadow;
       text-align: center;
-
-      // Поддержка нескольких строк
-      &-line{
-        display: block;
-        background:
-                linear-gradient(
-                                90deg,
-                                alpha($red, .2),
-                                $red 50%,
-                                alpha($red, .2)
-                );
-        padding: 5px 10px;
-        margin: 0 0 5px;
-      }
     }
 
     // Иконка привилегии
     &__icon{
       display: block;
-      height: 160px;
-      width: 160px;
-      margin: 0 auto;
+      height: 180px;
+      width: 180px;
+      margin: 10px auto;
       //image-rendering: pixelated;
     }
 
     // Наименование привилегии
     &__title{
       font-family: MinecraftTitle, sans-serif;
-      font-size: 36px;
+      font-size: 24px;
+      line-height: 1.2;
       color: var(--color);
-      padding: 0 10px;
+      padding: 20px 10px 0;
       text-shadow: 4px 4px alpha($black, .6);
     }
 
     // Стоимость привилегии
     &__price{
-      line-height: 24px;
-      font-size: 24px;
+      line-height: 1;
+      font-size: 20px;
       color: $white;
-      text-shadow: 4px 4px $white-shadow;
+      text-shadow: 3px 3px $white-shadow;
 
       // Зачеркнутая цена (для отображения разницы при скидке)
       &-strike{
         display: inline-block;
         position: relative;
-        color: alpha($gray, .7);
         padding: 0 4px;
+        margin: 0 0 5px;
+        color: alpha($gray, .7);
         text-shadow: 4px 4px $dark-gray-shadow;
         clear: both;
 
@@ -123,7 +145,7 @@
           background: $red;
           height: 3px;
           width: 100%;
-          top: 13px;
+          top: 9px;
           left: 0;
           opacity: .8;
           box-shadow: 3px 3px $red-shadow;
