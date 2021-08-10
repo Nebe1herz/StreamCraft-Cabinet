@@ -10,7 +10,7 @@ $urlFonts: $dir + '/font/'; // Уникальный путь шрифтов
 $background-blur: true;
 
 // Вид модального окна
-$modal_simple-mode: false;
+$modal: 'simple';
 
 // Длительность переходов у боковой панели
 $sidebar-feed_transition-duration: .15s;

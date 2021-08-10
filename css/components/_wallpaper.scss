@@ -31,9 +31,8 @@
   // Модификатор для модального окна с центрированием
   &_modal{
     display: flex;
-    max-height: 100vh;
     justify-content: center;
-    align-items: center;
+    padding :100px 0 200px;
   }
 }
 

@@ -1,9 +1,12 @@
 .modal{
   // Цвет затемнения
   --blackout: #{alpha($black, .6)};
+  --border: #{alpha($blue, .2)};
+  --background: #{alpha($black, .8)};
 
   // Основные стили
-  position: fixed;
+  display: grid;
+  position: fixed;;
   background: var(--blackout);
   height: 100vh;
   width: 100vw;
@@ -11,52 +14,97 @@
   top: 0;
   color: #fff;
   opacity: 0;
+  align-items: center;
   pointer-events: none;
   transition: .15s ease-in-out;
   @include background-blur-init(35px);
+  overflow: hidden auto;
   z-index: 99;
 
-  // Модификации
-  &_style-gold{
-    --blackout: #{alpha($gold, .4)};
+  &::-webkit-scrollbar {
+    width: 16px;
+
+    &-track {
+      background: alpha($black, .4);
+      @include background-blur-init();
+    }
+    &-thumb {
+      background: alpha($black, .6);
+
+      &:hover{
+        background: $white;
+      }
+    }
   }
 
-  // Стилизация окна
-  &__content{
-    // Цвет рамки и фона
-    --border: #{alpha($white, .2)};
-    --background: #{alpha($black, .8)};
+  // Модификации
+  &_style{
+    &-gold{
+      --blackout: #{alpha($gold, .2)};
+      --border: #{alpha($gold, .2)};
+    }
+  }
 
+  // Группа контента
+  &-area{
     // Основные стили
-    background: var(--background);
-    height: 600px;
-    width: 80%;
+    width: 65%;
     padding: 50px;
+    text-align: center;
     transition: .15s ease-in-out;
-    transform: scale(.5);
 
-    @if $modal_simple-mode == false {
-      // Прямо лютый OVERTHINKING
-      box-shadow:
-              0 40px 0 -20px var(--background),
-              0 -40px 0 -20px var(--background),
-              40px 0 0 -20px var(--background),
-              -40px 0 0 -20px var(--background),
+    // Оконный вид группы
+    // Объявлен переменной $modal в variables.scss
+    &_windowed{
+      background: var(--background);
+      @if $modal == 'clean' {
+        // Чистая версия, но проблемы с контрастами на чисто белом фоне
+        --background: #{$white};
+        @include bordered(var(--background), 15);
+      }
+      @if $modal == 'simple' {
+        // Самый оптимальный вариант
+        box-shadow:
+                10px 0 var(--border),
+                -10px 0 var(--border),
+                0 10px var(--border),
+                0 -10px var(--border),
+                0 0 0 10px var(--background),
+                20px 0 var(--background),
+                -20px 0 var(--background),
+                0 20px var(--background),
+                0 -20px var(--background);
+      }
+      @if $modal == 'decorate'{
+        // Прямо лютый OVERTHINKING
+        box-shadow:
+                0 40px 0 -20px var(--background),
+                0 -40px 0 -20px var(--background),
+                40px 0 0 -20px var(--background),
+                -40px 0 0 -20px var(--background),
 
-              0 0 0 10px var(--border),
-              -40px 0 0 -10px var(--border),
-              40px 0 0 -10px var(--border),
-              0 -40px 0 -10px var(--border),
-              0 40px 0 -10px var(--border);
-    } @else {
-      // Альтернатива попроще
-      box-shadow:
-              10px 0 var(--border),
-              -10px 0 var(--border),
-              0 10px var(--border),
-              0 -10px var(--border),
-              0 0 0 30px var(--background);
+                0 0 0 10px var(--border),
+                -40px 0 0 -10px var(--border),
+                40px 0 0 -10px var(--border),
+                0 -40px 0 -10px var(--border),
+                0 40px 0 -10px var(--border);
+      }
     }
 
+    // Заголовок второго уровня внутри группы
+    &__heading{
+      font-family: MinecraftTitle, sans-serif;
+      line-height: 20px;
+      font-size: 36px;
+      color: $white;
+      text-shadow: 4px 4px $white-shadow;
+    }
+
+    //
+    &__paragraph{
+      font-size: 18px;
+      color: $gray;
+      margin: 25px 0 0;
+    }
   }
 }
