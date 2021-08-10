@@ -18,9 +18,11 @@
       text-shadow: 0 0 transparent;
       list-style: none;
 
+      // Отступы между элементами списка
       &-item{
         margin-top: 10px;
       }
+      // Акцентное выделение текста
       &-mark{
         color: var(--color);
       }
