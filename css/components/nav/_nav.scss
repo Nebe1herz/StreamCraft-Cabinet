@@ -1,11 +1,23 @@
 .nav{
   position: fixed;
-  padding: 25px 100px 25px 0;
+  padding: 20px 100px 20px 0;
   width: 100%;
   color: #fff;
 
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background:alpha($dark-blue-shadow, .1);
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include background-blur-init();
+  }
+
   .wrapper_nav{
-    background: linear-gradient(to right, transparent, alpha($black, .8) 5%, transparent);
     max-width: 100%;
   }
 }
