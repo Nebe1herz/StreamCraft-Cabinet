@@ -1,0 +1,90 @@
+.nav{
+  position: fixed;
+  padding: 20px 100px 20px 0;
+  width: 100%;
+  color: #fff;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background:alpha($dark-blue-shadow, .1);
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include background-blur-init();
+  }
+
+  .wrapper_nav{
+    max-width: 100%;
+  }
+
+  &-list{
+    display: grid;
+    grid-template-columns: auto auto 1fr repeat(3, auto);
+    grid-column-gap: 5px;
+    list-style: none;
+
+    // Элемент списка
+    &__item{
+      display: grid;
+      grid-template-columns: 32px auto;
+      position: relative;
+      line-height: 1.4;
+      font-size: 18px;
+      height: 48px;
+      padding: 0 15px;
+      text-transform: initial;
+      grid-column-gap: 10px;
+      align-items: center;
+
+      &-icon{
+        width: 32px;
+        image-rendering: pixelated;
+      }
+    }
+
+    // # МОДИФИКАТОРЫ
+    // Пользователь
+    &__user{
+      grid-template-columns: repeat(3, auto);
+
+      // Аватарка (голова скина)
+      &-avatar{
+        display: block;
+        width: 42px;
+      }
+      // Никнейм
+      &-nickname{
+
+      }
+      // "Открыть профиль"
+      &-group{
+        display: inline-block;
+        background: $dark-gray;
+        color: $white;
+        padding: 0 5px;
+        text-shadow: 2px 2px $white-shadow;
+        box-shadow: 3px 3px $dark-gray-shadow;
+      }
+    }
+
+    // Баланс
+    &__balance{
+      &-icon{
+        width: 32px;
+        image-rendering: pixelated;
+      }
+    }
+    // Корзина
+    &__cart{
+      grid-template-columns: 32px auto auto;
+      &--counter{
+        color: $aqua;
+        text-shadow: 2px 2px $aqua-shadow;
+      }
+    }
+  }
+}
