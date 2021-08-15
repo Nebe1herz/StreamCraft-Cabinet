@@ -10,7 +10,7 @@
     overflow: hidden;
 
     &__icon{
-      --background: #{alpha($white, .1)};
+      --background: #{alpha($white, .05)};
 
       position: relative;
       background: var(--background);
@@ -31,16 +31,18 @@
     }
     &__counter{
       position: absolute;
-      font-size: 16px;
-      color: $white;
-      top: 0;
-      right: 0;
-      text-shadow: 2px 2px $white-shadow, 0 0 8px $white;
+      font-family: MinecraftTitle, sans-serif;
+      font-size: 24px;
+      line-height: 0;
+      color: $gold;
+      top: 5px;
+      right: -10px;
+      text-shadow: 2px 2px $gold-shadow;
     }
 
     &_unread{
       .sidebar-feed__notice-status__icon{
-        --background: #{alpha($gold, .2)};
+        //--background: #{alpha($gold, .1)};
         &::before{
           background-image: url('#{$url}/icon/notice-bell-unread.png')!important;
           animation: notice-bell-rings 1.5s ease-in infinite;

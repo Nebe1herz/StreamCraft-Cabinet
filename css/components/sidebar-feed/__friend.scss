@@ -45,6 +45,11 @@
         text-shadow: 3px 3px var(--text-shadow);
       }
 
+      &__avatar{
+        opacity: 1;
+        transition: .15s ease-in-out;
+      }
+
       // Статус пользователя
       &-status{
         --text-shadow: #{$dark-gray-shadow};

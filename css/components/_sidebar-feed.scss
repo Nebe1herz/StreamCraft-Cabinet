@@ -4,16 +4,14 @@
   width: 400px;
   right: 0;
   top: 0;
-  background: alpha($white, .05);
+  background: alpha($white, .02);
   padding: 0;
-  opacity: .5;
   transition: .15s ease-in-out;
   transform: translateX(calc(100% - 100px));
   overflow: hidden scroll;
 
   // Анимации при наведении
   &:hover{
-    opacity: 1;
     background:
             alpha(#010204, .95)
             radial-gradient(alpha($blue, .2), transparent)
@@ -60,9 +58,15 @@
     }
 
     // Скрыть блок с пользователем
-    &__friend-item__user{
-      opacity: 0;
-      transition: .15s ease-in-out;
+    &__friend-item{
+      &__user{
+        opacity: 0;
+        transition: .15s ease-in-out;
+      }
+      &__avatar{
+
+        opacity: .5;
+      }
     }
   }
 
