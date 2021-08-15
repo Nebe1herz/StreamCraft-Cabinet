@@ -5,7 +5,7 @@
   right: 0;
   top: 0;
   background: alpha($white, .05);
-  padding: 10px 0;
+  padding: 0;
   opacity: .5;
   transition: .15s ease-in-out;
   transform: translateX(calc(100% - 100px));
@@ -18,8 +18,8 @@
             alpha(#010204, .95)
             radial-gradient(alpha($blue, .2), transparent)
             left center;
-    background-size: 200% 100%;
     padding: 20px 0;
+    background-size: 200% 100%;
     transform: translateX(0);
   }
 
@@ -27,7 +27,7 @@
   &:not(:hover) .sidebar-feed{
     // Обнуление отступов в разделах
     &__section{
-      padding: 0;
+      padding: 9px 0;
 
       // Полностью убрать визуально заголовок
       &-heading{
@@ -37,7 +37,12 @@
 
       // Обнуление внешнего отступа от заголовка
       &-list{
-        margin: 0;
+        padding: 0;
+
+        &_hover-hide{
+          max-height: 0;
+          opacity: 0;
+        }
       }
 
       // Изменить отступы
@@ -46,17 +51,11 @@
       }
     }
 
-    // Уведомление
-    &__notice-item{
-      --color: transparent;
-      --color-meta: var(--color);
-      --text-shadow: var(--color);
-      line-height: 0;
-      width: 54px;
-
-      &_role-more{
-        height: 0;
-        padding: 0;
+    &__notice{
+      &-status{
+        opacity: 1;
+        padding: 8px 23px;
+        height: 70px;
       }
     }
 

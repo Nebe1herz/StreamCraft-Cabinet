@@ -23,9 +23,15 @@
   }
 
   &-list{
+    padding: 10px 0 0;
     list-style: none;
-    margin-top: 10px;
     transition: .15s ease-in-out;
+
+    &_hover-hide{
+      opacity: 1;
+      max-height: 100%;
+      overflow: hidden;
+    }
   }
   &-item{
     padding: 8px 25px;

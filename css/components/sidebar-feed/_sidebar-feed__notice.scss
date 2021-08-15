@@ -1,10 +1,70 @@
 .sidebar-feed__notice{
 
+  // Счетчик уведомлений
+  &-status{
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: .15s ease-in-out;
+    overflow: hidden;
+
+    &__icon{
+      --background: #{alpha($white, .1)};
+
+      position: relative;
+      background: var(--background);
+      height: 54px;
+      width: 54px;
+      @include bordered(var(--background));
+
+      &::before{
+        content:'';
+        display: block;
+        background: url('#{$url}/icon/notice-bell.png') no-repeat center;
+        background-size: cover;
+        width: 54px;
+        height: 54px;
+        transform-origin: center;
+        image-rendering: pixelated;
+      }
+    }
+    &__counter{
+      position: absolute;
+      font-size: 16px;
+      color: $white;
+      top: 0;
+      right: 0;
+      text-shadow: 2px 2px $white-shadow, 0 0 8px $white;
+    }
+
+    &_unread{
+      .sidebar-feed__notice-status__icon{
+        --background: #{alpha($gold, .2)};
+        &::before{
+          background-image: url('#{$url}/icon/notice-bell-unread.png')!important;
+          animation: notice-bell-rings 1.5s ease-in infinite;
+        }
+      }
+    }
+
+    @keyframes notice-bell-rings{
+      0%, 45%, 100%{
+        transform: rotate(0);
+      }
+      5%, 25%{
+        transform: rotate(45deg);
+      }
+      15%, 35%{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   // Уведомление
   &-item{
     --background: #{alpha($white, .1)};
     --color: #{$white};
-    --color-meta: #{$gray};
     --text-shadow: #{$white-shadow};
 
     display: block;
@@ -49,32 +109,14 @@
         min-height: 0;
         padding: 10px 0;
         text-align: center;
-
-        &::after{
-          content: unset!important;
-        }
       }
-    }
-
-    // Псевдоэлемент с иконкой
-    &::after{
-      content: '';
-      display: block;
-      position: absolute;
-      background: url('#{$url}/icon/notify.png') no-repeat center;
-      background-size: cover;
-      width: 54px;
-      height: 54px;
-      top: 0;
-      left: 0;
-      image-rendering: pixelated;
     }
   }
 
   // Метаданные @ Время получения уведомления
   &-meta{
     display: block;
-    color: var(--color-meta);
+    color: $gray;
     opacity: .6;
     text-shadow: 0 0 transparent;
   }
