@@ -2,7 +2,9 @@
 
   // Список-контейнер привилегий
   &__list{
-    font-size: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
     list-style: none;
 
     // Элемент списка
@@ -32,7 +34,8 @@
     display: block;
     position: relative;
     background: var(--background);
-    padding: 20px 0;
+    height: 100%;
+    padding: 35px 0;
     @include bordered(var(--background), 7);
     text-transform: initial;
     text-align: center;
@@ -45,7 +48,7 @@
 
       &__icon{
         width: 160px;
-        opacity: .3;
+        opacity: .1;
         image-rendering: pixelated;
       }
     }
