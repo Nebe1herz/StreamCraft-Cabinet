@@ -1,8 +1,10 @@
 .nav{
   position: fixed;
   padding: 20px 100px 20px 0;
-  width: 100%;
   color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
 
   &::before{
     content: '';
