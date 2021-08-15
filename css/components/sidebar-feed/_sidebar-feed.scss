@@ -24,57 +24,46 @@
   }
 
   // Анимация при отсутствии наведения
-  &:not(:hover) {
-    // Скрыть заголовки разделов
-    .sidebar-feed__section-heading{
-      opacity: 0;
-      transition: $sidebar-feed_transition-duration ease-in-out;
-    }
+  &:not(:hover) .sidebar-feed{
+    // Обнуление отступов в разделах
+    &__section{
+      padding: 0;
 
-    // Полностью скрыть прочитанные уведомления
-    .sidebar-feed__notice-item_read{
-      padding-top: 0;
-      padding-bottom: 0;
-      opacity: 0;
-      height: 0;
-    }
-
-    // Частично скрыть непрочитанные уведомления
-    .sidebar-feed__notice-item:not(.sidebar-feed__notice-item_read){
-      color: transparent;
-      height: 88px;
-      text-shadow: 3px 3px transparent;
-
-      // Отобразить превьюшки непрочитанных уведомлений
-      &::before{
-        opacity: .3;
-      }
-      &::after{
-        opacity: 1;
-      }
-
-      // Скрыть внутренние элементы
-      span{
+      // Полностью убрать визуально заголовок
+      &-heading{
+        line-height: 0;
         opacity: 0;
-        transition: $sidebar-feed_transition-duration ease-in-out;
+      }
+
+      // Обнуление внешнего отступа от заголовка
+      &-list{
+        margin: 0;
+      }
+
+      // Изменить отступы
+      &-item {
+        padding: 8px 23px;
       }
     }
 
-    .sidebar-feed__friend-list{
-      li:not(:first-of-type){
-        margin-top: 2px;
+    // Уведомление
+    &__notice-item{
+      --color: transparent;
+      --color-meta: var(--color);
+      --text-shadow: var(--color);
+      line-height: 0;
+      width: 54px;
+
+      &_role-more{
+        height: 0;
+        padding: 0;
       }
-    }
-    // Изменить отступы
-    .sidebar-feed__friend-item {
-      background: var(--background);
-      padding: 12px 18px;
     }
 
     // Скрыть блок с пользователем
-    .sidebar-feed__friend-item__user{
+    &__friend-item__user{
       opacity: 0;
-      transition: $sidebar-feed_transition-duration ease-in-out;
+      transition: .15s ease-in-out;
     }
   }
 
