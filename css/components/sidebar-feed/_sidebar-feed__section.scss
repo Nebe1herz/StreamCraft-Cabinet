@@ -1,30 +1,34 @@
 .sidebar-feed__section{
   position: relative;
-  padding: 40px 0 0;
+  padding: 20px 0;
+  transition: .15s ease-in-out;
   z-index: 1;
 
   // Заголовок
   &-heading{
-    margin: 0 0 20px;
-    padding: 0 30px;
-    font-size: 21px;
+    font-family: MinecraftTitle, sans-serif;
+    line-height: 1.2;
+    font-size: 28px;
     color: $white;
-    text-shadow: 3px 3px $white-shadow;
+    opacity: 1;
+    padding: 0 25px;
+    text-shadow: 4px 4px $white-shadow;
+    transition: .15s ease-in-out;
 
-    // Модификаторы цветы
-    &_color{
-      &-gray{
-        color: $gray;
-        text-shadow: 3px 3px $gray-shadow;
-      }
-      &-gold{
-        color: $gold;
-        text-shadow: 3px 3px $gold-shadow;
-      }
-      &-aqua{
-        color: $aqua;
-        text-shadow: 3px 3px $aqua-shadow;
-      }
+    &__count{
+      font-family: inherit;
+      color: $gray;
+      text-shadow: 4px 4px $gray-shadow;
     }
+  }
+
+  &-list{
+    list-style: none;
+    margin-top: 10px;
+    transition: .15s ease-in-out;
+  }
+  &-item{
+    padding: 8px 25px;
+    transition: .15s ease-in-out;
   }
 }
