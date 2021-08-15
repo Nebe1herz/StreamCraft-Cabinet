@@ -80,8 +80,7 @@
 
 }
 
-@import
-        'sidebar-feed__section', // Разделы в боковой панели
-        'sidebar-feed__notice', // Список уведомлений
-        'sidebar-feed__friend' // Список друзей
+@import 'sidebar-feed/__section', // Разделы в боковой панели
+        'sidebar-feed/__notice', // Список уведомлений
+        'sidebar-feed/__friend' // Список друзей
 ;
