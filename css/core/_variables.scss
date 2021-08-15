@@ -9,11 +9,8 @@ $urlFonts: $dir + '/font/'; // Уникальный путь шрифтов
 // Замыливание заднего фона
 $background-blur: true;
 
-// Вид модального окна
+// Вид модального окна @ simple @ decorate @ clean
 $modal: 'simple';
-
-// Длительность переходов у боковой панели
-$sidebar-feed_transition-duration: .15s;
 
 // Карта цветов
 $colors-map: (
