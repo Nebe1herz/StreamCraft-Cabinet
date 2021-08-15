@@ -1,103 +1,67 @@
 .sidebar-feed__notice{
-  // Список уведомлений
-  &-list{
-    list-style: none;
-  }
 
   // Уведомление
   &-item{
     --background: #{alpha($white, .1)};
     --color: #{$white};
-    --shadow: #{$white-shadow};
+    --color-meta: #{$gray};
+    --text-shadow: #{$white-shadow};
 
+    display: block;
     position: relative;
     background: var(--background);
-    height: 111px;
-    padding: 15px 30px;
-    line-height: 1.4;
+    line-height: 1.5;
     font-size: 14px;
-    color: var(--color);
-    transition: $sidebar-feed_transition-duration ease-in-out;
-    text-shadow: 2px 2px var(--shadow);
-    box-sizing: border-box;
-    overflow: hidden;
-
-    // Отступы между уведомлениями
-    &:not(:first-of-type){
-      margin-top: 2px;
-    }
-
-    // Превьюшки на сайдбаре, когда он скрыт
-    &::before,
-    &::after{
-      content: '';
-      display: block;
-      position: absolute;
-      border-radius: 5px;
-      background: var(--shadow);
-      height: 64px;
-      width: 64px;
-      left: 18px;
-      top: 12px;
-      opacity: 0;
-      z-index: 1;
-    }
-    // Значок "+1"
-    &::after{
-      content: '+1';
-      background: unset;
-      line-height: 64px;
-      font-size: 28px;
-      color: var(--color);
-      text-shadow: 4px 4px var(--shadow);
-      text-align: center;
-      z-index: 2;
-    }
+    padding: 15px;
+    width: 100%;
+    min-height: 54px;
+    transition: .15s ease-in-out;
+    @include bordered(var(--background));
+    text-transform: initial;
+    text-align: left;
 
     // Модификаторы цвета
     &_role{
+      // Разные цветовые состояния
       &-primary{
         --background: #{alpha($blue, .2)};
         --color: #{$aqua};
-        --shadow: #{$blue};
+        --text-shadow: #{$blue};
       }
       &-success{
         --background: #{alpha($green, .2)};
         --color: #{$green};
-        --shadow: #{$green-shadow};
+        --text-shadow: #{$green-shadow};
       }
       &-danger{
         --background: #{alpha($red, .2)};
         --color: #{$red};
-        --shadow: #{$red-shadow};
+        --text-shadow: #{$red-shadow};
       }
 
       &-warning{
         --background: #{alpha($gold, .2)};
         --color: #{$gold};
-        --shadow: #{$gold-shadow};
+        --text-shadow: #{$gold-shadow};
+      }
+      // Кнопка "Показать все уведомления"
+      &-more{
+        min-height: 0;
+        padding: 10px 0;
+        text-align: center;
+
+        &::after{
+          content: unset!important;
+        }
       }
     }
-
-    // Модификаторы состояния
-    &_read{
-      opacity:.4;
-    }
   }
 
-  // Время прибытия уведомления
+  // Метаданные @ Время получения уведомления
   &-meta{
     display: block;
-    margin: 5px 0 0;
-    color: $gray;
-    text-shadow: 2px 2px $gray-shadow;
-  }
-
-  // Статус "прочитано"
-  &-status{
-    display: inline-block;
-    background: $gray-shadow;
-    padding: 0 5px;
-    text-transform: uppercase;
+    color: var(--color-meta);
+    opacity: .6;
+    text-shadow: 0 0 transparent;
   }
 }

@@ -1,31 +1,27 @@
 .sidebar-feed__friend{
   // Список друзей
-  &-list{
-    list-style: none;
-    padding: 0 0 30px;
-  }
   &-item{
     --background: #{alpha($white, .1)};
 
     display: grid;
     background: transparent;
     grid-template-columns: auto 1fr;
+    align-items: center;
     grid-gap: 15px;
-    padding: 8px 30px;
-    //transition: $duration ease-in-out;
+    padding: 5px 0;
+    text-transform: none;
+    text-align: left;
 
     &:hover{
       cursor: pointer;
-      background: var(--background);
     }
 
     // Блок с аватаром пользователя
     &__avatar{
-      border-radius: 5px;
       background: var(--background);
-      padding: 4px;
-      width: 64px;
-      height: 64px;
+      width: 54px;
+      height: 54px;
+      @include bordered(var(--background));
 
       // Голова скина
       &-image{
@@ -40,33 +36,34 @@
     // Блок с информацией о пользователе
     &__user{
       line-height: 22px;
-      font-size: 16px;
+      font-size: 18px;
       color: $dark-gray;
-      padding: 10px 0;
-      text-shadow: 3px 3px $dark-gray-shadow;
 
       // Ник пользователя
       &-nickname{
-
+        --text-shadow: #{$dark-gray-shadow};
+        text-shadow: 3px 3px var(--text-shadow);
       }
 
       // Статус пользователя
       &-status{
-
+        --text-shadow: #{$dark-gray-shadow};
+        font-size: 14px;
+        text-shadow: 2px 2px var(--text-shadow);
       }
     }
 
     // Состояние "В сети"
     &_online{
-      --background: #{alpha($aqua, .2)};
+      --background: #{alpha($aqua, .1)};
 
       .sidebar-feed__friend-item__user-nickname{
         color: $gray;
-        text-shadow: 3px 3px $gray-shadow;
+        --text-shadow: #{$gray-shadow};
       }
       .sidebar-feed__friend-item__user-status{
         color: $aqua;
-        text-shadow: 3px 3px $aqua-shadow;
+        --text-shadow: #{$aqua-shadow};
       }
     }
     // Состояние "Поблизости"
@@ -75,11 +72,11 @@
 
       .sidebar-feed__friend-item__user-nickname{
         color: $gray;
-        text-shadow: 3px 3px $gray-shadow;
+        --text-shadow: #{$gray-shadow};
       }
       .sidebar-feed__friend-item__user-status{
         color: $gold;
-        text-shadow: 3px 3px $gold-shadow;
+        --text-shadow: #{$gold-shadow};
       }
     }
   }
