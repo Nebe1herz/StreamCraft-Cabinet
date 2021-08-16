@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Site Properities -->
+    <title>SC | Магазин блоков</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!--<link rel="icon" type="image/png" href="favicon.ico" />-->
+
+    <!-- Scripts -->
+    <!--Здесь пока ничего нет-->
+</head>
+<body class="overlay-checked">
+<div class="overlay">
+    <div class="nav">
+        <div class="wrapper wrapper_nav">
+            <ul class="nav-list">
+                <!-- Меню -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              nav-list__item"
+                    >
+                        <img src="images/icon/menu.png" alt
+                             class="nav-list__item-icon">
+                        Главное меню
+                    </a>
+                </li>
+                <!-- Корзина -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              nav-list__item
+                              nav-list__cart"
+                       data-modal-name="modal.coins-exchange"
+                    >
+                        <img src="images/icon/cart.png" alt
+                             class="nav-list__item-icon">
+                        Корзина
+                        <span class="nav-list__cart--counter">(15)</span>
+                    </a>
+                </li>
+                <!-- Разделитель -->
+                <li></li>
+                <!-- Баланс рублей -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              nav-list__item
+                              modal-trigger"
+                       data-modal-name="modal.add-balance"
+                    >
+                        <img src="images/icon/balance-rubles.png" alt
+                             class="nav-list__item-icon">
+                        0 руб.
+                    </a>
+                </li>
+                <!-- Баланс коинов -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              nav-list__item"
+                       data-modal-name="modal.coins-exchange"
+                    >
+                        <img src="images/icon/balance-coins.png" alt
+                             class="nav-list__item-icon">
+                        0 коинов
+                    </a>
+                </li>
+                <!-- Пользователь -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              nav-list__item
+                              nav-list__user"
+                    >
+                        <img src="images/heads/head-3.png" alt
+                             class="nav-list__user-avatar">
+                        <span class="nav-list__user-nickname">Nebelherz</span>
+                        <span class="nav-list__user-group">ИГРОК</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page">
+        <div class="page__heading">
+            <div class="wrapper">
+                Магазин блоков
+            </div>
+        </div>
+        <div class="shop">
+            <div class="page__area page__area_promo">
+                <div class="wrapper">
+                    <h2 class="page__area-heading">
+                        До конца специального предложения осталось:
+                        <span class="page__area-heading__timer">
+                            <span id="timerHour">03</span>:<span id="timerMin">44</span>:<span id="timerSec">13</span>
+                        </span>
+                    </h2>
+                    <ul class="shop__list">
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <span class="shop-card__sale">СКИДКА 15%</span>
+                                <h4 class="shop-card__title">Камень</h4>
+                                <img src="images/shop/1.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    <span class="shop-card__price-strike">
+                                        2 ₽ за 64 шт.
+                                    </span>
+                                    <br>
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <span class="shop-card__sale">СКИДКА 15%</span>
+                                <h4 class="shop-card__title">Блок травы</h4>
+                                <img src="images/shop/2.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    <span class="shop-card__price-strike">
+                                        2 ₽ за 64 шт.
+                                    </span>
+                                    <br>
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <span class="shop-card__sale">СКИДКА 15%</span>
+                                <h4 class="shop-card__title">Дуб</h4>
+                                <img src="images/shop/3.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    <span class="shop-card__price-strike">
+                                        2 ₽ за 64 шт.
+                                    </span>
+                                    <br>
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <span class="shop-card__sale">СКИДКА 15%</span>
+                                <h4 class="shop-card__title">Стекло</h4>
+                                <img src="images/shop/4.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    <span class="shop-card__price-strike">
+                                        2 ₽ за 64 шт.
+                                    </span>
+                                    <br>
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <span class="shop-card__sale">СКИДКА 15%</span>
+                                <h4 class="shop-card__title">Лазуритовая руда</h4>
+                                <img src="images/shop/5.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    <span class="shop-card__price-strike">
+                                        2 ₽ за 64 шт.
+                                    </span>
+                                    <br>
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <span class="shop-card__sale">СКИДКА 15%</span>
+                                <h4 class="shop-card__title">Блок золота</h4>
+                                <img src="images/shop/6.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    <span class="shop-card__price-strike">
+                                        2 ₽ за 64 шт.
+                                    </span>
+                                    <br>
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="page__area">
+                    <ul class="shop__list">
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Книжная полка</h4>
+                                <img src="images/shop/7.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Светокамень</h4>
+                                <img src="images/shop/8.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Паутина</h4>
+                                <img src="images/shop/9.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_violet shop-card__title_scroll">Зелье регенерации II</h4>
+                                <img src="images/shop/10.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_violet shop-card__title_scroll">Взрывное зелье огнестойкости</h4>
+                                <img src="images/shop/11.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_violet shop-card__title_scroll">Взрывное зелье ночного зрения</h4>
+                                <img src="images/shop/12.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_aqua shop-card__title_scroll">Великодревесный саженец</h4>
+                                <img src="images/shop/13.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_aqua shop-card__title_scroll">Серебродревесный саженец</h4>
+                                <img src="images/shop/14.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Зеркало</h4>
+                                <img src="images/shop/15.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Нитор</h4>
+                                <img src="images/shop/16.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Ранец</h4>
+                                <img src="images/shop/17.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Композит</h4>
+                                <img src="images/shop/18.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Нано-сабля</h4>
+                                <img src="images/shop/19.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Кусачки</h4>
+                                <img src="images/shop/20.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_aqua shop-card__title_scroll">Квантовый нагрудник</h4>
+                                <img src="images/shop/21.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_aqua shop-card__title_scroll">Улучшенный квантовый джетпак</h4>
+                                <img src="images/shop/22.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_aqua shop-card__title_scroll">Улучшенный алмазный бур</h4>
+                                <img src="images/shop/23.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_violet">Квантовое ядро</h4>
+                                <img src="images/shop/24.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Ихор</h4>
+                                <img src="images/shop/25.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Ихоровая роба</h4>
+                                <img src="images/shop/26.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Ихоровая кирка</h4>
+                                <img src="images/shop/27.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_gold">Ихоровый топор</h4>
+                                <img src="images/shop/28.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_scroll">Гиперактивный нитор</h4>
+                                <img src="images/shop/29.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Кольцо</h4>
+                                <img src="images/shop/30.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title shop-card__title_violet">Кристалл края</h4>
+                                <img src="images/shop/31.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                        <li class="shop__list-item">
+                            <a href="#" class="btn shop-card">
+                                <h4 class="shop-card__title">Жезл</h4>
+                                <img src="images/shop/32.png" alt
+                                     class="shop-card__icon">
+                                <p class="shop-card__price">
+                                    1 ₽ за 128 шт.
+                                </p>
+                                <span class="btn btn_success btn_hover-disabled">
+                                    Покупка
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-feed">
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Уведомлений
+                <span class="sidebar-feed__section-heading__count">17</span>
+            </h3>
+            <div class="sidebar-feed__notice-status
+                        sidebar-feed__notice-status_unread">
+                <div class="sidebar-feed__notice-status__icon">
+                    <span class="sidebar-feed__notice-status__counter">
+                        17
+                    </span>
+                </div>
+            </div>
+            <ul class="sidebar-feed__section-list
+                       sidebar-feed__section-list_hover-hide">
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item">
+                        Не следует, однако забывать, что новая модель позволяет...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 17 июля, 18:44
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-primary">
+                        Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
+                        <span class="sidebar-feed__notice-meta">
+                             Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-warning">
+                        Идейные соображения высшего порядка, а также рамки и место...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-danger">
+                        Требуют от нас анализа позиций, занимаемых участниками в...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 07 июля, 12:54
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-success">
+                        Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 04 июля, 16:33
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-more">
+                        Предыдущие уведомления
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Друзей
+                <span class="sidebar-feed__section-heading__count">256</span>
+            </h3>
+            <ul class="sidebar-feed__section-list">
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">DarthSidi0us</h4>
+                            <p class="sidebar-feed__friend-item__user-status">10 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mine03</h4>
+                            <p class="sidebar-feed__friend-item__user-status">56 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">xxxDark12xxx</h4>
+                            <p class="sidebar-feed__friend-item__user-status">102 блока от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-2.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">QueenOfPeace</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-3.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">IBath</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">noremac09</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">JoyereKnester</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-6.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Evaer_cool12</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-7.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mle4niy_kill_bioy</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-8.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">No4naya_Nyasha</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Azazzzinys</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">KillerMoj</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Likeaboss</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-10.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">vonderlol</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Alexsasha93</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">geraosfrrr</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <div class="wrapper wrapper_modal">
+        <div class="modal__content">
+            <a href="#" class="btn btn_success">Success УСПЕХ</a>
+            <br>
+            <br>
+            <a href="#" class="btn btn_danger">danger ОТМЕНИТЬ</a>
+        </div>
+    </div>
+</div>
+<div class="tooltip" style="display: none">
+    <div class="tooltip__content">
+        <h3 class="tooltip__title">Ультра квантовая панель</h3>
+        <p class="tooltip__row">Полная хуета</p>
+        <p class="tooltip__meta">Vanilla Minecraft</p>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+</body>
+</html>
