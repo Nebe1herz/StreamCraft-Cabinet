@@ -105,12 +105,23 @@
   &_hover{
     // Наведение отключено
     &-disabled{
-      pointer-events: none;
+      &::before{
+        display: none;
+      }
     }
     // При наведении эффект задней пышной тени
-    &-blue{
+    &-shadow{
       pointer-events: none;
     }
+  }
+
+  // Вертикальный разделитель внутри кнопки
+  &-separator{
+    display: inline-block;
+    background: var(--border-top);
+    width: 3px;
+    margin: -5px 5px;
+    vertical-align: top;
   }
 }
 
