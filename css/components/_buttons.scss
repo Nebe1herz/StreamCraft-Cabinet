@@ -6,6 +6,7 @@
   --outline-color: #{$white};
   --value: 5px;
   --value-reverse: -5px;
+  --blur: 0;
 
   // Основное
   position: relative;
@@ -23,7 +24,8 @@
           5px 0 var(--border-middle),
           -5px 0 var(--border-middle),
           5px 10px var(--shadow),
-          10px 5px var(--shadow);
+          10px 5px var(--shadow),
+          0 0 var(--blur) var(--background);
 
   // Настройки текста
   font-size: 20px;
@@ -98,6 +100,17 @@
     @include btn-var-init($gray-shadow);
     cursor: default!important;
     pointer-events: none;
+  }
+
+  &_hover{
+    // Наведение отключено
+    &-disabled{
+      pointer-events: none;
+    }
+    // При наведении эффект задней пышной тени
+    &-blue{
+      pointer-events: none;
+    }
   }
 }
 
