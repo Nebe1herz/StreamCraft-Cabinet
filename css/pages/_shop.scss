@@ -1,17 +1,114 @@
 .shop{
 
-  // Список
+  // Фильтры магазина блоков
+  &__filters{
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    grid-gap: 20px;
+    list-style: none;
+    margin: 0 0 35px;
+
+    // Элемент списка
+    &-item{
+      position: relative;
+      z-index: 3;
+    }
+
+    // Кнопка
+    .btn{
+      font-size: 16px;
+      padding: 15px 25px;
+      text-transform: initial;
+      z-index: 2;
+      text-align: left;
+
+      &:hover ~ .shop__filters-dropdown,
+      &~ .shop__filters-dropdown:hover{
+        opacity: 1;
+
+        .btn{
+          opacity: 1;
+          line-height: 1;
+        }
+      }
+
+      // Разделитель
+      &-separator{
+        height: 30px;
+      }
+
+      // Цветовое выделение значения фильтра
+      &-mark{
+        color: $green;
+        text-shadow: 2px 2px $green-shadow;
+      }
+    }
+
+    // Выпадающий список
+    &-dropdown{
+      --background: #{$dark-gray-shadow};
+
+      position: absolute;
+      background: var(--background);
+      padding: 20px 0 10px;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      @include bordered($gray-shadow);
+      z-index: 1;
+
+      .btn{
+        display: block;
+        opacity: 0;
+        line-height: 0;
+        transition: .15s ease-in-out;
+
+        &:hover{
+          transition: 0s;
+          color: $green;
+          text-shadow: 2px 2px $green-shadow;
+        }
+      }
+    }
+
+    // Поиск
+    &-search{
+      --background: #{alpha($black, .5)};
+      --border-top: var(--background);
+      --border-middle: var(--background);
+      --border-bottom: var(--background);
+      --text-shadow: transparent;
+      border: none;
+      outline: none;
+      cursor: text;
+
+      &::placeholder{
+        color: $gray;
+      }
+      &:active,
+      &:focus{
+        --border-top: #{$white};
+        --border-middle: #{$white};
+        --border-bottom: #{$white};
+      }
+    }
+  }
+
+  // Список товаров
   &__list{
     display: grid;
     grid-template-columns: repeat(6, 179.16px);
     grid-gap: 25px;
     list-style: none;
 
+    // Элемент списка
     &-item{
 
     }
   }
 
+  // Карточка товара
   &-card{
     --background: #{alpha($black, .5)};
 
@@ -22,14 +119,21 @@
     @include bordered(var(--background), 7);
     text-transform: initial;
 
+    // Состояние наведения
     &:hover{
+
+      // Создание эффекта подсветки кнопки
+      // Меняем значение переменное, изменяющее тень у кнопки
       .btn{
         --blur: 65px;
       }
+
+      // Прокрутка влево-вправо не влезающего длинного названия товара
       .shop-card__title_scroll{
         animation: title-scroll-loop 25s linear infinite;
         text-overflow: clip;
       }
+      // Анимация прокрутки для длинного названия
       @keyframes title-scroll-loop{
         0%, 20%, 40%, 60%, 80%, 100%{
           text-indent: 0;
@@ -40,6 +144,7 @@
       }
     }
 
+    // Контейнер для указания скидки
     &__sale{
       display: block;
       position: absolute;
@@ -70,7 +175,7 @@
       text-overflow: ellipsis;
       overflow: hidden;
 
-      // Цвет
+      // Модификаторы цвета
       &_aqua{
         color: $aqua;
         text-shadow: 2px 2px $aqua-shadow;
@@ -90,13 +195,14 @@
       margin: 10px 0;
     }
 
-    // Ценник
+    // Контейнер для цены на товар
     &__price{
       line-height: 1.2;
       font-size: 13px;
       color: $white;
       text-shadow: 2px 2px $white-shadow;
 
+      // Зачеркнутая цена
       &-strike{
         display: inline-block;
         position: relative;
@@ -106,6 +212,7 @@
         text-shadow: 2px 2px $dark-gray-shadow;
         clear: both;
 
+        // Линия, зачеркивающая ценник
         &::before{
           content: '';
           display: block;
@@ -120,6 +227,8 @@
         }
       }
     }
+
+    // Изменение размеров кнопки и позиционирование
     .btn{
       font-size: 16px;
       padding: 10px 25px;

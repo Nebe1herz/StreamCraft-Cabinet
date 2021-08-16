@@ -90,12 +90,15 @@
         </div>
     </div>
     <div class="page">
+        <!-- Заголовок -->
         <div class="page__heading">
             <div class="wrapper">
                 Магазин блоков
             </div>
         </div>
+        <!-- Страница -- Магазин блоков -->
         <div class="shop">
+            <!-- Специальное предложение -- Раздел промо -->
             <div class="page__area page__area_promo">
                 <div class="wrapper">
                     <h2 class="page__area-heading">
@@ -216,8 +219,43 @@
                     </ul>
                 </div>
             </div>
+            <!-- Основной контейнер с магазином и списком товаров -->
             <div class="wrapper">
                 <div class="page__area">
+                    <!-- Фильтры магазина блоков -->
+                    <ul class="shop__filters">
+                        <li class="shop__filters-item">
+                            <a href="#" class="btn btn_dark btn_hover-disabled">
+                                Категория
+                                <span class="btn-separator"></span>
+                                <span class="btn-mark">Все</span>
+                            </a>
+                            <div class="shop__filters-dropdown">
+                                <a href="#" class="btn">Блоки</a>
+                                <a href="#" class="btn">Еда</a>
+                                <a href="#" class="btn">Инструменты</a>
+                                <a href="#" class="btn">Оружие</a>
+                                <a href="#" class="btn">Броня</a>
+                            </div>
+                        </li>
+                        <li class="shop__filters-item">
+                            <a href="#" class="btn btn_dark btn_hover-disabled">
+                                Сортировка
+                                <span class="btn-separator"></span>
+                                <span class="btn-mark">По названию</span>
+                            </a>
+                            <div class="shop__filters-dropdown">
+                                <a href="#" class="btn">По возрастанию цены</a>
+                                <a href="#" class="btn">По убыванию цены</a>
+                                <a href="#" class="btn">По популярности</a>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="shop__filters-item">
+                            <input class="btn shop__filters-search" placeholder="Поиск...">
+                        </li>
+                    </ul>
+                    <!-- Список товаров -->
                     <ul class="shop__list">
                         <li class="shop__list-item">
                             <a href="#" class="btn shop-card">
