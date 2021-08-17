@@ -115,6 +115,30 @@
     }
   }
 
+  // Модификатор для кнопки покупки
+  &_purchase{
+    font-size: 0;
+    padding: 0 15px;
+    white-space: nowrap;
+
+    &-section{
+      position: relative;
+      display: inline-block;
+      line-height: 1.2;
+      font-size: 24px;
+      padding: 15px;
+    }
+    .btn-separator{
+      position: absolute;
+      background: var(--border-middle);
+      height: 100%;
+      top: 0;
+      left: -1px;
+      margin: 0;
+    }
+  }
+
+  // Внутренние компоненты
   // Вертикальный разделитель внутри кнопки
   &-separator{
     display: inline-block;
@@ -122,6 +146,29 @@
     width: 3px;
     margin: -5px 5px;
     vertical-align: top;
+  }
+  // Зачёркнутый текст
+  &-strike{
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+    color: alpha($gray, .7);
+    text-shadow: 2px 2px alpha($dark-gray-shadow, .7);
+    vertical-align: top;
+
+    // Зачеркивающая полоса
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      background: $red;
+      height: 3px;
+      width: 100%;
+      top: 12px;
+      left: 0;
+      opacity: .8;
+      box-shadow: 3px 3px $red-shadow;
+    }
   }
 }
 
