@@ -48,8 +48,7 @@
   // Группа контента
   &-area{
     // Основные стили
-    width: 65%;
-    padding: 50px;
+    padding: 35px 70px;
     text-align: center;
     transition: .15s ease-in-out;
 
@@ -91,13 +90,60 @@
       }
     }
 
+    // Превью продукта
+    &__icon{
+      display: block;
+      width: 210px;
+      margin: 15px auto;
+      image-rendering: pixelated;
+    }
+
     // Заголовок второго уровня внутри группы
     &__heading{
       font-family: MinecraftTitle, sans-serif;
-      line-height: 20px;
-      font-size: 36px;
+      line-height: 1.6;
+      font-size: 42px;
       color: $white;
       text-shadow: 4px 4px $white-shadow;
+    }
+
+    // Примечание, скидка
+    &__notice{
+      --color-1: #{alpha($light-purple, .6)};
+      --color-2: #{alpha($light-purple, .4)};
+
+      display: block;
+      font-family: MinecraftTitle, sans-serif;
+      background:
+              linear-gradient(
+                              90deg,
+                              transparent,
+                              var(--color-1) 25%,
+                              var(--color-2),
+                              var(--color-1) 75%,
+                              transparent
+              );
+      line-height: 32px;
+      font-size: 24px;
+      color: $white;
+      margin: 0 0 5px;
+      white-space: nowrap;
+      text-shadow: 3px 3px $white-shadow;
+      text-align: center;
+
+      &_sale{
+        --color-1: #{alpha($red, .6)};
+        --color-2: #{alpha($red, .4)};
+      }
+      &_empty{
+        --color-1: #{alpha($dark-gray, .6)};
+        --color-2: #{alpha($dark-gray, .4)};
+        color: $gray;
+        text-shadow: 3px 3px $gray-shadow;
+      }
+    }
+    .btn{
+      margin: 0 10px;
     }
 
     //
@@ -106,5 +152,36 @@
       color: $gray;
       margin: 25px 0 0;
     }
+  }
+}
+
+// Имитация интерфейса
+.inventory{
+  margin: 30px auto 0;
+  width: 606px;
+
+  // Заголвок
+  &-title{
+    font-size: 20px;
+    color: $white;
+    margin: 0 0 10px;
+    text-shadow: 2px 2px $white-shadow;
+  }
+
+  // Сетка
+  &-grid{
+    display: grid;
+    grid-template-columns: repeat(9, 64px);
+    list-style: none;
+  }
+
+  // Ячейка
+  &-cell{
+    background: var(--gray-400);
+    width: 64px;
+    height: 64px;
+    box-shadow:
+            inset 4px 4px $dark-gray,
+            inset -4px -4px $white;
   }
 }
