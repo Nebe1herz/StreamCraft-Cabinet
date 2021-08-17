@@ -34,6 +34,7 @@
   text-transform: uppercase;
   text-align: center;
 
+  // Псевдоэлемент-обводка для hover-эффекта
   &::before{
     content:'';
     display: block;
@@ -53,6 +54,7 @@
     z-index: 1;
   }
 
+  // Инициализация hover-эффекта
   &:not(&_disabled):hover{
     &::before{
       opacity: 1;
@@ -60,7 +62,7 @@
     }
   }
 
-  // Модификаторы
+  // Модификаторы состояния
   &_primary{
     @include btn-var-init($blue, $blue-shadow);
   }
@@ -87,7 +89,12 @@
   }
   &_light{
     @include btn-var-init(
-                    darken($white, 10)
+                    desaturate(lighten($blue, 20), 75)
+    );
+  }
+  &_steel{
+    @include btn-var-init(
+                    desaturate(lighten($blue, 20), 45)
     );
   }
   &_secondary{
@@ -96,12 +103,15 @@
   &_dark{
     @include btn-var-init($dark-gray-shadow);
   }
+
+  // Модификатор отключенного состояния кнопки
   &_disabled{
     @include btn-var-init($gray-shadow);
     cursor: default!important;
     pointer-events: none;
   }
 
+  // Модификаторы hover-эффектов
   &_hover{
     // Наведение отключено
     &-disabled{
