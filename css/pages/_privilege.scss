@@ -31,9 +31,10 @@
 
   // Вместо модификаторов
   .donate-card{
+    padding: 45px 0;
 
     &__icon{
-      margin: 0 auto;
+      margin: 0 auto 10px;
     }
     &__price-strike{
       display: inline-block;
