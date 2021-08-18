@@ -1,8 +1,8 @@
 .modal{
   // Цвет затемнения
-  --blackout: #{alpha($black, .6)};
-  --border: #{alpha($blue, .2)};
-  --background: #{alpha($black, .8)};
+  --blackout: #{alpha(darken($dark-blue-shadow, 5), .8)};
+  --border: #{alpha($blue, .4)};
+  --background: #{alpha($black, .9)};
 
   // Основные стили
   display: grid;
@@ -17,7 +17,6 @@
   align-items: center;
   pointer-events: none;
   transition: .15s ease-in-out;
-  @include background-blur-init(35px);
   overflow: hidden auto;
   z-index: 99;
 
@@ -39,9 +38,21 @@
 
   // Модификации
   &_style{
+    &-aqua{
+      --blackout: #{alpha(darken($aqua-shadow, 5), .8)};
+      --border: #{alpha($aqua, .4)};
+    }
+    &-green{
+      --blackout: #{alpha(darken($green-shadow, 5), .8)};
+      --border: #{alpha($green, .4)};
+    }
+    &-violet{
+      --blackout: #{alpha(darken($dark-purple, 28), .8)};
+      --border: #{alpha($dark-purple, .4)};
+    }
     &-gold{
-      --blackout: #{alpha($gold, .2)};
-      --border: #{alpha($gold, .2)};
+      --blackout: #{alpha(darken($gold, 40), .8)};
+      --border: #{alpha($gold, .4)};
     }
   }
 
