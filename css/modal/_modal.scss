@@ -119,19 +119,13 @@
       }
     }
 
-    // Превью продукта
-    &__icon{
-      display: block;
-      width: 210px;
-      margin: 15px auto;
-      image-rendering: pixelated;
-    }
+
 
     // Заголовок второго уровня внутри группы
     &__heading{
       font-family: MinecraftTitle, sans-serif;
-      line-height: 1.6;
-      font-size: 42px;
+      line-height: 1.5;
+      font-size: 36px;
       color: $white;
       text-shadow: 4px 4px $white-shadow;
     }
@@ -146,16 +140,16 @@
       background:
               linear-gradient(
                               90deg,
-                              transparent,
-                              var(--color-1) 25%,
+                              transparent 10%,
+                              var(--color-1) 35%,
                               var(--color-2),
-                              var(--color-1) 75%,
-                              transparent
+                              var(--color-1) 65%,
+                              transparent 90%
               );
-      line-height: 32px;
-      font-size: 24px;
+      line-height: 28px;
+      font-size: 20px;
       color: $white;
-      margin: 0 0 5px;
+      margin: 5px 0 0;
       white-space: nowrap;
       text-shadow: 3px 3px $white-shadow;
       text-align: center;
@@ -171,6 +165,15 @@
         text-shadow: 3px 3px $gray-shadow;
       }
     }
+
+    // Превью продукта
+    &__icon{
+      display: block;
+      width: 180px;
+      margin: 15px auto 20px;
+      image-rendering: pixelated;
+    }
+
     .btn{
       margin: 0 10px;
     }
@@ -186,31 +189,50 @@
 
 // Имитация интерфейса
 .inventory{
-  margin: 30px auto 0;
-  width: 606px;
+  width: 462px;
+  padding: 20px 15px 25px;
+  margin: 15px auto 0;
 
   // Заголвок
   &-title{
-    font-size: 20px;
-    color: $white;
+    font-size: 18px;
+    color: $dark-gray;
     margin: 0 0 10px;
-    text-shadow: 2px 2px $white-shadow;
+    text-align: left;
   }
 
   // Сетка
   &-grid{
     display: grid;
-    grid-template-columns: repeat(9, 64px);
+    grid-template-columns: repeat(9, 48px);
     list-style: none;
   }
 
   // Ячейка
   &-cell{
+    position: relative;
     background: var(--gray-400);
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
+    padding: 5px;
     box-shadow:
-            inset 4px 4px $dark-gray,
-            inset -4px -4px $white;
+            inset 3px 3px $dark-gray,
+            inset -3px -3px $white;
+
+
+    // Иконка предмета
+    &__icon{
+      width: 38px;
+      height: 38px;
+    }
+    // Количество предмета
+    &__count{
+      position: absolute;
+      font-size: 18px;
+      color: $white;
+      right: 0;
+      bottom: 3px;
+      text-shadow: 2px 2px $white-shadow;
+    }
   }
 }
