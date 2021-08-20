@@ -37,29 +37,6 @@
       background: var(--background-hover);
     }
 
-    &_rare{
-      &-0{
-        --background: #{$dark-green};
-        --background-hover: #{lighten($dark-green, 10)};
-      }
-      &-1{
-        --background: #{$blue};
-        --background-hover: #{lighten($blue, 10)};
-      }
-      &-2{
-        --background: #{$dark-purple};
-        --background-hover: #{lighten($dark-purple, 20)};
-      }
-      &-3{
-        --background: #{$red};
-        --background-hover: #{lighten($red, 15)};
-      }
-      &-4{
-        --background: #{$gold};
-        --background-hover: #{lighten($gold, 20)};
-      }
-    }
-
     // Иконка предмета
     &__icon{
       width: 42px;
