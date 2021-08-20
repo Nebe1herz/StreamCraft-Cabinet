@@ -51,8 +51,8 @@
         --background-hover: #{$dark-purple};
       }
       &-3{
-        --background: #{alpha($red, .7)};
-        --background-hover: #{$red};
+        --background: #{alpha($dark-red, .7)};
+        --background-hover: #{$dark-red};
       }
       &-4{
         --background: #{alpha($gold, .7)};
