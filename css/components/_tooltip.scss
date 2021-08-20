@@ -20,16 +20,18 @@
   // Основной контейнер с содержимым
   &__content{
     background: var(--gray-900);
-    border: 4px solid darken($blue,55%);
+    border: 6px solid darken($blue,55%);
     padding: 8px;
+    line-height: 1.4;
+    font-size: 15px;
     color: $gray;
+    text-shadow: 2px 2px $gray-shadow;
     @include bordered(#030303, 8);
     text-align: left;
   }
 
   // Заголовок // data-title
   &__title{
-    line-height: 1.2;
     font-weight: normal;
     font-size: 18px;
     color: $aqua;
@@ -39,9 +41,6 @@
   // Описание // data-row
   p{
     max-width: 320px;
-    margin: 5px 0 0;
-    line-height: 1.4;
-    font-size: 16px;
   }
 
   // Последняя строчка // data-meta
