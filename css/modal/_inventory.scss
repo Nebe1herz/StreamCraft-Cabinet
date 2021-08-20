@@ -1,0 +1,79 @@
+// Имитация интерфейса
+.inventory{
+  width: 498px;
+  padding: 20px 15px 25px;
+  margin: 15px auto 0;
+
+  // Заголвок
+  &-title{
+    font-size: 18px;
+    color: $dark-gray;
+    margin: 0 0 10px;
+    text-align: left;
+  }
+
+  // Сетка
+  &-grid{
+    display: grid;
+    grid-template-columns: repeat(9, 52px);
+    list-style: none;
+  }
+
+  // Ячейка
+  &-cell{
+    --background: var(--gray-400);
+    --background-hover: var(--gray-200);
+
+    position: relative;
+    background: var(--background);
+    width: 52px;
+    height: 52px;
+    padding: 5px;
+    box-shadow:
+            inset 3px 3px $dark-gray,
+            inset -3px -3px $white;
+
+    &:hover{
+      background: var(--background-hover);
+    }
+
+    &_rare{
+      &-0{
+        --background: #{$dark-green};
+        --background-hover: #{lighten($dark-green, 10)};
+      }
+      &-1{
+        --background: #{$blue};
+        --background-hover: #{lighten($blue, 10)};
+      }
+      &-2{
+        --background: #{$dark-purple};
+        --background-hover: #{lighten($dark-purple, 20)};
+      }
+      &-3{
+        --background: #{$red};
+        --background-hover: #{lighten($red, 15)};
+      }
+      &-4{
+        --background: #{$gold};
+        --background-hover: #{lighten($gold, 20)};
+      }
+    }
+
+    // Иконка предмета
+    &__icon{
+      width: 42px;
+      height: 42px;
+      image-rendering: pixelated;
+    }
+    // Количество предмета
+    &__count{
+      position: absolute;
+      font-size: 18px;
+      color: $white;
+      right: 0;
+      bottom: 3px;
+      text-shadow: 3px 3px $white-shadow;
+    }
+  }
+}
