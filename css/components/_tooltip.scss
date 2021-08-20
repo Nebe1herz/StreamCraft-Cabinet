@@ -8,14 +8,16 @@
   pointer-events: none;
   z-index: 9999;
 
-  // Класс для js-отрабатывания
+  // tooltip-trigger предназначен JS-обработчику
+  // для отображения тултипа и компонента, имеющего этот класс
   &-trigger{
+    // У всех внутренних элементов отключить события мыши
     *{
       pointer-events: none;
     }
   }
 
-  // Содержимое тултипа
+  // Основной контейнер с содержимым
   &__content{
     background: var(--gray-900);
     border: 4px solid darken($blue,55%);
@@ -25,31 +27,31 @@
     text-align: left;
   }
 
-  // Заголовок
+  // Заголовок // data-title
   &__title{
     line-height: 1.2;
     font-weight: normal;
-    font-size:16px;
+    font-size: 18px;
     color: $aqua;
     text-shadow: 2px 2px $aqua-shadow;
   }
 
-  // Основная часть
+  // Описание // data-row
   p{
-    max-width:320px;
-    margin:5px 0 0;
+    max-width: 320px;
+    margin: 5px 0 0;
     line-height: 1.4;
-    font-size:16px;
+    font-size: 16px;
   }
 
-  // Последняя строчка
+  // Последняя строчка // data-meta
   &__meta{
-    width:320px;
+    width: 320px;
     color: $blue;
     text-shadow: 2px 2px $blue-shadow;
   }
 
-  // Кастомные элементы для использования в тултипах
+  // Обёртка для Изменение цвета фрагмента текста
   span{
     --color: inherit;
     --shadow: inherit;
