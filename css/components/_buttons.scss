@@ -128,7 +128,7 @@
   // Модификатор для кнопки покупки
   &_purchase{
     font-size: 0;
-    padding: 0 15px;
+    padding: 0 10px;
     white-space: nowrap;
 
     &-section{
@@ -136,14 +136,14 @@
       display: inline-block;
       line-height: 1.2;
       font-size: 20px;
-      padding: 10px;
+      padding: 10px 15px;
     }
     .btn-separator{
       position: absolute;
       background: var(--border-middle);
       height: 100%;
       top: 0;
-      left: -1px;
+      left: -3px;
       margin: 0;
     }
   }
