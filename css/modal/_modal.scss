@@ -54,6 +54,10 @@
       --blackout: #{alpha(darken($gold, 40), .8)};
       --border: #{alpha($gold, .4)};
     }
+    &-red{
+      --blackout: #{alpha(darken($dark-red, 28), .8)};
+      --border: #{alpha($red, .4)};
+    }
   }
 
   // Кнопка закрытия
@@ -78,7 +82,6 @@
   // Группа контента
   &-area{
     // Основные стили
-    padding: 35px;
     text-align: center;
     transition: .15s ease-in-out;
 
@@ -120,7 +123,9 @@
       }
     }
 
-
+    &__section{
+      padding: 35px;
+    }
 
     // Заголовок второго уровня внутри группы
     &__heading{
