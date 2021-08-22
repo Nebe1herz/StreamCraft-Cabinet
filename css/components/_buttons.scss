@@ -134,17 +134,13 @@
     &-section{
       position: relative;
       display: inline-block;
-      line-height: 1.2;
+      line-height: 1;
       font-size: 20px;
-      padding: 10px 15px;
-    }
-    .btn-separator{
-      position: absolute;
-      background: var(--border-middle);
-      height: 100%;
-      top: 0;
-      left: -3px;
-      margin: 0;
+      padding: 15px;
+
+      &:not(:first-child){
+        border-left: 3px solid var(--border-middle);
+      }
     }
   }
 
@@ -174,7 +170,7 @@
       background: $red;
       height: 3px;
       width: 100%;
-      top: 12px;
+      top: 10px;
       left: 0;
       opacity: .8;
       box-shadow: 3px 3px $red-shadow;
