@@ -12,10 +12,13 @@
     &__icon{
       --background: #{alpha($white, .05)};
 
+      display: flex;
       position: relative;
       background: var(--background);
       height: 54px;
       width: 54px;
+      align-items: center;
+      justify-content: center;
       @include bordered(var(--background));
 
       &::before{
@@ -23,8 +26,8 @@
         display: block;
         background: url('#{$url}/icon/notice-bell.png') no-repeat center;
         background-size: cover;
-        width: 54px;
-        height: 54px;
+        width: 48px;
+        height: 48px;
         transform-origin: center;
         image-rendering: pixelated;
       }
