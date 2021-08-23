@@ -22,7 +22,7 @@ const modalToggle = (action, content = null) => {
             let request = new XMLHttpRequest();
 
             // Открываем запрос
-            request.open('GET', `/StreamCraft Cabinet/${content}.html`);
+            request.open('GET', `/StreamCraft Cabinet/modal/${content}.html`);
             // Отслеживание
             request.onload = (e) => {
                 // Проверка на готовность загрузки страницы
@@ -100,11 +100,4 @@ document.body.onclick = (e) => {
     }
 };
 
-
-        let modalName = i.target.getAttribute('data-modal-name');
-        modalToggle('show', modalName)
-
-    };
-});
-
-//document.addEventListener("DOMContentLoaded", modalToggle('show', 'modal.privilege.legend'));
+//document.addEventListener("DOMContentLoaded", modalToggle('show', 'modal.case.legend'));
