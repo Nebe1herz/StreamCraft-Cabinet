@@ -64,22 +64,28 @@
 
   // Модификаторы состояния
   &_primary{
-    @include btn-var-init($blue, $blue-shadow);
+    @include btn-var-init(
+                    desaturate(darken($blue, 15), 45),
+                    $blue-shadow
+    );
   }
   &_success{
     @include btn-var-init(
-                    lighten(desaturate($dark-green, 45), 10),
+                    desaturate(lighten($dark-green, 10), 45),
                     $green-shadow
     );
   }
   &_danger{
     @include btn-var-init(
-                    lighten(desaturate($dark-red, 45), 10),
+                    desaturate(lighten($dark-red, 10), 45),
                     $red-shadow
     );
   }
   &_warning{
-    @include btn-var-init($gold, $gold-shadow);
+    @include btn-var-init(
+                    desaturate(darken($gold, 5), 5),
+                    $gold-shadow
+    );
   }
   &_violet{
     @include btn-var-init($dark-purple, $light-purple-shadow);
@@ -131,6 +137,20 @@
     padding: 0 10px;
     white-space: nowrap;
 
+    &_column{
+      padding: 0;
+
+      .btn_purchase-section{
+        display: block;
+        padding: 15px 25px;
+
+        &:not(:first-of-type) {
+          background: var(--border-top);
+          border-left: 0;
+        }
+      }
+    }
+
     &-section{
       position: relative;
       display: inline-block;
@@ -138,9 +158,28 @@
       font-size: 20px;
       padding: 15px;
 
-      &:not(:first-child){
+      &:not(:first-of-type){
         border-left: 3px solid var(--border-middle);
       }
+    }
+
+    &__sale{
+      display: block;
+      position: absolute;
+      background: $red;
+      font-size: 16px;
+      line-height: 1;
+      color: $white;
+      width: calc(100% - 40px);
+      padding: 5px;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      white-space: nowrap;
+      text-shadow: 2px 2px $white-shadow;
+      box-shadow: 5px 5px alpha($red-shadow, .6);
+      z-index: 1;
     }
   }
 
@@ -175,5 +214,14 @@
       opacity: .8;
       box-shadow: 3px 3px $red-shadow;
     }
+  }
+  // Выделение текста
+  &-mark{
+    display: inline-block;
+    background: var(--border-middle);
+    padding: 10px;
+    box-shadow:
+            inset -5px -5px var(--border-top),
+            inset 5px 5px var(--border-bottom);
   }
 }
