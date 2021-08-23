@@ -23,7 +23,7 @@
     border: 6px solid darken($blue,55%);
     padding: 8px;
     line-height: 1.4;
-    font-size: 15px;
+    font-size: 16px;
     color: $gray;
     text-shadow: 2px 2px $gray-shadow;
     @include bordered(#030303, 8);
@@ -33,7 +33,7 @@
   // Заголовок // data-title
   &__title{
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
     color: $aqua;
     text-shadow: 2px 2px $aqua-shadow;
   }
