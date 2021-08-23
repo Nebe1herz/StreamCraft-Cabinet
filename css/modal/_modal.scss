@@ -46,13 +46,17 @@
       --blackout: #{alpha(darken($green-shadow, 5), .8)};
       --border: #{alpha($green, .4)};
     }
-    &-violet{
+    &-dark-purple{
       --blackout: #{alpha(darken($dark-purple, 28), .8)};
       --border: #{alpha($dark-purple, .4)};
     }
+    &-light-purple{
+      --blackout: #{alpha(darken($light-purple, 55), .8)};
+      --border: #{alpha($light-purple, .6)};
+    }
     &-gold{
-      --blackout: #{alpha(darken($gold, 40), .8)};
-      --border: #{alpha($gold, .4)};
+      --blackout: #{alpha(darken($gold, 35), .8)};
+      --border: #{alpha($gold, .6)};
     }
     &-red{
       --blackout: #{alpha(darken($dark-red, 28), .8)};
