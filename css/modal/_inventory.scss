@@ -1,8 +1,20 @@
 // Имитация интерфейса
 .inventory{
-  width: 498px;
+  --width: 654px;
+  --columns: 12;
+
+  width: var(--width);
   padding: 20px 15px 25px;
-  margin: 15px auto 0;
+  margin: auto;
+
+  &_columns-9{
+    --width: 498px;
+    --columns: 9;
+  }
+  &_columns-6{
+    --width: 342px;
+    --columns: 6;
+  }
 
   // Заголвок
   &-title{
@@ -15,7 +27,7 @@
   // Сетка
   &-grid{
     display: grid;
-    grid-template-columns: repeat(9, 52px);
+    grid-template-columns: repeat(var(--columns), 52px);
     list-style: none;
   }
 
