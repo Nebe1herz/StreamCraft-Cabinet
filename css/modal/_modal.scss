@@ -137,8 +137,8 @@
           padding: 35px 50px 50px;
         }
         &-inventory{
-          border-top: 4px solid $dark-gray-shadow;
-          padding: 10px 75px 25px;
+          background: var(--border);
+          padding: 25px 25px 15px;
         }
       }
     }
@@ -146,7 +146,7 @@
     // Заголовок второго уровня внутри группы
     &__heading{
       font-family: MinecraftTitle, sans-serif;
-      line-height: 1.4;
+      line-height: 1;
       font-size: 42px;
       color: $white;
       text-shadow: 4px 4px $white-shadow;
@@ -175,10 +175,17 @@
       text-shadow: 3px 3px $white-shadow;
       text-align: center;
 
+      // Отступ от заголовка у первого элемента этого типа
+      &:first-of-type{
+        margin-top: 10px;
+      }
+
+      // Модификатор для отображения скидки
       &_sale{
         --color-1: #{alpha($red, .6)};
         --color-2: #{alpha($red, .4)};
       }
+      // Модификатор для отображения отсутствия кейсов
       &_empty{
         --color-1: #{alpha($dark-gray, .6)};
         --color-2: #{alpha($dark-gray, .4)};
