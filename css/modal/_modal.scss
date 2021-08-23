@@ -42,6 +42,10 @@
       --blackout: #{alpha(darken($aqua-shadow, 5), .8)};
       --border: #{alpha($aqua, .4)};
     }
+    &-blue{
+      --blackout: #{alpha($blue-shadow, .8)};
+      --border: #{alpha($blue, .4)};
+    }
     &-green{
       --blackout: #{alpha(darken($green-shadow, 5), .8)};
       --border: #{alpha($green, .4)};
