@@ -204,6 +204,10 @@
       width: 240px;
       margin: auto;
       image-rendering: pixelated;
+
+      &_offset{
+        margin: 10px auto 20px;
+      }
     }
 
     .btn{
