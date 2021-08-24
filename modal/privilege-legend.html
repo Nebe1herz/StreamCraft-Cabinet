@@ -3,17 +3,46 @@
 ">
     <div class="wrapper wrapper_modal">
         <div class="modal-area modal-area_windowed">
-            <h2 class="modal-area__heading">
-                Группа Legend
-            </h2>
-            <p class="modal-area__paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores beatae eaque earum, facere ipsa ipsum odit praesentium recusandae soluta?
-            </p>
-            <br>
-            <br>
-            <a href="#" class="btn btn_success">Купить</a>
-            <a href="#" class="btn"
-               onclick="modalToggle('close')">Закрыть</a>
+            <div class="modal-area__section">
+                <h2 class="modal-area__heading">
+                    Группа Legend
+                </h2>
+                <!--<div class="modal-area__notice modal-area__notice_sale">
+                    СКИДКА 25%
+                </div>-->
+                <img src="../images/privilege/legend.png" alt
+                     class="modal-area__icon
+                            modal-area__icon_offset">
+                <a href="#"
+                   class="btn btn_success
+                          btn_purchase btn_purchase_column">
+                    <span class="btn_purchase-section">
+                        Купить на
+                        <span class="btn-mark">30 дней</span>
+                    </span>
+                    <span class="btn_purchase-section">
+                        Цена: 1 000 ₽
+                    </span>
+                </a>
+                <a href="#" class="btn btn_warning
+                                   btn_purchase btn_purchase_column">
+                    <span class="btn_purchase-section">
+                        Купить на
+                        <span class="btn-mark">90 дней</span>
+                    </span>
+                    <span class="btn_purchase-section">
+                        <span class="btn-strike">3 000 ₽</span>
+                        2 500 ₽
+                    </span>
+                    <span class="btn_purchase__sale">Выгоднее на 500 руб.</span>
+                </a>
+            </div>
         </div>
     </div>
+    <!-- Кнопка закрытия окна *** справа сверху -->
+    <button
+            class="closing-key tooltip-trigger"
+            data-title="<span class=white>Вернуться назад<span>"
+    >
+    </button>
 </div>
