@@ -73,11 +73,11 @@
     position: fixed;
     border: none;
     background: url('#{$url}/icon/close.png') no-repeat center;
-    background-size: 48px;
+    background-size: 64px;
     height: 64px;
     width: 64px;
     top: 50px;
-    right: 50px;
+    right: 100px;
     cursor: pointer;
     outline: none;
     image-rendering: pixelated;
