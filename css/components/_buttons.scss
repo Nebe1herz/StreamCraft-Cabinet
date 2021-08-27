@@ -196,7 +196,8 @@
   &-strike{
     position: relative;
     display: inline-block;
-    padding: 0 8px;
+    padding: 0 2px 0 4px;
+    margin: 0 5px 0 0;
     color: alpha($gray, .7);
     text-shadow: 2px 2px alpha($dark-gray-shadow, .7);
     vertical-align: top;
