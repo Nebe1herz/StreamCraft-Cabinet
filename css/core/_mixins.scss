@@ -18,7 +18,7 @@
 }
 
 // Инициализация размытия заднего фона
-@mixin background-blur-init($blur: 10px) {
+@mixin background-blur-init($blur: 15px) {
 
   // Проверка на опцию ВКЛ / ВЫКЛ блюра фона
   @if ($background-blur) {

@@ -3,7 +3,7 @@
 // С затемнением *** блюром фона
 .overlay{
   position: absolute;
-  background: #{alpha(#000, .8)};
+  background: #{alpha(#000, .7)};
   padding: 88px 100px 0 0;
   height: 100%;
   width: 100%;
@@ -28,6 +28,12 @@
     display: flex;
     justify-content: center;
     padding: 75px 0 150px;
+
+    &-wide{
+      background: alpha($black, .8);
+      padding: 0;
+      max-width: 100%;
+    }
   }
 }
 
