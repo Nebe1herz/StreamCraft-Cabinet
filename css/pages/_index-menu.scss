@@ -1,3 +1,55 @@
+.index{
+  position: relative;
+
+  // Группа кнопок
+  &-group{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding: 35px 0;
+    justify-content: center;
+
+    // Кнопка в меню
+    &__btn{
+      --background: #{alpha($black, .6)};
+      --border: var(--background);
+      --value: 7px;
+      --value-reverse: -7px;
+
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      line-height: 1.3;
+      font-size: 18px;
+      padding: 45px 15px;
+      text-transform: initial;
+
+      @include bordered(var(--border), 7);
+
+      // Модификатор цвета кнопки
+      &_style{
+        &-blue{
+          --background: #{alpha($blue, .2)};
+        }
+        &-green{
+          --background: #{alpha($green, .3)};
+        }
+        &-gold{
+          --background: #{alpha($gold, .2)};
+        }
+      }
+
+      // Иконка в кнопке
+      &-icon{
+        display: block;
+        width: 100px;
+        margin: 0 auto 10px;
+        image-rendering: pixelated;
+      }
+    }
+  }
+}
+
 .index-menu{
   position: relative;
 
