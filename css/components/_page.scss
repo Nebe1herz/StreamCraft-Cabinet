@@ -1,6 +1,5 @@
 .page{
-  --gradient: #{alpha($white, .05)};
-  padding: 15px 0 25px;
+  --gradient: #{alpha($white, .1)};
   max-height: calc(100vh - 88px);
   overflow: hidden auto;
 
@@ -31,19 +30,16 @@
                             to right,
                             transparent,
                             var(--gradient) 5%,
-                            transparent,
+                            transparent 40% 60%,
                             var(--gradient) 95%,
                             transparent
             );
-    font-size: 64px;
+    font-family: MinecraftTitle, sans-serif;
+    font-size: 48px;
     color: #fff;
     line-height: 64px;
     text-shadow: 6px 6px $white-shadow;
     text-align: center;
-
-    & *{
-      font-family: MinecraftTitle, sans-serif;
-    }
   }
 
   // Сгруппированный список привилегий
