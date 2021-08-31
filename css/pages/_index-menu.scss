@@ -13,7 +13,6 @@
     // Кнопка в меню
     &__btn{
       --background: #{alpha($black, .5)};
-      --border: var(--background);
       --value: 7px;
       --value-reverse: -7px;
 
@@ -25,7 +24,7 @@
       padding: 35px 15px;
       text-transform: initial;
 
-      @include bordered(var(--border), 7);
+      @include bordered(var(--background), 7);
 
       // Модификатор цвета кнопки
       &_style{
@@ -46,19 +45,35 @@
         }
       }
 
-      // Модификатор для кнопки боевого пропуска
-      &_battle-pass{
-        &::after{
-          content:'';
-          display: block;
-          position: absolute;
-          background: url('#{$url}/icon/battle-pass.png') no-repeat center -80px;
-          background-size: 320px;
-          width: calc(100% + 14px);
-          height: calc(100% + 14px);
-          top: -7px;
-          left: -7px;
-          image-rendering: pixelated;
+      // Модификаторы внутренней сетки
+      &_grid{
+        // Боевой пропуск
+        &-battle-pass{
+          &::after{
+            content:'';
+            display: block;
+            position: absolute;
+            background: url('#{$url}/icon/battle-pass.png') no-repeat center -64px;
+            background-size: 320px;
+            width: calc(100% + 14px);
+            height: calc(100% + 14px);
+            top: -7px;
+            left: -7px;
+            image-rendering: pixelated;
+          }
+        }
+        // Горизонтальное расположение
+        &-inline{
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto;
+          align-items: center;
+          grid-gap: 25px;
+          padding: 5px 25px;
+
+          .index-menu__group__btn-img{
+            width: 48px;
+            margin: 0;
+          }
         }
       }
 
@@ -80,6 +95,12 @@
         z-index: 1;
       }
     }
+  }
+
+  // Футер
+  &-footer{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
   }
 }
 
