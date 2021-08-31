@@ -1,5 +1,5 @@
 .page{
-  --gradient: #{alpha($white, .1)};
+  --gradient: #{alpha($gray, .1)};
   max-height: calc(100vh - 88px);
   overflow: hidden auto;
 
@@ -29,15 +29,15 @@
             linear-gradient(
                             to right,
                             transparent,
-                            var(--gradient) 5%,
-                            transparent 40% 60%,
-                            var(--gradient) 95%,
+                            var(--gradient) 25%,
+                            transparent,
+                            var(--gradient) 75%,
                             transparent
             );
     font-family: MinecraftTitle, sans-serif;
     font-size: 48px;
     color: #fff;
-    line-height: 64px;
+    line-height: 2;
     text-shadow: 6px 6px $white-shadow;
     text-align: center;
   }
