@@ -29,13 +29,35 @@
       // Модификатор цвета кнопки
       &_style{
         &-blue{
-          --background: #{alpha($blue, .2)};
+          --background: #{alpha($blue, .5)};
         }
         &-green{
-          --background: #{alpha($green, .3)};
+          --background: #{alpha($green, .5)};
         }
         &-gold{
-          --background: #{alpha($gold, .2)};
+          --background: #{alpha($gold, .5)};
+        }
+        &-violet{
+          --background: #{alpha($light-purple, .9)};
+        }
+        &-red{
+          --background: #{alpha($dark-red, .7)};
+        }
+      }
+
+      // Модификатор для кнопки боевого пропуска
+      &_battle-pass{
+        &::after{
+          content:'';
+          display: block;
+          position: absolute;
+          background: url('#{$url}/icon/battle-pass.png') no-repeat center -80px;
+          background-size: 320px;
+          width: calc(100% + 14px);
+          height: calc(100% + 14px);
+          top: -7px;
+          left: -7px;
+          image-rendering: pixelated;
         }
       }
 
