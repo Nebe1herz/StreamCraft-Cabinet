@@ -1,0 +1,25 @@
+.nav{
+  background: alpha($black, .6);
+  font-size: 0;
+  height: 36px;
+  padding: 0 35px;
+  margin: 20px 0 0;
+  @include bordered(alpha($black, .6), 5);
+  text-align: center;
+
+  // Элемент навигации, стилизация кнопок
+  &-item{
+    line-height: 36px;
+    font-family: MinecraftTitle, sans-serif;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 0 7.5px;
+    text-transform: initial;
+
+    &_checked{
+      --shadow: transparent;
+
+      pointer-events: none;
+    }
+  }
+}
