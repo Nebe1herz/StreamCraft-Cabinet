@@ -5,26 +5,26 @@
   &-group{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 256px;
-    grid-gap: 28px 21px;
-    padding: 35px 0;
+    grid-template-rows: 276px;
+    grid-gap: 32px 24px;
+    padding: 35px 0 32px;
     justify-content: center;
 
     // Кнопка в меню
     &__btn{
       --background: #{alpha($black, .5)};
-      --value: 7px;
-      --value-reverse: -7px;
+      --value: 8px;
+      --value-reverse: -8px;
 
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto auto;
       line-height: 1.3;
       font-size: 18px;
-      padding: 35px 15px;
+      padding: 45px 15px;
       text-transform: initial;
 
-      @include bordered(var(--background), 7);
+      @include bordered(var(--background), 8);
 
       // Модификатор цвета кнопки
       &_style{
@@ -67,7 +67,7 @@
           grid-template-columns: auto 1fr;
           grid-template-rows: auto;
           align-items: center;
-          grid-gap: 25px;
+          grid-gap: 15px;
           padding: 5px 25px;
 
           .index-menu__group__btn-img{
@@ -84,8 +84,15 @@
         margin: 0 auto 20px;
         image-rendering: pixelated;
 
+        // Модификатор для отключения эффекта пикселизации иконок
         &_smoothed{
           image-rendering: initial;
+        }
+
+        // Модификатор для уменьшенной версии иконок
+        &_scaled{
+          height: 48px;
+          margin: 0;
         }
       }
 
