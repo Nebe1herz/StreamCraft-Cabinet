@@ -1,6 +1,6 @@
 .header{
   position: fixed;
-  padding: 15px 100px 0 0;
+  padding: 20px 100px 0 0;
   color: #fff;
   width: 100%;
   top: 0;
@@ -29,9 +29,16 @@
       grid-column-gap: 10px;
       align-items: center;
 
+      // Иконка у кнопки
       &-icon{
         width: 32px;
         image-rendering: pixelated;
+      }
+
+      // Текст и модификаторы цвета
+      &-text{
+        color: $gray;
+        text-shadow: 2px 2px $gray-shadow;
       }
     }
 
