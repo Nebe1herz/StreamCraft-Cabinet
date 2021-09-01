@@ -95,13 +95,17 @@
   }
   &_light{
     @include btn-var-init(
-                    desaturate(lighten($blue, 20), 75)
+                    desaturate(lighten($blue, 35), 75)
     );
+    --color: #{$black};
+    --text-shadow: var(--border-top);
   }
   &_steel{
     @include btn-var-init(
                     desaturate(lighten($blue, 20), 45)
     );
+    --color: #{$blue-shadow};
+    --text-shadow: #{$blue-back};
   }
   &_secondary{
     @include btn-var-init($dark-gray);
