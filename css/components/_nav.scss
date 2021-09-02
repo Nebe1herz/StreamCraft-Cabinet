@@ -1,10 +1,10 @@
 .nav{
-  background: alpha($black, .6);
+  background: alpha($black, .3);
   font-size: 0;
   height: 36px;
   padding: 0 35px;
   margin: 20px 0 0;
-  @include bordered(alpha($black, .6), 5);
+  @include bordered(alpha($black, .3), 5);
   text-align: center;
 
   // Элемент навигации, стилизация кнопок
