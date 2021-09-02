@@ -71,14 +71,17 @@
 
   // Стилизация скроллбара
   &::-webkit-scrollbar {
-    background: var(--gray-800);
-    width: 10px;
+    background: transparent;
+    width: 12px;
   }
   &::-webkit-scrollbar-thumb {
-    background: var(--gray-700);
+    background: $white;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: var(--gray-600);
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: $dark-gray;
   }
 
 }
