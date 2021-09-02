@@ -38,7 +38,6 @@
 
       &__icon{
         width: 160px;
-        opacity: .1;
         image-rendering: pixelated;
       }
     }
@@ -61,7 +60,7 @@
         --color: #{$light-purple};
       }
       &-gold{
-        --border: #{alpha($gold, .8)};
+        --border: #{$gold};
         --color: #{$gold};
       }
     }
@@ -107,7 +106,7 @@
     &__title{
       font-family: MinecraftTitle, sans-serif;
       font-size: 24px;
-      line-height: 1;
+      line-height: 1.2;
       color: var(--color);
       padding: 0 10px;
       text-shadow: 4px 4px alpha($black, .6);

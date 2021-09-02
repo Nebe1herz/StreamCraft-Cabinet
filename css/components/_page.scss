@@ -22,8 +22,11 @@
     }
   }
 
-  &_style-gold{
-    --gradient: #{alpha($gold, .2)};
+  // Модификатор стилей
+  &_style{
+    &-gold{
+      --gradient: #{alpha($gold, .2)};
+    }
   }
 
   // Заголовок h1
@@ -58,13 +61,15 @@
 
     // Заголовок 2-го уровня
     &-heading{
-      font-size: 20px;
+      font-size: 24px;
       color: $green;
-      margin: 0 0 25px;
+      margin: 0 0 45px;
+      text-shadow: 3px 3px $green-shadow;
       text-align: center;
 
       &__timer{
         color: $gold;
+        text-shadow: 3px 3px $gold-shadow;
       }
     }
   }

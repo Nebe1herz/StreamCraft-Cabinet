@@ -34,19 +34,19 @@
       &_style{
         // По цветам
         &-blue{
-          --border: #{alpha($blue, .8)};
+          --border: #{$blue};
         }
         &-green{
-          --border: #{alpha($green, .8)};
+          --border: #{$green};
         }
         &-gold{
-          --border: #{alpha($gold, .8)};
+          --border: #{$gold};
         }
         &-violet{
-          --background: #{alpha($light-purple, .8)};
+          --background: #{$light-purple};
         }
         &-red{
-          --border: #{alpha($dark-red, .8)};
+          --border: #{$dark-red};
         }
       }
 
@@ -54,7 +54,7 @@
       &_role{
         // Кнопка боевого пропуска
         &-battle-pass{
-          --background: #{alpha($gold, .8)};
+          --background: #{$gold};
         }
         // Кнопка выхода с сервера
         &-exit{
