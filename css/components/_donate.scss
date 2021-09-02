@@ -4,7 +4,7 @@
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 25px;
+    grid-gap: 32px 24px;
     list-style: none;
 
     // Элемент списка
@@ -16,16 +16,17 @@
   // Карточка товара
   &-card{
     --background: #{alpha($black, .5)};
+    --border: var(--background);
     --color: #{$white};
-    --value: 7px;
-    --value-reverse: -7px;
+    --value: 8px;
+    --value-reverse: -8px;
 
     display: block;
     position: relative;
     background: var(--background);
     height: 100%;
-    padding: 25px 0;
-    @include bordered(var(--background), 7);
+    padding: 30px 0;
+    @include bordered(var(--border), 8);
     text-transform: initial;
     text-align: center;
 
@@ -45,27 +46,22 @@
     // Модификаторы цвета
     &_style{
       &-green{
-        --background: #{alpha($green, .1)};
         --color: #{$green};
       }
       &-red{
-        --background: #{alpha($red, .1)};
         --color: #{$red};
       }
       &-blue{
-        --background: #{alpha($blue, .1)};
         --color: #{$blue};
       }
       &-aqua{
-        --background: #{alpha($aqua, .1)};
         --color: #{$aqua};
       }
       &-light-purple{
-        --background: #{alpha($light-purple, .1)};
         --color: #{$light-purple};
       }
       &-gold{
-        --background: #{alpha($gold, .1)};
+        --border: #{alpha($gold, .8)};
         --color: #{$gold};
       }
     }
