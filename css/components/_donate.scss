@@ -74,23 +74,24 @@
     &__sale{
       display: block;
       position: absolute;
-      background:
-              linear-gradient(
-                              90deg,
-                              transparent,
-                              $red,
-                              transparent
-              );
-      line-height: 28px;
-      font-size: 18px;
-      color: $white;
-      right: -7px;
-      left: -7px;
-      top: 5px;
-      width: calc(100% + 14px);
-      white-space: nowrap;
-      text-shadow: 3px 3px $white-shadow;
+      width: 100%;
+      top: -18px;
+      right: 0;
+      left: 0;
       text-align: center;
+      z-index: 1;
+
+      &-text{
+        display: inline-block;
+        background: $red;
+        line-height: 28px;
+        font-size: 18px;
+        color: $white;
+        padding: 0 15px;
+        white-space: nowrap;
+        text-shadow: 3px 3px $white-shadow;
+        box-shadow: 5px 5px alpha($dark-red, .5);
+      }
     }
 
     // Иконка товара
@@ -110,9 +111,9 @@
     &__title{
       font-family: MinecraftTitle, sans-serif;
       font-size: 24px;
-      line-height: 1.2;
+      line-height: 1;
       color: var(--color);
-      padding: 20px 10px 0;
+      padding: 0 10px;
       text-shadow: 4px 4px alpha($black, .6);
     }
 
