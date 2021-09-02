@@ -1,7 +1,10 @@
 .page{
   --gradient: #{alpha($gray, .1)};
-  max-height: calc(100vh - 88px);
-  padding: 0 0 10px;
+
+  display: grid;
+  height: calc(100vh - 123px);
+  padding: 25px 0 50px;
+  align-items: center;
   overflow: hidden auto;
 
   &::-webkit-scrollbar {

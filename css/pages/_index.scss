@@ -1,5 +1,8 @@
 .index{
   position: relative;
+  height: calc(100vh - 67px);
+  margin-top: -56px;
+  padding-top: 0;
 
   // Группа кнопок
   &-group{
