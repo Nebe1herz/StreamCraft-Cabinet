@@ -11,11 +11,10 @@
     width: 16px;
 
     &-track {
-      background: alpha($black, .4);
-      @include background-blur-init();
+      background: transparent;
     }
     &-thumb {
-      background: alpha($black, .6);
+      background: $black;
 
       &:hover{
         background: $white;
@@ -29,15 +28,6 @@
 
   // Заголовок h1
   &__heading{
-   /* background:
-            linear-gradient(
-                            to right,
-                            transparent,
-                            var(--gradient) 25%,
-                            transparent,
-                            var(--gradient) 75%,
-                            transparent
-            );*/
     font-family: MinecraftTitle, sans-serif;
     font-size: 54px;
     color: #fff;

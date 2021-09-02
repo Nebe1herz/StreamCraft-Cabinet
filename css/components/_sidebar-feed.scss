@@ -4,7 +4,7 @@
   width: 400px;
   right: 0;
   top: 0;
-  background: alpha($white, .02);
+  background: alpha($black, .15);
   padding: 0;
   transition: .15s ease-in-out;
   transform: translateX(calc(100% - 100px));
@@ -64,7 +64,6 @@
         transition: .15s ease-in-out;
       }
       &__avatar{
-
         opacity: .5;
       }
     }
