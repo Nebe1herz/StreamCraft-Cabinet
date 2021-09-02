@@ -16,6 +16,7 @@
     // Кнопка в меню
     &__btn{
       --background: #{alpha($black, .5)};
+      --border: var(--background);
       --value: 8px;
       --value-reverse: -8px;
 
@@ -27,24 +28,37 @@
       padding: 45px 15px;
       text-transform: initial;
 
-      @include bordered(var(--background), 8);
+      @include bordered(var(--border), 8);
 
-      // Модификатор цвета кнопки
+      // Модификатор цвета
       &_style{
+        // По цветам
         &-blue{
-          --background: #{alpha($blue, .5)};
+          --border: #{alpha($blue, .8)};
         }
         &-green{
-          --background: #{alpha($green, .5)};
+          --border: #{alpha($green, .8)};
         }
         &-gold{
-          --background: #{alpha($gold, .5)};
+          --border: #{alpha($gold, .8)};
         }
         &-violet{
-          --background: #{alpha($light-purple, .9)};
+          --background: #{alpha($light-purple, .8)};
         }
         &-red{
-          --background: #{alpha($dark-red, .7)};
+          --border: #{alpha($dark-red, .8)};
+        }
+      }
+
+      // Модификатор по назначению
+      &_role{
+        // Кнопка боевого пропуска
+        &-battle-pass{
+          --background: #{alpha($gold, .8)};
+        }
+        // Кнопка выхода с сервера
+        &-exit{
+          --background: #{alpha($red-shadow, .8)};
         }
       }
 
@@ -56,7 +70,7 @@
             content:'';
             display: block;
             position: absolute;
-            background: url('#{$url}/icon/battle-pass.png') no-repeat center -64px;
+            background: url('#{$url}/icon/battle-pass.png') no-repeat center -32px;
             background-size: 320px;
             width: calc(100% + 14px);
             height: calc(100% + 14px);
