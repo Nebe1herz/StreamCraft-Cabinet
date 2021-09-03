@@ -5,10 +5,16 @@
   &__heading{
     font-size: 28px;
 
-    // Стилизация названия под голубой цвет
-    &_aqua{
-      color: $aqua;
-      text-shadow: 3px 3px $aqua-shadow;
+    // Модификатор цвета у названия
+    &_style{
+      &-aqua{
+        color: $aqua;
+        text-shadow: 3px 3px $aqua-shadow;
+      }
+      &-gold{
+        color: $gold;
+        text-shadow: 3px 3px $gold-shadow;
+      }
     }
   }
 
@@ -144,6 +150,7 @@
     transition: all .3s, opacity .15s .1s;
     image-rendering: pixelated;
     align-items: center;
+    z-index: 1;
 
     // Переключение состояния экрана на "виден"
     &_checked{
