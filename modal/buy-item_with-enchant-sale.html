@@ -1,0 +1,157 @@
+<div class="modal">
+    <div class="wrapper wrapper_modal">
+        <div class="modal-area modal-area_windowed buy-item">
+            <!-- Покупка предмета -->
+            <div class="modal-area__section">
+                <div class="buy-item__view window">
+                    <img src="../images/shop/23.png" alt
+                         class="buy-item__view-icon">
+                </div>
+                <h2 class="modal-area__heading buy-item__heading buy-item__heading_aqua">
+                    Улучшенный алмазный бур
+                </h2>
+                <p class="buy-item__mod-info">Industrial Craft 2</p>
+                <div class="buy-item__section">
+                    <span class="buy-item__section-title">Введите количество</span>
+                    <a href="#" class="btn btn_danger buy-item__section-control">-</a>
+                    <input type="number" class="buy-item__section-input" value="16" placeholder="0" max="9999">
+                    <a href="#" class="btn btn_success buy-item__section-control">+</a>
+                </div>
+                <div class="buy-item__section buy-item__section_enchant">
+                    Зачаруйте предмет
+                    <a href="#" class="btn btn_violet" onclick="itemEnchant()">Зачаровать</a>
+                    <ul class="buy-item__section-list">
+                        <li class="buy-item__section-list-item">
+                            <span>Острота Х</span>
+                            <span class="buy-item__section-list-item__price">
+                                350
+                                <span class="currency currency_rubles currency_size-24"></span>
+                            </span>
+                        </li>
+                        <li class="buy-item__section-list-item">
+                            <span>Заговор огня II</span>
+                            <span class="buy-item__section-list-item__price">
+                                50
+                                <span class="currency currency_rubles currency_size-24"></span>
+                            </span>
+                        </li>
+                        <li class="buy-item__section-list-item">
+                            <span>Добыча IV</span>
+                            <span class="buy-item__section-list-item__price">
+                                90
+                                <span class="currency currency_rubles currency_size-24"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn_success btn_purchase">
+                    <span class="btn_purchase-section">
+                        Купить
+                    </span>
+                    <span class="btn_purchase-section">
+                        <span class="btn-strike">640</span>
+                        490 <span class="btn-currency currency currency_rubles"></span>
+                    </span>
+                    <span class="btn_purchase__sale">
+                        <span class="btn_purchase__sale-text">Скидка на покупку 25%</span>
+                    </span>
+                </a>
+            </div>
+            <!-- Зачарование предмета -->
+            <div class="buy-item__enchant">
+                <div class="buy-item__enchant-content">
+                    <h3 class="buy-item__enchant-heading">Зачарование предмета</h3>
+                    <ul class="buy-item__enchant-list">
+                        <li class="buy-item__enchant-option buy-item__enchant-option_checked">
+                            <span>
+                                Острота
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                X
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                            <div class="buy-item__enchant-option__price">
+                                350 <span class="currency currency_rubles"></span>
+                            </div>
+                        </li>
+                        <li class="buy-item__enchant-option">
+                            <span>
+                                Небесная кара
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                -
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                        </li>
+                        <li class="buy-item__enchant-option">
+                            <span>
+                                Бич членистоногих
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                -
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                        </li>
+                        <li class="buy-item__enchant-option buy-item__enchant-option_checked">
+                            <span>
+                                Заговор огня
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                II
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                            <div class="buy-item__enchant-option__price">
+                                50 <span class="currency currency_rubles"></span>
+                            </div>
+                        </li>
+                        <li class="buy-item__enchant-option">
+                            <span>
+                                Отдача
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                -
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                        </li>
+                        <li class="buy-item__enchant-option buy-item__enchant-option_checked">
+                            <span>
+                                Добыча
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                IV
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                            <div class="buy-item__enchant-option__price">
+                                90 <span class="currency currency_rubles"></span>
+                            </div>
+                        </li>
+                        <li class="buy-item__enchant-option">
+                            <span>
+                                Прочность
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">-</a>
+                            <span class="buy-item__enchant-option__lvl">
+                                -
+                            </span>
+                            <a href="#" class="buy-item__enchant-option__btn">+</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn_secondary" onclick="itemEnchant()">Назад</a>
+                    <a href="#" class="btn btn_violet" onclick="itemEnchant()">Подтвердить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Кнопка закрытия окна *** справа сверху -->
+    <button
+            class="closing-key tooltip-trigger"
+            data-title="<span class=white>Вернуться назад<span>"
+    >
+    </button>
+</div>

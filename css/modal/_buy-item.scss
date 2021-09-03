@@ -42,6 +42,7 @@
     background: var(--background);
     padding: 10px 25px;
     margin: 15px 0;
+    min-height: 56px;
     @include bordered(var(--background));
     align-items: center;
     text-align: left;
@@ -51,6 +52,9 @@
       --background: #{alpha($dark-purple, .2)};
       grid-template-columns: 1fr auto;
 
+      &-disabled{
+        color: $dark-gray;
+      }
       // Стилизация кнопки "ЗАЧАРОВАТЬ"
       .btn{
         line-height: 36px;
