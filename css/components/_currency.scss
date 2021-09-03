@@ -2,17 +2,12 @@
   --size: 28px;
 
   display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('#{$url}icon/balance-rubles.png') no-repeat center;
   background-size: contain;
   width: var(--size);
   height: var(--size);
   image-rendering: pixelated;
   vertical-align: top;
-
-  &_rubles{
-    background-image: url('#{$url}icon/balance-rubles.png');
-  }
 
   &_coins{
     background-image: url('#{$url}icon/balance-coins.png');
