@@ -1,13 +1,18 @@
 .buy-item{
+  width: 600px;
 
-  // Заголовок
+  // Название предмета
   &__heading{
     font-size: 28px;
-    color: $aqua;
-    text-shadow: 3px 3px $aqua-shadow;
+
+    // Стилизация названия под голубой цвет
+    &_aqua{
+      color: $aqua;
+      text-shadow: 3px 3px $aqua-shadow;
+    }
   }
 
-  // Контейнер с отображением предмета
+  // Контейнер с иконкой продаваемого предмета
   &__view{
     position: relative;
     margin: 0 auto 25px;
@@ -20,7 +25,7 @@
     }
   }
 
-  // Принадлежность предмета к модификации
+  // Модификация, в которую входит предмет
   &__mod-info{
     font-size: 20px;
     color: $blue;
@@ -28,7 +33,7 @@
     text-shadow: 3px 3px $blue-shadow;
   }
 
-  // Ввод количества
+  // Разделы для настройки покупаемого предмета
   &__section{
     --background: #{alpha($white, .05)};
 
@@ -41,10 +46,12 @@
     align-items: center;
     text-align: left;
 
+    // Раздел зачарования предмета
     &_enchant{
       --background: #{alpha($dark-purple, .2)};
       grid-template-columns: 1fr auto;
 
+      // Стилизация кнопки "ЗАЧАРОВАТЬ"
       .btn{
         line-height: 36px;
         padding: 0 15px;
@@ -52,7 +59,7 @@
       }
     }
 
-    // Кнопки плюс и минус / Органы управления
+    // Кнопки управления "-" и "+" для добавления и убавления количества предмета
     &-control{
       line-height: 36px;
       padding: 0;
@@ -60,7 +67,7 @@
       width: 38px;
     }
 
-    // Поле для ввода количества предметов
+    // Поле для ввода количества покупаемого предмета
     &-input{
       border: none;
       background: alpha($white, .05);
@@ -72,7 +79,7 @@
       text-shadow: 2px 2px $white-shadow;
       text-align: center;
 
-      // Отключение элементов управления у type="number"
+      // Отключение элементов управления у input type="number"
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         display: none;
@@ -80,21 +87,184 @@
         margin: 0;
       }
     }
+
+    // Список наложенный зачарований
+    &-list{
+      border-top: 2px solid $dark-gray;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding: 15px 30px;
+      margin: 15px -30px 0;
+      list-style: none;
+
+      // Элемент списка
+      &-item{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        border-bottom: 2px dotted $dark-gray;
+        color: $gray;
+        line-height: 24px;
+        text-shadow: 2px 2px $gray-shadow;
+
+        // Отступ между элементами списка
+        &:not(:first-child){
+          margin: 5px 0 0;
+        }
+
+        // Цена зачарования
+        &__price{
+          color: $white;
+          text-shadow: 2px 2px $white-shadow;
+        }
+      }
+    }
   }
 
-  // Зачарование предмета
+  // Экран с зачарованием предмета
   &__enchant{
+    display: grid;
     position: absolute;
-    background: #fff;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    pointer-events: none;
+    border: 10px $black;
+    background:
+            url('#{$url}gui/scroll-pattern.png') repeat-y left center,
+            #d2ba93
+            url('#{$url}gui/scroll-pattern.png') repeat-y right center;
+    background-size: 20px 10px;
+    padding: 30px 20px;
+    height: 0;
+    width: calc(100% + 20px);
+    top: 50%;
+    left: -10px;
     opacity: 0;
+    pointer-events: none;
+    transition: all .3s, opacity .15s .1s;
+    image-rendering: pixelated;
+    align-items: center;
 
+    // Переключение состояния экрана на "виден"
     &_checked{
       pointer-events: all;
+      height: 540px;
+      top: calc((100% - 540px) / 2);
       opacity: 1;
     }
+
+    // Верхняя и нижняя граница экран в виде "свитка"
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url('#{$url}gui/scroll-border.png') no-repeat center;
+      background-size: contain;
+      height: 60px;
+      width: 800px;
+      top: -30px;
+      left: calc((800px - 100%) / -2);
+      image-rendering: pixelated;
+    }
+    // Нижняя граница - изменение позиционирования
+    &::after{
+      bottom: -30px;
+      top: unset;
+    }
+
+    // Обёртка для содержания экрана
+    &-content{
+      max-height: 100%;
+      padding: 20px 15px;
+      overflow: hidden;
+    }
+
+    // Заголовок
+    &-heading{
+      font-family: MinecraftTitle,sans-serif;
+      font-size: 28px;
+      color: darken(#96846a, 25);
+      margin: 0 0 15px;
+    }
+
+    // Список доступных чар
+    &-list{
+      margin: 0 0 25px;
+      list-style: none;
+    }
+
+    // Строка с настройкой чар
+    &-option{
+      --background: #{alpha(#96846a, .5)};
+
+      display: grid;
+      grid-template-columns: 1fr auto 65px auto 105px;
+      line-height: 28px;
+      font-size: 18px;
+      background: var(--background);
+      color: darken(#96846a, 25);
+      padding: 0 10px;
+      @include bordered(var(--background));
+      align-items: center;
+      text-align: left;
+
+      // Отступ между элементами списка
+      &:not(:first-child) {
+        margin: 15px 0 0;
+      }
+
+      // Модификатор для наложенного зачарования
+      &_checked{
+        --background: #{alpha($dark-purple, .75)};
+
+        color: $white;
+        text-shadow: 2px 2px $white-shadow;
+      }
+
+      // Элементы управления, кнопки "-" и "+"
+      &__btn{
+        --background: #{$black};
+
+        position: relative;
+        background: var(--background);
+        line-height: 28px;
+        font-size: 20px;
+        color: $white;
+        margin: 0;
+        padding: 0 10px;
+        text-shadow: 0 0 transparent;
+        @include bordered(var(--background));
+
+        // Состояние наведения
+        &:hover{
+          --background: #{$white};
+
+          color: $black;
+        }
+      }
+
+      // Уровень накладываемых чар
+      &__lvl{
+        --background: #{alpha($black, .1)};
+
+        background: var(--background);
+        font-family: MinecraftTitle,sans-serif;
+        font-size: 20px;
+        color: $white;
+        @include bordered(var(--background));
+        text-shadow: 2px 2px $white-shadow;
+        text-align: center;
+      }
+
+      // Цена наложенного зачарования
+      &__price{
+        color: $white;
+        line-height: 28px;
+        text-shadow: 2px 2px $white-shadow;
+        text-align: right;
+      }
+    }
+  }
+
+  // Отступ для кнопки покупки
+  .btn_purchase{
+    margin-top: 10px;
   }
 }
