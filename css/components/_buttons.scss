@@ -170,20 +170,25 @@
     &__sale{
       display: block;
       position: absolute;
-      background: $red;
-      font-size: 16px;
-      line-height: 1;
-      color: $white;
       width: calc(100% - 40px);
-      padding: 5px;
       bottom: 100%;
       left: 0;
       right: 0;
       margin: auto;
-      white-space: nowrap;
-      text-shadow: 2px 2px $white-shadow;
-      box-shadow: 5px 5px alpha($red-shadow, .6);
+      text-align: center;
       z-index: 1;
+
+      &-text{
+        display: inline-block;
+        background: $red;
+        line-height: 1;
+        font-size: 16px;
+        color: $white;
+        padding: 5px 10px;
+        white-space: nowrap;
+        text-shadow: 2px 2px $white-shadow;
+        box-shadow: 5px 5px alpha($red-shadow, .6);
+      }
     }
   }
 
@@ -196,13 +201,14 @@
     margin: -5px 5px;
     vertical-align: top;
   }
+
   // Зачёркнутый текст
   &-strike{
     position: relative;
     display: inline-block;
-    padding: 0 2px 0 4px;
+    padding: 0 5px;
     margin: 0 5px 0 0;
-    color: alpha($gray, .7);
+    color: $gray;
     text-shadow: 2px 2px alpha($dark-gray-shadow, .7);
     vertical-align: top;
 
@@ -216,10 +222,10 @@
       width: 100%;
       top: 10px;
       left: 0;
-      opacity: .8;
       box-shadow: 3px 3px $red-shadow;
     }
   }
+
   // Выделение текста
   &-mark{
     display: inline-block;
@@ -228,5 +234,10 @@
     box-shadow:
             inset -5px -5px var(--border-top),
             inset 5px 5px var(--border-bottom);
+  }
+
+  // Центрирование по-вертикали иконки с валютой
+  &-currency{
+    margin: -4px 0;
   }
 }
