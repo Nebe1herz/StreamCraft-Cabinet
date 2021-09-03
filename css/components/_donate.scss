@@ -4,6 +4,7 @@
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    //grid-template-rows: repeat(2, minmax(321px, 612px));
     grid-gap: 32px 24px;
     list-style: none;
 
@@ -25,7 +26,7 @@
     position: relative;
     background: var(--background);
     height: 100%;
-    padding: 30px 0;
+    padding: 25px 0;
     @include bordered(var(--border), 8);
     text-transform: initial;
     text-align: center;
@@ -92,13 +93,13 @@
     // Иконка товара
     &__icon{
       display: block;
-      height: 160px;
-      width: 160px;
+      height: 150px;
+      width: 150px;
       margin: 0 auto;
       image-rendering: pixelated;
 
       &_offset{
-        margin: 10px auto;
+        margin: 15px auto;
       }
     }
 
@@ -114,20 +115,44 @@
 
     // Стоимость
     &__price{
-      line-height: 1;
-      font-size: 20px;
+      line-height: 24px;
+      font-size: 18px;
       color: $white;
       text-shadow: 3px 3px $white-shadow;
+      text-align: center;
+
+      // Область с ценником
+      &-area{
+        --background: #{alpha($dark-gray-shadow, .9)};
+
+        display: inline-block;
+        background: var(--background);
+        padding: 5px 15px;
+        @include bordered(var(--background), 8)
+      }
+
+      //
+      &-text{
+        display: block;
+        font-family: MinecraftTitle, sans-serif;
+        color: var(--color);
+        font-size: 18px;
+        margin: 0 0 5px;
+        text-shadow: 0 0;
+      }
 
       // Зачеркнутая цена (для отображения разницы при скидке)
       &-strike{
         display: inline-block;
         position: relative;
         padding: 0 4px;
-        margin: 0 0 5px;
-        color: alpha($gray, .7);
+        color: $gray;
         text-shadow: 4px 4px $dark-gray-shadow;
-        clear: both;
+
+        // Убавляем прозрачность у иконки валюты
+        .currency{
+          opacity: .5;
+        }
 
         // Зачеркивающая полоса
         &::before{
@@ -137,10 +162,10 @@
           background: $red;
           height: 3px;
           width: 100%;
-          top: 9px;
+          top: 13px;
           left: 0;
-          opacity: .8;
           box-shadow: 3px 3px $red-shadow;
+          z-index: 1;
         }
       }
     }
