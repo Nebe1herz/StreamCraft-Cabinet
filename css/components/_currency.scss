@@ -1,0 +1,42 @@
+.currency{
+  --size: 28px;
+
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: var(--size);
+  height: var(--size);
+  image-rendering: pixelated;
+  vertical-align: top;
+
+  &_rubles{
+    background-image: url('#{$url}icon/balance-rubles.png');
+  }
+
+  &_coins{
+    background-image: url('#{$url}icon/balance-coins.png');
+  }
+
+  // Модификаторы размера
+  &_size{
+    &-16{
+      --size: 16px;
+    }
+    &-24{
+      --size: 24px;
+    }
+    &-32{
+      --size: 32px;
+    }
+    &-42{
+      --size: 42px;
+    }
+    &-48{
+      --size: 48px;
+    }
+    &-64{
+      --size: 64px;
+    }
+  }
+}
