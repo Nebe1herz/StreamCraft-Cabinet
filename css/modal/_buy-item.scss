@@ -1,0 +1,100 @@
+.buy-item{
+
+  // Заголовок
+  &__heading{
+    font-size: 28px;
+    color: $aqua;
+    text-shadow: 3px 3px $aqua-shadow;
+  }
+
+  // Контейнер с отображением предмета
+  &__view{
+    position: relative;
+    margin: 0 auto 25px;
+    width: 158px;
+
+    // Иконка предмета
+    &-icon{
+      width: 128px;
+      image-rendering: pixelated;
+    }
+  }
+
+  // Принадлежность предмета к модификации
+  &__mod-info{
+    font-size: 20px;
+    color: $blue;
+    margin: 5px 0  25px;
+    text-shadow: 3px 3px $blue-shadow;
+  }
+
+  // Ввод количества
+  &__section{
+    --background: #{alpha($white, .05)};
+
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    background: var(--background);
+    padding: 10px 25px;
+    margin: 15px 0;
+    @include bordered(var(--background));
+    align-items: center;
+    text-align: left;
+
+    &_enchant{
+      --background: #{alpha($dark-purple, .2)};
+      grid-template-columns: 1fr auto;
+
+      .btn{
+        line-height: 36px;
+        padding: 0 15px;
+        margin: 0;
+      }
+    }
+
+    // Кнопки плюс и минус / Органы управления
+    &-control{
+      line-height: 36px;
+      padding: 0;
+      margin: 0!important;
+      width: 38px;
+    }
+
+    // Поле для ввода количества предметов
+    &-input{
+      border: none;
+      background: alpha($white, .05);
+      font-size: 18px;
+      color: $white;
+      width: 80px;
+      height: 100%;
+      @include bordered(alpha($white, .05));
+      text-shadow: 2px 2px $white-shadow;
+      text-align: center;
+
+      // Отключение элементов управления у type="number"
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        display: none;
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  // Зачарование предмета
+  &__enchant{
+    position: absolute;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+
+    &_checked{
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}

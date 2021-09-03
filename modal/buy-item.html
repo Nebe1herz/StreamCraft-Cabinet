@@ -1,0 +1,46 @@
+<div class="modal">
+    <div class="wrapper wrapper_modal">
+        <div class="modal-area modal-area_windowed buy-item">
+            <!-- Покупка предмета -->
+            <div class="modal-area__section">
+                <div class="buy-item__view window">
+                    <img src="../images/shop/23.png" alt
+                         class="buy-item__view-icon">
+                </div>
+                <h2 class="modal-area__heading buy-item__heading">
+                    Улучшенный алмазный бур
+                </h2>
+                <p class="buy-item__mod-info">Industrial Craft 2</p>
+                <div class="buy-item__section">
+                    <span class="buy-item__section-title">Введите количество</span>
+                    <a href="#" class="btn btn_danger buy-item__section-control">-</a>
+                    <input type="number" class="buy-item__section-input" value="16" placeholder="0" max="9999">
+                    <a href="#" class="btn btn_success buy-item__section-control">+</a>
+                </div>
+                <div class="buy-item__section buy-item__section_enchant">
+                    Зачаруйте предмет
+                    <a href="#" class="btn btn_violet" onclick="itemEnchant()">Зачаровать</a>
+                </div>
+                <br>
+                <a href="#" class="btn btn_success btn_purchase">
+                    <span class="btn_purchase-section">
+                        60 ₽
+                    </span>
+                    <span class="btn_purchase-section">
+                        Купить
+                    </span>
+                </a>
+            </div>
+            <!-- Зачарование предмета -->
+            <div class="buy-item__enchant">
+                <a href="#" class="btn btn_violet" onclick="itemEnchant()">Наложить чары</a>
+            </div>
+        </div>
+    </div>
+    <!-- Кнопка закрытия окна *** справа сверху -->
+    <button
+            class="closing-key tooltip-trigger"
+            data-title="<span class=white>Вернуться назад<span>"
+    >
+    </button>
+</div>
