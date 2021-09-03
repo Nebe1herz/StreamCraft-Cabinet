@@ -191,7 +191,7 @@
 
     // Контейнер для цены на товар
     &__price{
-      line-height: 1.2;
+      line-height: 20px;
       font-size: 13px;
       color: $white;
       text-shadow: 2px 2px $white-shadow;
@@ -202,9 +202,14 @@
         position: relative;
         padding: 0 4px;
         margin: 0 0 5px;
-        color: alpha($gray, .7);
+        color: $gray;
         text-shadow: 2px 2px $dark-gray-shadow;
         clear: both;
+
+        // Убавляем прозрачность у иконки валюты
+        .currency{
+          opacity: .5;
+        }
 
         // Линия, зачеркивающая ценник
         &::before{
@@ -214,9 +219,9 @@
           background: #f55;
           height: 3px;
           width: 100%;
-          top: 7px;
+          top: 8px;
           left: 0;
-          opacity: .5;
+          opacity: .7;
           box-shadow: 3px 3px #3f1515;
         }
       }
