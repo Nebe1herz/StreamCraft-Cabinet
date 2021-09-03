@@ -48,15 +48,13 @@
       background:
               linear-gradient(
                               to right,
-                              transparent,
-                              alpha($green, .3) 20%,
-                              alpha($green, .15),
-                              alpha($gold, .15),
-                              alpha($gold, .3) 80%,
-                              transparent
+                              transparent 2%,
+                              alpha($green, .5),
+                              alpha($gold, .5),
+                              transparent 98%
               );
       padding: 25px 0 35px;
-      margin: 25px 0 15px;
+      margin: 0 0 15px;
     }
 
     // Заголовок 2-го уровня

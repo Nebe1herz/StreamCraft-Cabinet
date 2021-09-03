@@ -22,6 +22,8 @@
       z-index: 2;
       text-align: left;
 
+      // При наведении на кнопку или на выпадающий список
+      // Отображать выпадающий список
       &:hover ~ .shop__filters-dropdown,
       &~ .shop__filters-dropdown:hover{
         opacity: 1;
@@ -32,13 +34,9 @@
         }
       }
 
-      // Разделитель
-      &-separator{
-        height: 30px;
-      }
-
       // Цветовое выделение значения фильтра
       &-mark{
+        margin: -10px 0 -10px 8px;
         color: $green;
         text-shadow: 2px 2px $green-shadow;
       }
@@ -113,7 +111,7 @@
     --background: #{alpha($black, .5)};
 
     display: block;
-    padding: 30px 0;
+    padding: 20px 0 25px;
     height: 100%;
     font-size: 12px;
     @include bordered(var(--background), 7);
@@ -139,7 +137,7 @@
           text-indent: 0;
         }
         10%, 30%, 50%, 70%, 90%{
-          text-indent: -80%;
+          text-indent: -150px;
         }
       }
     }
@@ -148,29 +146,25 @@
     &__sale{
       display: block;
       position: absolute;
-      background:
-              linear-gradient(
-                              90deg,
-                              transparent,
-                              $red,
-                              transparent
-              );
+      background: $red;
       line-height: 20px;
       font-size: 14px;
       color: $white;
-      right: 0;
-      left: 0;
-      top: 5px;
-      width: 100%;
+      right: 30px;
+      left: 30px;
+      top: -15px;
+      width: calc(100% - 60px);
       white-space: nowrap;
       text-shadow: 2px 2px $white-shadow;
+      box-shadow: 5px 5px alpha($dark-red, .5);
       text-align: center;
+      z-index: 1;
     }
 
     // Название карточки
     &__title{
       font-size: 14px;
-      padding: 0 5px;
+      padding: 0 15px;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -192,7 +186,7 @@
 
     // Иконка (превьюшка) товара
     &__icon{
-      margin: 10px 0;
+      margin: 15px 0;
     }
 
     // Контейнер для цены на товар
