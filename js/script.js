@@ -247,5 +247,4 @@ document.body.onclick = (e) => {
         modalToggle('show', modalName);
     }
 };
-
-//document.addEventListener("DOMContentLoaded", modalToggle('show', 'modal.case.legend'));
+const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0].classList.toggle('buy-item__enchant_checked');
