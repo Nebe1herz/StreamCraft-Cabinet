@@ -99,5 +99,3 @@ document.body.onclick = (e) => {
         modalToggle('show', modalName);
     }
 };
-
-//document.addEventListener("DOMContentLoaded", modalToggle('show', 'modal.case.legend'));
