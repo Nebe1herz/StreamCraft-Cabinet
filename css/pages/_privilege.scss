@@ -4,11 +4,11 @@
     // Разделитель
     &-separator{
       border: none;
-      background: var(--color);
+      background:alpha($gray-shadow, .9);
       width: 75px;
-      height: 5px;
-      margin: 15px auto;
-      box-shadow: 4px 4px alpha($black, .4);
+      height: 4px;
+      margin: 12px auto;
+      //box-shadow: 4px 4px alpha($black, .4);
     }
     // Список преимуществ группы
     &-list{
@@ -31,7 +31,7 @@
 
   // Вместо модификаторов
   .donate-card{
-    padding: 20px 0 40px;
+    padding: 15px 25px 30px;
 
     &__price-strike{
       display: inline-block;
@@ -39,6 +39,7 @@
     }
   }
   .donate-card__title{
+    line-height: .8;
     font-size: 36px;
     padding-top: 0;
     margin-bottom: 10px;
