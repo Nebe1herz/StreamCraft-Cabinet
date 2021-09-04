@@ -30,7 +30,7 @@
   // Настройки текста
   font-size: 20px;
   color: var(--color);
-  text-shadow: 2px 2px var(--text-shadow);
+  text-shadow: 3px 3px var(--text-shadow);
   text-transform: uppercase;
   text-align: center;
 
@@ -209,8 +209,12 @@
     padding: 0 5px;
     margin: 0 5px 0 0;
     color: $gray;
-    text-shadow: 2px 2px alpha($dark-gray-shadow, .7);
+    text-shadow: 3px 3px $gray-shadow;
     vertical-align: top;
+
+    .currency{
+      opacity: .7;
+    }
 
     // Зачеркивающая полоса
     &::before{
@@ -223,6 +227,7 @@
       top: 10px;
       left: 0;
       box-shadow: 3px 3px $red-shadow;
+      z-index: 1;
     }
   }
 
@@ -234,10 +239,5 @@
     box-shadow:
             inset -5px -5px var(--border-top),
             inset 5px 5px var(--border-bottom);
-  }
-
-  // Центрирование по-вертикали иконки с валютой
-  &-currency{
-    margin: -4px 0;
   }
 }
