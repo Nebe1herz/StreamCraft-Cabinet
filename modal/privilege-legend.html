@@ -4,15 +4,19 @@
     <div class="wrapper wrapper_modal">
         <div class="modal-area modal-area_windowed">
             <div class="modal-area__section">
+                <!-- Название группы -->
                 <h2 class="modal-area__heading">
                     Группа Legend
                 </h2>
-                <!--<div class="modal-area__notice modal-area__notice_sale">
-                    СКИДКА 25%
-                </div>-->
-                <img src="../images/privilege/legend.png" alt
-                     class="modal-area__icon
-                            modal-area__icon_offset">
+                <!-- Обёртка иконки группы -->
+                <div class="privilege-header">
+                    <!-- Иконка -->
+                    <img src="../images/privilege/legend.png" alt
+                         class="modal-area__icon
+                                modal-area__icon_offset">
+                </div>
+
+                <!-- Кнопка покупки на 30 дней -->
                 <a href="#"
                    class="btn btn_success
                           btn_purchase btn_purchase_column">
@@ -24,6 +28,7 @@
                         Цена: 1 000 ₽
                     </span>
                 </a>
+                <!-- Кнопка покупки на 90 дней со скидкой -->
                 <a href="#" class="btn btn_warning
                                    btn_purchase btn_purchase_column">
                     <span class="btn_purchase-section">
@@ -34,15 +39,19 @@
                         <span class="btn-strike">3 000 ₽</span>
                         2 500 ₽
                     </span>
-                    <span class="btn_purchase__sale">Выгоднее на 500 руб.</span>
+                    <span class="btn_purchase__sale">
+                        <span class="btn_purchase__sale-text">Выгоднее на 500 руб.</span>
+                    </span>
                 </a>
+
+                <!-- Список преимуществ группы -->
             </div>
         </div>
     </div>
     <!-- Кнопка закрытия окна *** справа сверху -->
     <button
             class="closing-key tooltip-trigger"
-            data-title="<span class=white>Вернуться назад<span>"
+            data-title="<span class=white>Закрыть<span>"
     >
     </button>
 </div>

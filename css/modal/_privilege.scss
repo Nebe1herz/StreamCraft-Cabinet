@@ -1,0 +1,29 @@
+.privilege{
+
+  // Шапка с иконкой внутри
+  &-header{
+    background: url('#{$url}gui/privilege-pattern.png') top center;
+    background-size: 80px;
+    margin: 15px -35px 20px;
+    image-rendering: pixelated;
+
+    img{
+      margin: auto;
+    }
+
+    &_style{
+      &-legend{
+        background-image: url('#{$url}gui/privilege-pattern-legend.png');
+      }
+      &-deluxe{
+        background-image: url('#{$url}gui/privilege-pattern-deluxe.png');
+      }
+      &-premium{
+        background-image: url('#{$url}gui/privilege-pattern-premium.png');
+      }
+      &-vip{
+        background-image: url('#{$url}gui/privilege-pattern-vip.png');
+      }
+    }
+  }
+}
