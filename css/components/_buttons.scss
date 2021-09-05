@@ -240,4 +240,16 @@
             inset -5px -5px var(--border-top),
             inset 5px 5px var(--border-bottom);
   }
+
+  // Иконка пропуска
+  &-skip{
+    display: inline-block;
+    background: url('#{$url}gui/arrow-skip.gif') no-repeat center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 4px;
+    image-rendering: pixelated;
+    vertical-align: top;
+  }
 }

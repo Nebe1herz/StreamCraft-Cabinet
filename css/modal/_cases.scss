@@ -10,9 +10,14 @@
 
   // Сетка
   &-contains{
+    --card-size: 58px;
+    --column: 9;
+    --count-size: 18px;
+
     display: grid;
-    grid-template-columns: repeat(9, 58px);
+    grid-template-columns: repeat(var(--column), var(--card-size));
     grid-gap: 15px;
+    align-items: center;
     list-style: none;
   }
 
@@ -23,53 +28,174 @@
 
     position: relative;
     background: var(--background);
-    width: 58px;
-    height: 58px;
+    width: var(--card-size);
+    height: var(--card-size);
     padding: 5px;
     @include bordered(var(--background));
 
+    // Состояние наведения
     &:hover{
       --background: var(--background-hover);
       background: var(--background-hover);
     }
 
+    // Модификатор редкости кейса
     &_rare{
+      // Обычный
       &-0{
         --background: #{alpha($green, .5)};
         --background-hover: #{alpha($green, .8)};
       }
+
+      // Редкий
       &-1{
         --background: #{alpha($blue, .7)};
         --background-hover: #{$blue};
       }
+
+      // Мифический
       &-2{
         --background: #{alpha($dark-purple, .7)};
         --background-hover: #{$dark-purple};
       }
+
+      // Экзотический
       &-3{
         --background: #{alpha($dark-red, .7)};
         --background-hover: #{$dark-red};
       }
+
+      // Легендарный
       &-4{
         --background: #{alpha($gold, .7)};
         --background-hover: #{$gold};
+      }
+
+      // Привилегия
+      &-privilege{
+        padding: 0;
+
+        .case-item__icon{
+          width: var(--card-size);
+          height: var(--card-size);
+        }
       }
     }
 
     // Иконка предмета
     &__icon{
-      width: 48px;
-      height: 48px;
+      width: calc(var(--card-size) - 10px);
+      height: calc(var(--card-size) - 10px);
       image-rendering: pixelated;
     }
     // Количество предмета
     &__count{
       position: absolute;
-      font-size: 18px;
+      font-size: var(--count-size);
       color: $white;
       right: 0;
       bottom: 3px;
       text-shadow: 3px 3px $white-shadow;
+    }
+  }
+
+  &-open{
+    padding: 25px 0 50px;
+
+    // Заголовок открытия кейса
+    &__heading{
+      font-size: 32px;
+
+      // Модификатора цвета
+      &_style{
+        &-gold{
+          --color: #{$gold};
+          --text-shadow: #{$gold-shadow};
+        }
+      }
+
+      // Название кейса
+      &-name{
+        font-family: inherit;
+        color: var(--color);
+        text-shadow: 4px 4px var(--text-shadow);
+      }
+    }
+
+    // Полоса пропкрутки предметов
+    &__scrolling-wrapper{
+      position: relative;
+      margin: 10px 0 15px;
+      padding: 25px 0;
+      height: 126px;
+
+      //
+      .case-contains{
+        --card-size: 80px;
+        --count-size: 24px;
+        --width: 1727px;
+        --column: 18;
+
+        position: absolute;
+        top: 15px;
+        width: var(--width);
+        padding: 0 12px;
+        animation: case-scrolling 2s linear infinite;
+
+        //
+        &_scroll{
+          &-1{
+            --position: var(--width);
+          }
+          &-2{
+            --position: 0px;
+          }
+          &-3{
+            --position: calc(var(--width) * -1);
+          }
+        }
+        //
+        @keyframes case-scrolling{
+          0%{
+            right: var(--position);
+          }
+          100%{
+            right: calc(var(--position) + var(--width));
+          }
+        }
+      }
+
+      //
+      .case-item_rare-privilege{
+        --card-size: 96px;
+      }
+
+      //
+      &__cursor{
+        --size: 48px;
+
+        display: block;
+        position: absolute;
+        background: url('#{$url}gui/cursor.png') no-repeat center;
+        background-size: var(--size);
+        width: var(--size);
+        height: var(--size);
+        top: 0;
+        left: calc(50% - (var(--size) / 2));
+        animation: cursor-rotate .15s infinite;
+        transform-origin: center top;
+        image-rendering: pixelated;
+        z-index: 1;
+
+        @keyframes cursor-rotate{
+          0%{
+            transform: rotate(0);
+          }
+          100%{
+            transform: rotate(35deg);
+          }
+        }
+      }
     }
   }
 }
