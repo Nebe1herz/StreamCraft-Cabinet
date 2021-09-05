@@ -172,16 +172,14 @@
 
       //
       &__cursor{
-        --size: 48px;
-
         display: block;
         position: absolute;
         background: url('#{$url}gui/cursor.png') no-repeat center;
-        background-size: var(--size);
-        width: var(--size);
-        height: var(--size);
+        background-size: 48px;
+        width: 48px;
+        height: 48px;
         top: 0;
-        left: calc(50% - (var(--size) / 2));
+        left: calc(50% - 24px);
         animation: cursor-rotate .15s infinite;
         transform-origin: center top;
         image-rendering: pixelated;
