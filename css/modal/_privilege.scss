@@ -1,29 +1,113 @@
 .privilege{
+  --image: #{url("#{$url}gui/privilege-pattern.png")};
+  --icon: #{url("#{$url}gui/check.png")};
+  --color: #{$white};
+  --text-shadow: #{$white-shadow};
+
+  &_legend{
+    //--image: #{url('#{$url}gui/privilege-pattern-legend.png')};
+    --image: #{url("#{$url}gui/privilege-pattern.png")};
+    //--icon: #{url("#{$url}gui/check_gold.png")};
+    --color: #{$gold};
+    --text-shadow: #{$gold-shadow};
+  }
+  &_deluxe{
+    --image: #{url('#{$url}gui/privilege-pattern-deluxe.png')};
+    --color: #{$light-purple};
+    --text-shadow: #{$light-purple-shadow};
+  }
+  &_premium{
+    --image: #{url('#{$url}gui/privilege-pattern-premium.png')};
+    --color: #{$blue};
+    --text-shadow: #{$blue-shadow};
+  }
+  &_vip{
+    --image: #{url('#{$url}gui/privilege-pattern-vip.png')};
+    --color: #{$green};
+    --text-shadow: #{$green-shadow};
+  }
 
   // Шапка с иконкой внутри
   &-header{
-    background: url('#{$url}gui/privilege-pattern.png') top center;
+    background: var(--image) top center;
     background-size: 80px;
     margin: 15px -35px 20px;
     image-rendering: pixelated;
 
+    // Убираем лишние отступы у внутреннего компонента
     img{
       margin: auto;
     }
+  }
 
-    &_style{
-      &-legend{
-        background-image: url('#{$url}gui/privilege-pattern-legend.png');
+  //
+  &__area{
+    margin: 45px 0 0;
+
+    //
+    &-heading{
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-gap: 10px;
+      margin: 0 0 15px;
+      align-items: center;
+
+      //
+      &__text{
+        font-family: MinecraftTitle, sans-serif;
+        font-size: 24px;
+        color: $white;
+        text-shadow: 3px 3px $white-shadow;
       }
-      &-deluxe{
-        background-image: url('#{$url}gui/privilege-pattern-deluxe.png');
+
+      //
+      &__line{
+        display: block;
+        background: $dark-gray;
+        height: 5px;
+        box-shadow: 3px 3px $dark-gray-shadow;
       }
-      &-premium{
-        background-image: url('#{$url}gui/privilege-pattern-premium.png');
-      }
-      &-vip{
-        background-image: url('#{$url}gui/privilege-pattern-vip.png');
-      }
+    }
+  }
+
+
+  //
+  &__features{
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    grid-gap: 10px;
+    list-style: none;
+  }
+
+  //
+  &__feature{
+    position: relative;
+
+    //
+    &::before{
+      content: '';
+      display: block;
+      background: var(--icon) no-repeat center;
+      background-size: contain;
+      width: 48px;
+      height: 48px;
+      margin: auto;
+      image-rendering: pixelated;
+    }
+
+    //
+    &-heading{
+      line-height: 24px;
+      font-size: 18px;
+      color: var(--color);
+      text-shadow: 3px 3px var(--text-shadow);
+    }
+
+    //
+    &-about{
+      font-size: 13px;
+      color: $dark-gray;
+      text-shadow: 2px 2px $dark-gray-shadow;
     }
   }
 }
