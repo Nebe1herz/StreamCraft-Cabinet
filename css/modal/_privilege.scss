@@ -5,9 +5,8 @@
   --text-shadow: #{$white-shadow};
 
   &_legend{
-    //--image: #{url('#{$url}gui/privilege-pattern-legend.png')};
-    --image: #{url("#{$url}gui/privilege-pattern.png")};
-    //--icon: #{url("#{$url}gui/check_gold.png")};
+    --image: #{url('#{$url}gui/privilege-pattern-legend.png')};
+    --icon: #{url("#{$url}gui/check_gold.png")};
     --color: #{$gold};
     --text-shadow: #{$gold-shadow};
   }
@@ -68,20 +67,30 @@
         box-shadow: 3px 3px $dark-gray-shadow;
       }
     }
+
+    .inventory{
+      margin-top: 5px;
+    }
   }
 
 
   //
   &__features{
     display: grid;
-    grid-template-columns: repeat(4, 160px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 200px);
+    grid-gap: 25px 10px;
     list-style: none;
   }
 
   //
   &__feature{
     position: relative;
+
+    &_disable{
+      --icon: #{url("#{$url}gui/check_disable.png")};
+      --color: #{$dark-gray};
+      --text-shadow: #{$dark-gray-shadow};
+    }
 
     //
     &::before{
@@ -98,7 +107,7 @@
     //
     &-heading{
       line-height: 24px;
-      font-size: 18px;
+      font-size: 16px;
       color: var(--color);
       text-shadow: 3px 3px var(--text-shadow);
     }
