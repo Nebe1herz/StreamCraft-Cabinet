@@ -80,6 +80,7 @@
     // Поле для ввода количества покупаемого предмета
     &-input{
       border: none;
+      outline: none;
       background: alpha($white, .05);
       font-size: 18px;
       color: $white;

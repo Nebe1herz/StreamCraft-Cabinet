@@ -25,6 +25,7 @@
     display: block;
     position: relative;
     background: var(--background);
+    min-height: 319px;
     height: 100%;
     padding: 25px 0;
     @include bordered(var(--border), 8);

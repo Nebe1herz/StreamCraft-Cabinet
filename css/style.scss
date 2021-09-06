@@ -1,54 +1,75 @@
-// Bootstrap import
-/* @import 'bootstrap/bootstrap';*/
-
-// Основополагающие
+// Ключевые модули
 @import
-        'core/variables', // Переменные
-        'core/fonts', // Подключение шрифтов
-        'core/mixins', // Миксины и функции
-        'core/reset' // Сброс стилей элементов
+// Переменные
+'core/variables',
+// Подключение шрифтов
+'core/fonts',
+// Миксины и функции
+'core/mixins',
+// Сброс стилей элементов
+'core/reset'
 ;
 
 // Библиотека компонентов
 @import
-        'components/body', // Основной родитель
-        'components/wallpaper', // Контейнер для содержимого
+// Основной родитель
+'components/body',
+// Контейнер для содержимого
+'components/wallpaper',
 
-        'components/buttons', // Стилизация кнопок
-        'components/tooltip', // Подсказка при наведении на предмет
-        'components/currency', // Иконки игровых валют
+// Стилизация кнопок
+'components/buttons',
+// Подсказка при наведении на предмет
+'components/tooltip',
+// Иконки игровых валют
+'components/currency',
 
-        'components/header', // Пользовательская шапка
-        'components/nav', // Панель навигации
-        'components/sidebar-feed', // Боковой список уведомлений и друзей
+// Пользовательская шапка
+'components/header',
+// Панель навигации
+'components/nav',
+// Боковой список уведомлений и друзей
+'components/sidebar-feed',
 
-        'components/page', // Контейнер для страницы
-        'components/donate' // Карточки для платных услуг
+// Контейнер для страницы
+'components/page',
+// Карточки для платных услуг
+'components/donate'
 ;
 
 // Страницы
-@import 'pages/index', // Главное меню
+@import
+// Главное меню
+'pages/index',
 
-        'pages/privilege', // Наши привилегии
-        'pages/cases', // Выбор и покупка кейса
-        'pages/kits', // Выбор набора ресурсов
-        'pages/shop' // Магазин блоков
+// Наши привилегии
+'pages/privilege',
+// Выбор и покупка кейса
+'pages/cases',
+// Выбор набора ресурсов
+'pages/kits',
+// Магазин блоков
+'pages/shop'
 ;
 
 // Модальные окна
 @import
-        'modal/modal', // Общая стилизация модальных окон
+// Общая стилизация модальных окон
+'modal/modal',
 
-        'modal/inventory', // Отображение набора ресурсов
-        'modal/privilege', // Покупка донат-группы
-        'modal/cases', // Покупка и открытие кейсов
-        'modal/kits', // Просмотр и покупка донат-наборов
-        'modal/buy-item' // Покупка предмета в магазине блоков
-
-
+// Отображение набора ресурсов
+'modal/inventory',
+// Покупка донат-группы
+'modal/privilege',
+// Покупка и открытие кейсов
+'modal/cases',
+// Просмотр и покупка донат-наборов
+'modal/kits',
+// Покупка предмета в магазине блоков
+'modal/buy-item'
 ;
 
 // Плагины
 @import
-        'vendor/bootstrap.grid.css'
+'vendor/bootstrap.grid.css'
 ;
