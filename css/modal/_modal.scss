@@ -219,7 +219,9 @@
     &__paragraph{
       font-size: 18px;
       color: $gray;
-      margin: 25px 0 0;
+      width: 640px;
+      margin: 15px auto 25px;
+      text-shadow: 2px 2px $gray-shadow;
     }
   }
 }
