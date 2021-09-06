@@ -151,49 +151,46 @@ let timerId = setTimeout(tick = () => {
 // Элементу, который должен вызывать модальное окно
 // добавляем класс modal-trigger
 //
-let
-    modalTrigger = document.querySelectorAll('.modal-trigger'),
+let modalTrigger = document.querySelectorAll('.modal-trigger'),
     modalChecked = 'modal-checked'; // Класс отображения модального окна
 
 // Переключение модального окна (показать/скрыть)
-const modalToggle = (action, content = null) => {
+const modalToggle = (value = null) => {
     // Контейнер модального окна (если есть)
     let modalWrapper = document.getElementsByClassName('modal')[0];
 
-    switch(action) {
-        // Закрытие модального окна
-        case 'close':
-            document.body.classList.remove(modalChecked);
-            break;
+    // Отключаем отображение модального окна (если есть)
+    document.body.classList.remove(modalChecked);
 
-        case 'show':
-            let request = new XMLHttpRequest();
+    // Если в функцию ничего не передано, то вызов модального окна не требуется
+    // И выполнение функции прекратится
+    if(value === null) return false;
 
-            // Открываем запрос
-            request.open('GET', `/StreamCraft Cabinet/modal/${content}.html`);
-            // Отслеживание
-            request.onload = (e) => {
-                // Проверка на готовность загрузки страницы
-                if (request.readyState === 4) {
-                    // Проверка успешности GET-запроса
-                    switch(request.status) {
-                        case 200:
-                            modalWrapper.insertAdjacentHTML('afterend', request.responseText);
-                            modalWrapper.remove();
-                            setTimeout(() => document.body.classList.add(modalChecked), 10);
-                            modalTrigger = document.querySelectorAll('.modal-trigger');
-                            break;
-                        default:
-                            console.error(request.statusText)
-                    }
-                }
-            };
+    // Открываем запрос
+    let request = new XMLHttpRequest();
+    request.open('GET', `/StreamCraft Cabinet/modal/${value}.html`);
 
-            // Ловим ошибки
-            request.onerror = () => console.error(request.statusText);
-            request.send(null);
-            break;
-    }
+    // Отслеживание
+    request.onload = (e) => {
+        // Проверка на готовность загрузки страницы
+        if (request.readyState === 4) {
+            // Проверка успешности GET-запроса
+            switch(request.status) {
+                case 200:
+                    modalWrapper.insertAdjacentHTML('afterend', request.responseText);
+                    modalWrapper.remove();
+                    setTimeout(() => document.body.classList.add(modalChecked), 10);
+                    modalTrigger = document.querySelectorAll('.modal-trigger');
+                    break;
+                default:
+                    console.error(request.statusText)
+            }
+        }
+    };
+
+    // Ловим ошибки
+    request.onerror = () => console.error(request.statusText);
+    request.send(null);
 }
 
 document.body.onclick = (e) => {
@@ -201,19 +198,28 @@ document.body.onclick = (e) => {
 
     // Если клик по контейнеру modal или по любому внутреннему элементу
     if(item.classList.contains('modal') || !!item.closest('.modal')) {
+        // Проверка, осуществлён ли клик вне окна с контентом модалки
         if(
-            // Если клик по modal-area (окно с контентом модалки)
-            item.classList.contains('modal-area')
-            // или
-            ||
-            // По любому внутреннему элементу modal-area
-            !!item.closest('.modal-area')
-            // То завершаем выполнение скрипт
-        ) return false;
+            // Инвертируем boolean-значение
 
-        // В ином случае закрываем модальное окно, поскольку если проверка не прошла
-        // Значит клик осуществлён вне окна с контентом модалки
-        modalToggle('close');
+            // Если клик сделан внутри окна, то значение будет TRUE, но мы закрываем окно только при клике
+            // За пределами окна, потому мы инвертируем значение на FALSE и проверка не проходит
+
+            // Если клик сделан вне окна, то значит будет FALSE, которое инвертируется на TRUE
+            // Проверка срабатывается и окно закрывается
+            !(
+                // Если клик по modal-area (окно с контентом модалки)
+                item.classList.contains('modal-area')
+                // или
+                ||
+                // По любому внутреннему элементу modal-area
+                !!item.closest('.modal-area')
+            )
+        ) {
+            // Проверка инвертирована, потому если клик будет сделан вне модального окна
+            // То FALSE станет TRUE, проверка сработает и модальное окно закроется
+            modalToggle();
+        }
     }
 
     // Отработка открытия модалки по modal-trigger
@@ -234,17 +240,11 @@ document.body.onclick = (e) => {
             item = item.closest('.modal-trigger');
         }
 
-        // Проверка на наличие триггера для закрытия модалки
-        if(item.classList.contains('modal-trigger-close')) {
-            modalToggle('close');
-            return false;
-        }
-
         // Получаем название модалки, которую нужно вызвать
         let modalName = item.dataset.modalName;
 
         // Вызываем модалку
-        modalToggle('show', modalName);
+        modalToggle(modalName);
     }
 };
 const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0].classList.toggle('buy-item__enchant_checked');
