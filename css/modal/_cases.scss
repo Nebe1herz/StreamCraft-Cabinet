@@ -103,39 +103,84 @@
   &-open{
     padding: 25px 0 50px;
 
+    //
     &_drop{
       padding: 50px 0;
 
+      //
       &__area{
         background: var(--image) top center;
         background-size: 80px;
-        height: 340px;
+        padding: 0 0 5px;
         margin: 25px 0;
         image-rendering: pixelated;
+      }
+
+      //
+      &__icon{
+        position: relative;
+        margin: 0 auto 15px;
+        padding: 25px;
+        width: 190px;
+        height: 190px;
+        text-align: center;
+
+        //
+        &-item{
+          width: 140px;
+          height: 140px;
+        }
+
+        &-count{
+          position: absolute;
+          bottom: 25px;
+          right: 15px;
+          font-size: 48px;
+          text-shadow: 6px 6px $white-shadow;
+        }
       }
     }
 
     // Заголовок открытия кейса
     &__heading{
-      font-size: 32px;
+      --color: #{$white};
+      --text-shadow: #{$white-shadow};
 
-      // Модификатора цвета
-      &_style{
-        &-gold{
-          --color: #{$gold};
-          --text-shadow: #{$gold-shadow};
-        }
-        &-aqua{
-          --color: #{$aqua};
-          --text-shadow: #{$aqua-shadow};
-        }
-      }
+      font-size: 32px;
 
       // Цветовое выделение для названия кейса или предмета
       &-name{
         font-family: inherit;
         color: var(--color);
         text-shadow: 4px 4px var(--text-shadow);
+
+        // Модификатора цвета
+        &_style{
+          &-gold{
+            --color: #{$gold};
+            --text-shadow: #{$gold-shadow};
+          }
+          &-red{
+            --color: #{$red};
+            --text-shadow: #{$red-shadow};
+          }
+          &-aqua{
+            --color: #{$aqua};
+            --text-shadow: #{$aqua-shadow};
+          }
+          &-blue{
+            --color: #{$blue};
+            --text-shadow: #{$blue-shadow};
+          }
+          &-green{
+            --color: #{$green};
+            --text-shadow: #{$green-shadow};
+          }
+          &-dark-purple{
+            --color: #{$dark-purple};
+            --text-shadow: #{$dark-purple-shadow};
+          }
+        }
       }
 
       // Тег с указанием редкости
@@ -148,6 +193,30 @@
         margin: 10px 0;
         box-shadow: 5px 5px var(--text-shadow);
         text-shadow: 2px 2px $white-shadow;
+
+        // Модификатора цвета
+        &_style{
+          &-gold{
+            --color: #{$gold};
+            --text-shadow: #{$gold-shadow};
+          }
+          &-red{
+            --color: #{$red};
+            --text-shadow: #{$red-shadow};
+          }
+          &-light-purple{
+            --color: #{$light-purple};
+            --text-shadow: #{$light-purple-shadow};
+          }
+          &-green{
+            --color: #{$dark-green};
+            --text-shadow: #{$dark-green-shadow};
+          }
+          &-blue{
+            --color: #{$blue};
+            --text-shadow: #{$blue-shadow};
+          }
+        }
       }
     }
 
