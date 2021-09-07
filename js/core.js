@@ -24,6 +24,10 @@ document.body.onclick = (e) => {
 document.addEventListener('keydown', (e) => {
     switch(e.key){
         case "Escape":
+            if(document.body.classList.contains(modalChecked)){
+                document.body.classList.remove(modalChecked);
+                return false;
+            }
             overlayToggle();
             break;
     }
