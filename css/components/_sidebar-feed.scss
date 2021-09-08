@@ -9,6 +9,7 @@
   transition: .15s ease-in-out;
   transform: translateX(calc(100% - 100px));
   overflow: hidden scroll;
+  z-index: 1;
 
   // Анимации при наведении
   &:hover{

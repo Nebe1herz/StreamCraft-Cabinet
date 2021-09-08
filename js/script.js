@@ -22,7 +22,12 @@ document.body.onclick = (e) => {
 
 // Обработчик нажатия клавиши Escape для открытия/закрытия главного меню
 document.addEventListener('keydown', (e) => {
+    console.log(e.key)
     switch(e.key){
+        case 'r':
+        case 'R':
+            alert(`Testing`);
+            break;
         case "Escape":
             if(document.body.classList.contains(modalChecked)){
                 document.body.classList.remove(modalChecked);
