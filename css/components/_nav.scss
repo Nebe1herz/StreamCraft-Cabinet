@@ -1,25 +1,60 @@
 .nav{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   background: alpha($black, .3);
-  font-size: 0;
   height: 36px;
-  padding: 0 35px;
   margin: 20px 0 0;
   @include bordered(alpha($black, .3), 5);
-  text-align: center;
+
+  // Список с элементами навигации
+  &-list{
+    position: relative;
+    font-size: 0;
+    height: 56px;
+    top: -15px;
+    padding: 15px 0 5px;
+    list-style: none;
+    text-align: center;
+    white-space: nowrap;
+    overflow: scroll hidden;
+    z-index: 1;
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      height: 0;
+      width: 0;
+    }
+
+    // Элемент списка
+    &-item{
+      display: inline-block;
+    }
+  }
 
   // Элемент навигации, стилизация кнопок
   &-item{
+    display: block;
+    height: 36px;
     line-height: 36px;
     font-family: MinecraftTitle, sans-serif;
     font-size: 16px;
-    padding: 0 20px;
+    padding: 0 15px;
     margin: 0 7.5px;
     text-transform: initial;
 
+    // Текущая вкладка
     &_checked{
       --shadow: transparent;
 
       pointer-events: none;
+    }
+
+    // Модификатор для роли кнопок
+    &_role{
+      // Кнопки управления "Вперёд" и "Назад"
+      &-control{
+
+      }
     }
   }
 }
