@@ -20,14 +20,25 @@ document.body.onclick = (e) => {
     }
 };
 
-// Обработчик нажатия клавиши Escape для открытия/закрытия главного меню
+// Обработчик нажатий на клавиши клавиатуры
 document.addEventListener('keydown', (e) => {
-    console.log(e.key)
-    switch(e.key){
-        case 'r':
-        case 'R':
+    switch(e.code){
+        // Клавиша Q для переключения вкладки назад
+        case 'KeyQ':
+            document.body.getElementsByClassName('nav-item_role-control')[0].click();
+            break;
+
+        // Клавиша E для переключения вкладки вперёд
+        case 'KeyE':
+            document.body.getElementsByClassName('nav-item_role-control')[1].click();
+            break;
+
+        // Клавиша R для переключения фона
+        case 'KeyR':
             alert(`Testing`);
             break;
+
+        // Клавиша Esc для закрытия или открытия интерфейса
         case "Escape":
             if(document.body.classList.contains(modalChecked)){
                 document.body.classList.remove(modalChecked);
