@@ -38,7 +38,7 @@
     line-height: 36px;
     font-family: MinecraftTitle, sans-serif;
     font-size: 16px;
-    padding: 0 10px;
+    padding: 0 12px;
     margin: 0 7.5px;
     text-transform: initial;
 
@@ -57,42 +57,23 @@
     &_role{
       // Кнопки управления "Вперёд" и "Назад"
       &-control{
-        --background: #{alpha($black, .4)};
+        --background: #{alpha($black, .5)};
         --color: #{$white};
         --text-shadow: #{$white-shadow};
 
+        font-size: 21px;
         margin: 0;
         @include bordered(var(--background));
       }
     }
   }
 
-  // Имитация клавиши клавиатуры
-  &-key{
-    --background: #{$dark-gray};
-
-    display: inline-block;
-    background: var(--background);
-    font-family: inherit;
-    line-height: 21px;
-    padding: 0 5px;
-    margin: 5px 10px;
-    box-shadow:
-            0 -5px var(--background),
-            0 5px var(--background),
-            -5px 0 var(--background),
-            5px 0 var(--background),
-            0 5px 0 5px $dark-gray-shadow,
-            0 10px $dark-gray-shadow;
-    vertical-align: top;
-  }
-
   // Иконка левой/правой стрелки
   &-icon{
     display: inline-block;
-    background: var(--image) no-repeat center;
-    background-size: 32px;
-    width: 32px;
+    background: var(--image) no-repeat center 5px;
+    background-size: 12px;
+    width: 12px;
     height: 36px;
     image-rendering: pixelated;
     vertical-align: top;
@@ -102,10 +83,12 @@
       // Левая
       &-left{
         --image: #{url("#{$url}gui/arrow-left.png")};
+        margin-right: 5px;
       }
       // Правая
       &-right{
         --image: #{url("#{$url}gui/arrow-right.png")};
+        margin-left: 5px;
       }
     }
   }
