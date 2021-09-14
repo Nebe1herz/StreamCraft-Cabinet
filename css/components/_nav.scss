@@ -10,9 +10,9 @@
   &-list{
     position: relative;
     font-size: 0;
-    height: 56px;
+    height: 61px;
     top: -15px;
-    padding: 15px 0 5px;
+    padding: 15px 0 10px;
     list-style: none;
     text-align: center;
     white-space: nowrap;
@@ -30,9 +30,11 @@
       display: inline-block;
     }
   }
-
   // Элемент навигации, стилизация кнопок
   &-item{
+    --color: #{$gray};
+    --text-shadow: #{$gray-shadow};
+
     display: block;
     height: 36px;
     line-height: 36px;
@@ -44,16 +46,38 @@
 
     // Текущая вкладка
     &_checked{
-      --shadow: transparent;
+      //--background: #{$dark-gray-shadow};
+      --color: #{$white};
+      --text-shadow: #{$green-shadow};
 
+      background: var(--background);
       pointer-events: none;
+      @include bordered(alpha($gray, .35));
+
+      &__status{
+        display: inline-block;
+        position: absolute;
+        background: $white-shadow;
+        line-height: 14px;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100px;
+        color: $gold;
+        top: calc(100% - 5px);
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 0 0 5px;
+        text-shadow: 0 0 transparent;
+      }
     }
 
     // Модификатор для роли кнопок
     &_role{
       // Кнопки управления "Вперёд" и "Назад"
       &-control{
-
+        --color: #{$white};
+        --text-shadow: #{$white-shadow};
       }
     }
   }
