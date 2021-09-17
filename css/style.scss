@@ -19,6 +19,8 @@
 
 // Стилизация кнопок
 'components/buttons',
+// Формы ввода
+'components/form-control',
 // Подсказка при наведении на предмет
 'components/tooltip',
 // Иконки игровых валют
@@ -49,7 +51,14 @@
 // Выбор набора ресурсов
 'pages/kits',
 // Магазин блоков
-'pages/shop'
+'pages/shop',
+
+// Профиль игрока
+'pages/profile',
+// Изменить внешность
+'pages/personalization',
+// Раздел достижений
+'pages/achievements'
 ;
 
 // Модальные окна
@@ -66,7 +75,10 @@
 // Просмотр и покупка донат-наборов
 'modal/kits',
 // Покупка предмета в магазине блоков
-'modal/buy-item'
+'modal/buy-item',
+
+// Пополнение баланса рублей и коинов
+'modal/add-balance'
 ;
 
 // Плагины

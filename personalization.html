@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     <!-- Site Properities -->
-    <title>SC | Главное меню</title>
+    <title>SC | Донат-услуги</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -23,13 +23,13 @@
             <ul class="header-list">
                 <!-- Кнопка, ведущая на главный экран меню с полной навигацией -->
                 <li>
-                    <a href="#"
+                    <a href="index.html"
                        class="btn
                               header-list__item"
                     >
                         <img src="images/icon/menu.png" alt
                              class="header-list__item-icon">
-                        Вернуться к игре
+                        В главное меню
                     </a>
                 </li>
                 <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
@@ -97,20 +97,11 @@
                     </a>
                 </li>
             </ul>
-        </div>
-    </div>
-    <div class="page index">
-        <div class="wrapper">
-            <!-- Заголовок -->
-            <div class="page__heading">
-                Главное меню
-            </div>
-            <!-- Основная группа -->
-            <div class="index-group">
-                <!-- Мой профиль -->
-                <a href="#"
+            <div class="nav">
+                <a href="index.html"
                    class="btn
-                          index-group__btn
+                          nav-item
+                          nav-item_role-control
                           tooltip-trigger"
                    data-title="Профиль Nebelherz"
                    data-row="
@@ -130,206 +121,93 @@
                             "
                    data-meta="Кликните, чтобы открыть"
                 >
-                    <img src="images/heads/head-3.png" alt
-                         class="index-group__btn-icon index-group__btn-icon_smoothed">
-                    Мой<br>профиль
+                    <i class="nav-icon nav-icon_arrow-left"></i>
+                    Q
                 </a>
-                <!-- Боевой пропуск -->
-                <a href="#"
-                   class="btn
-                          index-group__btn
-                          index-group__btn_role-battle-pass
-                          index-group__btn_grid-battle-pass
-                          tooltip-trigger"
-                   data-title="<span class=gold>Боевой пропуск</span>"
-                   data-row="
-                            Тип пропуска:
-                            <span class=gold>Расширенный</span>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="index.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Профиль Nebelherz"
+                           data-row="
+                            Ваша группа:
+                            <span class=gold>Premium</span>
                             <br>
-                            Текущий ранг:
-                            <span class=green>5 уровней</span>
                             <br>
+                            Боевой пропуск:
+                            <span class=green>5 уровень</span>
                             <br>
                             Получено
-                            <span class=aqua>4 награды</span>
+                            <span class=green>4 награды</span>
                             из 200
                             <br>
                             Выполнено
-                            <span class=aqua>32 задания</span>
-                            <br>
-                            Открыто достижений
-                            <span class=aqua>4 из 96</span>
+                            <span class=green>32 задания</span>
                             "
-                   data-meta="Кликните для перехода"
-                >
-                    <img src="#" alt class="index-group__btn-icon">
-                    <span class="index-group__btn-text">Боевой пропуск</span>
-                </a>
-                <!-- Внешность -->
-                <a href="personalization.html"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Мой профиль
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="privilege.html"
+                           class="btn
+                                  nav-item
+                                  nav-item_checked
+                                  tooltip-trigger"
+                           data-title="Изменить внешность"
+                           data-row="Добавь изюминки своего персонажу — <span class=white>крылья</span>, <span class=white>шляпы</span>, <span class=white>питомцы</span> и многое другое!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Изменить внешность
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="index.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="<span class=gold>Список достижений</span>"
+                           data-row="Все достижения из Minecraft и модификаций сервера"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Достижения
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="index.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Ваша статистика"
+                           data-row="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Статистика
+                        </a>
+                    </li>
+                </ul>
+                <a href="index.html"
                    class="btn
-                          index-group__btn
-                          index-group__btn_style-blue
-                          tooltip-trigger"
-                   data-title="Изменить внешность"
-                   data-row="Добавь изюминки своего персонажу — <span class=white>крылья</span>, <span class=white>шляпы</span>, <span class=white>питомцы</span> и многое другое!"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/wardrobe.png" alt
-                         class="index-group__btn-icon">
-                    Изменить внешность
-                </a>
-                <!-- Достижения -->
-                <a href="#"
-                   class="btn
-                          index-group__btn
+                          nav-item
+                          nav-item_role-control
                           tooltip-trigger"
                    data-title="<span class=gold>Список достижений</span>"
                    data-row="Все достижения из Minecraft и модификаций сервера"
                    data-meta="Кликните, чтобы открыть"
                 >
-                    <img src="images/icon/achievements.png" alt
-                         class="index-group__btn-icon">
-                    Достижения
-                </a>
-                <!-- Статистика -->
-                <a href="#"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="Ваша статистика"
-                   data-row="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/stats.png" alt
-                         class="index-group__btn-icon">
-                    Статистика
-                </a>
-                <!-- Настройки -->
-                <a href="#"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="Настройки игры"
-                   data-row="Настройте графику, звук или управление — всё для Вашего комфорта в игре!"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/settings.png" alt
-                         class="index-group__btn-icon">
-                    Настройки
-                </a>
-                <!-- Магазин блоков -->
-                <a href="shop.html"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=green>Магазин блоков</span>"
-                   data-row="<span class=gold>Покупайте</span> все необходимые ресурсы в два клика за <i class='currency currency_size-24'></i>"
-                   data-meta="Кликните для перехода"
-                >
-                    <img src="images/icon/shop.png" alt
-                         class="index-group__btn-icon">
-                    Магазин блоков
-                </a>
-                <!-- Привилегии -->
-                <a href="privilege.html"
-                   class="btn
-                          index-group__btn
-                          index-group__btn_style-gold
-                          tooltip-trigger"
-                   data-title="<span class=gold>Игровые статусы</span>"
-                   data-row="
-                            Хотите иметь больше приватов, команд и возможностей?
-                            <br>
-                            <span class=green>Воплотите мечту в реальность!</span>
-                            "
-                   data-meta="Кликните для перехода"
-                >
-                    <img src="images/icon/privileges.png" alt
-                         class="index-group__btn-icon">
-                    Игровые статусы
-                </a>
-                <!-- Кейсы -->
-                <a href="cases.html"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=light-purple>Кейсы</span>"
-                   data-row="Испытайте свою удачу и получите особо ценные награды!"
-                   data-meta="Кликните для перехода"
-                >
-                    <img src="images/icon/cases.png" alt
-                         class="index-group__btn-icon">
-                    Кейсы
-                </a>
-                <!-- Киты -->
-                <a href="kits.html"
-                   class="btn
-                              index-group__btn
-                              tooltip-trigger"
-                   data-title="Наборы ресурсов"
-                   data-row="Воплотите свои самые смелые фантазии в жизнь;)"
-                   data-meta="Кликните для перехода"
-                >
-                    <img src="images/icon/kits.png" alt
-                         class="index-group__btn-icon">
-                    Наборы ресурсов
-                </a>
-                <!-- Аукцион -->
-                <a href="#"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=light-purple>Торговый аукцион</span>"
-                   data-row="<span class=gold>Покупайте</span> или <span class=green>продавайте</span> интересующие товары за <i class='currency currency_coin currency_size-24'></i>"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/auction.png" alt
-                         class="index-group__btn-icon">
-                    Аукцион
-                </a>
-                <!-- Варпы -->
-                <a href="#"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=green>Список варпов</span>"
-                   data-row="Все достижения из Minecraft и модификаций сервера"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/warps.png" alt
-                         class="index-group__btn-icon">
-                    Варпы
+                    E
+                    <i class="nav-icon nav-icon_arrow-right"></i>
                 </a>
             </div>
-            <!-- Футер -->
-            <div class="index-footer">
-                <a href="#"
-                   class="btn
-                          index-group__btn
-                          index-group__btn_grid-inline
-                          tooltip-trigger"
-                   data-title="<span class=green>Мне нужна помощь</span>"
-                   data-row="Напишите в нашу техническую поддержку, мы Вам поможем! =)"
-                   data-meta="Кликните, чтобы открыть"
-                >
-                    <img src="images/icon/help.png" alt
-                         class="index-group__btn-icon index-group__btn-icon_scaled">
-                    Мне нужна помощь
-                </a>
-                <span></span>
-                <a href="#"
-                   class="btn
-                              index-group__btn
-                              index-group__btn_role-exit
-                              index-group__btn_grid-inline
-                              tooltip-trigger"
-                   data-title="<span class=red>Выход с сервера<span>"
-                >
-                    <img src="images/icon/exit.png" alt
-                         class="index-group__btn-icon index-group__btn-icon_scaled">
-                    Выход с сервера
-                </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="wrapper">
+            <div class="page__area">
+                132
             </div>
         </div>
     </div>
