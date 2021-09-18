@@ -1,12 +1,20 @@
 .personalization{
+  overflow: hidden;
+
+  &-grid{
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 35px;
+    height: 777px;
+  }
 
   // Навигация / Голова, тело, питомец, эффекты
   &__nav{
     // Внутренний список
     &__list{
       display: grid;
-      grid-template-columns: repeat(6, minmax(min-content, max-content));
-      grid-gap: 15px;
+      grid-template-columns: 62px 62px 62px 62px auto 62px;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -20,56 +28,95 @@
       // Разделитель списка
       &-separator{
         display: block;
-        background: $gray;
-        height: 40px;
+        background: $white;
+        height: 16px;
         width: 4px;
         margin: 0 15px;
-        opacity: .2;
-        box-shadow: 4px 4px $gray-shadow;
       }
     }
 
     // Элемент навигации
     &-item{
       display: block;
-      min-width: 80px;
-      padding: 5px;
-      font-size: 12px;
-      color: $gray;
-      text-transform: initial;
-      text-shadow: 2px 2px $gray-shadow;
+      position: relative;
+      padding: 15px;
+      color: transparent;
 
-      &:hover{
-        background: alpha($white, .1);
-        @include bordered(alpha($white, .1));
+      &:hover,
+      &_checked{
+        color: $white;
+
+        .personalization__nav-item__img{
+          opacity: 1;
+        }
       }
 
       &__img{
         display: block;
-        width: 48px;
-        margin: 0 auto 5px;
+        width: 32px;
+        opacity: .3;
         image-rendering: pixelated;
+      }
+      &__text{
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        width: 100px;
+        top: 54px;
+        left: calc((100px - 62px) / -2);
+        white-space: nowrap;
       }
     }
   }
 
   // Область кастомизации персонажа
-  &__area{
+  &__character{
     position: relative;
-    display: grid;
-    grid-template-columns: 45%;
-    margin: 35px 0 0;
-    height: 665px;
-    justify-content: end;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
 
-    &-character{
+    &-img{
+      position: absolute;
+      display: block;
+      top: 10%;
+      left: 5%;
+      width: 90%;
+      image-rendering: pixelated;
+    }
+  }
 
+  // Окно с галлереей персонализации
+  &-gallery{
+    background: alpha($black, .5);
+    padding: 25px;
+    @include bordered(alpha($black, .5), 10);
+
+    &__heading{
+      margin-bottom: 10px;
+      color: $gray;
+      text-shadow: 2px 2px $gray-shadow;
+
+      &:not(:first-of-type){
+        margin-top: 25px;
+      }
     }
 
-    // Окно с выбором одежды
-    &-collection{
-      background: alpha($black, .75);
-      @include bordered(alpha($black, .75), 10)
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 5px;
+      list-style: none;
+    }
+
+    &__item{
+      display: block;
+      width: 100%;
+      height: 97px;
+      box-shadow:
+              inset 4px 4px $dark-gray,
+              inset -4px -4px $gray-shadow;
     }
   }
 }
