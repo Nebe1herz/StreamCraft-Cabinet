@@ -188,7 +188,7 @@ const modalToggle = (value = null) => {
 
     // Открываем запрос
     let request = new XMLHttpRequest();
-    request.open('GET', `/StreamCraft Cabinet/modal/${value}.html`);
+    request.open('GET', `modal/${value}.html`);
 
     // Отслеживание
     request.onload = (e) => {
