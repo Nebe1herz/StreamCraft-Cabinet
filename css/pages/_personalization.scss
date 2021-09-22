@@ -89,34 +89,81 @@
 
   // Окно с галлереей персонализации
   &-gallery{
-    background: alpha($black, .5);
-    padding: 25px;
-    @include bordered(alpha($black, .5), 10);
+    --background: #{alpha($black, .5)};
 
+
+    background: var(--background);
+    height: 680px;
+    padding: 20px;
+    @include bordered(var(--background), 15);
+    overflow: hidden scroll;
+
+    // Стилизация скроллбара
+    &::-webkit-scrollbar {
+      width: 15px;
+
+      &-track {
+        background:
+                linear-gradient(
+                                90deg,
+                                transparent 30%,
+                                alpha($white, .1) 30% 70%,
+                                transparent 70%
+                );
+      }
+      &-thumb {
+        background-color: $white;
+      }
+    }
+
+    // Заголовок
     &__heading{
-      margin-bottom: 10px;
-      color: $gray;
-      text-shadow: 2px 2px $gray-shadow;
+      font-size: 18px;
+      color: $dark-gray;
+      margin: 0 0 25px;
+      text-shadow: 2px 2px $dark-gray-shadow;
 
       &:not(:first-of-type){
         margin-top: 25px;
       }
     }
 
+    // Список
     &__list{
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 5px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
       list-style: none;
     }
 
+    // Карточки элементов персонализации в галлерее
     &__item{
+      --background: #{alpha($black, .5)};
+      --inset-shadow: #{alpha($white-shadow, .2)};
+      --shadow: #{alpha($white, .2)};
+
       display: block;
+      padding: 20px;
+      height: 150px;
       width: 100%;
-      height: 97px;
       box-shadow:
-              inset 4px 4px $dark-gray,
-              inset -4px -4px $gray-shadow;
+              inset 0 0 0 10px var(--inset-shadow),
+              0 -5px var(--shadow),
+              0 5px var(--shadow),
+              -5px 0 var(--shadow),
+              5px 0 var(--shadow);
+
+      // Состояния карточки элемента персонализации
+      &_role{
+        &-purchased{
+          --inset-shadow: #{alpha($blue-shadow, .4)};
+          --shadow: #{alpha($blue, .4)};
+        }
+        &-checked{
+          --inset-shadow: #{alpha($gold-shadow, .4)};
+          --shadow: #{alpha($gold, .8)};
+        }
+      }
     }
   }
 }
