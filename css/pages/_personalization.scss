@@ -1,10 +1,11 @@
 .personalization{
+  padding: 50px 0;
   overflow: hidden;
 
   &-grid{
     display: grid;
     grid-template-columns: 55% 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 777px;
     grid-gap: 35px;
     height: 777px;
   }
@@ -14,7 +15,8 @@
     // Внутренний список
     &__list{
       display: grid;
-      grid-template-columns: 62px 62px 62px 62px auto 62px;
+      background: alpha($dark-gray, .2);
+      grid-template-columns: repeat(4, 72px) auto 72px;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -53,17 +55,17 @@
 
       &__img{
         display: block;
-        width: 32px;
+        width: 42px;
         opacity: .3;
         image-rendering: pixelated;
       }
       &__text{
-        display: block;
+        display: none;
         position: absolute;
         font-size: 12px;
         width: 100px;
         top: 54px;
-        left: calc((100px - 62px) / -2);
+        left: calc((100px - 72px) / -2);
         white-space: nowrap;
       }
     }
@@ -72,30 +74,33 @@
   // Область кастомизации персонажа
   &__character{
     position: relative;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
 
     &-img{
       position: absolute;
       display: block;
-      top: 10%;
-      left: 5%;
-      width: 90%;
+      top: 0;
+      left: 0;
+      width: 100%;
       image-rendering: pixelated;
     }
   }
 
-  // Окно с галлереей персонализации
-  &-gallery{
+  //
+  &-content{
     --background: #{alpha($black, .5)};
 
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 15px;
 
     background: var(--background);
-    height: 680px;
-    padding: 20px;
+    padding: 0 0 15px;
     @include bordered(var(--background), 15);
+  }
+
+  // Окно с галлереей персонализации
+  &-gallery{
+    padding: 5px 20px 5px 5px;
     overflow: hidden scroll;
 
     // Стилизация скроллбара
@@ -107,24 +112,38 @@
                 linear-gradient(
                                 90deg,
                                 transparent 30%,
-                                alpha($white, .1) 30% 70%,
+                                $dark-gray-shadow 30% 70%,
                                 transparent 70%
                 );
       }
       &-thumb {
-        background-color: $white;
+        background: $dark-gray;
+
+        &:hover{
+          background: $white;
+        }
       }
     }
 
     // Заголовок
     &__heading{
-      font-size: 18px;
-      color: $dark-gray;
-      margin: 0 0 25px;
-      text-shadow: 2px 2px $dark-gray-shadow;
+      font-size: 21px;
+      color: $gray;
+      margin: 0 0 20px;
+      text-shadow: 3px 3px $gray-shadow;
+
+      &_special{
+        color: $gold;
+        text-shadow: 3px 3px $gold-shadow;
+      }
 
       &:not(:first-of-type){
-        margin-top: 25px;
+        margin-top: 30px;
+      }
+
+      &-counter{
+        color: $green;
+        text-shadow: 3px 3px $green-shadow;
       }
     }
 
@@ -139,13 +158,16 @@
     // Карточки элементов персонализации в галлерее
     &__item{
       --background: #{alpha($black, .5)};
-      --inset-shadow: #{alpha($white-shadow, .2)};
-      --shadow: #{alpha($white, .2)};
+      --inset-shadow: #{$dark-gray-shadow};
+      --shadow: #{$dark-gray};
 
-      display: block;
-      padding: 20px;
-      height: 150px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-gap: 10px;
+      padding: 15px;
       width: 100%;
+      height: 100%;
+      min-height: 180px;
       box-shadow:
               inset 0 0 0 10px var(--inset-shadow),
               0 -5px var(--shadow),
@@ -156,12 +178,71 @@
       // Состояния карточки элемента персонализации
       &_role{
         &-purchased{
-          --inset-shadow: #{alpha($blue-shadow, .4)};
-          --shadow: #{alpha($blue, .4)};
+          --inset-shadow: #{$blue-shadow};
+          --shadow: #{$blue};
         }
         &-checked{
-          --inset-shadow: #{alpha($gold-shadow, .4)};
-          --shadow: #{alpha($gold, .8)};
+          --inset-shadow: #{$gold-shadow};
+          --shadow: #{$gold};
+        }
+      }
+
+      // Контейнер для централизации картинки элемента персонализации
+      &-preview{
+        display: flex;
+        align-items: center;
+      }
+
+      // Картинка элемента персонализации
+      &-img{
+        display: block;
+        width: 100%;
+      }
+
+      // Цена товара
+      .donate-card__price{
+        font-size: 14px;
+        text-align: left;
+      }
+
+      // КУплено / Экипировано
+      &-text{
+        color: $blue;
+        text-shadow: 3px 3px $blue-shadow;
+
+        &_checked{
+          color: $gold;
+          text-shadow: 3px 3px $gold-shadow;
+        }
+
+        &_disabled{
+          line-height: .8;
+          color: $dark-gray;
+          text-shadow: 3px 3px $dark-gray-shadow;
+        }
+      }
+
+      // Иконка статуса товара
+      &-status{
+        display: block;
+        background: var(--image) no-repeat center;
+        background-size: cover;
+        height: 24px;
+        width: 24px;
+        float: right;
+        image-rendering: pixelated;
+
+        // Статус "не куплен"
+        &_disabled{
+          --image: #{url('#{$url}gui/personalization-locked.png')}
+        }
+        // Статус "куплен"
+        &_purchased{
+          --image: #{url('#{$url}gui/check_blue.png')}
+        }
+        // Статус "экипирован"
+        &_checked{
+          --image: #{url('#{$url}gui/check_gold.png')}
         }
       }
     }
