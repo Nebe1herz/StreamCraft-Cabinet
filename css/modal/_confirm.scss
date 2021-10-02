@@ -11,6 +11,16 @@
       color: $aqua;
       text-shadow: 2px 2px $aqua-shadow;
     }
+    // Золотой
+    &-gold{
+      color: $gold;
+      text-shadow: 2px 2px $gold-shadow;
+    }
+    // Красный
+    &-red{
+      color: $red;
+      text-shadow: 2px 2px $red-shadow;
+    }
   }
 }
 

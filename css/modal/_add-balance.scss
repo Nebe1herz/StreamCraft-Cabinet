@@ -54,12 +54,11 @@
   }
 
   &__input{
+    border: none;
     background: none;
     font-size: 18px;
-    padding: 15px 50px!important;
-    margin: 0!important;
-    text-align: left;
-    text-transform: initial;
-    @include bordered($gray);
+    padding: 15px 50px;
+    outline: none;
+    @include bordered($dark-gray);
   }
 }
