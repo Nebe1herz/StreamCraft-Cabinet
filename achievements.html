@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Site Properities -->
+    <title>SC | Изменить внешность</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!--<link rel="icon" type="image/png" href="favicon.ico" />-->
+
+    <!-- Scripts -->
+    <!--Здесь пока ничего нет-->
+</head>
+<body class="overlay-checked">
+<div class="overlay">
+    <div class="header">
+        <div class="wrapper">
+            <ul class="header-list">
+                <!-- Кнопка, ведущая на главный экран меню с полной навигацией -->
+                <li>
+                    <a href="index.html"
+                       class="btn
+                              header-list__item"
+                    >
+                        <img src="images/icon/menu.png" alt
+                             class="header-list__item-icon">
+                        В главное меню
+                    </a>
+                </li>
+                <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              header-list__cart"
+                       data-modal-name="modal.coins-exchange"
+                    >
+                        <img src="images/icon/cart.png" alt
+                             class="header-list__item-icon">
+                        Корзина
+                        <span class="header-list__cart--counter">(15)</span>
+                    </a>
+                </li>
+                <!-- Разделитель -->
+                <li></li>
+                <!-- Баланс рублей -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              modal-trigger"
+                       data-modal-name="add-balance-rubles"
+                    >
+                        <img src="images/icon/balance-rubles.png" alt
+                             class="header-list__item-icon">
+                        114 рублей
+                    </a>
+                </li>
+                <!-- Баланс коинов -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              modal-trigger"
+                       data-modal-name="coins-exchange"
+                    >
+                        <img src="images/icon/balance-coins.png" alt
+                             class="header-list__item-icon">
+                        3 280 коинов
+                    </a>
+                </li>
+                <!-- Аватар, ник и группа пользователь -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              header-list__user
+                              tooltip-trigger"
+                       data-title="Профиль Nebelherz"
+                       data-row="
+                            Ваша группа:
+                            <span class=gold>Premium</span>
+                            <br>
+                            Боевой пропуск:
+                            <span class=green>5 уровень</span>
+                            "
+                       data-meta="Кликните, чтобы открыть"
+                    >
+                        <img src="images/heads/head-3.png" alt
+                             class="header-list__user-avatar">
+                        <span class="header-list__user-nickname">Nebelherz</span>
+                        <span class="header-list__user-group">ИГРОК</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav">
+                <a href="personalization.html"
+                   class="btn
+                          nav-item
+                          nav-item_role-control
+                          tooltip-trigger"
+                   data-title="Изменить внешность"
+                   data-row="Добавь изюминки своего персонажу — <span class=white>крылья</span>, <span class=white>шляпы</span>, <span class=white>питомцы</span> и многое другое!"
+                   data-meta="Кликните, чтобы открыть"
+                >
+                    <i class="nav-icon nav-icon_arrow-left"></i>
+                    Q
+                </a>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="profile.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Профиль Nebelherz"
+                           data-row="
+                            Ваша группа:
+                            <span class=gold>Premium</span>
+                            <br>
+                            <br>
+                            Боевой пропуск:
+                            <span class=green>5 уровень</span>
+                            <br>
+                            Получено
+                            <span class=green>4 награды</span>
+                            из 200
+                            <br>
+                            Выполнено
+                            <span class=green>32 задания</span>
+                            "
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Мой профиль
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="personalization.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Изменить внешность"
+                           data-row="Добавь изюминки своего персонажу — <span class=white>крылья</span>, <span class=white>шляпы</span>, <span class=white>питомцы</span> и многое другое!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Изменить внешность
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="achievements.html"
+                           class="btn
+                                  nav-item
+                                  nav-item_checked
+                                  tooltip-trigger"
+                           data-title="<span class=gold>Список достижений</span>"
+                           data-row="Все достижения из Minecraft и модификаций сервера"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Достижения
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="index.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Ваша статистика"
+                           data-row="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Статистика
+                        </a>
+                    </li>
+                </ul>
+                <a href="index.html"
+                   class="btn
+                          nav-item
+                          nav-item_role-control
+                          tooltip-trigger"
+                   data-title="Ваша статистика"
+                   data-row="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
+                   data-meta="Кликните, чтобы открыть"
+                >
+                    E
+                    <i class="nav-icon nav-icon_arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page achievements">
+        <div class="wrapper">
+            <div class="page__area achievements-area">
+                <div class="achievements-scrollable">
+                    <h2 class="achievements__heading">Основные задания</h2>
+                    <ul class="achievements-list">
+                        <li>
+                            <a href="#" class="btn achievements-item achievements-item_checked">
+                                <img src="images/shop/22.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Нано-технологии</h3>
+                                    <p class="achievements-item__about">Создайте 16 улучшенных квантовых ядер при помощи молекулярного преобразователя и материи.</p>
+                                </div>
+                                <img src="images/gui/check_gold.png"
+                                     class="achievements-item__icon-check" alt>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item achievements-item_checked">
+                                <img src="images/shop/16.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Огненные недра</h3>
+                                    <p class="achievements-item__about">Постройте, зажгите и войдите в портал Нижнего мира.</p>
+                                </div>
+                                <img src="images/gui/check_gold.png"
+                                     class="achievements-item__icon-check" alt>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item">
+                                <img src="images/shop/1.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Кротовая нора</h3>
+                                    <p class="achievements-item__about">Переместитесь на 7 км в обычном мире через Нижний мир</p>
+                                    <p class="achievements-item__about
+                                              achievements-item__about_progress">
+                                        Прогресс достижения: 32% (4500 блоков осталось)
+                                    </p>
+                                    <div class="achievements-item__progressbar">
+                                        <div class="achievements-item__progressbar-thumb" style="width: 33%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item achievements-item_checked">
+                                <img src="images/shop/15.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Доктор для зомби</h3>
+                                    <p class="achievements-item__about">Ослабьте и исцелите зомби-жителя</p>
+                                </div>
+                                <img src="images/gui/check_gold.png"
+                                     class="achievements-item__icon-check" alt>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item">
+                                <img src="images/shop/29.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Ты неси меня по лаве</h3>
+                                    <p class="achievements-item__about">Прокатитесь на лавомерке, управляя ею с помощью удочки с искажённым грибом</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item">
+                                <img src="images/shop/26.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Ладные доспехи</h3>
+                                    <p class="achievements-item__about">Получите полный комплект незеритовой брони</p>
+                                    <p class="achievements-item__about
+                                              achievements-item__about_progress">
+                                        Прогресс достижения: 50% (2 шт. осталось)
+                                    </p>
+                                    <div class="achievements-item__progressbar">
+                                        <div class="achievements-item__progressbar-thumb" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item">
+                                <img src="images/shop/30.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Путеводный камень</h3>
+                                    <p class="achievements-item__about">Настройте компас на магнетит</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item">
+                                <img src="images/shop/7.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">Было ваше — стало наше!</h3>
+                                    <p class="achievements-item__about">Обыщите сундук в развалинах бастиона</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn achievements-item">
+                                <img src="images/shop/31.png" alt>
+                                <div>
+                                    <h3 class="achievements-item__heading">	Война миров</h3>
+                                    <p class="achievements-item__about">Заманите гаста в обычный мир… а затем убейте его.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="achievements-content">
+                    <img src="images/shop/22.png"
+                         class="achievements-content__preview" alt>
+                    <h2 class="achievements__heading">Нано-технологии</h2>
+                    <p class="achievements-content__task">Создайте 16 улучшенных квантовых ядер при помощи молекулярного преобразователя и материи.</p>
+                    <br>
+                    <a href="#" class="btn btn_dark">Получено</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-feed">
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Уведомлений
+                <span class="sidebar-feed__section-heading__count">17</span>
+            </h3>
+            <div class="sidebar-feed__notice-status
+                        sidebar-feed__notice-status_unread">
+                <div class="sidebar-feed__notice-status__icon">
+                    <span class="sidebar-feed__notice-status__counter">
+                        17
+                    </span>
+                </div>
+            </div>
+            <ul class="sidebar-feed__section-list
+                       sidebar-feed__section-list_hover-hide">
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item">
+                        Не следует, однако забывать, что новая модель позволяет...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 17 июля, 18:44
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-primary">
+                        Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
+                        <span class="sidebar-feed__notice-meta">
+                             Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-warning">
+                        Идейные соображения высшего порядка, а также рамки и место...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-danger">
+                        Требуют от нас анализа позиций, занимаемых участниками в...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 07 июля, 12:54
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-success">
+                        Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 04 июля, 16:33
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-more">
+                        Предыдущие уведомления
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Друзей
+                <span class="sidebar-feed__section-heading__count">256</span>
+            </h3>
+            <ul class="sidebar-feed__section-list">
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">DarthSidi0us</h4>
+                            <p class="sidebar-feed__friend-item__user-status">10 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mine03</h4>
+                            <p class="sidebar-feed__friend-item__user-status">56 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">xxxDark12xxx</h4>
+                            <p class="sidebar-feed__friend-item__user-status">102 блока от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-2.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">QueenOfPeace</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-3.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">IBath</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">noremac09</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">JoyereKnester</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-6.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Evaer_cool12</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-7.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mle4niy_kill_bioy</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-8.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">No4naya_Nyasha</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Azazzzinys</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">KillerMoj</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Likeaboss</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-10.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">vonderlol</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Alexsasha93</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">geraosfrrr</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <div class="wrapper wrapper_modal">
+        <div class="modal__content">
+            <a href="#" class="btn btn_success">Success УСПЕХ</a>
+            <br>
+            <br>
+            <a href="#" class="btn btn_danger">danger ОТМЕНИТЬ</a>
+        </div>
+    </div>
+</div>
+<div class="tooltip" style="display: none">
+    <div class="tooltip__content">
+        <h3 class="tooltip__title">Ультра квантовая панель</h3>
+        <p class="tooltip__row">Полная хуета</p>
+        <p class="tooltip__meta">Vanilla Minecraft</p>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+.achievements{
+  padding-bottom: 0;
+  // Сетка экрана
+  &-area{
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 25px;
+  }
+  // Прокручиваемая область
+  &-scrollable{
+    height: 777px;
+    padding: 5px 15px 5px 5px;
+    overflow: hidden scroll;
+
+    // Стилизация скроллбара
+    &::-webkit-scrollbar {
+      width: 15px;
+
+      &-track {
+        background:
+                linear-gradient(
+                                90deg,
+                                transparent 30%,
+                                $dark-gray-shadow 30% 70%,
+                                transparent 70%
+                );
+      }
+      &-thumb {
+        background: $dark-gray;
+
+        &:hover{
+          background: $white;
+        }
+      }
+    }
+  }
+
+  // Заголовок раздела с достижениями
+  &__heading{
+    font-family: MinecraftTitle,sans-serif;
+    font-size: 32px;
+    color: $aqua;
+    text-shadow: 3px 3px $aqua-shadow;
+  }
+
+  // Список достижений
+  &-list{
+    margin: 15px 0 0;
+    list-style: none;
+
+    li:not(:first-child){
+      margin-top: 15px;
+    }
+  }
+
+  // Карточка достижения
+  &-item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap: 15px;
+
+    background: alpha($black, .5);
+    padding: 15px;
+    color: $gray;
+    text-shadow: 2px 2px $gray-shadow;
+    @include bordered(alpha($gray, .5));
+    text-transform: initial;
+    text-align: left;
+
+    // Активное достижение
+    &_checked{
+      background: alpha($gold-shadow, .5);
+      color: $dark-gray;
+      text-shadow: 2px 2px $dark-gray-shadow;
+      @include bordered(alpha($gold, .5));
+    }
+
+    // Название достижения
+    &__heading{
+      line-height: 24px;
+      font-size: 18px;
+      color: $white;
+      text-shadow: 2px 2px $white-shadow;
+    }
+    // Задача
+    &__about{
+      line-height: 18px;
+      font-size: 12px;
+
+      &_progress{
+        color: $gold;
+        margin: 5px 0 0;
+        text-shadow: 2px 2px $gold-shadow;
+      }
+    }
+
+    // Шкала прогрессии
+    &__progressbar{
+      background:
+              linear-gradient(
+                              transparent 25%,
+                              $gray-shadow 25% 75%,
+                              transparent 75%
+      );
+      height: 15px;
+      margin: 5px 0 0;
+
+      &-thumb{
+        background: $gold;
+        height: 100%;
+      }
+    }
+
+    // Иконка полученного достижения
+    &__icon-check{
+      width: 48px;
+      image-rendering: pixelated;
+    }
+  }
+
+  // Содержание ачвики
+  &-content{
+    text-align:center;
+
+    // Превью ачивки
+    &__preview{
+      width: 128px;
+      image-rendering: pixelated;
+    }
+    // Описание задачи
+    &__task{
+      line-height: 28px;
+      font-size: 18px;
+      color: $gray;
+      margin: 10px 0 0;
+      text-shadow: 3px 3px $gray-shadow;
+    }
+  }
+}
