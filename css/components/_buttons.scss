@@ -11,8 +11,9 @@
   // Основное
   position: relative;
   display: inline-block;
-  padding: 15px 45px;
+  padding: 15px 35px;
   cursor: pointer;
+  border: none;
   outline: none;
   transition: .1s ease-in-out;
 
@@ -119,6 +120,30 @@
     @include btn-var-init($gray-shadow);
     cursor: default!important;
     pointer-events: none;
+  }
+
+  // Модификатор размера
+  &_size{
+    &-sm{
+      padding: 10px 20px;
+      font-size: 16px;
+      text-shadow: 2px 2px var(--text-shadow);
+    }
+    &-md{
+      padding: 10px 25px;
+      font-size: 18px;
+      text-shadow: 2px 2px var(--text-shadow);
+    }
+    &-lg{
+      padding: 20px 35px;
+      font-size: 22px;
+      text-shadow: 3px 3px var(--text-shadow);
+    }
+    &-xl{
+      padding: 20px 45px;
+      font-size: 24px;
+      text-shadow: 4px 4px var(--text-shadow);
+    }
   }
 
   // Модификаторы hover-эффектов
