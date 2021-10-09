@@ -5,6 +5,124 @@
 // Генератор случайных чисел
 const
     randomNum = (min, max) => Math.floor(Math.random()*(max-min+1)+min),
+    nicknameArray = [
+        'AMIR321',
+        'Dag2',
+        'Sun_Ray',
+        'Stawlie',
+        'zoromanuy',
+        'MrKapral',
+        'Timeran',
+        'RahaMilopNo',
+        'Darkness33',
+        'PycckuuLol228',
+        'Beasi',
+        'xPAPECHx',
+        'Mal4ik_Semen',
+        '_Malina1703_',
+        'autodrel',
+        'egorka3434',
+        'Astalawista',
+        'AlexSuperWorld',
+        'Dendi5128',
+        'Malminar',
+        'Wegerom',
+        'jur012',
+        'Kyanete',
+        'MrFortex',
+        'PVOsistem',
+        'YourDream',
+        'Cessabit',
+        'Makcym_Petuxov',
+        'AMIR321',
+        'Cutterman',
+        '3Y6acTbIu',
+        'Temo4chka',
+        'Warre',
+        'Ochkee',
+        'FlipSize',
+        'Mechanist',
+        'dimiron',
+        'BigRed',
+        'Foxy9_YT',
+        'Bing',
+        'SavvaMura',
+        'vit2001xd',
+        'Patrick_2000',
+        'Troll2032',
+        '_Wegge_',
+        'playjeger1337',
+        'diler137',
+        'Victorius',
+        'mrs_Asia',
+        'krabuik',
+        '_Sandro_',
+        'sasha6886',
+        'CompLexity',
+        'Google',
+        'PoSTrA',
+        'Yandex',
+        'Feni4_',
+        'Julia_Butterfly',
+        'Blazer008',
+        'Miks4277',
+        'RomanKekistan',
+        '0angel_of_death0',
+        'Zebra1598',
+        'MArkGamer',
+        'Freedrikson',
+        'foxfyz',
+        'zevsbro001',
+        'SnowlyS',
+        'artemiu15',
+        'MkZet',
+        'ShTaTuS',
+        'FairMont',
+        'soinik',
+        'VMXpocBMX',
+        'Enzis',
+        'TROJ',
+        'Zaknafein',
+        'ImmortalLove',
+        'Sterix',
+        'Monsterjam777',
+        'ListMen228',
+        'Prototype',
+        'Antonitor',
+        'etutaev',
+        'Toulouse',
+        'Nikit11',
+        'Chit',
+        'Krasilov2003',
+        'Fayans',
+        'mrdmitriy1337',
+        'Asterra',
+        'divainpro',
+        'Sanya00',
+        'Flamess',
+        'Wikusikrasotka',
+        'giogio123',
+        'Lublukrolikov',
+        'Bing',
+        'pavil',
+        'YFoxTest2',
+        '3Jlou4eLoVeK',
+        'BukaBuka',
+        'CreeperStone',
+        '_Wegge_',
+        '9_ne_robot',
+        '_Sandro_',
+        'Lime_The_Fan',
+        'xAgare',
+        'TheIngin',
+        'LaGGeRNaFeeD',
+        'BoomZoom',
+        'Bazhen',
+        'Gdasik',
+        'Mega_Gaster',
+        'gleb9012'
+    ],
+
     overlayToggle = () => document.body.classList.toggle(overlayChecked),
     overlayChecked = 'overlay-checked'; // Класс открытия оверлея
 
@@ -268,3 +386,63 @@ document.body.onclick = (e) => {
     }
 };
 const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0].classList.toggle('buy-item__enchant_checked');
+document.addEventListener("DOMContentLoaded", ()=>{
+    let
+        // Объект с элементами для перебора
+        tableRow = document.getElementsByClassName('ratings__table-row'),
+        lastCount = 300;
+
+
+    for (let i in tableRow) {
+        let
+            //
+            item = tableRow[i].children[1].childNodes[2];
+            // Для расчётов динамики
+            r = [
+            randomNum(0,1),
+            randomNum(0,1),
+            randomNum(0,1)
+        ];
+
+        //
+        if(item !== undefined) {
+            // Голова скина
+            tableRow[i].children[1].children[0].setAttribute('src', `images/heads/head-${randomNum(1, 12)}.png`)
+
+            // Никнейм
+            item.textContent = nicknameArray[randomNum(0,nicknameArray.length)];
+
+            // Количество убийств
+            tableRow[i].children[2].textContent = `${lastCount-= randomNum(1, 15)} ${randomNum(111, 999)}`;
+
+            // Количество смертей
+            tableRow[i].children[3].textContent = `${Math.trunc(lastCount / randomNum(1, 15))} ${randomNum(111, 999)}`;
+        }
+
+        tableRow[i].dataset.title = tableRow[i].children[1].innerText;
+
+        //
+        tableRow[i].dataset.row = `
+            <span class=dark-gray>Текущее место:</span>
+            <span class=gold>${tableRow[i].children[0].innerText}</span>
+            <br>
+            <br>
+            <span class=gray>Динамика изменений:</span>
+            <br>
+            <span class=dark-gray>За день:</span>
+            <span class=${(r[0]) ? 'green' : 'red'}>
+                ${(r[0]) ? '+' : '-'}${randomNum(0, 177)}
+            </span>
+            <br>
+            <span class=dark-gray>За неделю:</span>
+            <span class=${(r[1]) ? 'green' : 'red'}>
+                ${(r[1]) ? '+' : '-'}${randomNum(0, 177)}
+            </span>
+            <br>
+            <span class=dark-gray>За месяц:</span>
+            <span class=${(r[2]) ? 'green' : 'red'}>
+                ${(r[2]) ? '+' : '-'}${randomNum(0, 177)}
+            </span>
+        `;
+    }
+});
