@@ -1,0 +1,194 @@
+.ratings{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-gap: 35px;
+
+  // Переключатель вкладок (рейтингов)
+  &-nav{
+    background: alpha($black, .3);
+    @include bordered($dark-gray);
+    list-style: none;
+
+    // Вкладка
+    &__item{
+      display: block;
+      font-family: MinecraftTitle,sans-serif;
+      line-height: 1.4;
+      font-size: 16px;
+      color: $gray;
+      width: 100%;
+      padding: 25px 10px;
+      text-shadow: 2px 2px $gray-shadow;
+      text-align: center;
+
+      // Состояние наведения
+      &:not([class*="_checked"]):hover{
+      }
+
+      // Состояние активной вкладки
+      &_checked{
+        background: alpha($black, .5);
+        color: $white;
+        @include bordered($white);
+        cursor: default;
+      }
+
+      // Иконка у вкладки
+      &-img{
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 10px;
+        image-rendering: pixelated;
+      }
+    }
+  }
+
+  // Контейнер со вкладками
+  &__tab{
+
+    //
+    &-list{
+      height: 779px;
+      padding: 5px 15px 5px 5px;
+      overflow: hidden scroll;
+      list-style: none;
+
+      // Стилизация скроллбара
+      &::-webkit-scrollbar {
+        width: 15px;
+
+        &-track {
+          background:
+                  linear-gradient(
+                                  90deg,
+                                  transparent 30%,
+                                  $dark-gray-shadow 30% 70%,
+                                  transparent 70%
+                  );
+        }
+        &-thumb {
+          background: $dark-gray;
+
+          &:hover{
+            background: $white;
+          }
+        }
+      }
+    }
+
+    //
+    &-item{
+      display: none;
+
+      // Активное состояние
+      &_checked{
+        display: block;
+      }
+    }
+
+    //
+    &-heading{
+      font-size: 18px;
+      color: $white;
+      text-shadow: 2px 2px $white-shadow;
+    }
+
+    &-footer{
+      margin: 15px 0 0;
+      text-align: center;
+    }
+  }
+
+  // Рейтинговая таблица
+  &__table{
+    list-style: none;
+
+    // Строка
+    &-row{
+      --background: #{alpha($black, .3)};
+      --shadow: var(--background);
+      --line-height: 36px;
+      --color: #{$gray};
+
+      display: grid;
+      grid-template-columns: 2fr 5fr 3fr 3fr;
+      align-items: center;
+
+      background: var(--background);
+
+      line-height: var(--line-height);
+      font-size: 16px;
+      color: var(--color);
+
+      padding: 0 25px;
+      margin: 15px 0 0;
+      @include bordered(var(--shadow));
+      text-shadow: 2px 2px $gray-shadow;
+      text-transform: initial;
+      text-align: left;
+
+      &_type{
+        //
+        &-own{
+          --shadow: #{$dark-gray};
+          margin: 15px 0 35px;
+        }
+
+        // Заголовок
+        &-header{
+          margin: 0;
+        }
+
+        // Топ-позиции
+        &-top{
+          --line-height: 50px;
+          --color: var(--shadow);
+
+          font-size: 20px;
+          color: $white;
+          text-shadow: 3px 3px $white-shadow;
+
+          .ratings__table-data__rank{
+            font-size: 32px;
+          }
+
+          &-1{
+            --shadow: #{$gold};
+          }
+          &-2{
+            --shadow: #{$light-purple};
+          }
+          &-3{
+            --shadow: #{$blue};
+          }
+        }
+      }
+    }
+
+    // Ячейка
+    &-data{
+      &__img{
+        height: var(--line-height);
+        margin: 0 5px 0 0;
+        vertical-align: top;
+      }
+      &__rank{
+        font-family: MinecraftTitle,sans-serif;
+        font-size: 20px;
+        color: var(--color);
+        text-shadow: 0 0;
+      }
+    }
+  }
+
+  //
+
+  //
+
+  //
+
+  //
+
+  //
+}
