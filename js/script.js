@@ -421,6 +421,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // Число, от которого считается статистика
         // (отнимается для воспроизведения рейтинга)
         lastCount = 300;
+    console.log(tableRow)
 
     for (let i in tableRow) {
         let // Селектор для выделения
@@ -436,6 +437,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // У заголовков его не должно быть и скрипт не выполнится
         // TODO ПЕРЕПИСАТЬ ПРОВЕРКУ, здесь конченная логика
         if(item !== undefined) {
+            console.log(item = tableRow[i].children[1].childNodes[2])
+
             // Голова скина
             tableRow[i].children[1].children[0].setAttribute('src', `images/heads/head-${randomNum(1, 12)}.png`)
 
@@ -443,10 +446,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
             item.textContent = nicknameArray[randomNum(0,nicknameArray.length - 1)];
 
             // Количество убийств
-            tableRow[i].children[2].textContent = `${lastCount-= randomNum(1, 15)} ${randomNum(111, 999)}`;
+            tableRow[i].children[2].textContent = `${lastCount-= randomNum(1, 5)} ${randomNum(111, 999)}`;
 
             // Количество смертей
-            tableRow[i].children[3].textContent = `${Math.trunc(lastCount / randomNum(1, 15))} ${randomNum(111, 999)}`;
+            if(tableRow[i].children[3] !== undefined){
+                tableRow[i].children[3].textContent = `${Math.trunc(lastCount / randomNum(1, 5))} ${randomNum(111, 999)}`;
+            }
+
         }
 
         // В заголовок тултипа пишем никнейм игрока
