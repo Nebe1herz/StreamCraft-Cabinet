@@ -386,6 +386,32 @@ document.body.onclick = (e) => {
     }
 };
 const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0].classList.toggle('buy-item__enchant_checked');
+// Обработчик кликов
+document.body.onclick = (e) => {
+    if(!e.target.classList.contains('ratings-nav__item')) return false;
+
+    let classNav = 'ratings-nav__item',
+        classTab = 'ratings__tab-item',
+        rating = e.target.dataset.rating;
+
+    // Убираем checked состояние у всех остальных вкладок
+    document.getElementsByClassName(`${classNav}_checked`)[0].classList.remove(`${classNav}_checked`)
+
+    // Текущей активной вкладке добавляем класс checked
+    e.target.classList.add(`${classNav}_checked`);
+
+    // Убираем класс checked у содержания вкладки
+    document.getElementsByClassName(`${classTab}_checked`)[0].classList.remove(`${classTab}_checked`)
+
+    document.querySelectorAll(`.${classTab}[data-rating="${rating}"]`)[0].classList.add(`${classTab}_checked`)
+
+    /*
+
+    //
+    document.querySelector(`${classTab}[data-rating*="${rating}"]`)[0].classList.add(`${classTab}_checked`)*/
+};
+
+//
 document.addEventListener("DOMContentLoaded", ()=>{
     let
         // Объект с элементами для перебора
