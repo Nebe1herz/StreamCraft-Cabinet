@@ -33,29 +33,22 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // Число, от которого считается статистика
         // (отнимается для воспроизведения рейтинга)
         lastCount = 300;
-    console.log(tableRow)
 
     for (let i in tableRow) {
-        let // Селектор для выделения
-            item = tableRow[i].children[1].childNodes[2],
-            // Для расчётов динамики
+        let // Для расчётов динамики
             r = [
                 randomNum(0,1),
                 randomNum(0,1),
                 randomNum(0,1)
             ];
 
-        // Проверка на то, что существует ли такой элемент
-        // У заголовков его не должно быть и скрипт не выполнится
-        // TODO ПЕРЕПИСАТЬ ПРОВЕРКУ, здесь конченная логика
-        if(item !== undefined) {
-            console.log(item = tableRow[i].children[1].childNodes[2])
-
+        // Проверка на пропуск элемента
+        if(tableRow[i].dataset.type !== 'skip') {
             // Голова скина
             tableRow[i].children[1].children[0].setAttribute('src', `images/heads/head-${randomNum(1, 12)}.png`)
 
             // Никнейм
-            item.textContent = nicknameArray[randomNum(0,nicknameArray.length - 1)];
+            tableRow[i].children[1].childNodes[2].textContent = nicknameArray[randomNum(0,nicknameArray.length - 1)];
 
             // Количество убийств
             tableRow[i].children[2].textContent = `${lastCount-= randomNum(1, 5)} ${randomNum(111, 999)}`;
