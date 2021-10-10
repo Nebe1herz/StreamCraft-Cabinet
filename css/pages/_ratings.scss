@@ -1,6 +1,7 @@
 .ratings{
   display: grid;
   grid-template-columns: 320px 1fr;
+  align-items: start;
   grid-gap: 35px;
 
   // Переключатель вкладок (рейтингов)
@@ -9,21 +10,26 @@
     @include bordered($dark-gray);
     list-style: none;
 
+    li:not(:first-child){
+      margin: 5px 0 0;
+      box-shadow: 0 -5px $dark-gray;
+    }
+
     // Вкладка
     &__item{
-      display: block;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      grid-gap: 15px;
+
       font-family: MinecraftTitle,sans-serif;
       line-height: 1.4;
       font-size: 16px;
       color: $gray;
       width: 100%;
-      padding: 25px 10px;
+      padding: 25px;
       text-shadow: 2px 2px $gray-shadow;
-      text-align: center;
-
-      // Состояние наведения
-      &:not([class*="_checked"]):hover{
-      }
+      text-align: left;
 
       // Состояние активной вкладки
       &_checked{
@@ -31,14 +37,18 @@
         color: $white;
         @include bordered($white);
         cursor: default;
+
+        &::before{
+          display: none;
+        }
       }
 
       // Иконка у вкладки
       &-img{
         display: block;
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 10px;
+        width: 64px;
+        height: 64px;
+        pointer-events: none!important;
         image-rendering: pixelated;
       }
     }
@@ -95,14 +105,23 @@
     }
 
     &-footer{
-      margin: 15px 0 0;
       text-align: center;
     }
   }
 
   // Рейтинговая таблица
   &__table{
+    --columns: 2fr 5fr 3fr 3fr;
+
+    margin: 0 0 20px;
     list-style: none;
+
+    // Модификатор для изменения колонок
+    &_columns{
+      &-1{
+        --columns: 2fr 5fr 3fr;
+      }
+    }
 
     // Строка
     &-row{
@@ -112,7 +131,7 @@
       --color: #{$gray};
 
       display: grid;
-      grid-template-columns: 2fr 5fr 3fr 3fr;
+      grid-template-columns: var(--columns);
       align-items: center;
 
       background: var(--background);
