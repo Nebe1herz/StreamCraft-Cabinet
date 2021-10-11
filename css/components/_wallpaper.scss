@@ -2,9 +2,12 @@
 // Для модалок и экранов кабинета
 // С затемнением *** блюром фона
 .overlay{
+  display: grid;
+  grid-template-rows: 118px 1fr;
+
   position: absolute;
   background: #{alpha(#000, .6)};
-  padding: 123px 100px 0 0;
+  padding: 0 100px 0 0;
   height: 100%;
   width: 100%;
   opacity: 0;
