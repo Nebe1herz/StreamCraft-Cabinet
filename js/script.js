@@ -390,7 +390,7 @@ const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0
 // - ratings.html
 //
 // Вешаем обработчик на документ
-document.body.onclick = (e) => {
+document.getElementsByClassName('ratings-nav')[0].onclick = (e) => {
     // Проверяем, осуществлён ли клик по вкладке на экране с рейтингами
     // Иначе останавливаем функцию
     if(!e.target.classList.contains('ratings-nav__item')) return false;
