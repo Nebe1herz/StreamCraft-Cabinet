@@ -58,6 +58,37 @@
     text-shadow: 2px 2px var(--shadow);
   }
 
+  // Индикатор прогресса
+  &__progress{
+    // Основной контейнер
+    &-bar{
+      display: block;
+      background: $dark-gray-shadow;
+      margin: 5px 0;
+      padding: 5px;
+      height: 18px;
+    }
+    // Внутренняя полоса прогресса
+    &-line{
+      display: block;
+      background: linear-gradient(
+                      to right,
+                      $gold 90%,
+                      transparent 90%
+      ) repeat-x;
+      background-size: 31px;
+      height: 100%;
+    }
+  }
+
+  // Разделитель
+  hr{
+    display: block;
+    border: none;
+    height: 0;
+    margin: 8px 0;
+  }
+
   // Инициализация модификаторов со всей палитрой
   @each $value in $colors-map {
     @include tooltip-color($value);
