@@ -1,15 +1,60 @@
 .achievements{
   padding-bottom: 0;
 
-  // Сетка экрана
-  &-area{
+  // Раздел
+  &__area{
     min-height: 180px;
+    &:not(:first-of-type){
+      margin: 50px 0 0;
+    }
+
+    // Заголовок раздела с достижениями
+    &-heading{
+      font-size: 32px;
+      color: $white;
+      margin: 0 0 25px;
+      text-shadow: 4px 4px $white-shadow;
+    }
   }
 
-  // Заголовок раздела с достижениями
-  &__heading{
-    font-size: 32px;
-    color: $white;
-    text-shadow: 4px 4px $white-shadow;
+  // Список достижений
+  &-list{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 15px;
+
+    list-style: none;
+
+    // Элемент списка
+    &__item{
+      --background: #{alpha($black, .3)};
+      --shadow: #{$dark-gray};
+
+      display: grid;
+      grid-template-rows: 3fr 1fr;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 15px;
+
+      background: var(--background);
+      min-height: 160px;
+      @include bordered(var(--shadow));
+
+      // Модификатор прогресса достижения
+      &_progress{
+        &-finished{
+          --background: #{alpha($green-shadow, .3)};
+          --shadow: #{$green};
+        }
+      }
+
+      // Картинка элемента
+      &-img{
+        display: block;
+        height: 80px;
+        width: 80px;
+        image-rendering: pixelated;
+      }
+    }
   }
 }
