@@ -62,21 +62,46 @@
   &__progress{
     // Основной контейнер
     &-bar{
+      // По-умолчанию размер шага - 100%
+      --step: 200%;
+
       display: block;
+      position: relative;
       background: $dark-gray-shadow;
       margin: 5px 0;
       padding: 5px;
       height: 18px;
+
+      // Модификатор количества шагов
+      &_step{
+        &-7{
+          --step: calc(100% / 7);
+        }
+        &-16{
+          --step: calc(100% / 16);
+        }
+      }
+
+      &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: linear-gradient(
+                        to right,
+                        $dark-gray-shadow 3px,
+                        transparent 3px
+        ) repeat-x;
+        background-size: var(--step);
+        width: calc(100% - 7px);
+        height: calc(100% - 10px);
+        top: 5px;
+        left: 2px;
+      }
     }
     // Внутренняя полоса прогресса
     &-line{
       display: block;
-      background: linear-gradient(
-                      to right,
-                      $gold 90%,
-                      transparent 90%
-      ) repeat-x;
-      background-size: 31px;
+      background: $gold;
       height: 100%;
     }
   }
