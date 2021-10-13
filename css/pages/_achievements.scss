@@ -31,13 +31,13 @@
       --shadow: #{$dark-gray};
 
       display: grid;
-      grid-template-rows: 3fr 1fr;
+      grid-template-rows: 4fr auto;
       justify-content: center;
-      align-items: center;
       grid-gap: 15px;
 
       background: var(--background);
-      min-height: 160px;
+      padding: 15px 0;
+      height: 100%;
       @include bordered(var(--shadow));
 
       // Модификатор прогресса достижения
@@ -53,7 +53,51 @@
         display: block;
         height: 80px;
         width: 80px;
+        margin: 0 auto;
         image-rendering: pixelated;
+      }
+
+      //
+      &-status{
+        --color: #{$dark-gray};
+        --background: #{$gray-shadow};
+        --text-shadow: #{$dark-gray-shadow};
+
+        display:block;
+        height: 44px;
+        line-height: 22px;
+        font-size: 16px;
+        color: var(--color);
+        text-shadow: 2px 2px var(--text-shadow);
+        text-align: center;
+
+        // Начатое достижение
+        &_started{
+          --color: #{$gold};
+          --background: #{$gold-shadow};
+          --text-shadow: #{$gold-shadow};
+        }
+        // Завершенное достижение
+        &_finished{
+          color: #{$green};
+          --text-shadow: #{$green-shadow};
+        }
+
+        &-bar{
+          --progress: 0%;
+
+          display: block;
+          background:
+                  var(--background)
+                  linear-gradient(
+                                  to right,
+                                  $gold var(--progress),
+                                  transparent var(--progress)
+                  );
+          height: 8px;
+          margin: 10px auto 0;
+          box-shadow: 0 0 0 5px var(--text-shadow);
+        }
       }
     }
   }
