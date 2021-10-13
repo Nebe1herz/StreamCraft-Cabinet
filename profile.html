@@ -34,7 +34,7 @@
                 </li>
                 <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
                 <li>
-                    <a href="#"
+                    <a href="cart.html"
                        class="btn
                               header-list__item
                               header-list__cart"
@@ -54,7 +54,7 @@
                        class="btn
                               header-list__item
                               modal-trigger"
-                       data-modal-name="add-balance-rubles"
+                       data-modal-name="add-balance"
                     >
                         <img src="images/icon/balance-rubles.png" alt
                              class="header-list__item-icon">
@@ -76,7 +76,7 @@
                 </li>
                 <!-- Аватар, ник и группа пользователь -->
                 <li>
-                    <a href="#"
+                    <a href="profile.html"
                        class="btn
                               header-list__item
                               header-list__user
@@ -99,13 +99,13 @@
                 </li>
             </ul>
             <div class="nav">
-                <a href="index.html"
+                <a href="ratings.html"
                    class="btn
                           nav-item
                           nav-item_role-control
                           tooltip-trigger"
-                   data-title="Ваша статистика"
-                   data-row="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
+                   data-title="Рейтинги игроков"
+                   data-row="Глобальная статистика - соревнуйтесь с другими игроками!"
                    data-meta="Кликните, чтобы открыть"
                 >
                     <i class="nav-icon nav-icon_arrow-left"></i>
@@ -152,27 +152,27 @@
                         </a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="index.html"
+                        <a href="achievements.html"
                            class="btn
                                   nav-item
                                   tooltip-trigger"
-                           data-title="<span class=gold>Список достижений</span>"
-                           data-row="Все достижения из Minecraft и модификаций сервера"
+                           data-title="<span class=gold>Ваши достижения</span>"
+                           data-row="Время в игре, поставлено или создано блоков, убийство мобов - <span class=green>всё здесь</span>!"
                            data-meta="Кликните, чтобы открыть"
                         >
                             Достижения
                         </a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="index.html"
+                        <a href="ratings.html"
                            class="btn
                                   nav-item
                                   tooltip-trigger"
-                           data-title="Ваша статистика"
-                           data-row="Время в игре, поставлено или скрафчено блоков, убийство мобов - всё здесь!"
+                           data-title="Рейтинги игроков"
+                           data-row="Глобальная статистика - соревнуйтесь с другими игроками!"
                            data-meta="Кликните, чтобы открыть"
                         >
-                            Статистика
+                            Рейтинги
                         </a>
                     </li>
                 </ul>
@@ -503,20 +503,13 @@
     </div>
 </div>
 <div class="modal">
-    <div class="wrapper wrapper_modal">
-        <div class="modal__content">
-            <a href="#" class="btn btn_success">Success УСПЕХ</a>
-            <br>
-            <br>
-            <a href="#" class="btn btn_danger">danger ОТМЕНИТЬ</a>
-        </div>
-    </div>
+    <!-- Содержание модального окна, динамически подгружаемое через JS -->
 </div>
 <div class="tooltip" style="display: none">
     <div class="tooltip__content">
-        <h3 class="tooltip__title">Ультра квантовая панель</h3>
-        <p class="tooltip__row">Полная хуета</p>
-        <p class="tooltip__meta">Vanilla Minecraft</p>
+        <h3 class="tooltip__title">Заголовок</h3>
+        <p class="tooltip__row">Описание</p>
+        <p class="tooltip__meta">Модификация</p>
     </div>
 </div>
 <script src="js/script.min.js"></script>
