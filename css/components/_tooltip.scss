@@ -63,7 +63,7 @@
     // Основной контейнер
     &-bar{
       // По-умолчанию размер шага - 100%
-      --step: 200%;
+      --step: 0.5;
 
       display: block;
       position: relative;
@@ -74,11 +74,23 @@
 
       // Модификатор количества шагов
       &_step{
+        &-3{
+          --step: 3;
+        }
+        &-5{
+          --step: 5;
+        }
         &-7{
-          --step: calc(100% / 7);
+          --step: 7;
+        }
+        &-10{
+          --step: 10;
         }
         &-16{
-          --step: calc(100% / 16);
+          --step: 16;
+        }
+        &-25{
+          --step: 25;
         }
       }
 
@@ -91,7 +103,7 @@
                         $dark-gray-shadow 3px,
                         transparent 3px
         ) repeat-x;
-        background-size: var(--step);
+        background-size: calc(100% / var(--step));
         width: calc(100% - 7px);
         height: calc(100% - 10px);
         top: 5px;
@@ -103,6 +115,7 @@
       display: block;
       background: $gold;
       height: 100%;
+      width: 0;
     }
   }
 
