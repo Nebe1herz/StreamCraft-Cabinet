@@ -5,12 +5,29 @@
   &-heading{
     font-size: 36px;
     color: $white;
-    margin: 0 0 35px;
     text-shadow: 4px 4px $white-shadow;
 
     &__counter{
       color: $gold;
       text-shadow: 4px 4px $gold-shadow;
+    }
+  }
+
+  //
+  &-filter{
+    background: #{alpha($black, .3)};
+    line-height: 32px;
+    font-size: 16px;
+    color: $gray;
+    padding: 15px 25px;
+    margin: 25px 0;
+    @include bordered($dark-gray);
+    text-shadow: 2px 2px $gray-shadow;
+
+    .btn{
+      padding: 0 15px;
+      margin: 0 0 0 10px;
+      text-transform: initial;
     }
   }
 
@@ -93,7 +110,7 @@
                   );
           height: 8px;
           margin: 10px auto 0;
-          box-shadow: 0 0 0 5px var(--text-shadow);
+          box-shadow: 0 0 0 5px var(--background);
         }
       }
     }
