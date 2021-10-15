@@ -1,0 +1,115 @@
+.stats{
+  padding: 50px 0;
+
+  // Заголовок экрана
+  &-heading{
+    font-size: 36px;
+    color: $white;
+    text-shadow: 4px 4px $white-shadow;
+  }
+
+  // Раздел со статистикой
+  &__area{
+    --background: #{alpha($black, .5)};
+
+    background: var(--background);
+    padding: 25px;
+    margin: 35px 10px;
+    @include bordered(var(--background), 10);
+
+    // Заголовок раздела
+    &-heading{
+      font-size: 20px;
+      color: $green;
+      margin: 0 0 15px;
+      text-shadow: 3px 3px $green-shadow;
+    }
+  }
+
+  // Контейнер со статистикой по рейтингам
+  &__ratings{
+    // Контейнер списка с перечнем рейтинговых позиций
+    &-list{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 15px;
+
+      line-height: 1.4;
+      font-size: 16px;
+      color: $dark-gray;
+      text-shadow: 2px 2px $dark-gray-shadow;
+      list-style: none;
+    }
+
+    // Позиция в рейтинге
+    &-rank{
+      font-family: MinecraftTitle,sans-serif;
+      font-size: 42px;
+      color: $dark-gray;
+      text-shadow: 6px 6px $dark-gray-shadow;
+
+      // По-умолчанию стилизовано состояние без рейтинга
+      // Модификатор стилизует состояние топа рейтинга
+      &_type{
+        &-leading{
+          color: $gold;
+          text-shadow: 6px 6px $gold-shadow;
+        }
+      }
+    }
+  }
+
+  // Список с данными статистики
+  &-list{
+    list-style: none;
+
+    // Строчка со статистикой
+    &__item{
+      --color: #{$green};
+      --text-shadow: #{$green-shadow};
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      background: alpha($green, .075);
+      line-height: 30px;
+      font-size: 18px;
+      color: $gray;
+      margin: 0 0 3px;
+      text-shadow: 3px 3px $gray-shadow;
+
+      // Каждая вторая строчка выделяется другим
+      // цветом для контрастности
+      &:nth-child(even){
+        background: alpha($green, .125);
+      }
+
+      // Количественные данные в статистике
+      // выделяются другим цветом
+      &-value{
+        color: var(--color);
+        text-shadow: 3px 3px var(--text-shadow);
+      }
+
+      // Выделение фрагмента текста
+      // с указанием позиции в рейтинге
+      &-mark{
+        color: $yellow;
+        text-shadow: 3px 3px $yellow-shadow;
+      }
+
+      // Модификатор для изменения стилизации строки
+      &_type{
+        // Тип - лидирующий в рейтинге
+        &-leading{
+          --color: #{$gold};
+          --text-shadow: #{$gold-shadow};
+
+          background: alpha($gold, .3)!important;
+          color: $white;
+          text-shadow: 3px 3px $white-shadow;
+        }
+      }
+    }
+  }
+}
