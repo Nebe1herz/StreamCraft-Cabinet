@@ -129,6 +129,9 @@
 
   // Инициализация модификаторов со всей палитрой
   @each $value in $colors-map {
-    @include tooltip-color($value);
+    .#{$value}{
+      --color: var(--#{$value});
+      --shadow: var(--#{$value}-shadow);
+    }
   }
 }

@@ -35,13 +35,6 @@
   --shadow: #{alpha($shadow, .3)};
 }
 
-@mixin tooltip-color($value) {
-  .#{$value}{
-    --color: var(--#{$value});
-    --shadow: var(--#{$value}-shadow);
-  }
-}
-
 @mixin windowConfig($style){
   --background: #{$style};
   --border: #{$black};
