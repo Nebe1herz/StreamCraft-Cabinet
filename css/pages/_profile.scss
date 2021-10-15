@@ -2,21 +2,21 @@
   padding: 50px 0;
   align-items: start;
 
-  // Заголовок
+  // Заголовок экрана
   &-heading{
     font-size: 48px;
     color: $white;
     text-shadow: 6px 6px $white-shadow;
   }
 
-  // Основное содержания
+  // Колонка с основным содержанием
   &-content{
     position: relative;
     width: 65%;
     z-index: 1;
   }
 
-  //
+  // Контейнер для раздела
   &-area{
     --background: #{alpha($black, .5)};
     --shadow: #{$dark-gray};
@@ -26,15 +26,27 @@
     margin: 35px 0 0;
     @include bordered(var(--shadow));
 
-    //
-    &_style{
-      &-purple{
+    // Цветовая стилизация раздела для разных привилегий
+    &_status{
+      &-vip{
+        --background: #{alpha($green-shadow, .4)};
+        --shadow: #{$green};
+      }
+      &-premium{
+        --background: #{alpha($blue-shadow, .4)};
+        --shadow: #{$blue};
+      }
+      &-deluxe{
         --background: #{alpha($dark-purple-shadow, .4)};
         --shadow: #{$light-purple};
       }
+      &-legend{
+        --background: #{alpha($gold-shadow, .4)};
+        --shadow: #{$gold};
+      }
     }
 
-    //
+    // Заголовок раздела
     &__heading{
       font-size: 20px;
       color: $white;
@@ -42,17 +54,19 @@
       text-shadow: 3px 3px $white-shadow;
     }
 
+    // Контейнер со списком друзей
     &__friends{
-      //
+      // Список друзей
       &-list{
         display: grid;
         grid-template-columns: repeat(10, 60px);
         grid-gap: 15px;
 
+        margin: 0 0 15px;
         list-style: none;
       }
 
-      //
+      // Элемент списка друзей
       &-item{
         --background: #{alpha($gray, .1)};
 
@@ -66,14 +80,15 @@
         padding: 0;
         @include bordered(var(--background));
 
-        //
+        // Модификатор с стилизацией типа карточки,
+        // когда игрок находится в сети
         &_type{
           &-online{
             --background: #{alpha($blue, .2)};
           }
         }
 
-        //
+        // Аватарка игрока
         img{
           display: block;
           width: 45px;
@@ -83,15 +98,16 @@
     }
   }
 
-  //
+  // Внутренние компоненты раздела
   &__stats{
-    //
+    // Заголовок третьего уровня
     &-heading{
       font-size: 16px;
       color: $gray;
       text-shadow: 2px 2px $gray-shadow;
     }
-    //
+
+    // Разделитель между разными частями раздела
     &-separator{
       display: block;
       border: none;
@@ -101,44 +117,30 @@
     }
   }
 
-  //
+  // Контейнер с сеткой
+  // для основной информации в профиле
   &__header-stats{
     display: grid;
     grid-template-columns: 3fr 4fr;
     grid-gap: 15px;
 
     line-height: 1.2;
+    color: $gray;
+    text-shadow: 6px 6px $gray-shadow;
     list-style: none;
 
-    //
+    // Значение параметров
+    // группа, уровень боевого пропуск и проч.
     &__value{
-      --color: #{$gray};
-      --text-shadow: #{$gray-shadow};
+      --text-shadow-size: 6px;
 
       font-family: MinecraftTitle,sans-serif;
       font-size: 42px;
-      color: var(--color);
-      text-shadow: 6px 6px var(--text-shadow);
-
-      //
-      &_style{
-        &-green{
-          --color: #{$green};
-          --text-shadow: #{$green-shadow};
-        }
-        &-gold{
-          --color: #{$gold};
-          --text-shadow: #{$gold-shadow};
-        }
-        &-purple{
-          --color: #{$light-purple};
-          --text-shadow: #{$light-purple-shadow};
-        }
-      }
     }
   }
 
-  //
+  // Контейнер с карточками
+  // с ссылкой на подраздел профиля
   &-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -146,37 +148,19 @@
 
     margin: 35px 0 0;
 
-    //
+    // Карточка
     &__item {
       margin: 0;
       padding: 25px 10px;
       text-transform: initial;
 
-      //
+      // Картинка в карточке
       &-img {
         display: block;
         margin: 25px auto 0;
         width: 112px;
         height: 112px;
         image-rendering: pixelated;
-      }
-    }
-
-    //
-    &__text {
-      display: block;
-
-      //
-      &_style {
-        &-green {
-          color: $green;
-          text-shadow: 2px 2px $green-shadow;
-        }
-
-        &-gold {
-          color: $gold;
-          text-shadow: 2px 2px $gold-shadow;
-        }
       }
     }
   }

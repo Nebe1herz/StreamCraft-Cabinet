@@ -157,10 +157,22 @@
                                   nav-item
                                   tooltip-trigger"
                            data-title="<span class=gold>Ваши достижения</span>"
-                           data-row="Время в игре, поставлено или создано блоков, убийство мобов - <span class=green>всё здесь</span>!"
+                           data-row="Получено <span class=green>4 из 32</span> достижений"
                            data-meta="Кликните, чтобы открыть"
                         >
                             Достижения
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="stats.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="<span class=green>Игровая статистика</span>"
+                           data-row="Время в игре, поставлено или создано блоков, убийство мобов - <span class=green>всё здесь</span>!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Статистика
                         </a>
                     </li>
                     <li class="nav-list-item">
@@ -196,12 +208,12 @@
             <h1 class="profile-heading">Ваш профиль</h1>
             <div class="profile-content">
                 <!---->
-                <div class="profile-area profile-area_style-purple">
+                <div class="profile-area profile-area_status-deluxe">
                     <ul class="profile__header-stats">
                         <li>
                             <h3 class="profile__stats-heading">Группа:</h3>
                             <h4 class="profile__header-stats__value
-                                       profile__header-stats__value_style-purple"
+                                       text text_style-light-purple"
                             >
                                 DELUXE
                             </h4>
@@ -209,7 +221,7 @@
                         <li>
                             <h3 class="profile__stats-heading">Боевой пропуск:</h3>
                             <h4 class="profile__header-stats__value
-                                       profile__header-stats__value_style-gold"
+                                       text text_style-gold"
                             >
                                 25 УРОВЕНЬ
                             </h4>
@@ -242,31 +254,49 @@
                 </div>
                 <!---->
                 <div class="profile-cards">
-                    <a href="#" class="btn profile-area profile-cards__item">
+                    <a href="achievements.html"
+                       class="btn
+                              profile-area
+                              profile-cards__item
+                              tooltip-trigger"
+                       data-title="<span class=gold>Ваши достижения</span>"
+                       data-row="Получено <span class=green>4 из 32</span> достижений"
+                       data-meta="Кликните, чтобы открыть"
+                    >
                         <div>
                             Достижения
-                            <span class="profile-cards__text
-                                         profile-cards__text_style-gold">
-                               4 из 32
-                            </span>
+                            <div class="text text_style-gold">4 из 32</div>
                         </div>
                         <img src="images/icon/achievements.png"
                              class="profile-cards__item-img" alt>
                     </a>
-                    <a href="#" class="btn profile-area profile-cards__item">
+                    <a href="stats.html"
+                       class="btn
+                              profile-area
+                              profile-cards__item
+                              tooltip-trigger"
+                       data-title="<span class=green>Игровая статистика</span>"
+                       data-row="Время в игре, поставлено или создано блоков, убийство мобов - <span class=green>всё здесь</span>!"
+                       data-meta="Кликните, чтобы открыть"
+                    >
                         <div>
-                            Игровые статистика
+                            Статистика <br><br>
                         </div>
                         <img src="images/icon/stats.png"
                              class="profile-cards__item-img" alt>
                     </a>
-                    <a href="#" class="btn profile-area profile-cards__item">
+                    <a href="profile.html"
+                       class="btn
+                              profile-area
+                              profile-cards__item
+                              tooltip-trigger"
+                       data-title="<span class=aqua>Задания</span>"
+                       data-row="Текущий прогресс <span class=green>94%</span>"
+                       data-meta="Кликните, чтобы открыть"
+                    >
                         <div>
                             Задания
-                            <span class="profile-cards__text
-                                         profile-cards__text_style-green">
-                               прогресс 94%
-                            </span>
+                            <div class="text text_style-green">Прогресс 94%</div>
                         </div>
                         <img src="images/icon/quests.png"
                              class="profile-cards__item-img" alt>
@@ -275,8 +305,11 @@
                 <!---->
                 <div class="profile-area">
                     <h2 class="profile-area__heading">
-                        Список друзей
-                        <span class="text text_style-aqua">21</span>
+                        Друзей в списке:
+                        <span class="text text_style-gold">21</span>
+                        <span class="text text_style-aqua text_style-right">
+                            В сети 4 игрока из списка
+                        </span>
                     </h2>
                     <ul class="profile-area__friends-list">
                         <li>
@@ -732,7 +765,13 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="text_style-center">
+                        <a href="#" class="btn btn_success btn_size-sm">
+                            Показать весь список (24)
+                        </a>
+                    </div>
                 </div>
+                <!---->
                 <div class="profile-area">
                     <h2 class="profile-area__heading">Общая статистика</h2>
                     <ul class="stats-list stats-list_type-compact">
@@ -811,7 +850,7 @@
                     <br>
                     <br>
                     <h2 class="profile-area__heading">Прочая статистика:</h2>
-                    <ul class="stats-list">
+                    <ul class="stats-list stats-list_type-compact">
                         <li class="stats-list__item">
                             <span>Совершено покупок в магазине блоков</span>
                             <span class="stats-list__item-value">
