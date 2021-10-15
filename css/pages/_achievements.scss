@@ -7,6 +7,7 @@
     color: $white;
     text-shadow: 4px 4px $white-shadow;
 
+    //
     &__counter{
       color: $gold;
       text-shadow: 4px 4px $gold-shadow;
@@ -15,7 +16,7 @@
 
   //
   &-filter{
-    background: #{alpha($black, .3)};
+    background: #{alpha($black, .5)};
     line-height: 32px;
     font-size: 16px;
     color: $gray;
@@ -41,7 +42,7 @@
 
     // Элемент списка
     &__item{
-      --background: #{alpha($black, .3)};
+      --background: #{alpha($black, .5)};
       --shadow: #{$dark-gray};
 
       display: grid;
@@ -57,7 +58,7 @@
       // Модификатор прогресса достижения
       &_progress{
         &-finished{
-          --background: #{alpha($green-shadow, .3)};
+          --background: #{alpha($green-shadow, .5)};
           --shadow: #{$green};
         }
       }
