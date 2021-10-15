@@ -11,7 +11,9 @@
 
   // Основное содержания
   &-content{
-    width: 60%;
+    position: relative;
+    width: 65%;
+    z-index: 1;
   }
 
   //
@@ -21,23 +23,75 @@
 
     background: var(--background);
     padding: 25px;
-    margin: 25px 0 0;
+    margin: 35px 0 0;
     @include bordered(var(--shadow));
 
+    //
     &_style{
       &-purple{
         --background: #{alpha($dark-purple-shadow, .4)};
         --shadow: #{$light-purple};
       }
     }
+
+    //
+    &__heading{
+      font-size: 20px;
+      color: $white;
+      margin: 0 0 15px;
+      text-shadow: 3px 3px $white-shadow;
+    }
+
+    &__friends{
+      //
+      &-list{
+        display: grid;
+        grid-template-columns: repeat(10, 60px);
+        grid-gap: 15px;
+
+        list-style: none;
+      }
+
+      //
+      &-item{
+        --background: #{alpha($gray, .1)};
+
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--background);
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        @include bordered(var(--background));
+
+        //
+        &_type{
+          &-online{
+            --background: #{alpha($blue, .2)};
+          }
+        }
+
+        //
+        img{
+          display: block;
+          width: 45px;
+          image-rendering: pixelated;
+        }
+      }
+    }
   }
 
+  //
   &__stats{
+    //
     &-heading{
       font-size: 16px;
       color: $gray;
       text-shadow: 2px 2px $gray-shadow;
     }
+    //
     &-separator{
       display: block;
       border: none;
@@ -47,6 +101,7 @@
     }
   }
 
+  //
   &__header-stats{
     display: grid;
     grid-template-columns: 3fr 4fr;
@@ -55,6 +110,7 @@
     line-height: 1.2;
     list-style: none;
 
+    //
     &__value{
       --color: #{$gray};
       --text-shadow: #{$gray-shadow};
@@ -64,6 +120,7 @@
       color: var(--color);
       text-shadow: 6px 6px var(--text-shadow);
 
+      //
       &_style{
         &-green{
           --color: #{$green};
@@ -81,10 +138,54 @@
     }
   }
 
+  //
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+
+    margin: 35px 0 0;
+
+    //
+    &__item {
+      margin: 0;
+      padding: 25px 10px;
+      text-transform: initial;
+
+      //
+      &-img {
+        display: block;
+        margin: 25px auto 0;
+        width: 112px;
+        height: 112px;
+        image-rendering: pixelated;
+      }
+    }
+
+    //
+    &__text {
+      display: block;
+
+      //
+      &_style {
+        &-green {
+          color: $green;
+          text-shadow: 2px 2px $green-shadow;
+        }
+
+        &-gold {
+          color: $gold;
+          text-shadow: 2px 2px $gold-shadow;
+        }
+      }
+    }
+  }
+
   // Рендер скина в 3D
   &-skin{
     position: absolute;
     top: 50px;
     right: 0;
+    pointer-events: none;
   }
 }
