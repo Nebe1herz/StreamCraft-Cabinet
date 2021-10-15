@@ -28,23 +28,37 @@
 
   // Контейнер со статистикой по рейтингам
   &__ratings{
+    list-style: none;
+
     // Контейнер списка с перечнем рейтинговых позиций
     &-list{
+      --columns: 5;
+      --font-size: 16px;
+      --font-size-rank: 42px;
+
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 15px;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      grid-gap: 5px;
 
       line-height: 1.4;
-      font-size: 16px;
+      font-size: var(--font-size);
       color: $dark-gray;
       text-shadow: 2px 2px $dark-gray-shadow;
       list-style: none;
+
+      &_type{
+        &-compact{
+          --columns: 3;
+          --font-size: 12px;
+          --font-size-rank: 36px;
+        }
+      }
     }
 
     // Позиция в рейтинге
     &-rank{
       font-family: MinecraftTitle,sans-serif;
-      font-size: 42px;
+      font-size: var(--font-size-rank);
       color: $dark-gray;
       text-shadow: 6px 6px $dark-gray-shadow;
 
@@ -61,7 +75,14 @@
 
   // Список с данными статистики
   &-list{
+    --font-size: 18px;
     list-style: none;
+
+    &_type{
+      &-compact{
+        --font-size: 16px;
+      }
+    }
 
     // Строчка со статистикой
     &__item{
@@ -72,8 +93,8 @@
       grid-template-columns: 1fr auto;
 
       background: alpha($green, .075);
-      line-height: 30px;
-      font-size: 18px;
+      line-height: 1.6;
+      font-size: var(--font-size);
       color: $gray;
       margin: 0 0 3px;
       text-shadow: 3px 3px $gray-shadow;
