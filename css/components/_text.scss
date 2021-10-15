@@ -1,0 +1,17 @@
+.text{
+  --color: #{$white};
+  --text-shadow: #{$white-shadow};
+
+  color: var(--color);
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) var(--text-shadow);
+
+  // Инициализация модификаторов со всей палитрой
+  &_style{
+    @each $value in $colors-map {
+      &-#{$value}{
+        --color: var(--#{$value});
+        --text-shadow: var(--#{$value}-shadow);
+      }
+    }
+  }
+}
