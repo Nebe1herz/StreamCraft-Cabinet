@@ -5,13 +5,24 @@
   color: var(--color);
   text-shadow: var(--text-shadow-size) var(--text-shadow-size) var(--text-shadow);
 
-  // Инициализация модификаторов со всей палитрой
+  // Инициализация модификаторов
   &_style{
+    // Цвет текста
     @each $value in $colors-map {
       &-#{$value}{
         --color: var(--#{$value});
         --text-shadow: var(--#{$value}-shadow);
       }
+    }
+
+    // Выравнивание текста по-центру
+    &-center{
+      text-align: center;
+    }
+
+    // Выравнивание текста по правому краю
+    &-right{
+      float: right;
     }
   }
 }
