@@ -1,7 +1,90 @@
 .profile{
+  padding: 50px 0;
+  align-items: start;
 
-  // Скин в профиле
+  // Заголовок
+  &-heading{
+    font-size: 48px;
+    color: $white;
+    text-shadow: 6px 6px $white-shadow;
+  }
+
+  // Основное содержания
+  &-content{
+    width: 60%;
+  }
+
+  //
+  &-area{
+    --background: #{alpha($black, .5)};
+    --shadow: #{$dark-gray};
+
+    background: var(--background);
+    padding: 25px;
+    margin: 25px 0 0;
+    @include bordered(var(--shadow));
+
+    &_style{
+      &-purple{
+        --background: #{alpha($dark-purple-shadow, .4)};
+        --shadow: #{$light-purple};
+      }
+    }
+  }
+
+  &__stats{
+    &-heading{
+      font-size: 16px;
+      color: $gray;
+      text-shadow: 2px 2px $gray-shadow;
+    }
+    &-separator{
+      display: block;
+      border: none;
+      background: $gray-shadow;
+      margin: 15px 0;
+      height: 5px;
+    }
+  }
+
+  &__header-stats{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 15px;
+
+    line-height: 1.2;
+    list-style: none;
+
+    &__value{
+      --color: #{$gray};
+      --text-shadow: #{$gray-shadow};
+
+      font-family: MinecraftTitle,sans-serif;
+      font-size: 42px;
+      color: var(--color);
+      text-shadow: 6px 6px var(--text-shadow);
+
+      &_style{
+        &-green{
+          --color: #{$green};
+          --text-shadow: #{$green-shadow};
+        }
+        &-gold{
+          --color: #{$gold};
+          --text-shadow: #{$gold-shadow};
+        }
+        &-purple{
+          --color: #{$light-purple};
+          --text-shadow: #{$light-purple-shadow};
+        }
+      }
+    }
+  }
+
+  // Рендер скина в 3D
   &-skin{
-
+    position: absolute;
+    top: 50px;
+    right: 0;
   }
 }

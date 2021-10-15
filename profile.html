@@ -192,9 +192,56 @@
         </div>
     </div>
     <div class="page profile">
-        <div class="wrapper">1
-            123
+        <div class="wrapper">
+            <h1 class="profile-heading">Ваш профиль</h1>
+            <div class="profile-content">
+                <div class="profile-area profile-area_style-purple">
+                    <ul class="profile__header-stats">
+                        <li>
+                            <h3 class="profile__stats-heading">Группа:</h3>
+                            <h4 class="profile__header-stats__value
+                                       profile__header-stats__value_style-purple"
+                            >
+                                DELUXE
+                            </h4>
+                        </li>
+                        <li>
+                            <h3 class="profile__stats-heading">Боевой пропуск:</h3>
+                            <h4 class="profile__header-stats__value
+                                       profile__header-stats__value_style-gold"
+                            >
+                                25 УРОВЕНЬ
+                            </h4>
+                        </li>
+                    </ul>
+                    <hr class="profile__stats-separator">
+                    <h3 class="profile__stats-heading">Позиции в рейтингах:</h3>
+                    <ul class="stats__ratings-list stats__ratings-list_type-compact">
+                        <li>
+                            <h4 class="stats__ratings-rank stats__ratings-rank_type-leading"># 56</h4>
+                            По времени в игре
+                        </li>
+                        <li>
+                            <h4 class="stats__ratings-rank stats__ratings-rank_type-leading"># 122</h4>
+                            По убийствам игроков
+                        </li>
+                        <li>
+                            <h4 class="stats__ratings-rank"># 1 989</h4>
+                            По убийствам мобов
+                        </li>
+                        <li>
+                            <h4 class="stats__ratings-rank"># 3 899</h4>
+                            По балансу коинов
+                        </li>
+                        <li>
+                            <h4 class="stats__ratings-rank"># 5 935</h4>
+                            По балансу рублей
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- Рендер скина в 3D -->
             <canvas class="profile-skin" id="viewSkin3d"></canvas>
         </div>
     </div>
@@ -516,7 +563,7 @@
 <script src="js/skinview3d.bundle.js"></script>
 <script src="js/script.min.js"></script>
 <script>
-    let skinViewer = new skinview3d.SkinViewer({
+    let FXAASkinViewer = new skinview3d.SkinViewer({
         canvas: document.getElementById("viewSkin3d"),
         width: 1100,
         height: 1400,
@@ -524,40 +571,16 @@
     });
 
     // Добавляем анимацию ходьбы
-    let walk = skinViewer.animations.add(skinview3d.WalkingAnimation);
+    let walk = FXAASkinViewer.animations.add(skinview3d.WalkingAnimation);
 
-    // Устанвливаем скорость ходьбы
+    // Устанавливаем скорость ходьбы
     walk.speed = 0.1;
 
-    setTimeout(function(){
-        skinViewer.playerObject.rotation._x = -0.5;
-        skinViewer.playerObject.quaternion._y = -0.2;
+    // Боковой поворот скина на лево
+    setTimeout(() => {
+        FXAASkinViewer.playerObject.rotation._x = -0.5;
+        FXAASkinViewer.playerObject.quaternion._y = -0.2;
     }, 200);
 </script>
-<!--<script>
-    console.log(document.getElementById('viewSkin3d'))
-    let item = document.getElementById('viewSkin3d'),
-        skinViewer = new skinview3d.SkinViewer({
-            domElement: item,
-            width: 512,
-            height: 1024,
-            skinUrl: 'images/skin-lololowka.png',
-            capeUrl: "img/cape.png"
-        });
-    let control = skinview3d.createOrbitControls(skinViewer);
-    control.enableRotate = false;
-    control.enableZoom = false;
-    control.enablePan = false;
-
-    skinViewer.animation = new skinview3d.CompositeAnimation();
-
-    let walk = skinViewer.animation.add(skinview3d.WalkingAnimation);
-
-    setTimeout(function(){
-        walk.paused = true;
-        skinViewer.playerObject.rotation._x = 0.15;
-        skinViewer.playerObject.quaternion._y = 0.1;
-    }, 200);
-</script>-->
 </body>
 </html>
