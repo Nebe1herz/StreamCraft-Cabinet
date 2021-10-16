@@ -94,6 +94,7 @@
       // Активное состояние
       &_checked{
         display: block;
+        animation: inherit;
       }
     }
 
@@ -107,6 +108,15 @@
     &-footer{
       text-align: center;
     }
+  }
+
+  &-search{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    grid-gap: 15px;
+
+    margin: 0 0 20px;
   }
 
   // Рейтинговая таблица
@@ -200,14 +210,4 @@
       }
     }
   }
-
-  //
-
-  //
-
-  //
-
-  //
-
-  //
 }
