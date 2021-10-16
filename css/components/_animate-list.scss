@@ -1,0 +1,27 @@
+.animate-list{
+
+  @keyframes opacity-show{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  & > *{
+    --delay: 0s;
+    animation:
+            opacity-show
+            .3s
+            ease-out
+            var(--delay)
+            both;
+
+    @for $i from 1 to 35 {
+      &:nth-of-type(#{$i}){
+        --delay: #{$i * 35}ms;
+      }
+    }
+  }
+}
