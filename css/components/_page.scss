@@ -30,13 +30,25 @@
   }
 
   // Заголовок h1
-  &__heading{
+  &-heading{
+    --text-shadow-size: 6px;
+
     font-family: MinecraftTitle, sans-serif;
     font-size: 54px;
     color: #fff;
     line-height: 1.5;
-    text-shadow: 6px 6px $white-shadow;
-    text-align: center;
+    text-shadow:
+            var(--text-shadow-size) var(--text-shadow-size) $white-shadow;
+
+    // Модификатор для выравнивания текста по центру
+    &_align-center{
+      text-align: center;
+    }
+
+    // Наследование шрифта у всех дочерних элементов
+    *{
+      font: inherit;
+    }
   }
 
   // Сгруппированный список привилегий
