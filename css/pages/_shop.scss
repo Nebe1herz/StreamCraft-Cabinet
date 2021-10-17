@@ -26,11 +26,13 @@
       // Отображать выпадающий список
       &:hover ~ .shop__filters-dropdown,
       &~ .shop__filters-dropdown:hover{
+        pointer-events: all;
         opacity: 1;
 
         .btn{
           opacity: 1;
           line-height: 1;
+          pointer-events: all;
         }
       }
 
@@ -44,7 +46,7 @@
 
     // Выпадающий список
     &-dropdown{
-      --background: #{$dark-gray-shadow};
+      --background: #{alpha($black, .8)};
 
       position: absolute;
       background: var(--background);
@@ -53,6 +55,7 @@
       top: 100%;
       left: 0;
       opacity: 0;
+      pointer-events: none;
       @include bordered($gray-shadow);
       z-index: 1;
 
@@ -77,6 +80,7 @@
       --border-middle: var(--background);
       --border-bottom: var(--background);
       --text-shadow: transparent;
+      width: 360px;
       border: none;
       outline: none;
       cursor: text;
