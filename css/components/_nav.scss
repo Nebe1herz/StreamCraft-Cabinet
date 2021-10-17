@@ -53,6 +53,47 @@
       pointer-events: none;
     }
 
+    // Иконка с уведомлением у вкладки
+    &__icon-notify{
+      --color: #{$white};
+
+      display: inline-block;
+      background: var(--color);
+      width: 8px;
+      height: 8px;
+      margin: 0 0 0 4px;
+      animation: 1s nav-item__spread-blink infinite;
+      vertical-align: middle;
+
+      // Стилизация с разными цветами
+      &_style{
+        &-green{
+          --color: #{$green};
+        }
+        &-aqua{
+          --color: #{$aqua};
+        }
+        &-gold{
+          --color: #{$gold};
+        }
+        &-yellow{
+          --color: #{$yellow};
+        }
+        &-light-purple{
+          --color: #{$light-purple};
+        }
+      }
+    }
+
+    @keyframes nav-item__spread-blink{
+      0%{
+        box-shadow: 0 0 0 0 var(--color);
+      }
+      100%{
+        box-shadow: 0 0 0 20px transparent;
+      }
+    }
+
     // Модификатор для роли кнопок
     &_role{
       // Кнопки управления "Вперёд" и "Назад"
