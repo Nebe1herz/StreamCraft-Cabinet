@@ -1,0 +1,75 @@
+.auction{
+  // Вступительное описание аукциона
+  &-about{
+    --text-shadow-size: 4px;
+
+    line-height: 32px;
+    font-size: 24px;
+    color: $gray;
+    max-width: 900px;
+    margin: 15px auto;
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) $gray-shadow;
+    text-align: center;
+  }
+
+  // Небольшое меню с разными разделами аукциона
+  &-menu{
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    justify-content: center;
+    grid-gap: 25px;
+
+    margin: 35px 0 0;
+
+    // Элементы меню
+    &__item{
+      background:
+              alpha($black, .5);
+      padding: 60px 15px;
+      line-height: 28px;
+      text-transform: initial;
+      @include bordered(var(--color));
+
+      // Модификатор стилизации цвета
+      &_style{
+        &-green{
+          --color: #{$green};
+          --text-shadow: #{$green-shadow};
+        }
+        &-gold{
+          --color: #{$gold};
+          --text-shadow: #{$gold-shadow};
+        }
+        &-light-purple{
+          --color: #{$light-purple};
+          --text-shadow: #{$light-purple-shadow};
+        }
+      }
+
+      // Заголовок
+      &-heading{
+        font-size: 24px;
+        color: var(--color);
+        text-shadow: 4px 4px var(--text-shadow);
+      }
+
+      // Описание
+      &-about{
+        display: block;
+        font-size: 18px;
+        color: $gray;
+        margin: 10px 0 0;
+        text-shadow: 2px 2px $gray-shadow;
+      }
+
+      // Картинка
+      &-img{
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 30px auto 0;
+        image-rendering: pixelated;
+      }
+    }
+  }
+}

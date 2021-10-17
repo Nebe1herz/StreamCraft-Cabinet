@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     <!-- Site Properities -->
-    <title>SC | Что такое аукционы?</title>
+    <title>SC | Что такое аукцион?</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -118,11 +118,11 @@
                                   nav-item
                                   nav-item_checked
                                   tooltip-trigger"
-                           data-title="<span class=green>Что такое аукционы?</span>"
+                           data-title="<span class=green>Что такое аукцион?</span>"
                            data-row="Навигация по <span class=gold>аукционам</span> и всем-всем его функциям!"
                            data-meta="Кликните, чтобы открыть"
                         >
-                            Что такое аукционы?
+                            Что такое аукцион?
                         </a>
                     </li>
                     <li class="nav-list-item">
@@ -169,9 +169,68 @@
         </div>
     </div>
     <div class="page">
-        <h1 class="page-heading page-heading_align-center">
-            Что такое <span class="text text_style-green">аукцион</span>?
-        </h1>
+        <div class="wrapper">
+            <h1 class="page-heading page-heading_align-center">
+                Что такое <span class="text text_style-green">аукцион</span>?
+            </h1>
+            <p class="auction-about">
+                Здесь можно <span class="text text_style-green">продавать</span> и <span class="text text_style-gold">покупать</span> товары у игроков.
+            </p>
+            <p class="auction-about">
+                Выставляешь предмет <span class="text text_style-green">на продажу</span>, а другие игроки делают
+                <span class="text text_style-gold">ставки</span>
+                <i class="currency currency_coin currency_size-32"></i>.
+                Кто заплатит больше - <span class="text text_style-gold">забирает товар</span>!
+            </p>
+            <div class="auction-menu">
+                <!--Выставить предмет на аукцион-->
+                <a href="#"
+                   class="btn
+                          auction-menu__item
+                          auction-menu__item_style-green
+                          modal-trigger"
+                   data-modal-name="auction-create">
+                    <h2 class="auction-menu__item-heading">
+                        Продать предмет
+                    </h2>
+                    <span class="auction-menu__item-about">
+                        Выстави свой предмет для быстрой продажи!
+                    </span>
+                    <img src="images/icon/shop.png"
+                         class="auction-menu__item-img" alt>
+                </a>
+
+                <!--Посмотреть список аукционов других игроков-->
+                <a href="auction-list.html"
+                   class="btn
+                          auction-menu__item
+                          auction-menu__item_style-light-purple">
+                    <h2 class="auction-menu__item-heading">
+                        Список аукционов
+                    </h2>
+                    <span class="auction-menu__item-about">
+                        Взгляни, что продают другие игроки!
+                    </span>
+                    <img src="images/icon/auction.png"
+                         class="auction-menu__item-img" alt>
+                </a>
+
+                <!--Посмотреть свою историю операций-->
+                <a href="auction-my.html"
+                   class="btn
+                          auction-menu__item
+                          auction-menu__item_style-gold">
+                    <h2 class="auction-menu__item-heading">
+                        Мои ставки
+                    </h2>
+                    <span class="auction-menu__item-about">
+                        Полный список всех ставок и аукционов
+                    </span>
+                    <img src="images/icon/balance-coins.png"
+                         class="auction-menu__item-img" alt>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="sidebar-feed">
         <div class="sidebar-feed__section">
