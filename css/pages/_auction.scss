@@ -72,4 +72,63 @@
       }
     }
   }
+
+  // Контейнер для содержания со списком аукционов, фильтрами и категориями
+  &-content{
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+    grid-gap: 35px;
+
+    margin: 25px 0 0;
+
+    // Категории и фильтры
+    &__categories{
+      background: alpha($black, .3);
+      margin: 0 0 25px;
+      @include bordered($dark-gray);
+      list-style: none;
+
+      li:not(:first-child){
+        margin-top: 5px;
+        box-shadow: 0 -5px $dark-gray;
+      }
+
+      // Элемент категории
+      &-item{
+        --color: #{$gray};
+        --text-shadow: #{$gray-shadow};
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-gap: 15px;
+
+        line-height: 48px;
+        padding: 0 15px;
+        text-transform: initial;
+        text-align: left;
+
+        // Активное состояние
+        &_checked{
+          --color: #{$white};
+          --text-shadow: #{$white-shadow};
+
+          background: alpha($black, .5);
+          @include bordered($white);
+        }
+      }
+
+      // Превью категорий
+      &-img{
+        width: 32px;
+      }
+    }
+
+    // Шапка раздела со списками
+    &__header{
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+    }
+  }
 }
