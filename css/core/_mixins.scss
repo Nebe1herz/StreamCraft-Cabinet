@@ -32,7 +32,6 @@
   --border-top: #{lighten($color, 10)};
   --border-middle: #{darken($color, 8)};
   --border-bottom: #{darken($color, 16)};
-  --shadow: #{alpha($shadow, .3)};
 }
 
 @mixin windowConfig($style){
