@@ -27,5 +27,12 @@
       color: alpha($black, .6);
       text-shadow: none;
     }
+
+    // Модификатор для инвертации плейсхолдера
+    &_placeholder-invert{
+      &::placeholder{
+        color: alpha($white, .6);
+      }
+    }
   }
 }
