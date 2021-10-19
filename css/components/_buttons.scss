@@ -24,8 +24,6 @@
           0 5px var(--border-bottom),
           5px 0 var(--border-middle),
           -5px 0 var(--border-middle),
-          5px 10px var(--shadow),
-          10px 5px var(--shadow),
           0 0 var(--blur) var(--background);
 
   // Настройки текста
@@ -110,6 +108,9 @@
   }
   &_secondary{
     @include btn-var-init($dark-gray);
+  }
+  &_night{
+    @include btn-var-init($gray-shadow);
   }
   &_dark{
     @include btn-var-init($dark-gray-shadow);
