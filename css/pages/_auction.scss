@@ -73,62 +73,91 @@
     }
   }
 
-  // Контейнер для содержания со списком аукционов, фильтрами и категориями
+  // Контейнер для категорий и списка аукционов
   &-content{
     display: grid;
     grid-template-columns: 320px 1fr;
+    grid-template-rows: auto auto 1fr;
     align-items: start;
-    grid-gap: 35px;
+    grid-gap: 25px;
 
     margin: 25px 0 0;
+  }
 
-    // Категории и фильтры
-    &__categories{
+  // Категории и фильтры
+  &-categories{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    // Список категорий
+    &__list{
       background: alpha($black, .3);
       margin: 0 0 25px;
-      @include bordered($dark-gray);
+      @include bordered($gray-shadow);
       list-style: none;
 
+      // Отступы и границы между элементами списка
       li:not(:first-child){
         margin-top: 5px;
-        box-shadow: 0 -5px $dark-gray;
+        box-shadow: 0 -5px $gray-shadow;
+      }
+    }
+
+    // Категория
+    &__item{
+      --color: #{$gray};
+      --text-shadow: #{$gray-shadow};
+
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      grid-gap: 15px;
+
+      line-height: 48px;
+      padding: 0 15px;
+      text-transform: initial;
+      text-align: left;
+
+      // Активная категория
+      &_checked{
+        --color: #{$white};
+        --text-shadow: #{$white-shadow};
+
+        background: alpha($black, .5);
+        @include bordered($white);
       }
 
-      // Элемент категории
-      &-item{
-        --color: #{$gray};
-        --text-shadow: #{$gray-shadow};
-
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
-        grid-gap: 15px;
-
-        line-height: 48px;
-        padding: 0 15px;
-        text-transform: initial;
-        text-align: left;
-
-        // Активное состояние
-        &_checked{
-          --color: #{$white};
-          --text-shadow: #{$white-shadow};
-
-          background: alpha($black, .5);
-          @include bordered($white);
-        }
-      }
-
-      // Превью категорий
+      // Иконка категории
       &-img{
         width: 32px;
       }
     }
+  }
 
-    // Шапка раздела со списками
-    &__header{
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+  //
+  &-filters {
+    grid-template-columns: auto auto 1fr;
+    grid-gap: 0;
+
+    background: alpha($black, .3);
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    @include bordered($gray-shadow);
+
+    .btn-mark{
+      padding: 10px 0;
+    }
+  }
+
+  //
+  &-meta{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    .btn{
+      padding: 0 25px;
+      line-height: 48px;
+      text-transform: initial;
     }
   }
 }

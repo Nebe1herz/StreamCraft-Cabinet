@@ -175,33 +175,39 @@
                 и
                 <span class="text text_style-gold">покупайте</span>
             </h1>
+            <!-- Сетка экрана -->
             <div class="auction-content">
-                <div>
-                    <ul class="auction-content__categories">
+                <!-- Категории -->
+                <div class="auction-categories">
+                    <!-- Все категории -->
+                    <ul class="auction-categories__list">
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/1.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Все категории
                             </a>
                         </li>
+                    </ul>
+                    <!-- Категории Minecraft Vanilla -->
+                    <ul class="auction-categories__list">
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/38.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Оружие и броня
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/36.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Инструменты
                             </a>
                         </li>
@@ -209,109 +215,140 @@
                             <a href="#" class="btn
                                            btn_size-sm
                                            btn_hover-disabled
-                                           auction-content__categories-item
-                                           auction-content__categories-item_checked">
+                                           auction-categories__item
+                                           auction-categories__item_checked">
                                 <img src="images/shop/33.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Ресурсы и материалы
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/3.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Блоки
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/9.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Прочее
                             </a>
                         </li>
                     </ul>
-                    <ul class="auction-content__categories">
+                    <!-- Категории модификаций -->
+                    <ul class="auction-categories__list">
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/21.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Industrial Craft Exp.
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/23.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Gravitation Suite
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/19.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 ComboArmors
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/16.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 ThaumCraft
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/31.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Thaumic Tinkerer
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/30.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Forbidden Magic
                             </a>
                         </li>
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           auction-content__categories-item">
+                                           auction-categories__item">
                                 <img src="images/shop/32.png"
-                                     class="auction-content__categories-img" alt>
+                                     class="auction-categories__item-img" alt>
                                 Thaumic Horizons
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <div class="auction-content__header">
-                        <a href="#" class="btn btn_success btn_size-sm">Продать предмет</a>
-                        <br>
-                        <label class="btn btn_secondary btn_size-sm
-                                 form-control">
-                            <span class="form-control__text">Поиск:</span>
-                            <input class="form-control__input" placeholder="Название предмета">
-                        </label>
+                <div class="auction-filters shop__filters">
+                    <div class="shop__filters-item">
+                        <a href="#" class="btn btn_size-sm">
+                            Категория:
+                            <span class="btn-mark">Показать всё</span>
+                        </a>
+                        <div class="shop__filters-dropdown">
+                            <a href="#" class="btn">Только аукционы</a>
+                            <a href="#" class="btn">Только быстрая покупка</a>
+                        </div>
+                    </div>
+                    <div class="shop__filters-item">
+                        <a href="#" class="btn btn_size-sm">
+                            Сортировка:
+                            <span class="btn-mark">По названию</span>
+                        </a>
+                        <div class="shop__filters-dropdown">
+                            <a href="#" class="btn">По возрастанию ставки</a>
+                            <a href="#" class="btn">По убыванию ставки</a>
+                            <a href="#" class="btn">Скоро закончится</a>
+                            <a href="#" class="btn">По популярности</a>
+                        </div>
                     </div>
                 </div>
+                <div class="auction-meta">
+                    <a href="#" class="btn btn_success btn_size-sm">
+                        Продать предмет
+                    </a>
+                    <br>
+                    <label class="btn btn_size-sm btn_night form-control">
+                        <span class="form-control__text">Поиск:</span>
+                        <input class="form-control__input
+                                          form-control__input_placeholder-invert"
+                               placeholder="Название предмета">
+                    </label>
+                </div>
+                <ul class="auction-list">
+                    <li>
+                        123
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
