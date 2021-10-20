@@ -1,0 +1,74 @@
+.battle-pass{
+
+  //
+  &-content{
+    height: 200px;
+  }
+
+  &__awards{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+
+    width: 100%;
+    padding: 0 0 10px;
+    overflow: scroll hidden;
+
+    // Стилизация скроллбара
+    &::-webkit-scrollbar {
+      width: 15px;
+
+      &-track {
+        background: alpha($black, .5);
+      }
+
+      &-thumb {
+        background: $dark-gray;
+
+        &:hover {
+          background: $white;
+        }
+      }
+    }
+
+
+    // Лента наград
+    &-feed {
+      display: grid;
+      grid-template-columns: repeat(20, min(180px));
+      grid-gap: 25px;
+
+      padding: 15px 25px;
+      list-style: none;
+
+      &_type{
+        &-default{
+          background: alpha($black, .3);
+        }
+        &-premium{
+          background: alpha($gold, .3);
+        }
+      }
+
+      .btn_size-sm{
+        padding: 10px 0;
+        width: 100%;
+      }
+    }
+
+    // Карточка предмета
+    &-card{
+      --shadow: #{$white-shadow};
+
+      display: block;
+      background: alpha($black, .3);
+      height: 100px;
+      width: 100%;
+      @include bordered(var(--shadow));
+
+      // Карточка с премиум-наградой
+      &-premium{
+        --shadow: #{$gold};
+      }
+    }
+  }
+}
