@@ -2,6 +2,7 @@
   --color: #{$white};
   --text-shadow: #{$white-shadow};
 
+  font-family: inherit;
   color: var(--color);
   text-shadow: var(--text-shadow-size) var(--text-shadow-size) var(--text-shadow);
 

@@ -63,6 +63,7 @@
         display: block;
         opacity: 0;
         line-height: 0;
+        white-space: nowrap;
         transition: .15s ease-in-out;
 
         &:hover{
