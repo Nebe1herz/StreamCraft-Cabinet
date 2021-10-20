@@ -7,7 +7,7 @@
   grid-gap: 5px;
 
   position: absolute;
-  background: #{alpha(#000, .6)};
+  background: alpha($black, .6);
   padding: 0 100px 0 0;
   height: 100%;
   width: 100%;
@@ -18,6 +18,24 @@
 
   // Инициализация размытия заднего фона
   @include background-blur-init;
+
+  // Модификатор для экрана с боевым пропуском
+  &_type{
+    &-battle-pass{
+      background:
+              url('../images/gui/battle-pass.png')
+              no-repeat center,
+
+              alpha($black, .8)
+              linear-gradient(
+                              0,
+                              transparent,
+                              alpha($gold, .1)
+              );
+      background-size: 1280px, auto;
+      image-rendering: pixelated;
+    }
+  }
 }
 
 // Контейнер для ограничения по ширине
