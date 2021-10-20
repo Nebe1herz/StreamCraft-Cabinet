@@ -10,13 +10,13 @@
     vertical-align: top;
 
     &_style-gold{
-      --background: #{alpha($gold, .3)};
+      --background: #{alpha($gold, .2)};
     }
   }
 
   //
   &__table{
-    padding: 10px 25px;
+    padding: 5px 35px;
     margin: 0 0 25px;
     list-style: none;
 
@@ -26,9 +26,10 @@
       grid-template-columns: 1fr auto;
       align-items: center;
 
-      min-height: 52px;
-      font-size: 18px;
-      padding: 5px 0;
+      //background: alpha($white, .1);
+      line-height: 24px;
+      font-size: 16px;
+      padding: 8px 0;
       text-align: left;
 
       &:not(:first-child){
@@ -40,16 +41,26 @@
     //
     &__img{
       display: inline-block;
-      margin: -13px 5px -13px 0;
+      width: 40px;
+      margin: 0 5px 0 0;
       vertical-align: top
     }
 
     //
     .btn{
-      margin: 0 -25px 0 0;
+      line-height: 46px;
+      padding: 0 15px;
+      margin: 0 -15px 0 0;
       text-transform: initial;
       white-space: nowrap;
     }
+  }
+
+  //
+  &__note{
+    line-height: 24px;
+    width: 80%;
+    margin: 0 auto 30px;
   }
 
   //
