@@ -1,18 +1,75 @@
 <div class="modal">
     <div class="wrapper wrapper_modal">
-        <div class="modal-area modal-area_windowed buy-item">
-            <!-- Покупка предмета -->
+        <div class="modal-area modal-area_windowed auction-trade">
+            <!-- Аукцион -->
             <div class="modal-area__section">
                 <div class="buy-item__view window">
                     <img src="../images/shop/23.png" alt
                          class="buy-item__view-icon">
                 </div>
                 <h2 class="modal-area__heading buy-item__heading">
-                    <span class="text text_style-aqua">Улучшенный алмазный бур</span>
+                    <span class="text text_style-aqua">Улучшенный алмазный бур</span> - 1 шт.
                 </h2>
-                <p class="buy-item__mod-info buy-item__mod-info_aqua">Industrial Craft 2e</p>
+                <p class="buy-item__mod-info buy-item__mod-info_aqua">Industrial Craft 2</p>
 
-                <a href="#" class="btn btn_success">
+                <ul class="auction-trade__section auction-trade__table">
+                    <li class="auction-trade__table-row">
+                        <span class="text text_style-white">Продавец</span>
+                        <a href="#" class="btn btn_size-md">
+                            <img src="images/heads/head-3.png"
+                                 class="header-list__user-avatar auction-trade__table__img" alt>
+                            Nebelherz
+                            <span class="header-list__user-group">ИГРОК</span>
+                        </a>
+                    </li>
+                    <li class="auction-trade__table-row">
+                        <span class="text text_style-white">Тип</span>
+                        <span class="text text_style-green">Аукцион</span>
+                    </li>
+                    <li class="auction-trade__table-row">
+                        <span class="text text_style-white">Количество ставок</span>
+                        <span class="text text_style-green">7 ставок</span>
+                    </li>
+                    <li class="auction-trade__table-row">
+                        <span class="text text_style-white">Окончание</span>
+                        <span class="text text_style-yellow">12 ч. 30 мин.</span>
+                    </li>
+                </ul>
+
+                <ul class="auction-trade__section
+                            auction-trade__section_style-gold
+                            auction-trade__table"
+                >
+                    <li class="auction-trade__table-row">
+                        <span class="text text_style-white">Наивысшая ставка</span>
+                        <span class="text text_style-gold">
+                            261
+                            <i class="currency currency_coin currency_size-24"></i>
+                        </span>
+                    </li>
+                    <li class="auction-trade__table-row">
+                        <span class="text text_style-white">Покупатель</span>
+                        <a href="#" class="btn btn_size-md">
+                            <img src="images/heads/head-1.png"
+                                 class="header-list__user-avatar auction-trade__table__img" alt>
+                            FiKKyS_
+                            <span class="header-list__user-group">ИГРОК</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="auction-trade__section
+                            auction-trade__form-input
+                            btn
+                            btn_size-md"
+                >
+                    <i class="currency currency_coin currency_offset"></i>
+                    <input class="
+                              form-control__input
+                              form-control__input_placeholder-invert"
+                           placeholder="Введите ставку">
+                </div>
+                <a href="#" class="btn btn_size-md btn_success">
                     Сделать ставку
                 </a>
             </div>
