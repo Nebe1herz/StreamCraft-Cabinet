@@ -2,7 +2,12 @@
 
   //
   &-content{
-    height: 200px;
+    --background: #{alpha($black, .5)};
+
+    background: var(--background);
+    height: 350px;
+    margin: 15px 0 35px;
+    @include bordered(var(--background), 10);
   }
 
   &__awards{
@@ -34,12 +39,19 @@
     // Лента наград
     &-feed {
       display: grid;
-      grid-template-columns: repeat(20, min(180px));
+      grid-template-columns: 320px repeat(20, 180px);
+      align-items: center;
       grid-gap: 25px;
 
+      line-height: 24px;
+      font-size: 16px;
+      color: $gray;
       padding: 15px 25px;
+      text-shadow: 2px 2px $gray-shadow;
+      text-align: center;
       list-style: none;
 
+      //
       &_type{
         &-default{
           background: alpha($black, .3);
@@ -50,24 +62,102 @@
       }
 
       .btn_size-sm{
-        padding: 10px 0;
-        width: 100%;
+        padding: 5px 15px;
       }
+    }
+
+    // Забрать награду
+    &-collect{
+      width: 100%;
     }
 
     // Карточка предмета
     &-card{
       --shadow: #{$white-shadow};
 
-      display: block;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+
       background: alpha($black, .3);
       height: 100px;
       width: 100%;
+      padding: 0;
       @include bordered(var(--shadow));
 
       // Карточка с премиум-наградой
       &-premium{
         --shadow: #{$gold};
+      }
+    }
+
+    //
+    &-grid{
+      --columns: auto;
+      --rows: auto;
+      --font-size: 24px;
+      --img-size: 56px;
+
+      display: grid;
+      grid-template-columns: var(--columns);
+      grid-template-rows: var(--rows);
+      justify-content: center;
+      align-items: center;
+      grid-gap: 10px;
+
+      line-height: 32px;
+      font-size: var(--font-size);
+      list-style: none;
+
+      //
+      &_column{
+        &-2{
+          --columns: auto auto;
+        }
+        &-3{
+          --columns: auto auto auto;
+          --img-size: 48px;
+          --font-size: 20px;
+        }
+      }
+
+      //
+      &_rows{
+        &-2{
+          --rows: auto auto;
+          --font-size: 18px;
+          --img-size: 36px;
+        }
+      }
+
+      //
+      &_scale{
+        --font-size: 36px;
+        --img-size: 96px;
+      }
+
+      //
+      &__item{
+        position: relative;
+        line-height: 1;
+        width: var(--img-size);
+        height: var(--img-size);
+
+        //
+        &-img{
+          display: block;
+          width: 100%;
+          image-rendering: pixelated;
+        }
+
+        //
+        &-count{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: $white;
+          text-shadow: 3px 3px $white-shadow;
+        }
       }
     }
   }
