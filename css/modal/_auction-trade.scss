@@ -9,8 +9,14 @@
     @include bordered(var(--background));
     vertical-align: top;
 
-    &_style-gold{
-      --background: #{alpha($gold, .2)};
+    //
+    &_style{
+      &-gold{
+        --background: #{alpha($gold, .2)};
+      }
+      &-green{
+        --background: #{alpha($green, .2)};
+      }
     }
   }
 
@@ -26,12 +32,12 @@
       grid-template-columns: 1fr auto;
       align-items: center;
 
-      //background: alpha($white, .1);
       line-height: 24px;
       font-size: 16px;
       padding: 8px 0;
       text-align: left;
 
+      //
       &:not(:first-child){
         margin-top: 3px;
         box-shadow: 0 -3px alpha($white, .1);
@@ -45,15 +51,16 @@
       margin: 0 5px 0 0;
       vertical-align: top
     }
+  }
 
-    //
-    .btn{
-      line-height: 46px;
-      padding: 0 15px;
-      margin: 0 -15px 0 0;
-      text-transform: initial;
-      white-space: nowrap;
-    }
+  //
+  &__user{
+    line-height: 46px;
+    padding: 0 15px;
+    margin: 0 -15px!important;
+    text-transform: initial;
+    white-space: nowrap;
+    text-align: left;
   }
 
   //
@@ -69,5 +76,33 @@
     grid-template-columns: auto 200px;
     align-items: center;
     grid-gap: 10px;
+  }
+
+  //
+  &__separator{
+    display: block;
+    font-family: MinecraftTitle,sans-serif;
+    font-size: 48px;
+    color: alpha($white, .1);
+    margin: 30px 0 25px;
+  }
+
+  //
+  &__history{
+    margin: 25px 0 0;
+    list-style: none;
+
+    //
+    &-item{
+      display: grid;
+      grid-template-columns: 50% 1fr auto;
+      align-items: center;
+      grid-gap: 25px;
+
+      line-height: 24px;
+      padding: 0 15px;
+      margin: 15px 0 0;
+      text-align: right;
+    }
   }
 }
