@@ -1,17 +1,19 @@
-// Ключевые модули
+
+  // Ключевые модули //
+
 @import
 // Переменные
 'core/variables',
+// Функции и миксины
+'core/mixins',
 // Подключение шрифтов
 'core/fonts',
-// Миксины и функции
-'core/mixins',
 // Сброс стилей элементов
-'core/reset'
-;
+'core/reset',
 
-// Библиотека компонентов
-@import
+
+  // компоненты //
+
 // Основной родитель
 'components/body',
 // Контейнер для содержимого
@@ -40,11 +42,11 @@
 // Контейнер для страницы
 'components/page',
 // Карточки для платных услуг
-'components/donate'
-;
+'components/donate',
 
-// Страницы
-@import
+
+  // Страницы //
+
 // Главное меню
 'pages/index',
 
@@ -71,11 +73,11 @@
 // Аукцион
 'pages/auction',
 // Боевой пропуск
-'pages/battle-pass'
-;
+'pages/battle-pass',
 
-// Модальные окна
-@import
+
+  // Модальные окнаА //
+
 // Общая стилизация модальных окон
 'modal/modal',
 
@@ -99,10 +101,9 @@
 // Создание аукциона
 'modal/auction-trade',
 // Покупка боевого пропуска
-'modal/battle-pass__buy'
-;
+'modal/battle-pass__buy',
 
-// Плагины
-@import
+
+  // Плагины //
 'vendor/bootstrap.grid.css'
 ;
