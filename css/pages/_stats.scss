@@ -13,9 +13,17 @@
     --background: #{alpha($black, .5)};
 
     background: var(--background);
-    padding: 25px;
+    padding: 35px 25px;
     margin: 35px 10px;
     @include bordered(var(--background), 10);
+
+    // Модификатор стилей
+    &_style{
+      // Без фона
+      &-transparent {
+        --background: transparent;
+      }
+    }
 
     // Заголовок раздела
     &-heading{
@@ -131,6 +139,64 @@
           text-shadow: 3px 3px $white-shadow;
         }
       }
+    }
+  }
+
+  // История покупок донат-групп
+  &-donate{
+    // Список
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 25px;
+
+      margin: 35px 0 0;
+      list-style: none;
+
+      // Карточка с привилегией
+      &-item {
+        --color: #{$gray-shadow};
+        --bordered: var(--color);
+
+        background: alpha($black, .3) no-repeat center;
+        background-size: 96px;
+        line-height: 1.5;
+        padding: 15px 0;
+        @include bordered(var(--bordered), 5);
+        image-rendering: pixelated;
+        text-align: center;
+
+        // Модификаторы со стилизацией под разные цвета
+        &_style{
+          &-gold{
+            --color: #{$gold};
+          }
+          &-light-purple{
+            --color: #{$light-purple};
+            --bordered: #{$light-purple-shadow};
+          }
+          &-blue{
+            --color: #{$blue};
+            --bordered: #{$blue-shadow};
+          }
+          &-green{
+            --color: #{$green};
+            --bordered: #{$green-shadow};
+          }
+          &-none{
+            background-image: url('../images/privilege/unknown.png');
+          }
+        }
+      }
+    }
+
+    // Внутренний заголовок
+    &__heading{
+      font-family: MinecraftTitle,sans-serif;
+      line-height: 1;
+      font-size: 24px;
+      color: var(--color);
+      text-shadow: 3px 3px $black-shadow;
     }
   }
 }
