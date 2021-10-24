@@ -96,9 +96,9 @@
       list-style: none;
 
       // Отступы и границы между элементами списка
-      li:not(:first-child){
-        margin-top: 3px;
-        box-shadow: 0 -3px $gray-shadow;
+      li:not(:last-child){
+        margin-bottom: 5px;
+        box-shadow: 0 5px $gray-shadow;
       }
     }
 
