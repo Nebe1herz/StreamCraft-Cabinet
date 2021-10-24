@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Site Properities -->
+    <title>SC | Список аукционов</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!--<link rel="icon" type="image/png" href="favicon.ico" />-->
+
+    <!-- Scripts -->
+    <!--Здесь пока ничего нет-->
+</head>
+<body class="overlay-checked">
+<div class="overlay">
+    <div class="header">
+        <div class="wrapper">
+            <ul class="header-list">
+                <!-- Кнопка, ведущая на главный экран меню с полной навигацией -->
+                <li>
+                    <a href="index.html"
+                       class="btn
+                              header-list__item"
+                    >
+                        <img src="images/icon/menu.png" alt
+                             class="header-list__item-icon">
+                        В главное меню
+                    </a>
+                </li>
+                <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
+                <li>
+                    <a href="cart.html"
+                       class="btn
+                              header-list__item
+                              header-list__cart"
+                       data-modal-name="modal.coins-exchange"
+                    >
+                        <img src="images/icon/cart.png" alt
+                             class="header-list__item-icon">
+                        Корзина
+                        <span class="header-list__cart--counter">(15)</span>
+                    </a>
+                </li>
+                <!-- Разделитель -->
+                <li></li>
+                <!-- Баланс рублей -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              modal-trigger"
+                       data-modal-name="add-balance"
+                    >
+                        <img src="images/icon/balance-rubles.png" alt
+                             class="header-list__item-icon">
+                        114 рублей
+                    </a>
+                </li>
+                <!-- Баланс коинов -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              modal-trigger"
+                       data-modal-name="coins-exchange"
+                    >
+                        <img src="images/icon/balance-coins.png" alt
+                             class="header-list__item-icon">
+                        3 280 коинов
+                    </a>
+                </li>
+                <!-- Аватар, ник и группа пользователь -->
+                <li>
+                    <a href="profile.html"
+                       class="btn
+                              header-list__item
+                              header-list__user
+                              tooltip-trigger"
+                       data-title="Профиль Nebelherz"
+                       data-row="
+                            Ваша группа:
+                            <span class=gold>Premium</span>
+                            <br>
+                            Боевой пропуск:
+                            <span class=green>5 уровень</span>
+                            "
+                       data-meta="Кликните, чтобы открыть"
+                    >
+                        <img src="images/heads/head-3.png" alt
+                             class="header-list__user-avatar">
+                        <span class="header-list__user-nickname">Nebelherz</span>
+                        <span class="header-list__user-group">ИГРОК</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav">
+                <a href="auction-index.html"
+                   class="btn
+                          nav-item
+                          nav-item_role-control
+                          tooltip-trigger"
+                   data-title="<span class=green>что такое аукцион?</span>"
+                   data-row=""
+                   data-meta="Кликните, чтобы открыть"
+                >
+                    <i class="nav-icon nav-icon_arrow-left"></i>
+                    Q
+                </a>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="auction-index.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="<span class=green>что такое аукцион?</span>"
+                           data-row="Навигация по <span class=gold>аукционам</span> и всем-всем его функциям!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            что такое аукцион?
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="auction-list.html"
+                           class="btn
+                                  nav-item
+                                  nav-item_checked
+                                  tooltip-trigger"
+                           data-title="<span class=gold>Список аукционов</span>"
+                           data-row="<span class=green>Продажа</span> и <span class=green>покупка</span> у других игроков - всё здесь!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Список аукционов
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="auction-my.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Мои ставки"
+                           data-row="Сделанные <span class=gold>ставки</span>, купленные и проданные <span class=gold>предметы</span>"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Мои ставки
+                            <i class="nav-item__icon-notify
+                                      nav-item__icon-notify_style-green"
+                            ></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="auction-my.html"
+                   class="btn
+                          nav-item
+                          nav-item_role-control
+                          tooltip-trigger"
+                   data-title="Мои ставки"
+                   data-row=""
+                   data-meta="Кликните, чтобы открыть"
+                >
+                    E
+                    <i class="nav-icon nav-icon_arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="wrapper">
+            <h1 class="page-heading page-heading_align-center">
+                <span class="text text_style-green">Продавайте</span>
+                и
+                <span class="text text_style-gold">покупайте</span>
+            </h1>
+            <!-- Сетка экрана -->
+            <div class="auction-content">
+                <!-- Категории -->
+                <div class="auction-categories">
+                    <!-- Все категории -->
+                    <ul class="auction-categories__list animate-list">
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/1.png"
+                                     class="auction-categories__item-img" alt>
+                                Все категории
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Категории Minecraft Vanilla -->
+                    <ul class="auction-categories__list animate-list">
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/38.png"
+                                     class="auction-categories__item-img" alt>
+                                Оружие и броня
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/36.png"
+                                     class="auction-categories__item-img" alt>
+                                Инструменты
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           btn_hover-disabled
+                                           auction-categories__item
+                                           auction-categories__item_checked">
+                                <img src="images/shop/33.png"
+                                     class="auction-categories__item-img" alt>
+                                Ресурсы и материалы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/3.png"
+                                     class="auction-categories__item-img" alt>
+                                Блоки
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/9.png"
+                                     class="auction-categories__item-img" alt>
+                                Прочее
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Категории модификаций -->
+                    <ul class="auction-categories__list animate-list">
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/21.png"
+                                     class="auction-categories__item-img" alt>
+                                Industrial Craft Exp.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/23.png"
+                                     class="auction-categories__item-img" alt>
+                                Gravitation Suite
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/19.png"
+                                     class="auction-categories__item-img" alt>
+                                ComboArmors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/16.png"
+                                     class="auction-categories__item-img" alt>
+                                ThaumCraft
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/31.png"
+                                     class="auction-categories__item-img" alt>
+                                Thaumic Tinkerer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/30.png"
+                                     class="auction-categories__item-img" alt>
+                                Forbidden Magic
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn
+                                           btn_size-sm
+                                           auction-categories__item">
+                                <img src="images/shop/32.png"
+                                     class="auction-categories__item-img" alt>
+                                Thaumic Horizons
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="auction-filters shop__filters">
+                    <div class="shop__filters-item">
+                        <a href="#" class="btn btn_size-sm">
+                            Фильтр:
+                            <span class="btn-mark">Показывать всё</span>
+                        </a>
+                        <div class="shop__filters-dropdown">
+                            <a href="#" class="btn">Только аукционы</a>
+                            <a href="#" class="btn">Только быстрая покупка</a>
+                        </div>
+                    </div>
+                    <div class="shop__filters-item">
+                        <a href="#" class="btn btn_size-sm">
+                            Сортировка:
+                            <span class="btn-mark">По названию</span>
+                        </a>
+                        <div class="shop__filters-dropdown">
+                            <a href="#" class="btn">По возрастанию ставки</a>
+                            <a href="#" class="btn">По убыванию ставки</a>
+                            <a href="#" class="btn">Скоро закончится</a>
+                            <a href="#" class="btn">По популярности</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="auction-meta">
+                    <a href="#" class="btn btn_success btn_size-sm">
+                        Продать предмет
+                    </a>
+                    <br>
+                    <label class="btn btn_size-sm btn_night form-control">
+                        <span class="form-control__text">Поиск:</span>
+                        <input class="form-control__input
+                                          form-control__input_placeholder-invert"
+                               placeholder="Название предмета">
+                    </label>
+                </div>
+                <ul class="auction-list animate-list">
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Камень <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>ch1ldren_lmao</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    120
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>35 ч. 59 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    35 ч. 59 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/1.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">120</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Светящийся камень <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gold>Syaonis</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    90
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>34 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade_with-bet"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    34 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/8.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">90</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Паутина <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>Vishinka</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    90
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>2 ч. 57 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    2 ч. 57 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/9.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">700</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Железные ботинки <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    250
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>57 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    57 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/40.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">250</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Зелье регенерации <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    100
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>13 ч. 54 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    13 ч. 54 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/10.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">100</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Улучшенный алмазный бур <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    1 250
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>3 ч. 59 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    3 ч. 59 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/23.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">1 250</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Кусачки <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gold>Syaonis</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    90
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>2 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    2 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/20.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">90</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Нитор <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>Vishinka</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    899
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>3 ч. 21 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    3 ч. 21 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/16.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">899</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Лазуритовая руда <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    440
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>29 ч. 08 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    29 ч. 08 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/5.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">440</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Саженец великого дерева <span class=white>- 16 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>ch1ldren_lmao</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    905
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>45 ч. 57 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    45 ч. 57 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/13.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    16
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">905</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Дуб <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    200
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>5 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    5 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/3.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">200</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Дуб <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    230
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>1 ч. 22 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    1 ч. 22 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/3.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">230</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Куриное яйцо <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gold>Syaonis</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    90
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>44 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    44 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/34.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">90</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Железная кирка <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>Vishinka</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    175
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow> 4 ч. 59 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    4 ч. 59 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/36.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">175</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Стекло <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>ch1ldren_lmao</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    610
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>12 ч. 53 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    12 ч. 53 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/4.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">610</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Стекло <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    503
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>3 ч. 55 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    3 ч. 55 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/4.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">503</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Композитный слиток <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gold>Syaonis</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    3 999
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>25 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    25 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/18.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">3 999</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Нитор <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    1 700
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>24 ч. 55 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    24 ч. 55 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/16.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">1 700</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Жезл <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    7 850
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>7 ч. 35 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    7 ч. 35 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/32.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">7 850</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Паутина <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>Vishinka</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    983
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>5 ч. 03 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    5 ч. 03 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/9.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">983</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Кристалл Края <span class=white>- 36 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    18 900
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>19 ч. 33 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    19 ч. 33 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/31.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    36
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">18 900</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Светящийся камень <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gold>Syaonis</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    133
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>37 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    37 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/8.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">133</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Зеркало <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>Vishinka</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    4 500
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>1 ч. 42 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    1 ч. 42 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/15.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">4 500</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Камень <span class=white>- 64 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>ch1ldren_lmao</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    101
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>32 ч. 41 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    32 ч. 41 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/1.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">101</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Квантовый нагрудник <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    13 900
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>6 ч. 01 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    6 ч. 01 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/21.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">13 900</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Ихор <span class=white>- 3 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>ch1ldren_lmao</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    2 401
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>21 ч. 40 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    21 ч. 40 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/25.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    3
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">2 401</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Книжная полка <span class=white>- 4 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gold>Syaonis</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    700
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>54 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    54 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/7.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    4
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">700</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Амулет <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    350
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=green>27 ч. 11 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-green">
+                                    27 ч. 11 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/30.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count"></span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">350</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Гиперактивный нитор <span class=white>- 16 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=blue>EternalSatyra</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    5 600
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=red>10 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-red">
+                                    10 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/29.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    16
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">5 600</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="btn
+                                  auction-list__item
+                                  tooltip-trigger
+                                  modal-trigger"
+                           data-title="Золотой блок <span class=white>- 1 шт.</span>"
+                           data-row="
+                               <span class=dark-gray>Продавец:</span>
+                               <span class=gray>Vishinka</span>
+                               <br>
+                               <span class=dark-gray>Стоимость:</span>
+                               <span class=gold>
+                                    3 500
+                                    <i class='currency currency_coin currency_size-20'></i>
+                               </span>
+                               <br>
+                               <span class=dark-gray>До окончания:</span>
+                               <span class=yellow>4 ч. 27 мин.</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                           data-modal-name="auction-trade"
+                        >
+                            <div class="auction-list__item-timer">
+                                <span class="text text_style-yellow">
+                                    4 ч. 27 мин.
+                                </span>
+                            </div>
+                            <div class="auction-list__item-preview">
+                                <img src="images/shop/6.png"
+                                     class="auction-list__item-img" alt>
+                                <span class="auction-list__item-count">
+                                    64
+                                </span>
+                            </div>
+                            <div class="auction-list__item-price">
+                                Стоимость:
+                                <br>
+                                <span class="text text_style-gold">3 500</span>
+                                <i class="currency currency_coin currency_size-20"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-feed">
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Уведомлений
+                <span class="sidebar-feed__section-heading__count">17</span>
+            </h3>
+            <div class="sidebar-feed__notice-status
+                        sidebar-feed__notice-status_unread">
+                <div class="sidebar-feed__notice-status__icon">
+                    <span class="sidebar-feed__notice-status__counter">
+                        17
+                    </span>
+                </div>
+            </div>
+            <ul class="sidebar-feed__section-list
+                       sidebar-feed__section-list_hover-hide">
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item">
+                        Не следует, однако забывать, что новая модель позволяет...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 17 июля, 18:44
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-primary">
+                        Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
+                        <span class="sidebar-feed__notice-meta">
+                             Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-warning">
+                        Идейные соображения высшего порядка, а также рамки и место...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-danger">
+                        Требуют от нас анализа позиций, занимаемых участниками в...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 07 июля, 12:54
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-success">
+                        Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 04 июля, 16:33
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-more">
+                        Предыдущие уведомления
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Друзей
+                <span class="sidebar-feed__section-heading__count">256</span>
+            </h3>
+            <ul class="sidebar-feed__section-list">
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">DarthSidi0us</h4>
+                            <p class="sidebar-feed__friend-item__user-status">10 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mine03</h4>
+                            <p class="sidebar-feed__friend-item__user-status">56 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">xxxDark12xxx</h4>
+                            <p class="sidebar-feed__friend-item__user-status">102 блока от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-2.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">QueenOfPeace</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-3.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">IBath</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">noremac09</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">JoyereKnester</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-6.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Evaer_cool12</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-7.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mle4niy_kill_bioy</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-8.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">No4naya_Nyasha</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Azazzzinys</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">KillerMoj</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Likeaboss</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-10.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">vonderlol</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Alexsasha93</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">geraosfrrr</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <!-- Содержание модального окна, динамически подгружаемое через JS -->
+</div>
+<div class="tooltip" style="display: none">
+    <div class="tooltip__content">
+        <h3 class="tooltip__title">Заголовок</h3>
+        <p class="tooltip__row">Описание</p>
+        <p class="tooltip__meta">Модификация</p>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+</body>
+</html>
