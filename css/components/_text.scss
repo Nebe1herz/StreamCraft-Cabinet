@@ -25,5 +25,15 @@
     &-right{
       float: right;
     }
+
+    // Трансформирование текста по-умолчанию
+    &-initial{
+      text-transform: initial;
+    }
+
+    // Запрет переносов текста
+    &-nowrap{
+      white-space: nowrap
+    }
   }
 }
