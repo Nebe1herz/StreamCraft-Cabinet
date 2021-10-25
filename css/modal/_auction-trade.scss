@@ -105,4 +105,58 @@
       text-align: right;
     }
   }
+
+  //
+  &__options{
+    padding: 25px;
+    margin: 35px 0 0;
+
+    &-price{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      padding: 15px 15px 15px 25px;
+      margin: 25px 0;
+    }
+
+    // Заголовок раздела с опциями
+    &-heading{
+      text-align: left;
+    }
+
+    //
+    &-time{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      grid-gap: 15px;
+
+      margin: 25px 0 0;
+      list-style: none;
+
+      .btn{
+        padding: 10px 0;
+        margin: 0;
+        font-size: 18px;
+        text-transform: initial;
+
+        &:not(.btn_success){
+          --background: #{alpha($white, .05)};
+
+          @include bordered(var(--background));
+        }
+      }
+
+      &__input{
+        grid-column-start: 1;
+        grid-column-end: 5;
+
+        .form-control{
+          width: 100%;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
 }

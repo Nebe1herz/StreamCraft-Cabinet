@@ -1,0 +1,156 @@
+<div class="modal">
+    <div class="wrapper wrapper_modal">
+        <div class="modal-area modal-area_windowed auction-trade">
+            <!-- Аукцион - создание лота -->
+            <div class="modal-area__section">
+                <!-- Слот и иконка выбранного предмета -->
+                <div class="buy-item__view window tooltip-trigger"
+                     data-title="<span class=aqua>Нано-сабля</span>"
+                     data-row="
+                     Острота IV
+                     <br>Прочность II
+                     <br>Добыча X
+                     <br><span class=blue>Industrial Craft 2</span>
+                    "
+                >
+                    <img src="../images/shop/19.png" alt
+                         class="buy-item__view-icon">
+                </div>
+                <!-- Название выбранного предмета -->
+                <h2 class="modal-area__heading buy-item__heading">
+                    Выбрано:
+                    <span class="text text_style-aqua">Нано-сабля</span>
+                </h2>
+                <!-- Модификация -->
+                <p class="buy-item__mod-info buy-item__mod-info_aqua">Industrial Craft 2</p>
+
+                <a href="#"
+                   class="btn btn_size-sm btn_primary modal-trigger"
+                   data-modal-name="auction-create_checked"
+                >
+                    Изменить предмет
+                </a>
+                <div class="auction-trade__section auction-trade__options">
+                    <h3 class="auction-trade__options-heading">
+                        <span class="text text_style-green">Длительность продажи</span>
+                        <span class="text text_style-yellow text_style-right tooltip-trigger"
+                              data-row="
+                              Выставить предмет на аукцион можно только на <span class=yellow>ограниченное время</span>.
+                              <hr>
+                              Если другие игроки не успеют купить предмет, то он будет <span class=yellow>снят с продажи</span> по истечению времени.
+                              <hr>
+                              <span class=green>Выбирайте время с умом!</span>
+                              "
+                        >
+                            ПОДСКАЗКА
+                            <span class="text text_style-green">(?)</span>
+                        </span>
+                    </h3>
+                    <ul class="auction-trade__options-time">
+                        <li class="btn btn_size-sm tooltip-trigger"
+                            data-title="<span class=green>4 часа</span>"
+                            data-row="
+                                Комиссия:
+                                <span class=gold>45</span>
+                                <i class='currency currency_coin currency_size-24'></i>
+                                <br>
+                                <span class=blue>Кликните, чтобы выбрать</span>
+                                "
+                        >
+                            4 часа
+                        </li>
+                        <li class="btn btn_size-sm tooltip-trigger"
+                            data-title="<span class=green>12 часов</span>"
+                            data-row="
+                                Комиссия:
+                                <span class=gold>135</span>
+                                <i class='currency currency_coin currency_size-24'></i>
+                                <br>
+                                <span class=blue>Кликните, чтобы выбрать</span>
+                                "
+                        >
+                            12 часов
+                        </li>
+                        <li class="btn btn_size-sm btn_success btn_hover-disabled tooltip-trigger"
+                            data-title="<span class=green>24 часа</span>"
+                            data-row="
+                                Комиссия:
+                                <span class=gold>495</span>
+                                <i class='currency currency_coin currency_size-24'></i>
+                                <br>
+                                <span class=blue>Кликните, чтобы выбрать</span>
+                                "
+                        >
+                            24 часа
+                        </li>
+                        <li class="btn btn_size-sm tooltip-trigger"
+                            data-title="<span class=green>48 часов</span>"
+                            data-row="
+                                Комиссия:
+                                <span class=gold>1 935</span>
+                                <i class='currency currency_coin currency_size-24'></i>
+                                <br>
+                                <span class=blue>Кликните, чтобы выбрать</span>
+                                "
+                        >
+                            48 часов
+                        </li>
+                        <li class="auction-trade__options-time__input">
+                            <label class="btn btn_size-sm form-control">
+                                <span class="form-control__text">Введите другое время:</span>
+                                <input class="form-control__input
+                                          form-control__input_placeholder-invert" placeholder="(часов)">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Введение цены -->
+                <div class="auction-trade__section
+                            auction-trade__section_style-gold
+                            auction-trade__options-price">
+                    <h3 class="auction-trade__options-heading">
+                        <span class="text text_style-gold">Введите цену</span>
+                    </h3>
+                    <div class="auction-trade__section
+                            auction-trade__form-input
+                            btn
+                            btn_size-md">
+                        <i class="currency currency_coin currency_offset"></i>
+                        <input class="
+                              form-control__input
+                              form-control__input_placeholder-invert" placeholder="10 000">
+                    </div>
+                </div>
+                <!-- Создание лота -->
+                <a href="#"
+                   class="btn btn_success modal-trigger tooltip-trigger"
+                   data-title="<span class=green>Выставить на продажу</span>"
+                   data-row="
+                   <span class=dark-gray>Предмет:</span>
+                   <span class=aqua>Нано-сабля</span>
+                   <br>
+                   <span class=dark-gray>Количество:</span>
+                   <span>1 шт.</span>
+                   <br>
+                   <span class=dark-gray>Длительность:</span>
+                   <span>24 часа</span>
+                   <br>
+                   <span class=dark-gray>Цена:</span>
+                   <span class=gold>
+                        300
+                        <i class='currency currency_coin currency_size-24'></i>
+                   </span>
+                   "
+                >
+                    Выставить на продажу
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Кнопка закрытия окна *** справа сверху -->
+    <button
+            class="closing-key tooltip-trigger modal-trigger"
+            data-title="<span class=white>Вернуться назад<span>"
+    >
+    </button>
+</div>
