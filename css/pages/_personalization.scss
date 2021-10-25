@@ -10,6 +10,20 @@
     height: 777px;
   }
 
+  // Область кастомизации персонажа
+  &__character{
+    position: relative;
+
+    &-skin{
+      position: absolute;
+      display: block;
+      top: -20%;
+      right: -75%;
+      width: 100%;
+      image-rendering: pixelated;
+    }
+  }
+
   // Навигация / Голова, тело, питомец, эффекты
   &__nav{
     // Внутренний список
@@ -71,20 +85,6 @@
     }
   }
 
-  // Область кастомизации персонажа
-  &__character{
-    position: relative;
-
-    &-img{
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      image-rendering: pixelated;
-    }
-  }
-
   //
   &-content{
     --background: #{alpha($black, .5)};
@@ -93,9 +93,11 @@
     grid-template-rows: auto 1fr;
     grid-gap: 15px;
 
+    position: relative;
     background: var(--background);
     padding: 0 0 15px;
     @include bordered(var(--background), 15);
+    z-index: 1;
   }
 
   // Окно с галлереей персонализации

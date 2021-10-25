@@ -1090,7 +1090,8 @@
                     </div>
                 </div>
                 <div class="personalization__character">
-                    <img src="images/character.png" class="personalization__character-img" alt>
+                    <!-- Рендер скина в 3D -->
+                    <canvas class="personalization__character-skin" id="viewSkin3d"></canvas>
                 </div>
             </div>
         </div>
@@ -1409,6 +1410,32 @@
         <p class="tooltip__meta">Модификация</p>
     </div>
 </div>
+<script src="js/three.min.js"></script>
+<script src="js/skinview3d.bundle.js"></script>
 <script src="js/script.min.js"></script>
+<script>
+    let FXAASkinViewer = new skinview3d.SkinViewer({
+        canvas: document.getElementById("viewSkin3d"),
+        width: 1200,
+        height: 1600,
+        skin: "images/skin.png"
+    });
+
+    // Добавляем анимацию ходьбы
+    let walk = FXAASkinViewer.animations.add(skinview3d.WalkingAnimation),
+        control = skinview3d.createOrbitControls(FXAASkinViewer);
+    control.enableRotate = true;
+
+    control.enableZoom = false;
+
+    // Устанавливаем скорость ходьбы
+    walk.speed = 0.1;
+
+    // Боковой поворот скина на лево
+    setTimeout(() => {
+        FXAASkinViewer.playerObject.rotation._x = -0.5;
+        FXAASkinViewer.playerObject.quaternion._y = -0.2;
+    }, 200);
+</script>
 </body>
 </html>
