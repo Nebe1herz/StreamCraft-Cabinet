@@ -83,12 +83,23 @@
 
   // Список с данными статистики
   &-list{
+    --background-odd: #{alpha($green, .1)};
+    --background-even: #{alpha($green, .2)};
+    --columns: 1fr auto;
     --font-size: 18px;
     list-style: none;
 
+    // Модификатор типового вида списка
     &_type{
+      // Компактный вид
       &-compact{
         --font-size: 16px;
+      }
+      // Красная стилизация для списка наказний
+      &-danger{
+        --background-odd: #{alpha($red, .1)};
+        --background-even: #{alpha($red, .2)};
+        --columns: 2fr 1fr auto;
       }
     }
 
@@ -98,9 +109,10 @@
       --text-shadow: #{$green-shadow};
 
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: var(--columns);
+      align-items: center;
 
-      background: alpha($green, .075);
+      background: var(--background-odd);
       line-height: 1.6;
       font-size: var(--font-size);
       color: $gray;
@@ -110,7 +122,7 @@
       // Каждая вторая строчка выделяется другим
       // цветом для контрастности
       &:nth-child(even){
-        background: alpha($green, .125);
+        background: var(--background-even);
       }
 
       // Количественные данные в статистике
