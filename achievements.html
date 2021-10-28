@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Site Properities -->
+    <title>SC | Мои достижения</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!--<link rel="icon" type="image/png" href="favicon.ico" />-->
+
+    <!-- Scripts -->
+    <!--Здесь пока ничего нет-->
+</head>
+<body class="overlay-checked">
+<div class="overlay">
+    <div class="header">
+        <div class="wrapper">
+            <ul class="header-list">
+                <!-- Кнопка, ведущая на главный экран меню с полной навигацией -->
+                <li>
+                    <a href="index.html"
+                       class="btn
+                              header-list__item"
+                    >
+                        <img src="images/icon/menu.png" alt
+                             class="header-list__item-icon">
+                        В главное меню
+                    </a>
+                </li>
+                <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
+                <li>
+                    <a href="cart.html"
+                       class="btn
+                              header-list__item
+                              header-list__cart"
+                       data-modal-name="modal.coins-exchange"
+                    >
+                        <img src="images/icon/cart.png" alt
+                             class="header-list__item-icon">
+                        Корзина
+                        <span class="header-list__cart--counter">(15)</span>
+                    </a>
+                </li>
+                <!-- Разделитель -->
+                <li></li>
+                <!-- Баланс рублей -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              modal-trigger"
+                       data-modal-name="add-balance"
+                    >
+                        <img src="images/icon/balance-rubles.png" alt
+                             class="header-list__item-icon">
+                        114 рублей
+                    </a>
+                </li>
+                <!-- Баланс коинов -->
+                <li>
+                    <a href="#"
+                       class="btn
+                              header-list__item
+                              modal-trigger"
+                       data-modal-name="coins-exchange"
+                    >
+                        <img src="images/icon/balance-coins.png" alt
+                             class="header-list__item-icon">
+                        3 280 коинов
+                    </a>
+                </li>
+                <!-- Аватар, ник и группа пользователь -->
+                <li>
+                    <a href="profile.html"
+                       class="btn
+                              header-list__item
+                              header-list__user
+                              tooltip-trigger"
+                       data-title="Профиль Nebelherz"
+                       data-row="
+                           <span class=dark-gray>Привилегия:</span>
+                           <span class=light-purple>DELUXE</span>
+                           <br>
+                           <span class=dark-gray>Боевой пропуск:</span>
+                           <span class=green>5 уровень</span>
+                           "
+                       data-meta="Кликните, чтобы открыть"
+                    >
+                        <img src="images/heads/head-3.png" alt
+                             class="header-list__user-avatar">
+                        <span class="header-list__user-nickname">Nebelherz</span>
+                        <span class="header-list__user-group">ИГРОК</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav">
+                <a href="personalization.html"
+                   class="btn
+                          nav-item
+                          nav-item_role-control
+                          tooltip-trigger"
+                   data-title="
+                   <span class=gray>Назад:</span>
+                   Изменить внешность
+                   "
+                   data-row="<span class=gold>Нажмите <span class=yellow>Q</span> или <span class=yellow>кликните</span> для перехода</span>"
+                >
+                    <i class="nav-icon nav-icon_arrow-left"></i>
+                    Q
+                </a>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="profile.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Мой профиль"
+                           data-row="
+                           <span class=dark-gray>Привилегия:</span>
+                           <span class=light-purple>DELUXE</span>
+                           <br>
+                           <span class=dark-gray>Боевой пропуск:</span>
+                           <span class=green>5 уровень</span>
+                           "
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Мой профиль
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="personalization.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Изменить внешность"
+                           data-row="Добавь изюминки своего персонажу — <span class=white>крылья</span>, <span class=white>шляпы</span>, <span class=white>питомцы</span> и многое другое!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Изменить внешность
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="achievements_legacy.html"
+                           class="btn
+                                  nav-item
+                                  nav-item_checked
+                                  tooltip-trigger"
+                           data-title="<span class=gold>Мои достижения</span>"
+                           data-row="Получено <span class=green>4 из 32</span> достижений"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Достижения
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="stats.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="<span class=green>Игровая статистика</span>"
+                           data-row="Время в игре, поставлено или создано блоков, убийство мобов - <span class=green>всё здесь</span>!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Статистика
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="ratings.html"
+                           class="btn
+                                  nav-item
+                                  tooltip-trigger"
+                           data-title="Рейтинги игроков"
+                           data-row="Глобальная статистика - соревнуйтесь с другими игроками!"
+                           data-meta="Кликните, чтобы открыть"
+                        >
+                            Рейтинги
+                        </a>
+                    </li>
+                </ul>
+                <a href="stats.html"
+                   class="btn
+                          nav-item
+                          nav-item_role-control
+                          tooltip-trigger"
+                   data-title="
+                   <span class=gray>Вперёд:</span>
+                   <span class=green>Игровая статистика</span>
+                   "
+                   data-row="<span class=gold>Нажмите <span class=yellow>E</span> или <span class=yellow>кликните</span> для перехода</span>"
+                >
+                    E
+                    <i class="nav-icon nav-icon_arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page achievements_legacy">
+        <div class="wrapper">
+            <h2 class="achievements_legacy-heading">
+                Мои достижения -
+                <span class="achievements_legacy-heading__counter">4 из 32</span>
+            </h2>
+            <div class="achievements_legacy-filter">
+                Сначала показывать :
+                <a href="#" class="btn btn_success btn_size-sm btn_hover-disabled">Завершенные</a>
+                <a href="#" class="btn btn_size-sm">В процессе</a>
+                <a href="#" class="btn btn_size-sm">Не начаты</a>
+            </div>
+            <ul class="achievements_legacy-list animate-list">
+                <li class="achievements_legacy-list__item
+                               achievements_legacy-list__item_progress-finished
+                               tooltip-trigger"
+                    data-title="Нано-технологии"
+                    data-row="
+                        Создайте 16 квантовых ядер при помощи молекулярного преобразователя материи.
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            16/16
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-16'>
+                            <span class='tooltip__progress-line'
+                                  style='width: 100%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            11 925
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        <hr>
+                        "
+                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
+                >
+                    <img src="images/shop/22.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_finished">
+                            100%
+                            ПОЛУЧЕНО
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item
+                               achievements_legacy-list__item_progress-finished
+                               tooltip-trigger"
+                    data-title="Кротовая нора"
+                    data-row="
+                        Переместитесь на 7 км в обычном мире через Нижний мир
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            7/7
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-7'>
+                            <span class='tooltip__progress-line' style='width: 100%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            129
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        <hr>
+                        "
+                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
+                >
+                    <img src="images/shop/1.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_finished">
+                            100%
+                            ПОЛУЧЕНО
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item
+                               achievements_legacy-list__item_progress-finished
+                               tooltip-trigger"
+                    data-title="Огненные недра"
+                    data-row="
+                        Постройте, зажгите и войдите в портал Нижнего мира
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            1/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line' style='width: 100%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            1 350
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        <hr>
+                        "
+                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
+                >
+                    <img src="images/shop/16.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_finished">
+                            100%
+                            ПОЛУЧЕНО
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item
+                               achievements_legacy-list__item_progress-finished
+                               tooltip-trigger"
+                    data-title="Невозможное возможно"
+                    data-row="
+                        Испытайте все 25 эффектов от зелий на себе
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            25/25
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-25'>
+                            <span class='tooltip__progress-line' style='width: 100%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            500
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        <hr>
+                        "
+                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
+                >
+                    <img src="images/shop/10.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_finished">
+                            100%
+                            ПОЛУЧЕНО
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Горящий тур"
+                    data-row="
+                        Исследуйте все биомы Нижнего мира
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            9/10
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-10'>
+                            <span class='tooltip__progress-line' style='width: 90%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            3 950
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/16.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            90%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 90%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Ладные доспехи"
+                    data-row="
+                        Изучите и создайте полный комплект ихоровой брони
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            4/5
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-5'>
+                            <span class='tooltip__progress-line' style='width: 80%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            150
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/26.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            80%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 80%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Местный зельевар"
+                    data-row="
+                        Сварите все возможные взрывные зелья
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            14/16
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-16'>
+                            <span class='tooltip__progress-line' style='width: 72%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            5 750
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/11.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            72%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 72%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Ты неси меня по лаве"
+                    data-row="
+                        Прокатитесь на лавомерке 10 км, управляя ею с помощью удочки с искаженным грибом
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            6/10
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-10'>
+                            <span class='tooltip__progress-line' style='width: 70%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            40
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/29.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            60%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 70%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Бремя заклинателя"
+                    data-row="
+                        Наберите 25 уровней опыта при помощи пузырьков опыта
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            13/25
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-25'>
+                            <span class='tooltip__progress-line' style='width: 54%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            450
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/33.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            54%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 54%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Тортик - ложь"
+                    data-row="
+                        Найдите 7 спрятанных тортов в верхнем мире
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            3/7
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-7'>
+                            <span class='tooltip__progress-line' style='width: 43%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            77
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/34.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            43%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 43%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Тауматург"
+                    data-row="
+                        Изучите и откройте все 25 возможных видов посохов и жезлов в таумономиконе
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            7/25
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-25'>
+                            <span class='tooltip__progress-line' style='width: 23%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            5 275
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/32.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            23%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 23%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Энергетический поток"
+                    data-row="
+                        Зарядите электрический ранец на 10 миллионов EU
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            1/10
+                        </span>
+                        <span class='tooltip__progress-bar
+                                     tooltip__progress-bar_step-10'>
+                            <span class='tooltip__progress-line' style='width: 10%'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            125
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/17.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status
+                                     achievements_legacy-list__item-status_started">
+                            10%
+                            <span class="achievements_legacy-list__item-status-bar"
+                                  style="--progress: 10%"
+                            ></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Начинающий маг"
+                    data-row="
+                        Отыщите саженец серебряного дерева
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            2 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/14.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="В паучьих сетях"
+                    data-row="
+                        Отыщите рассадник редких пещерных пауков
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            75
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/9.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Доктор для зомби"
+                    data-row="
+                        Ослабьте и исцелите зомби-жителя
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            25 500
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/15.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Путеводный камень"
+                    data-row="
+                        Настройте компас на магнетит
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            15
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/7.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Было ваше - стало наше"
+                    data-row="
+                        Обыщите сундук в развалинах бастиона
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            1 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/30.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Война миров"
+                    data-row="
+                        Заманите гаста в обычный мир, а затем убейте
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            50
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/31.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Саперные работы"
+                    data-row="
+                        Используя кусачки снять 25 проводов
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/25
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            2 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/20.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Уноси ноги!"
+                    data-row="
+                        Пробежать 10 000 блоков
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/10 000
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            75
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/40.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Путешественник"
+                    data-row="
+                        Найти магический леся
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            25 500
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/13.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Обновка!"
+                    data-row="
+                        Скрафтить железную кирку
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            15
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/36.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Золотые яйца!"
+                    data-row="
+                        Развести 25 кур
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/25
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            1 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/34.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Да будет свет!"
+                    data-row="
+                        Добудьте светокамень в Нижнем Мире
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            50
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/8.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Серьёзный аргумент"
+                    data-row="
+                        Создайте улучшенный алмазный бур
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            2 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/23.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Квантовый мир"
+                    data-row="
+                        Получите квантовое ядро из материи
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            75
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/24.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Вечная история"
+                    data-row="
+                        Вскопайте ихоровой киркой 1 миллион блоков
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            25 500
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/27.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Горячая шутчка!"
+                    data-row="
+                        Переплавьте в печи 10 стопок стекла
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/10
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            15
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/4.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Шёлковое касание"
+                    data-row="
+                        Добудьте блок травы с помощью чар
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            1 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/2.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Бронзовый век"
+                    data-row="
+                        Создайте 64 компресионных слитка в компрессоре
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/64
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            50
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/18.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Lapis lazuli"
+                    data-row="
+                        Добудьте лазуритовую руду с максимальной удачей
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            15
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/5.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Без головы"
+                    data-row="
+                        Убейте по монстру каждого вида хотя бы один раз
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/25
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            1 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/35.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Лесоруб от бога"
+                    data-row="
+                        Создайте ихоровый топор
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            50
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/28.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Коррекция зрения"
+                    data-row="
+                        Примените на себе зелье ночного зрения с максимальным эффектом
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            1 000
+                            <i class='currency currency_coin currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/12.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+                <li class="achievements_legacy-list__item tooltip-trigger"
+                    data-title="Амброзия"
+                    data-row="
+                        Изучите ихор в таумономиконе
+                        <hr>
+                        <span class=gold>Прогресс:</span>
+                        <span class=white>
+                            0/1
+                        </span>
+                        <span class='tooltip__progress-bar'>
+                            <span class='tooltip__progress-line'></span>
+                        </span>
+                        <span class=light-purple>Награда:</span>
+                        <span class=white>
+                            50
+                            <i class='currency currency_size-24'></i>
+                        </span>
+                        "
+                >
+                    <img src="images/shop/25.png"
+                         class="achievements_legacy-list__item-img" alt>
+                    <span class="achievements_legacy-list__item-status">
+                            0%
+                            <span class="achievements_legacy-list__item-status-bar"></span>
+                        </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-feed">
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Уведомлений
+                <span class="sidebar-feed__section-heading__count">17</span>
+            </h3>
+            <div class="sidebar-feed__notice-status
+                        sidebar-feed__notice-status_unread">
+                <div class="sidebar-feed__notice-status__icon">
+                    <span class="sidebar-feed__notice-status__counter">
+                        17
+                    </span>
+                </div>
+            </div>
+            <ul class="sidebar-feed__section-list
+                       sidebar-feed__section-list_hover-hide">
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item">
+                        Не следует, однако забывать, что новая модель позволяет...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 17 июля, 18:44
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-primary">
+                        Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
+                        <span class="sidebar-feed__notice-meta">
+                             Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-warning">
+                        Идейные соображения высшего порядка, а также рамки и место...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 13 июля, 23:05
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-danger">
+                        Требуют от нас анализа позиций, занимаемых участниками в...
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 07 июля, 12:54
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-success">
+                        Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
+                        <span class="sidebar-feed__notice-meta">
+                            Получено 04 июля, 16:33
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#"
+                       class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-more">
+                        Предыдущие уведомления
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-feed__section">
+            <h3 class="sidebar-feed__section-heading">
+                Друзей
+                <span class="sidebar-feed__section-heading__count">256</span>
+            </h3>
+            <ul class="sidebar-feed__section-list">
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">DarthSidi0us</h4>
+                            <p class="sidebar-feed__friend-item__user-status">10 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mine03</h4>
+                            <p class="sidebar-feed__friend-item__user-status">56 блоков от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_near">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">xxxDark12xxx</h4>
+                            <p class="sidebar-feed__friend-item__user-status">102 блока от вас</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-2.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">QueenOfPeace</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-3.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">IBath</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item
+                                       sidebar-feed__friend-item_online">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">noremac09</h4>
+                            <p class="sidebar-feed__friend-item__user-status">В сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">JoyereKnester</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-6.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Evaer_cool12</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-7.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Mle4niy_kill_bioy</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-8.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">No4naya_Nyasha</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-9.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Azazzzinys</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-12.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">KillerMoj</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-11.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Likeaboss</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-10.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">vonderlol</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-4.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Alexsasha93</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-feed__section-item">
+                    <a href="#" class="btn
+                                       sidebar-feed__friend-item">
+                        <div class="sidebar-feed__friend-item__avatar">
+                            <img src="images/heads/head-5.png" alt
+                                 class="sidebar-feed__friend-item__avatar-image">
+                        </div>
+                        <div class="sidebar-feed__friend-item__user">
+                            <h4 class="sidebar-feed__friend-item__user-nickname">geraosfrrr</h4>
+                            <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <!-- Содержание модального окна, динамически подгружаемое через JS -->
+</div>
+<div class="tooltip" style="display: none">
+    <div class="tooltip__content">
+        <h3 class="tooltip__title">Заголовок</h3>
+        <p class="tooltip__row">Описание</p>
+        <p class="tooltip__meta">Модификация</p>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+</body>
+</html>
