@@ -1,4 +1,6 @@
 .achievements{
+  padding: 25px 35px 25px 50px;
+
   // Заголовок раздела с достижениями
   &-heading {
     --text-shadow-size: 4px;
@@ -7,23 +9,95 @@
     text-align: center;
   }
 
-  // Карточки с категориями
-  &-stripe{
+  // Контейнер с категориями
+  &__category{
     background:
             url('#{$url}gui/achievements-stripe__top.png')
             repeat-x top left,
-            $dark-red
             url('#{$url}gui/achievements-stripe__bottom.png')
-            repeat-x bottom left;
-    background-size: 500px;
-    padding: 25px 0;
+            repeat-x bottom left,
+            $dark-red
+            linear-gradient(
+                            90deg,
+                            $none 5%,
+                            alpha($gold, 0),
+                            $none 95%
+            )
+            center;
+    background-size: 500px, 500px, 220px;
+    padding: 25px 0 50px;
     margin: 0 0 35px;
     image-rendering: pixelated;
-    box-shadow: 0 0 10px 5px $dark-red-shadow;
-  }
+    @include bordered($dark-red-shadow);
 
-  //
-  &__category{
-    height: 250px;
+    // Список категорий
+    &-list{
+      display: grid;
+      grid-template-columns: repeat(6, 180px);
+      justify-content: center;
+      grid-gap: 25px;
+
+      margin: 25px 0 0;
+      padding: 0 15px;
+      list-style: none;
+
+      // Элемент списка
+      &__item{
+        background: $dark-red-shadow;
+        box-shadow: 0 0 35px 15px $dark-red-shadow;
+      }
+    }
+
+    // Категория
+    &-item{
+      --background: #{alpha($black, .7)};
+
+      padding: 25px;
+      line-height: 1.5;
+      font-size: 16px;
+      height: 100%;
+      width: 100%;
+      @include bordered(var(--background));
+      text-transform: initial;
+
+      // Ионка категории
+      &__icon{
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 15px;
+        image-rendering: pixelated;
+      }
+
+      // Название категорий
+      &__title{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      // Индикатор прогресса
+      &__progress{
+        --progress: 0%;
+
+        display: block;
+        background:
+                $dark-gray-shadow
+                linear-gradient(
+                                90deg,
+                                $gold var(--progress),
+                                transparent var(--progress)
+                );
+        height: 10px;
+        margin: 5px 0;
+
+        &_style{
+          &-33{
+            --progress: 33%;
+          }
+        }
+      }
+    }
   }
 }
