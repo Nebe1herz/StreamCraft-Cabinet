@@ -12,90 +12,117 @@
   // Контейнер с категориями
   &__category{
     background:
+            // Левыый контур
+            url('#{$url}gui/achievements-stripe__left.png')
+            repeat-y bottom left,
+            // Правый контур
+            url('#{$url}gui/achievements-stripe__right.png')
+            repeat-y center right,
+            // Верхний контур
             url('#{$url}gui/achievements-stripe__top.png')
             repeat-x top left,
-            url('#{$url}gui/achievements-stripe__bottom.png')
-            repeat-x bottom left,
+            // Цвет фона
             $dark-red
-            linear-gradient(
-                            90deg,
-                            $none 5%,
-                            alpha($gold, 0),
-                            $none 95%
-            )
-            center;
-    background-size: 500px, 500px, 220px;
-    padding: 25px 0 50px;
+            // Нижний контур
+            url('#{$url}gui/achievements-stripe__bottom.png')
+            repeat-x bottom right;
+    background-size: 25px, 25px, 500px, 500px;
+    padding: 65px 25px;
     margin: 0 0 35px;
     image-rendering: pixelated;
-    @include bordered($dark-red-shadow);
+    @include bordered(
+                    $dark-red-shadow,
+                    5,
+                    #{inset 0 0 0 10px $dark-red-shadow}
+    );
 
     // Список категорий
     &-list{
       display: grid;
       grid-template-columns: repeat(6, 180px);
       justify-content: center;
-      grid-gap: 25px;
+      grid-gap: 35px;
 
-      margin: 25px 0 0;
+      //margin: 25px 0 0;
       padding: 0 15px;
       list-style: none;
 
       // Элемент списка
       &__item{
         background: $dark-red-shadow;
-        box-shadow: 0 0 35px 15px $dark-red-shadow;
+        box-shadow: 0 0 15px 15px $dark-red-shadow;
       }
     }
 
-    // Категория
+    // Карточка категории
     &-item{
-      --background: #{alpha($black, .7)};
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 96px 34px;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 20px;
 
-      padding: 25px;
-      line-height: 1.5;
+      background: $black;
+      line-height: 20px;
       font-size: 16px;
-      height: 100%;
       width: 100%;
-      @include bordered(var(--background));
-      text-transform: initial;
+      height: 100%;
+      padding: 20px;
+      @include bordered($black);
 
-      // Ионка категории
-      &__icon{
-        width: 96px;
-        height: 96px;
-        margin: 0 auto 15px;
-        image-rendering: pixelated;
+      // Состояние активной
+      &_checked{
+        background: $white;
+        color: $dark-gray;
+        @include bordered($white);
+        pointer-events: none;
+        text-shadow: 0 0;
       }
 
-      // Название категорий
-      &__title{
-        display: block;
-        width: 100%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+      // Наследование шрифта
+      *{
+        font-family: MinecraftTitle,sans-serif;
       }
+    }
 
-      // Индикатор прогресса
-      &__progress{
-        --progress: 0%;
+    // Ионка категории
+    &-icon{
+      width: 96px;
+      height: 96px;
+      margin: 0 auto;
+      image-rendering: pixelated;
+    }
+    // Индикатор прогресса
+    &-progress{
+      --value: 0%;
+      --style: #{$gold};
 
-        display: block;
-        background:
-                $dark-gray-shadow
-                linear-gradient(
-                                90deg,
-                                $gold var(--progress),
-                                transparent var(--progress)
-                );
-        height: 10px;
-        margin: 5px 0;
+      display: block;
+      background:
+              $dark-gray-shadow
+              linear-gradient(
+                              90deg,
+                              var(--style) var(--value),
+                              transparent var(--value)
+              );
+      height: 6px;
+      margin: 0 0 8px;
+      box-shadow: 0 0 0 4px $dark-gray-shadow;
 
-        &_style{
-          &-33{
-            --progress: 33%;
-          }
+      &_style{
+        &-10{
+          --value: 10%;
+        }
+        &-35{
+          --value: 35%;
+        }
+        &-75{
+          --value: 75%;
+        }
+        &-100{
+          --value: 100%;
+          --style: #{$green};
         }
       }
     }
