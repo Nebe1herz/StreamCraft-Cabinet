@@ -8,9 +8,10 @@
   @return transparentize($color, 1 - $value);
 }
 
-// Для тултипа
-@mixin bordered($color, $width: 5){
+// Выступающая рамка по краям
+@mixin bordered($color, $width: 5, $custom: 0 0){
   box-shadow:
+          $custom,
           0 (-$width)+px $color,
           0 $width+px $color,
           (-$width)+px 0 $color,
