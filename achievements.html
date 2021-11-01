@@ -204,7 +204,11 @@
             <!--<h2 class="achievements-heading text text_style-white">
                 Категории
             </h2>-->
-            <ul class="achievements__category-list">
+            <ul id="trigger-list"
+                class="achievements__category-list trigger-list"
+                data-trigger="achievements__category-item"
+                data-trigger-reload="achievements_legacy-list"
+            >
                 <li class="achievements__category-list__item">
                     <a href="#" class="btn achievements__category-item">
                         <span>Minecraft</span>
@@ -282,7 +286,6 @@
             </ul>
         </div>
         <div class="wrapper">
-
             <ul class="achievements_legacy-list animate-list">
                 <li class="achievements_legacy-list__item
                                achievements_legacy-list__item_progress-finished
