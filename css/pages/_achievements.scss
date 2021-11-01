@@ -83,6 +83,7 @@
       // Наследование шрифта
       *{
         font-family: MinecraftTitle,sans-serif;
+        pointer-events: none!important;
       }
     }
 
