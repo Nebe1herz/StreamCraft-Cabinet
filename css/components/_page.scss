@@ -2,6 +2,7 @@
   --gradient: #{alpha($gray, .1)};
 
   display: grid;
+  grid-template-columns: 100%;
   align-items: center;
 
   padding: 25px 0;
