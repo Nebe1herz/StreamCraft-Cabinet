@@ -1,5 +1,6 @@
 // Основной родитель
 body{
+  --image: #{url('../images/game/1.png')};
   --text-shadow-size: 2px;
 
   position: relative;
@@ -13,7 +14,11 @@ body{
     content: '';
     display: block;
     position: absolute;
-    background: url('#{$url}/game/1.png') no-repeat center bottom;
+    background:
+            $dark-gray-shadow
+            var(--image)
+            no-repeat
+            center bottom;
     background-size: cover;
     left: 0;
     top: 0;
@@ -22,7 +27,7 @@ body{
     z-index: 0;
   }
 
-  // Стиль, открывающий (инициилизирующий) #overlay
+  // Стиль, открывающий (инициализирующий) #overlay
   &.overlay-checked{
     .overlay{
       opacity: 1;
@@ -48,7 +53,7 @@ body{
     }
   }
 
-  // Костыль для игнорирования JS'ом тултипов
+  // Костыль для игнорирования JS'ом всплывающих подсказок
   &:not(.overlay-checked){
     .tooltip-trigger{
       pointer-events: none;
