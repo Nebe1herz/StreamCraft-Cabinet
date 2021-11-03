@@ -151,7 +151,7 @@
                                   nav-item_checked
                                   tooltip-trigger"
                            data-title="<span class=gold>Мои достижения</span>"
-                           data-row="Получено <span class=green>4 из 32</span> достижений"
+                           data-row="Открыто <span class=green>4 из 32</span> достижений"
                            data-meta="Кликните, чтобы открыть"
                         >
                             Достижения
@@ -208,16 +208,34 @@
             </h2>-->
             <ul class="achievements__category-list list-trigger"
                 data-trigger="achievements__category-item"
-                data-trigger-reload="achievements_legacy-list"
+                data-trigger-reload="achievements-list"
             >
                 <li class="achievements__category-list__item">
-                    <div class="achievements__category-stats">
+                    <div class="achievements__category-stats
+                              tooltip-trigger"
+                         data-title="<span class=gold>Общий прогресс</span>"
+                         data-row="
+                                <span class=dark-gray>Всего:</span>
+                                <span class=gold>1 678 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>453 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gold>27%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 27%'>
+                                    </span>
+                                </span>
+                        "
+                    >
                         <span class="text text_style-white">Общий прогресс</span>
                         <div class="achievements__category-stats__progress">
                             <span class="text text_style-gold">27%</span>
                         </div>
                         <span class="text text_style-gray">
-                            открыто
+                            Открыто
                             <br>
                             <span class="text text_style-gold">453 из 1 678</span>
                         </span>
@@ -228,7 +246,25 @@
                        class="btn
                               achievements__category-item
                               achievements__category-item_premium
-                    ">
+                              tooltip-trigger"
+                       data-title="<span class=gold>Боевой пропуск</span>"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>165 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=gray>0 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gray>0%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 0%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Боевой пропуск</span>
                         <img src="images/shop/0.png"
                              class="achievements__category-icon" alt>
@@ -239,7 +275,26 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#" class="btn achievements__category-item
+                              tooltip-trigger"
+                       data-title="Minecraft"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>83 достижения</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>27 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gold>35%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 35%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Minecraft</span>
                         <img src="images/shop/3.png"
                              class="achievements__category-icon" alt>
@@ -251,7 +306,27 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#"
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="Vanilla Plus"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>47 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>47 достижений</span>
+                                <hr>
+                                <span class=green>Все достижения получены</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 100%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Vanilla Plus</span>
                         <img src="images/shop/8.png"
                              class="achievements__category-icon" alt>
@@ -266,7 +341,25 @@
                     <a href="#"
                        class="btn
                               achievements__category-item
-                              achievements__category-item_checked"
+                              achievements__category-item_checked
+                              tooltip-trigger"
+                       data-title="Industrial Craft 2 Exp."
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>35 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>5 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gold>14%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 14%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
                     >
                         <span>Industrial Craft 2 Exp.</span>
                         <img src="images/shop/21.png"
@@ -279,7 +372,28 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#"
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="GravitationSuite"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>12 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=gray>0 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gray>0%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 0%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Gravitation Suite</span>
                         <img src="images/shop/23.png"
                              class="achievements__category-icon" alt>
@@ -291,7 +405,27 @@
                 </li>
                 <li class="achievements__category-list__item">
                     <a href="#"
-                       class="btn achievements__category-item">
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="ThaumCraft"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>61 достижение</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>45 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gold>76%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 76%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>ThaumCraft</span>
                         <img src="images/shop/15.png"
                              class="achievements__category-icon" alt>
@@ -303,7 +437,28 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#"
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="ThaumicTinkerer"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>75 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=gray>0 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gray>0%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 0%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Thaumic Tinkerer</span>
                         <img src="images/shop/29.png"
                              class="achievements__category-icon" alt>
@@ -314,7 +469,28 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#"
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="Thermal Expansion"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>133 достижения</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>104 достижения</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gold>74%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 76%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Thermal Expansion</span>
                         <img src="images/shop/33.png"
                              class="achievements__category-icon" alt>
@@ -326,7 +502,27 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#"
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="Modular Powersuits"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>271 достижение</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>271 достижение</span>
+                                <hr>
+                                <span class=green>Все достижения получены</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 100%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Modular Powersuits</span>
                         <img src="images/shop/24.png"
                              class="achievements__category-icon" alt>
@@ -338,7 +534,28 @@
                     </a>
                 </li>
                 <li class="achievements__category-list__item">
-                    <a href="#" class="btn achievements__category-item">
+                    <a href="#"
+                       class="btn
+                              achievements__category-item
+                              tooltip-trigger"
+                       data-title="Forbidden Magic"
+                       data-row="
+                                <span class=dark-gray>В категории:</span>
+                                <span class=gold>68 достижений</span>
+                                <br>
+                                <span class=dark-gray>Открыто:</span>
+                                <span class=green>17 достижений</span>
+                                <hr>
+                                <span class=dark-gray>Общий прогресс:</span>
+                                <span class=gold>10%</span>
+                                <span class='tooltip__progress-bar'>
+                                    <span class='tooltip__progress-line'
+                                          style='width: 10%'>
+                                    </span>
+                                </span>
+                        "
+                       data-meta="Кликните для выбора"
+                    >
                         <span>Forbidden Magic</span>
                         <img src="images/shop/31.png"
                              class="achievements__category-icon" alt>
@@ -352,12 +569,17 @@
             </ul>
         </div>
         <div class="wrapper">
-            <ul class="achievements_legacy-list animate-list">
-                <li class="achievements_legacy-list__item
-                               achievements_legacy-list__item_progress-finished
-                               tooltip-trigger"
-                    data-title="Нано-технологии"
-                    data-row="
+            <ul class="achievements-list animate-list">
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              achievements-list__item_finished
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                       data-title="Нано-технологии"
+                       data-row="
                         Создайте 16 квантовых ядер при помощи молекулярного преобразователя материи.
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -376,21 +598,33 @@
                         </span>
                         <hr>
                         "
-                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
-                >
-                    <img src="images/shop/22.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_finished">
-                        100%
-                        ПОЛУЧЕНО
-                    </span>
+                       data-meta="<span class=green>ДОСТИЖЕНИЕ ОТКРЫТО</span>"
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/22.png"
+                             class="achievements-list__item-img"
+                             alt
+                        >
+                        <span class="text text_style-white">
+                            Нано-технологии
+                            <span class="text text_style-aqua">(4/4)</span>
+                        </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 100%"
+                        ></div>
+                        <span class="text text_style-green">Завершено</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item
-                               achievements_legacy-list__item_progress-finished
-                               tooltip-trigger"
-                    data-title="Кротовая нора"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              achievements-list__item_finished
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                       data-title="Кротовая нора"
+                       data-row="
                         Переместитесь на 7 км в обычном мире через Нижний мир
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -408,21 +642,33 @@
                         </span>
                         <hr>
                         "
-                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
-                >
-                    <img src="images/shop/1.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_finished">
-                            100%
-                            ПОЛУЧЕНО
+                       data-meta="<span class=green>ДОСТИЖЕНИЕ ОТКРЫТО</span>"
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/1.png"
+                             class="achievements-list__item-img"
+                             alt
+                        >
+                        <span class="text text_style-white">
+                            Кротовая нора
+                            <span class="text text_style-aqua">(4/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 100%"
+                        ></div>
+                        <span class="text text_style-green">Завершено</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item
-                               achievements_legacy-list__item_progress-finished
-                               tooltip-trigger"
-                    data-title="Огненные недра"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              achievements-list__item_finished
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                       data-title="Огненные недра"
+                       data-row="
                         Постройте, зажгите и войдите в портал Нижнего мира
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -439,21 +685,33 @@
                         </span>
                         <hr>
                         "
-                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
-                >
-                    <img src="images/shop/16.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_finished">
-                            100%
-                            ПОЛУЧЕНО
+                       data-meta="<span class=green>ДОСТИЖЕНИЕ ОТКРЫТО</span>"
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/16.png"
+                             class="achievements-list__item-img"
+                             alt
+                        >
+                        <span class="text text_style-white">
+                            Огненные недра
+                            <span class="text text_style-aqua">(4/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 100%"
+                        ></div>
+                        <span class="text text_style-green">Завершено</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item
-                               achievements_legacy-list__item_progress-finished
-                               tooltip-trigger"
-                    data-title="Невозможное возможно"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              achievements-list__item_finished
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                       data-title="Невозможное возможно"
+                       data-row="
                         Испытайте все 25 эффектов от зелий на себе
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -471,19 +729,32 @@
                         </span>
                         <hr>
                         "
-                    data-meta="<span class=green>ДОСТИЖЕНИЕ ПОЛУЧЕНО</span>"
-                >
-                    <img src="images/shop/10.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_finished">
-                            100%
-                            ПОЛУЧЕНО
+                       data-meta="<span class=green>ДОСТИЖЕНИЕ ОТКРЫТО</span>"
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/10.png"
+                             class="achievements-list__item-img"
+                             alt
+                        >
+                        <span class="text text_style-white">
+                            Невозможное возможно
+                            <span class="text text_style-aqua">(4/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 100%"
+                        ></div>
+                        <span class="text text_style-green">Завершено</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Горящий тур"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                       data-title="Горящий тур"
+                       data-row="
                         Исследуйте все биомы Нижнего мира
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -500,20 +771,31 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/16.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            90%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 90%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/16.png"
+                             class="achievements-list__item-img"
+                             alt
+                        >
+                        <span class="text text_style-gray">
+                            Горящий тур
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                              style="--progress: 90%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 90%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Ладные доспехи"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Ладные доспехи"
+                        data-row="
                         Изучите и создайте полный комплект ихоровой брони
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -530,20 +812,29 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/26.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            80%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 80%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/26.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Ладные доспехи
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 80%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 80%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Местный зельевар"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Местный зельевар"
+                        data-row="
                         Сварите все возможные взрывные зелья
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -560,20 +851,29 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/11.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            72%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 72%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/11.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Местный зельевар
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 72%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 72%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Ты неси меня по лаве"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Ты неси меня по лаве"
+                        data-row="
                         Прокатитесь на лавомерке 10 км, управляя ею с помощью удочки с искаженным грибом
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -590,20 +890,29 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/29.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            60%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 70%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/29.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Ты неси меня по лаве
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 70%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 70%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Бремя заклинателя"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Бремя заклинателя"
+                        data-row="
                         Наберите 25 уровней опыта при помощи пузырьков опыта
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -620,20 +929,29 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/33.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            54%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 54%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/33.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Бремя заклинателя
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 54%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 54%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Тортик - ложь"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Тортик - ложь"
+                        data-row="
                         Найдите 7 спрятанных тортов в верхнем мире
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -650,20 +968,29 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/34.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            43%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 43%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/34.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Тортик - ложь
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 43%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 43%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Тауматург"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Тауматург"
+                        data-row="
                         Изучите и откройте все 25 возможных видов посохов и жезлов в таумономиконе
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -680,20 +1007,29 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/32.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            23%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 23%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/32.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Тауматург
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 23%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 23%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Энергетический поток"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Энергетический поток"
+                        data-row="
                         Зарядите электрический ранец на 10 миллионов EU
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -710,20 +1046,29 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/17.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status
-                                     achievements_legacy-list__item-status_started">
-                            10%
-                            <span class="achievements_legacy-list__item-status-bar"
-                                  style="--progress: 10%"
-                            ></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/17.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Энергетический поток
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"
+                             style="--progress: 10%"
+                        ></div>
+                        <span class="text text_style-gold">Прогресс 10%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Начинающий маг"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Начинающий маг"
+                        data-row="
                         Отыщите саженец серебряного дерева
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -739,17 +1084,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/14.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/14.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Начинающий маг
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="В паучьих сетях"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="В паучьих сетях"
+                        data-row="
                         Отыщите рассадник редких пещерных пауков
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -765,17 +1120,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/9.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/9.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            В паучьих сетях
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Доктор для зомби"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Доктор для зомби"
+                        data-row="
                         Ослабьте и исцелите зомби-жителя
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -791,17 +1156,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/15.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/15.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Доктор для зомби
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Путеводный камень"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Путеводный камень"
+                        data-row="
                         Настройте компас на магнетит
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -817,17 +1192,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/7.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/7.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Путеводный камень
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Было ваше - стало наше"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Было ваше - стало наше"
+                        data-row="
                         Обыщите сундук в развалинах бастиона
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -843,17 +1228,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/30.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/30.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Было ваше - стало наше
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Война миров"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Война миров"
+                        data-row="
                         Заманите гаста в обычный мир, а затем убейте
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -869,17 +1264,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/31.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/31.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Война миров
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Саперные работы"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Саперные работы"
+                        data-row="
                         Используя кусачки снять 25 проводов
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -895,17 +1300,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/20.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/20.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Саперные работы
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Уноси ноги!"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Уноси ноги!"
+                        data-row="
                         Пробежать 10 000 блоков
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -921,17 +1336,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/40.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/40.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Уноси ноги!
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Путешественник"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Путешественник"
+                        data-row="
                         Найти магический леся
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -947,17 +1372,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/13.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/13.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Путешественник
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Обновка!"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Обновка!"
+                        data-row="
                         Скрафтить железную кирку
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -973,17 +1408,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/36.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/36.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Обновка!
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Золотые яйца!"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Золотые яйца!"
+                        data-row="
                         Развести 25 кур
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -999,17 +1444,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/34.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/34.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Золотые яйца!
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Да будет свет!"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Да будет свет!"
+                        data-row="
                         Добудьте светокамень в Нижнем Мире
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1025,17 +1480,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/8.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/8.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Да будет свет!
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Серьёзный аргумент"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Серьёзный аргумент"
+                        data-row="
                         Создайте улучшенный алмазный бур
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1051,17 +1516,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/23.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/23.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Серьёзный аргумент
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Квантовый мир"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Квантовый мир"
+                        data-row="
                         Получите квантовое ядро из материи
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1077,17 +1552,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/24.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/24.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Квантовый мир
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Вечная история"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Вечная история"
+                        data-row="
                         Вскопайте ихоровой киркой 1 миллион блоков
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1103,17 +1588,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/27.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/27.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Вечная история
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Горячая шутчка!"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Горячая шутчка!"
+                        data-row="
                         Переплавьте в печи 10 стопок стекла
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1129,17 +1624,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/4.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/4.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Горячая шутчка!
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Шёлковое касание"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Шёлковое касание"
+                        data-row="
                         Добудьте блок травы с помощью чар
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1155,17 +1660,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/2.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/2.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Шёлковое касание
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Бронзовый век"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Бронзовый век"
+                        data-row="
                         Создайте 64 компресионных слитка в компрессоре
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1181,17 +1696,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/18.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/18.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Бронзовый век
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Lapis lazuli"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Lapis lazuli"
+                        data-row="
                         Добудьте лазуритовую руду с максимальной удачей
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1207,17 +1732,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/5.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/5.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Lapis lazuli
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Без головы"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Без головы"
+                        data-row="
                         Убейте по монстру каждого вида хотя бы один раз
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1233,17 +1768,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/35.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/35.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Без головы
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Лесоруб от бога"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Лесоруб от бога"
+                        data-row="
                         Создайте ихоровый топор
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1259,17 +1804,27 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/28.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/28.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Лесоруб от бога
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Коррекция зрения"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Коррекция зрения"
+                        data-row="
                         Примените на себе зелье ночного зрения с максимальным эффектом
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1285,17 +1840,27 @@
                             <i class='currency currency_coin currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/12.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/12.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Коррекция зрения
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
-                <li class="achievements_legacy-list__item tooltip-trigger"
-                    data-title="Амброзия"
-                    data-row="
+                <li>
+                    <a href="#"
+                       class="btn
+                              achievements-list__item
+                              tooltip-trigger
+                              modal-trigger
+                       "
+                        data-title="Амброзия"
+                        data-row="
                         Изучите ихор в таумономиконе
                         <hr>
                         <span class=gold>Прогресс:</span>
@@ -1311,13 +1876,17 @@
                             <i class='currency currency_size-24'></i>
                         </span>
                         "
-                >
-                    <img src="images/shop/25.png"
-                         class="achievements_legacy-list__item-img" alt>
-                    <span class="achievements_legacy-list__item-status">
-                            0%
-                            <span class="achievements_legacy-list__item-status-bar"></span>
+                       data-modal-name="buy-item"
+                    >
+                        <img src="images/shop/25.png"
+                             class="achievements-list__item-img" alt>
+                        <span class="text text_style-gray">
+                            Амброзия
+                            <span class="text text_style-aqua">(1/4)</span>
                         </span>
+                        <div class="achievements-list__item-progress"></div>
+                        <span class="text text_style-dark-gray">Прогресс 0%</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -1344,7 +1913,7 @@
                               sidebar-feed__notice-item">
                         Не следует, однако забывать, что новая модель позволяет...
                         <span class="sidebar-feed__notice-meta">
-                            Получено 17 июля, 18:44
+                            Открыто 17 июля, 18:44
                         </span>
                     </a>
                 </li>
@@ -1355,7 +1924,7 @@
                               sidebar-feed__notice-item_role-primary">
                         Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
                         <span class="sidebar-feed__notice-meta">
-                             Получено 13 июля, 23:05
+                             Открыто 13 июля, 23:05
                         </span>
                     </a>
                 </li>
@@ -1366,7 +1935,7 @@
                               sidebar-feed__notice-item_role-warning">
                         Идейные соображения высшего порядка, а также рамки и место...
                         <span class="sidebar-feed__notice-meta">
-                            Получено 13 июля, 23:05
+                            Открыто 13 июля, 23:05
                         </span>
                     </a>
                 </li>
@@ -1377,7 +1946,7 @@
                               sidebar-feed__notice-item_role-danger">
                         Требуют от нас анализа позиций, занимаемых участниками в...
                         <span class="sidebar-feed__notice-meta">
-                            Получено 07 июля, 12:54
+                            Открыто 07 июля, 12:54
                         </span>
                     </a>
                 </li>
@@ -1388,7 +1957,7 @@
                               sidebar-feed__notice-item_role-success">
                         Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
                         <span class="sidebar-feed__notice-meta">
-                            Получено 04 июля, 16:33
+                            Открыто 04 июля, 16:33
                         </span>
                     </a>
                 </li>
