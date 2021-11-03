@@ -1,26 +1,57 @@
 const
-    triggerScroll = document.getElementsByClassName('scroll-trigger')[0],
-    triggerScrollArea = document.querySelectorAll(triggerScroll.dataset.area)[0],
+    // Контейнер основной страницы, где функционирует вертикальная прокрутка
     page = document.getElementsByClassName('page')[0];
 
-triggerScroll.onmouseenter = (e) =>{
-    page.style.cssText =
-        'padding-right: 51px;' +
-        'overflow: hidden;'
-    ;
-}
-triggerScroll.onmouseleave = (e) =>{
-    page.style.cssText = '';
-}
+let
+    // Глобальная переменная с СЕЛЕКТОРОМ элемента, который необходимо прокручивать
+    // Объявляется здесь, а значение назначается в обработчике
+    scrollTriggerArea;
 
+document.addEventListener('mousemove', (e) => {
+    // Контейнер, при наведении на который будет работать горизонтальная прокрутка
+    let scrollTrigger = e.target.closest('.scroll-trigger');
+
+    // Проверка, если движение мыши совершено в другой области
+    if (!scrollTrigger) return -1;
+
+    // Получаем СЕЛЕКТОР элемента из атрибута data-area, который необходимо будет прокручивать
+    scrollTriggerArea = document.querySelectorAll(scrollTrigger.dataset.area)[0];
+
+    // Устанавливаем обработчик на "вход" мыши в область контейнера
+    scrollTrigger.onmouseenter = (e) =>{
+        // Отключаем скролл и устанавливаем внутренний отступ справа,
+        // чтобы компенсировать его ширину
+        page.style.cssText =
+            'padding-right: 51px;' +
+            'overflow: hidden;'
+        ;
+    }
+
+    // Устанавливаем обработчик на "выход" мыши из области контейнера
+    scrollTrigger.onmouseleave = (e) =>{
+        // Обнуляем стили в разметке
+        page.style.cssText = '';
+    }
+});
+
+// Устанавливаем обработчик прокрутки документа
 document.body.onwheel = (e) => {
-    if(!page.style.overflow === 'hidden') return false;
+    // Сбрасываем выполнение скрипта, если у контейнера страницы не отключена
+    // прокрутка, таким образом осуществляется проверка на наведение курсора
+    // на контейнер triggerScroll
+    if(!page.style.overflow === 'hidden') return -1;
 
+    // Ставим цикл для осуществления плавной прокрутки
+    // Прокрутка осуществляется на 150 пикселей
     for (
         let i = 0;
         i < 150;
         i++
     ) {
-        triggerScrollArea.scrollLeft += (++e.deltaY < 0) ? -1 : 1;
+        // Свойству, в котором хранится значение, насколько было прокручено окно
+        // Переопределяем его с каждым шагом на 1 - длину шага (в пикселях)
+        // Проверка стоит на отрицательную или положительную прокрутку
+        // Т.е. вправо (плюс) или влево (минус)
+        scrollTriggerArea.scrollLeft += (++e.deltaY < 0) ? -1 : 1;
     }
 }
