@@ -11,6 +11,7 @@
 
   // Контейнер с категориями
   &__category{
+    position: relative;
     background:
             // Левыый контур
             url('#{$url}gui/achievements-stripe__left.png')
@@ -27,7 +28,7 @@
             url('#{$url}gui/achievements-stripe__bottom.png')
             repeat-x bottom right;
     background-size: 25px, 25px, 500px, 500px;
-    padding: 35px;
+    padding: 35px 25px;
     margin: 0 0 35px;
     image-rendering: pixelated;
     @include bordered(
@@ -36,9 +37,25 @@
                     #{inset 0 0 0 10px $dark-red-shadow}
     );
 
+    // Размытие по периметру (слева и справа)
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% - 50px);
+      height: calc(100% - 70px);
+      top: 35px;
+      left: 25px;
+      box-shadow:
+              inset -30px 0 15px -15px $dark-red,
+              inset 30px 0 15px -15px $dark-red;
+      pointer-events: none;
+      z-index: 1;
+    }
+
     // Список категорий
     &-list{
-      padding: 25px 30px 35px;
+      padding: 25px 45px 35px;
       overflow: scroll hidden;
       white-space: nowrap;
       list-style: none;
