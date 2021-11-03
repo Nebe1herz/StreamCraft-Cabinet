@@ -405,14 +405,17 @@ document.body.onclick = (e) => {
         modalToggle(modalName);
     }
 };
-// Объявляем константу с контейнером списка со вкладками
-const triggerList = document.getElementById('trigger-list');
-
 // Назначаем обработчик кликов элементу
-triggerList.onclick = (e) => {
+document.addEventListener('click', (e) => {
+    // Контейнер со вкладками
+    let listTrigger = e.target.closest('.list-trigger');
+
+    // Проверка, если клик осуществлён в другом месте
+    if (!listTrigger) return -1;
+
     // Получаем класс, который у всех вкладок, которые мы будем менять
-    let triggerClass = triggerList.dataset.trigger,
-        triggerClassReload = triggerList.dataset.triggerReload;
+    let triggerClass = listTrigger.dataset.trigger,
+        triggerClassReload = listTrigger.dataset.triggerReload;
 
     // Проверка, если клик совершен не по карточке с нужным классом
     if(!e.target.classList.contains(triggerClass)) return false;
@@ -431,8 +434,65 @@ triggerList.onclick = (e) => {
         // Установка элементу класса заново
         document.getElementsByClassName(triggerClassReload)[0].classList.add('animate-list');
     }, 50)
-};
+});
 
+const
+    // Контейнер основной страницы, где функционирует вертикальная прокрутка
+    page = document.getElementsByClassName('page')[0];
+
+let
+    // Глобальная переменная с СЕЛЕКТОРОМ элемента, который необходимо прокручивать
+    // Объявляется здесь, а значение назначается в обработчике
+    scrollTriggerArea;
+
+document.addEventListener('mousemove', (e) => {
+    // Контейнер, при наведении на который будет работать горизонтальная прокрутка
+    let scrollTrigger = e.target.closest('.scroll-trigger');
+
+    // Проверка, если движение мыши совершено в другой области
+    if (!scrollTrigger) return -1;
+
+    // Получаем СЕЛЕКТОР элемента из атрибута data-area, который необходимо будет прокручивать
+    scrollTriggerArea = document.querySelectorAll(scrollTrigger.dataset.area)[0];
+
+    // Устанавливаем обработчик на "вход" мыши в область контейнера
+    scrollTrigger.onmouseenter = (e) =>{
+        // Отключаем скролл и устанавливаем внутренний отступ справа,
+        // чтобы компенсировать его ширину
+        page.style.cssText =
+            'padding-right: 51px;' +
+            'overflow: hidden;'
+        ;
+    }
+
+    // Устанавливаем обработчик на "выход" мыши из области контейнера
+    scrollTrigger.onmouseleave = (e) =>{
+        // Обнуляем стили в разметке
+        page.style.cssText = '';
+    }
+});
+
+// Устанавливаем обработчик прокрутки документа
+document.body.onwheel = (e) => {
+    // Сбрасываем выполнение скрипта, если у контейнера страницы не отключена
+    // прокрутка, таким образом осуществляется проверка на наведение курсора
+    // на контейнер triggerScroll
+    if(!page.style.overflow === 'hidden') return -1;
+
+    // Ставим цикл для осуществления плавной прокрутки
+    // Прокрутка осуществляется на 150 пикселей
+    for (
+        let i = 0;
+        i < 150;
+        i++
+    ) {
+        // Свойству, в котором хранится значение, насколько было прокручено окно
+        // Переопределяем его с каждым шагом на 1 - длину шага (в пикселях)
+        // Проверка стоит на отрицательную или положительную прокрутку
+        // Т.е. вправо (плюс) или влево (минус)
+        scrollTriggerArea.scrollLeft += (++e.deltaY < 0) ? -1 : 1;
+    }
+}
 const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0].classList.toggle('buy-item__enchant_checked');
 // Механизм переключения вкладок на экране с рейтингами
 // - ratings.html

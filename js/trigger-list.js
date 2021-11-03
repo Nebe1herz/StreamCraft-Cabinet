@@ -1,11 +1,14 @@
-// Объявляем константу с контейнером списка со вкладками
-const triggerList = document.getElementById('trigger-list');
-
 // Назначаем обработчик кликов элементу
-triggerList.onclick = (e) => {
+document.addEventListener('click', (e) => {
+    // Контейнер со вкладками
+    let listTrigger = e.target.closest('.list-trigger');
+
+    // Проверка, если клик осуществлён в другом месте
+    if (!listTrigger) return -1;
+
     // Получаем класс, который у всех вкладок, которые мы будем менять
-    let triggerClass = triggerList.dataset.trigger,
-        triggerClassReload = triggerList.dataset.triggerReload;
+    let triggerClass = listTrigger.dataset.trigger,
+        triggerClassReload = listTrigger.dataset.triggerReload;
 
     // Проверка, если клик совершен не по карточке с нужным классом
     if(!e.target.classList.contains(triggerClass)) return false;
@@ -24,4 +27,4 @@ triggerList.onclick = (e) => {
         // Установка элементу класса заново
         document.getElementsByClassName(triggerClassReload)[0].classList.add('animate-list');
     }, 50)
-};
+});
