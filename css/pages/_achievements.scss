@@ -260,6 +260,32 @@
     }
   }
 
+  // Фильтры достижений
+  &-filters{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: left;
+    align-items: center;
+    grid-gap: 25px;
+
+    margin: 0 0 35px;
+    list-style: none;
+
+    &__item{
+      --background: #{alpha($white, .1)};
+
+      @include bordered(var(--background));
+
+      &_checked{
+        --background: #{$white};
+
+        color: $dark-gray;
+        pointer-events: none;
+        text-shadow: 0 0;
+      }
+    }
+  }
+
   // Список достижений
   &-list{
     display: grid;
