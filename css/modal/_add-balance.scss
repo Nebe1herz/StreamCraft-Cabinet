@@ -1,33 +1,53 @@
 .add-balance{
+  width: 1300px;
+  margin: auto;
+  padding: 15px 0 25px;
+
   // Список вариантов пополнения
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 15px;
 
-    width: 800px;
-    margin: 25px auto;
+    margin: 35px 0 0;
+    min-height: 420px;
     list-style: none;
 
     // Карточка пополнения
     &-item{
-      display: block;
+      --background: #{alpha($green, .3)};
+      --gradient: #{alpha($green, .5)};
+
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      align-items: center;
+
       background:
-              $green
-              url('#{$url}gui/add-balance.png')
-              no-repeat center 120px;
-      background-size: 402px;
-      min-height: 280px;
-      margin: 0!important;
-      padding: 15px 0;
-      box-shadow:
-              inset 5px 5px alpha($white, .5),
-              inset -5px -5px alpha($black, .5);
+              var(--background)
+              radial-gradient(
+                              #{var(--gradient)} 0%,
+                              transparent 50%
+              ) center;
+      ;
+      background-size: 150% 100%;
+      padding: 25px 10px 10px;
+      height: 100%;
+      @include bordered(var(--background));
+
+      &_style{
+        &-gold{
+          --background: #{alpha($gold, .3)};
+          --gradient: #{alpha($gold, .8)};
+        }
+        &-purple{
+          --background: #{alpha($light-purple, .3)};
+          --gradient: #{alpha($light-purple, .8)};
+        }
+      }
 
       // Выделение текста
       &__mark{
         display: inline-block;
-        background: alpha($black, .5);
         font-size: 24px;
         padding: 10px;
       }
@@ -36,7 +56,25 @@
         margin: 5px 0 0;
         font-size: 16px;
       }
+
+      &:hover{
+        .btn{
+          --blur: 65px;
+        }
+      }
     }
+
+    .btn{
+      margin: 0;
+    }
+  }
+
+  &__icon{
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    image-rendering: pixelated;
   }
 
   &__other-amount{
