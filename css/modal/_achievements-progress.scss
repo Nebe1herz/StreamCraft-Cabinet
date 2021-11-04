@@ -1,0 +1,106 @@
+.achievements-progress{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+
+  &__card{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    grid-gap: 5px 25px;
+
+    line-height: 1.4;
+    font-size: 18px;
+    width: 800px;
+    padding: 25px;
+    text-align: left;
+
+    // Превью достижения
+    &-img{
+      grid-row-start: 1;
+      grid-row-end: 6;
+      width: 128px;
+      height: 128px;
+      image-rendering: pixelated;
+    }
+
+    // Заголовок
+    &-heading{
+      font-size: 32px;
+    }
+
+    &__progress{
+      // Основной контейнер
+      &-bar{
+        // По-умолчанию размер шага - 100%
+        --step: 0.5;
+
+        display: block;
+        position: relative;
+        background: $dark-gray-shadow;
+        margin: 5px 0;
+        padding: 5px;
+        height: 18px;
+
+        // Модификатор количества шагов
+        &_step{
+          &-3{
+            --step: 3;
+          }
+          &-5{
+            --step: 5;
+          }
+          &-7{
+            --step: 7;
+          }
+          &-10{
+            --step: 10;
+          }
+          &-16{
+            --step: 16;
+          }
+          &-25{
+            --step: 25;
+          }
+        }
+
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          background: linear-gradient(
+                          to right,
+                          $dark-gray-shadow 3px,
+                          transparent 3px
+          ) repeat-x;
+          background-size: calc(100% / var(--step));
+          width: calc(100% - 7px);
+          height: calc(100% - 10px);
+          top: 5px;
+          left: 2px;
+        }
+      }
+      // Внутренняя полоса прогресса
+      &-line{
+        display: block;
+        background: $gold;
+        height: 100%;
+        width: 0;
+      }
+    }
+  }
+
+  &__offline{
+    position: absolute;
+    filter: brightness(0.25);
+    padding: 0 0 50px;
+
+    .modal-area{
+      margin: 50px 0 0;
+    }
+
+    .achievements-progress__card-img{
+      filter: saturate(0);
+    }
+  }
+}
