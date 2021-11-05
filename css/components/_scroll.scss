@@ -1,0 +1,59 @@
+// Общая стилизация скролла для контейнера страницы .page
+// И селектора .scroll, который можно использовать для
+// внутренних компонентов на страницах
+.page,
+.scroll{
+  // Размер градиента у thumb
+  --background-size: 5px auto;
+  // Градус наклона градиента у track
+  --gradient-deg: 0;
+  // Высота полосы прокрутки
+  --scroll-height: auto;
+  // Ширина полосы прокрутка
+  --scroll-width: 16px;
+
+  // Полоса прокрутки
+  &::-webkit-scrollbar {
+    width: var(--scroll-width);
+    height: var(--scroll-height);
+
+    // Основная полоса
+    &-track{
+      background:
+              linear-gradient(
+                              var(--gradient-deg),
+                              transparent,
+                              alpha($black, .3) 10% 90%,
+                              transparent
+              );
+
+      // Эффект наведения на неё
+      &:hover{
+        background:
+                linear-gradient(
+                                var(--gradient-deg),
+                                transparent,
+                                alpha($black, .7) 10% 90%,
+                                transparent
+                );
+      }
+    }
+
+    // Ползунок у полосы прокрутки
+    &-thumb {
+      background:
+              linear-gradient(var(--gradient-deg), $white, $white)
+              no-repeat
+              center;
+      background-size: var(--background-size);
+    }
+  }
+}
+
+// Модификатор для вертикальной полосы прокрутки
+.scroll_x{
+  --background-size: auto 5px;
+  --gradient-deg: 90deg;
+  --scroll-height: 16px;
+  --scroll-width: auto;
+}

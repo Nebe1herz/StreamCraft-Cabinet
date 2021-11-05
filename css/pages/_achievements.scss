@@ -60,16 +60,6 @@
       white-space: nowrap;
       list-style: none;
 
-      // Стилизация в обычном состоянии (полупрозрачный, почти не виден)
-      &::-webkit-scrollbar {
-        background: alpha($black, .1);
-        height: 16px;
-
-        &-thumb {
-          background: transparent;
-        }
-      }
-
       // Элемент списка
       &__item{
         display: inline-block;
@@ -80,25 +70,6 @@
 
         &:not(:first-child){
           margin-left: 45px;
-        }
-      }
-    }
-
-    // При наведении на основной контейнер
-    &:hover{
-      // У списка категорий
-      .achievements__category-list{
-        // Стилизация скроллбара
-        &::-webkit-scrollbar {
-          background: alpha($black, .3);
-
-          &-thumb {
-            background: $black;
-
-            &:hover {
-              background: $white;
-            }
-          }
         }
       }
     }
