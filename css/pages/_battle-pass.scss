@@ -19,24 +19,6 @@
     padding: 0 0 10px;
     overflow: scroll hidden;
 
-    // Стилизация скроллбара
-    &::-webkit-scrollbar {
-      width: 15px;
-
-      &-track {
-        background: alpha($black, .5);
-      }
-
-      &-thumb {
-        background: $dark-gray;
-
-        &:hover {
-          background: $white;
-        }
-      }
-    }
-
-
     // Лента наград
     &-feed {
       display: grid;

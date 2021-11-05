@@ -20,22 +20,6 @@
   overflow: hidden auto;
   z-index: 99;
 
-  &::-webkit-scrollbar {
-    width: 16px;
-
-    &-track {
-      background: alpha($black, .4);
-      @include background-blur-init();
-    }
-    &-thumb {
-      background: alpha($black, .6);
-
-      &:hover{
-        background: $white;
-      }
-    }
-  }
-
   // Модификации
   &_style{
     &-aqua{
