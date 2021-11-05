@@ -199,883 +199,722 @@
             </div>
         </div>
     </div>
+    <!-- Переключение вкладок, навигация -->
+    <div class="personalization__nav">
+        <div class="wrapper">
+            <ul class="personalization__nav__list">
+                <li class="personalization__nav__list-item">
+                    <a href="#"
+                       class="personalization__nav-item
+                                  personalization__nav-item_checked
+                                  tooltip-trigger"
+                       data-title="Головные уборы"
+                       data-row="
+                                Всего в коллекции
+                                <span class=green>7</span> из <span class=green>36</span>
+                           "
+                    >
+                        <img src="images/gui/personalization-head.png"
+                             class="personalization__nav-item__img"
+                             alt>
+                    </a>
+                </li>
+                <li class="personalization__nav__list-item">
+                    <a href="#"
+                       class="personalization__nav-item
+                                  tooltip-trigger"
+                       data-title="Тело и спина"
+                       data-row="
+                                Всего в коллекции
+                                <span class=green>12</span> из <span class=green>76</span>
+                           "
+                    >
+                        <img src="images/gui/personalization-body.png"
+                             class="personalization__nav-item__img"
+                             alt>
+                    </a>
+                </li>
+                <li class="personalization__nav__list-item">
+                    <a href="#"
+                       class="personalization__nav-item
+                                  tooltip-trigger"
+                       data-title="Питомцы"
+                       data-row="
+                                Всего в коллекции
+                                <span class=green>4</span> из <span class=green>12</span>
+                           "
+                    >
+                        <img src="images/gui/personalization-pet.png"
+                             class="personalization__nav-item__img"
+                             alt>
+                    </a>
+                </li>
+                <li class="personalization__nav__list-item">
+                    <a href="#"
+                       class="personalization__nav-item
+                                  tooltip-trigger"
+                       data-title="Эффекты"
+                       data-row="
+                                Всего в коллекции
+                                <span class=green>9</span> из <span class=green>28</span>
+                           "
+                    >
+                        <img src="images/gui/personalization-effects.png"
+                             class="personalization__nav-item__img"
+                             alt>
+                    </a>
+                </li>
+                <li>
+                    <i class="personalization__nav__list-separator"></i>
+                </li>
+                <li class="personalization__nav__list-item">
+                    <a href="#"
+                       class="personalization__nav-item
+                                  tooltip-trigger"
+                       data-title="Моя коллекция"
+                       data-row="
+                                Всего в коллекции
+                                <span class=green>45</span> из <span class=green>90</span>
+                           "
+                    >
+                        <img src="images/gui/personalization-collection.png"
+                             class="personalization__nav-item__img"
+                             alt>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="page personalization">
+        <!---->
         <div class="wrapper">
             <!-- Основная сетка и контейнер страницы -->
             <div class="personalization-grid">
+
+                <br>
                 <!-- Раздел с выбором персоналищации -->
-                <div class="personalization-content">
-                    <!-- Переключение вкладок, навигация -->
-                    <div class="personalization__nav">
-                        <ul class="personalization__nav__list">
-                            <li class="personalization__nav__list-item">
-                                <a href="#"
-                                   class="personalization__nav-item
-                                          personalization__nav-item_checked
-                                          tooltip-trigger"
-                                   data-title="Головные уборы"
-                                   data-row="
-                                        Всего в коллекции
-                                        <span class=green>7</span> из <span class=green>36</span>
-                                   "
-                                >
-                                    <img src="images/gui/personalization-head.png"
-                                         class="personalization__nav-item__img"
-                                         alt>
-                                </a>
-                            </li>
-                            <li class="personalization__nav__list-item">
-                                <a href="#"
-                                   class="personalization__nav-item
-                                          tooltip-trigger"
-                                   data-title="Тело и спина"
-                                   data-row="
-                                        Всего в коллекции
-                                        <span class=green>12</span> из <span class=green>76</span>
-                                   "
-                                >
-                                    <img src="images/gui/personalization-body.png"
-                                         class="personalization__nav-item__img"
-                                         alt>
-                                </a>
-                            </li>
-                            <li class="personalization__nav__list-item">
-                                <a href="#"
-                                   class="personalization__nav-item
-                                          tooltip-trigger"
-                                   data-title="Питомцы"
-                                   data-row="
-                                        Всего в коллекции
-                                        <span class=green>4</span> из <span class=green>12</span>
-                                   "
-                                >
-                                    <img src="images/gui/personalization-pet.png"
-                                         class="personalization__nav-item__img"
-                                         alt>
-                                </a>
-                            </li>
-                            <li class="personalization__nav__list-item">
-                                <a href="#"
-                                   class="personalization__nav-item
-                                          tooltip-trigger"
-                                   data-title="Эффекты"
-                                   data-row="
-                                        Всего в коллекции
-                                        <span class=green>9</span> из <span class=green>28</span>
-                                   "
-                                >
-                                    <img src="images/gui/personalization-effects.png"
-                                         class="personalization__nav-item__img"
-                                         alt>
-                                </a>
-                            </li>
-                            <li>
-                                <i class="personalization__nav__list-separator"></i>
-                            </li>
-                            <li class="personalization__nav__list-item">
-                                <a href="#"
-                                   class="personalization__nav-item
-                                          tooltip-trigger"
-                                   data-title="Моя коллекция"
-                                   data-row="
-                                        Всего в коллекции
-                                        <span class=green>45</span> из <span class=green>90</span>
-                                   "
-                                >
-                                    <img src="images/gui/personalization-collection.png"
-                                         class="personalization__nav-item__img"
-                                         alt>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Содержание вкладки, галерея -->
-                    <div class="personalization-gallery">
-                        <!-- Первая коллекция -->
-                        <h4 class="personalization-gallery__heading">
-                            Головные уборы:
-                            <span class="personalization-gallery__heading-counter">7</span>
-                            из
-                            <span class="personalization-gallery__heading-counter">16</span>
-                        </h4>
-                        <ul class="personalization-gallery__list">
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-purchased
-                                          tooltip-trigger"
-                                   data-title="Шляпа пасечника"
-                                   data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/1.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <!--<span class="donate-card__price-strike">
-                                            500
-                                            <i class="currency currency_size-24"></i>
-                                        </span>-->
+                <div class="personalization-gallery">
+                    <!-- Первая коллекция -->
+                    <h4 class="personalization-heading text text_style-green">
+                        Головные уборы:
+                        <span class="text text_style-yellow">7 из 16</span>
+                    </h4>
+                    <ul class="personalization-list">
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_purchased
+                                      tooltip-trigger"
+                               data-title="Шляпа пасечника"
+                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/1.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_purchased
+                                      tooltip-trigger"
+                               data-title="Шапка-ушанка"
+                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/2.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_checked
+                                      tooltip-trigger"
+                               data-title="Утиная шапочка"
+                               data-row="<span class=gold>Предмет экипирован</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/3.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_purchased
+                                      tooltip-trigger"
+                               data-title="Рыцарский шлем"
+                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/4.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_purchased
+                                      tooltip-trigger"
+                               data-title="Красная шапка"
+                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/5.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_purchased
+                                      tooltip-trigger"
+                               data-title="Строительная каска"
+                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/6.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      personalization-item_purchased
+                                      tooltip-trigger"
+                               data-title="Шляпа лепрекона"
+                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/7.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Шлем викинга"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>75</span>
+                                        <span class='currency currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/8.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Восточный тюрбан"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>65</span>
+                                        <span class='currency currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/9.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Шляпа кролика"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>65</span>
+                                        <span class='currency currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/10.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Цилиндр"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>50</span>
+                                        <span class='currency currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/11.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Поварский колпак"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>2 500</span>
+                                        <span class='currency currency_coin currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/12.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Кепка анонима"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>1 500</span>
+                                        <span class='currency currency_coin currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/13.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Синяя кепка"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>750</span>
+                                        <span class='currency currency_coin currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/14.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Красная шапка"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>500</span>
+                                        <span class='currency currency_coin currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/5.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      modal-trigger
+                                      tooltip-trigger"
+                               data-title="Наушники Лололошки"
+                               data-row="
+                                        Стоимость:
+                                        <span class=white>150</span>
+                                        <span class='currency currency_coin currency_size-24'></span>
+                                        <br>
+                                        <span class=dark-gray>Кликните для покупки</span>
+                               "
+                               data-modal-name="confirm_personalization"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/15.png" alt>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
 
-                                        <span class="personalization-gallery__item-text">
-                                            ПОЛУЧЕНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_purchased"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-purchased
-                                          tooltip-trigger"
-                                   data-title="Шапка-ушанка"
-                                   data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/2.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text">
-                                            ПОЛУЧЕНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_purchased"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-checked
-                                          tooltip-trigger"
-                                   data-title="Утиная шапочка"
-                                   data-row="<span class=gold>Предмет экипирован</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/3.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text
-                                                     personalization-gallery__item-text_checked
-                                        ">
-                                            АКТИВНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_checked"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-purchased
-                                          tooltip-trigger"
-                                   data-title="Рыцарский шлем"
-                                   data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/4.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text">
-                                            ПОЛУЧЕНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_purchased"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-purchased
-                                          tooltip-trigger"
-                                   data-title="Красная шапка"
-                                   data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/5.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text">
-                                            ПОЛУЧЕНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_purchased"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-purchased
-                                          tooltip-trigger"
-                                   data-title="Строительная каска"
-                                   data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/6.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text">
-                                            ПОЛУЧЕНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_purchased"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          personalization-gallery__item_role-purchased
-                                          tooltip-trigger"
-                                   data-title="Шляпа лепрекона"
-                                   data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/7.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text">
-                                            ПОЛУЧЕНО
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_purchased"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Шлем викинга"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>75</span>
-                                            <span class='currency currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/8.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        75
-                                        <i class="currency currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Восточный тюрбан"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>65</span>
-                                            <span class='currency currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/9.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        65
-                                        <i class="currency currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Шляпа кролика"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>65</span>
-                                            <span class='currency currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/10.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        65
-                                        <i class="currency currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Цилиндр"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>50</span>
-                                            <span class='currency currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/11.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        50
-                                        <i class="currency currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Поварский колпак"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>2 500</span>
-                                            <span class='currency currency_coin currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/12.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        2.5К
-                                        <i class="currency currency_coin currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Кепка анонима"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>1 500</span>
-                                            <span class='currency currency_coin currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/13.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        1.5К
-                                        <i class="currency currency_coin currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Синяя кепка"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>750</span>
-                                            <span class='currency currency_coin currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/14.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        750
-                                        <i class="currency currency_coin currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Красная шапка"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>500</span>
-                                            <span class='currency currency_coin currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/5.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        500
-                                        <i class="currency currency_coin currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          modal-trigger
-                                          tooltip-trigger"
-                                   data-title="Наушники Лололошки"
-                                   data-row="
-                                            Стоимость:
-                                            <span class=white>150</span>
-                                            <span class='currency currency_coin currency_size-24'></span>
-                                            <br>
-                                            <span class=dark-gray>Кликните для покупки</span>
-                                   "
-                                   data-modal-name="confirm_personalization"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/15.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        150
-                                        <i class="currency currency_coin currency_size-24"></i>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
+                    <!-- Вторая коллекция -->
+                    <h4 class="personalization-heading text text_style-gold">
+                        Боевой пропуск:
+                        <span class="text text_style-yellow">0 из 20</span>
+                    </h4>
+                    <ul class="personalization-list">
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Шляпа пасечника"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/1.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                        <!-- Вторая коллекция -->
-                        <h4 class="personalization-gallery__heading personalization-gallery__heading_special">
-                            Боевой пропуск:
-                            <span class="personalization-gallery__heading-counter">0</span>
-                            из
-                            <span class="personalization-gallery__heading-counter">20</span>
-                        </h4>
-                        <ul class="personalization-gallery__list">
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Шляпа пасечника"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/1.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Шапка-ушанка"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/2.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Шапка-ушанка"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/2.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Утиная шапочка"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/3.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Утиная шапочка"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/3.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Рыцарский шлем"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/4.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Рыцарский шлем"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/4.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Красная шапка"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/5.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Красная шапка"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/5.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Строительная каска"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/6.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Строительная каска"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/6.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Шляпа лепрекона"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/7.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Шляпа лепрекона"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/7.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Шлем викинга"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/8.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Шлем викинга"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/8.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Восточный тюрбан"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/9.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Восточный тюрбан"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/9.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Шляпа кролика"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/10.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Шляпа кролика"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/10.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Цилиндр"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/11.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Цилиндр"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/11.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Поварский колпак"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/12.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Поварский колпак"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/12.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Кепка анонима"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/13.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Кепка анонима"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/13.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Синяя кепка"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/14.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Синяя кепка"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/14.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="btn
+                                      personalization-item
+                                      tooltip-trigger"
+                               data-title="Наушники Лололошки"
+                               data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
+                            >
+                                <div class="personalization-item__preview">
+                                    <img src="images/personalization/15.png" alt>
+                                </div>
+                                <p class="donate-card__price">
+                                    <span class="personalization-item-text personalization-item-text_disabled">
 
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="btn
-                                          personalization-gallery__item
-                                          tooltip-trigger"
-                                   data-title="Наушники Лололошки"
-                                   data-row="<span class=gold>Награда за прохождение боевого пропуска</span>"
-                                >
-                                    <div class="personalization-gallery__item-preview">
-                                        <img src="images/personalization/15.png"
-                                             class="personalization-gallery__item-img" alt>
-                                    </div>
-                                    <p class="donate-card__price">
-                                        <span class="personalization-gallery__item-text personalization-gallery__item-text_disabled">
-
-                                        </span>
-                                        <i class="personalization-gallery__item-status
-                                              personalization-gallery__item-status_disabled"
-                                        ></i>
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="personalization__character">
-                    <!-- Рендер скина в 3D -->
-                    <canvas class="personalization__character-skin" id="viewSkin3d"></canvas>
+                                    </span>
+                                    <i class="personalization-item-status
+                                          personalization-item-status_disabled"
+                                    ></i>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <!-- Рендер скина в 3D -->
+            <canvas class="personalization__character-skin" id="viewSkin3d"></canvas>
         </div>
     </div>
     <div class="sidebar-feed">
@@ -1398,8 +1237,8 @@
 <script>
     let FXAASkinViewer = new skinview3d.SkinViewer({
         canvas: document.getElementById("viewSkin3d"),
-        width: 1200,
-        height: 1600,
+        width: 1100,
+        height: 1375,
         skin: "images/skin.png"
     });
 
@@ -1415,8 +1254,8 @@
 
     // Боковой поворот скина на лево
     setTimeout(() => {
-        FXAASkinViewer.playerObject.rotation._x = -0.5;
-        FXAASkinViewer.playerObject.quaternion._y = -0.2;
+        FXAASkinViewer.playerObject.rotation._x = 0.5;
+        FXAASkinViewer.playerObject.quaternion._y = 0.2;
     }, 200);
 </script>
 </body>

@@ -1,13 +1,10 @@
 .personalization{
-  padding: 50px 0;
-  overflow: hidden;
+  padding: 25px 0;
 
   &-grid{
     display: grid;
-    grid-template-columns: 55% 1fr;
-    grid-template-rows: 777px;
-    grid-gap: 35px;
-    height: 777px;
+    grid-template-columns: 1fr 55%;
+    grid-gap: 15px;
   }
 
   // Область кастомизации персонажа
@@ -15,26 +12,30 @@
     position: relative;
 
     &-skin{
-      position: absolute;
+      position: fixed;
       display: block;
-      top: -20%;
-      right: -75%;
-      width: 100%;
+      top: 150px;
+      left: -2%;
       image-rendering: pixelated;
     }
   }
 
   // Навигация / Голова, тело, питомец, эффекты
   &__nav{
+    position: relative;
+    padding: 25px 0 0;
+    z-index: 2;
+
     // Внутренний список
     &__list{
       display: grid;
-      background: alpha($dark-gray, .2);
       grid-template-columns: repeat(4, 72px) auto 72px;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+
       text-align: center;
       list-style: none;
+      box-shadow: 0 5px alpha($white, .1);
 
       // Элементы списка
       &-item{
@@ -85,167 +86,82 @@
     }
   }
 
-  //
-  &-content{
-    --background: #{alpha($black, .5)};
-
+  // Окно с галлереей персонализации
+  &-gallery{
     display: grid;
     grid-template-rows: auto 1fr;
     grid-gap: 15px;
 
     position: relative;
-    background: var(--background);
-    padding: 0 0 15px;
-    @include bordered(var(--background), 15);
     z-index: 1;
   }
 
-  // Окно с галлереей персонализации
-  &-gallery{
-    padding: 5px 20px 5px 5px;
-    overflow: hidden scroll;
+  // Заголовок
+  &-heading{
+    font-size: 21px;
 
-    // Стилизация скроллбара
-    &::-webkit-scrollbar {
-      width: 15px;
-
-      &-track {
-        background:
-                linear-gradient(
-                                90deg,
-                                transparent 30%,
-                                $dark-gray-shadow 30% 70%,
-                                transparent 70%
-                );
-      }
-      &-thumb {
-        background: $dark-gray;
-
-        &:hover{
-          background: $white;
-        }
-      }
+    &:not(:first-of-type){
+      margin-top: 30px;
     }
 
-    // Заголовок
-    &__heading{
-      font-size: 21px;
-      color: $gray;
-      margin: 0 0 20px;
-      text-shadow: 3px 3px $gray-shadow;
+  }
 
-      &_special{
-        color: $gold;
-        text-shadow: 3px 3px $gold-shadow;
-      }
+  // Список
+  &-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    list-style: none;
+  }
 
-      &:not(:first-of-type){
-        margin-top: 30px;
-      }
+  // Карточки элементов персонализации в галлерее
+  &-item{
+    --background: #{alpha($black, .7)};
+    --inset-shadow: #{alpha($white, .1)};
+    //--inset-shadow: #{transparent};
+    --shadow: var(--background);
 
-      &-counter{
-        color: $green;
-        text-shadow: 3px 3px $green-shadow;
-      }
+    position: relative;
+    background:
+            var(--background)
+            radial-gradient(
+                            #{var(--inset-shadow)},
+                            transparent 65%
+            ) center;
+    padding: 0;
+    width: 100%;
+    height: 210px;
+    @include bordered(
+                    var(--shadow),
+                    5,
+                    #{inset 0 0 0 5px var(--inset-shadow)}
+    );
+
+    // Состояния карточки элемента персонализации
+    &_purchased{
+      --inset-shadow: #{alpha($blue, .2)};
+    }
+    &_checked{
+      --inset-shadow: #{alpha($gold, .2)};
     }
 
-    // Список
-    &__list{
+    // Контейнер для централизации картинки элемента персонализации
+    &__preview{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 15px;
-      list-style: none;
-    }
+      align-items: center;
 
-    // Карточки элементов персонализации в галлерее
-    &__item{
-      --background: #{alpha($black, .5)};
-      --inset-shadow: #{$dark-gray-shadow};
-      --shadow: #{$dark-gray};
-
-      display: grid;
-      grid-template-rows: 1fr auto;
-      grid-gap: 10px;
-      padding: 15px;
-      width: 100%;
+      position: absolute;
+      padding: 35px;
       height: 100%;
-      min-height: 180px;
-      box-shadow:
-              inset 0 0 0 10px var(--inset-shadow),
-              0 -5px var(--shadow),
-              0 5px var(--shadow),
-              -5px 0 var(--shadow),
-              5px 0 var(--shadow);
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
 
-      // Состояния карточки элемента персонализации
-      &_role{
-        &-purchased{
-          --inset-shadow: #{$blue-shadow};
-          --shadow: #{$blue};
-        }
-        &-checked{
-          --inset-shadow: #{$gold-shadow};
-          --shadow: #{$gold};
-        }
-      }
-
-      // Контейнер для централизации картинки элемента персонализации
-      &-preview{
-        display: flex;
-        align-items: center;
-      }
-
-      // Картинка элемента персонализации
-      &-img{
+      //Картинка элемента персонализации
+      img{
         display: block;
         width: 100%;
-      }
-
-      // Цена товара
-      .donate-card__price{
-        font-size: 14px;
-        text-align: left;
-      }
-
-      // КУплено / Экипировано
-      &-text{
-        color: $blue;
-        text-shadow: 3px 3px $blue-shadow;
-
-        &_checked{
-          color: $gold;
-          text-shadow: 3px 3px $gold-shadow;
-        }
-
-        &_disabled{
-          line-height: .8;
-          color: $dark-gray;
-          text-shadow: 3px 3px $dark-gray-shadow;
-        }
-      }
-
-      // Иконка статуса товара
-      &-status{
-        display: block;
-        background: var(--image) no-repeat center;
-        background-size: cover;
-        height: 24px;
-        width: 24px;
-        float: right;
-        image-rendering: pixelated;
-
-        // Статус "не куплен"
-        &_disabled{
-          --image: #{url('#{$url}gui/personalization-locked.png')}
-        }
-        // Статус "куплен"
-        &_purchased{
-          --image: #{url('#{$url}gui/check_blue.png')}
-        }
-        // Статус "экипирован"
-        &_checked{
-          --image: #{url('#{$url}gui/check_gold.png')}
-        }
       }
     }
   }
