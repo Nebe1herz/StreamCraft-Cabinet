@@ -10,7 +10,7 @@
   }
 
   & > *{
-    --delay: 0s;
+    --delay: 1.5s;
     animation:
             opacity-show
             .3s
@@ -18,9 +18,9 @@
             var(--delay)
             both;
 
-    @for $i from 1 to 35 {
+    @for $i from 1 to 50 {
       &:nth-of-type(#{$i}){
-        --delay: #{$i * 35}ms;
+        --delay: #{$i * 30}ms;
       }
     }
   }
