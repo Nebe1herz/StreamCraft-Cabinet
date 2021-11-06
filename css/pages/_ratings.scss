@@ -1,19 +1,13 @@
 .ratings{
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  align-items: start;
-  grid-gap: 35px;
-
   // Переключатель вкладок (рейтингов)
   &-nav{
-    background: alpha($black, .3);
-    @include bordered($dark-gray);
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-gap: 15px;
 
-    li:not(:first-child){
-      margin: 5px 0 0;
-      box-shadow: 0 -5px $dark-gray;
-    }
+    margin: 25px 0 0;
+    list-style: none;
 
     // Вкладка
     &__item{
@@ -23,19 +17,22 @@
       grid-gap: 15px;
 
       font-family: MinecraftTitle,sans-serif;
-      line-height: 1.4;
+      line-height: 24px;
       font-size: 16px;
-      color: $gray;
+      color: $gold;
       width: 100%;
-      padding: 35px 25px;
-      text-shadow: 2px 2px $gray-shadow;
+      padding: 10px 20px;
+      background: alpha($black, .3);
+      @include bordered($gold);
+      text-shadow: 2px 2px $gold-shadow;
       text-align: left;
 
       // Состояние активной вкладки
       &_checked{
-        background: alpha($black, .5);
-        color: $white;
+        background: $white;
+        color: $dark-gray;
         @include bordered($white);
+        text-shadow: 0 0;
         cursor: default;
 
         &::before{
@@ -46,8 +43,8 @@
       // Иконка у вкладки
       &-img{
         display: block;
-        width: 64px;
-        height: 64px;
+        width: 48px;
+        height: 48px;
         pointer-events: none!important;
         image-rendering: pixelated;
       }
@@ -59,32 +56,7 @@
 
     //
     &-list{
-      height: 805px;
-      padding: 5px 15px 5px 5px;
-      overflow: hidden scroll;
       list-style: none;
-
-      // Стилизация скроллбара
-      &::-webkit-scrollbar {
-        width: 15px;
-
-        &-track {
-          background:
-                  linear-gradient(
-                                  90deg,
-                                  transparent 30%,
-                                  $dark-gray-shadow 30% 70%,
-                                  transparent 70%
-                  );
-        }
-        &-thumb {
-          background: $dark-gray;
-
-          &:hover{
-            background: $white;
-          }
-        }
-      }
     }
 
     //
@@ -112,16 +84,17 @@
 
   &-search{
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 420px auto;
+    justify-content: center;
     align-items: center;
     grid-gap: 15px;
 
-    margin: 0 0 20px;
+    margin: 15px 0;
   }
 
   // Рейтинговая таблица
   &__table{
-    --columns: 2fr 5fr 3fr 3fr;
+    --columns: 120px 5fr 3fr 3fr;
 
     margin: 0 0 20px;
     list-style: none;
@@ -129,7 +102,7 @@
     // Модификатор для изменения колонок
     &_columns{
       &-1{
-        --columns: 2fr 5fr 3fr;
+        --columns: 120px 5fr 3fr;
       }
     }
 
@@ -147,25 +120,21 @@
       background: var(--background);
 
       line-height: var(--line-height);
-      font-size: 16px;
+      font-size: 18px;
       color: var(--color);
 
       padding: 0 25px;
       margin: 15px 0 0;
       @include bordered(var(--shadow));
-      text-shadow: 2px 2px $gray-shadow;
+      text-shadow: 3px 3px $gray-shadow;
       text-transform: initial;
       text-align: left;
 
       &_type{
-        //
-        &-own{
-          --shadow: #{$dark-gray};
-          margin: 15px 0 35px;
-        }
-
         // Заголовок
         &-header{
+          --background:transparent;
+
           margin: 0;
         }
 
@@ -183,12 +152,15 @@
           }
 
           &-1{
+            --background: #{alpha($gold-shadow, .5)};
             --shadow: #{$gold};
           }
           &-2{
+            --background: #{alpha($light-purple-shadow, .5)};
             --shadow: #{$light-purple};
           }
           &-3{
+            --background: #{alpha($blue-shadow, .5)};
             --shadow: #{$blue};
           }
         }
@@ -199,7 +171,7 @@
     &-data{
       &__img{
         height: var(--line-height);
-        margin: 0 5px 0 0;
+        margin: 0 10px 0 0;
         vertical-align: top;
       }
       &__rank{
