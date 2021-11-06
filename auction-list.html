@@ -178,7 +178,11 @@
             <!-- Сетка экрана -->
             <div class="auction-content">
                 <!-- Категории -->
-                <div class="auction-categories">
+                <div class="auction-categories
+                            list-trigger"
+                     data-trigger="auction-categories__item"
+                     data-trigger-reload="auction-list"
+                >
                     <!-- Все категории -->
                     <ul class="auction-categories__list animate-list">
                         <li>
@@ -214,7 +218,6 @@
                         <li>
                             <a href="#" class="btn
                                            btn_size-sm
-                                           btn_hover-disabled
                                            auction-categories__item
                                            auction-categories__item_checked">
                                 <img src="images/shop/33.png"

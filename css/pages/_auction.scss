@@ -124,6 +124,7 @@
 
         background: alpha($black, .5);
         @include bordered($white);
+        pointer-events: none;
       }
 
       // Иконка категории
