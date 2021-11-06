@@ -1,29 +1,48 @@
 .ratings{
+  padding: 20px 0 50px;
+
   // Переключатель вкладок (рейтингов)
   &-nav{
+    // Количество колонок в разделе
+    --columns: 4;
+    // Внутренняя сетка у вкладки
+    --grid-item: auto auto;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(var(--columns), 1fr);
     justify-content: center;
     grid-gap: 15px;
 
     margin: 25px 0 0;
     list-style: none;
 
+    // Модификатор с измененной сеткой навигации
+    // Где вкладок может быть больше (максимум 6)
+    &_grid{
+      &-6{
+        --columns: 6;
+        --grid-item: auto 100px;
+      }
+    }
+
     // Вкладка
     &__item{
+      --background: #{alpha($gold, .2)};
+
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: var(--grid-item);
+      justify-content: center;
       align-items: center;
       grid-gap: 15px;
 
+      background: var(--background);
       font-family: MinecraftTitle,sans-serif;
-      line-height: 24px;
+      line-height: 20px;
       font-size: 16px;
       color: $gold;
       width: 100%;
-      padding: 10px 20px;
-      background: alpha($black, .3);
-      @include bordered($gold);
+      padding: 5px 10px;
+      @include bordered(var(--background));
       text-shadow: 2px 2px $gold-shadow;
       text-align: left;
 
@@ -51,15 +70,33 @@
     }
   }
 
+  // Поиск
+  &-search{
+    display: grid;
+    grid-template-columns: 420px 1fr auto;
+    justify-content: center;
+    grid-gap: 15px;
+
+    width: 1080px;
+    margin: 25px auto 0;
+
+    .form-control{
+      background: alpha($black, .3);
+      @include bordered($dark-gray);
+    }
+  }
+
   // Контейнер со вкладками
   &__tab{
 
-    //
+    // Список контейнеров с содержимым вкладок
     &-list{
+      width: 1080px;
+      margin: auto;
       list-style: none;
     }
 
-    //
+    // Элемент списка с содержимым вкладки
     &-item{
       display: none;
 
@@ -70,26 +107,12 @@
       }
     }
 
-    //
+    // Заголовок вкладки
     &-heading{
       font-size: 18px;
       color: $white;
       text-shadow: 2px 2px $white-shadow;
     }
-
-    &-footer{
-      text-align: center;
-    }
-  }
-
-  &-search{
-    display: grid;
-    grid-template-columns: 420px auto;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 15px;
-
-    margin: 15px 0;
   }
 
   // Рейтинговая таблица

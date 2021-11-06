@@ -201,7 +201,7 @@
     </div>
     <div class="wrapper wrapper_fixed">
         <!-- Переключатель вкладок (рейтингов) -->
-        <ul class="ratings-nav">
+        <ul class="ratings-nav ratings-nav_grid-6">
             <li>
                 <button class="btn ratings-nav__item ratings-nav__item_checked"
                         data-rating="kill">
@@ -232,6 +232,22 @@
                     <img src="images/icon/rating-rubles.png"
                          class="ratings-nav__item-img" alt>
                     Баланс в рублях
+                </button>
+            </li>
+            <li>
+                <button class="btn ratings-nav__item"
+                        data-rating="kill">
+                    <img src="images/icon/rating-kills.png"
+                         class="ratings-nav__item-img" alt>
+                    Убитые игроки
+                </button>
+            </li>
+            <li>
+                <button class="btn ratings-nav__item"
+                        data-rating="time">
+                    <img src="images/icon/rating-time.png"
+                         class="ratings-nav__item-img" alt>
+                    Время в игре
                 </button>
             </li>
         </ul>
@@ -282,6 +298,7 @@
                             </a>
                         </li>
                     </ol>
+                    <!---->
                     <!---->
                     <ol class="ratings__table animate-list">
                         <li class="ratings__table-row ratings__table-row_type-header"
