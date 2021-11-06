@@ -8,7 +8,7 @@
 
   position: absolute;
   background: alpha($black, .6);
-  padding: 0 100px 0 0;
+  padding: 0 105px 0 0;
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -56,6 +56,13 @@
       padding: 0;
       max-width: 100%;
     }
+  }
+
+  // Выравнивание контейнера при его
+  // использовании вне компонента .page
+  &_fixed{
+    position: relative;
+    left: -8px;
   }
 }
 
