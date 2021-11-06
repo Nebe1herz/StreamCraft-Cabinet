@@ -21,7 +21,7 @@
   }
 
   // Навигация / Голова, тело, питомец, эффекты
-  &__nav{
+  &-nav{
     position: relative;
     padding: 25px 0 0;
     z-index: 2;
@@ -29,18 +29,18 @@
     // Внутренний список
     &__list{
       display: grid;
-      grid-template-columns: repeat(4, 72px) auto 72px;
+      grid-template-columns: repeat(10, auto);
       justify-content: center;
       align-items: center;
+      grid-gap: 15px;
 
+      background: #{alpha($black, .5)};
+      width: 881px;
+      margin: auto;
+      padding: 5px;
+      @include bordered(alpha($black, .5));
       text-align: center;
       list-style: none;
-      box-shadow: 0 5px alpha($white, .1);
-
-      // Элементы списка
-      &-item{
-
-      }
 
       // Разделитель списка
       &-separator{
@@ -52,36 +52,34 @@
       }
     }
 
-    // Элемент навигации
-    &-item{
+    // Элемент навигацииr
+    &__item{
+      --background: #{alpha($black, .3)};
+      --shadow: #{alpha($blue, .2)};
+
       display: block;
       position: relative;
       padding: 15px;
-      color: transparent;
+      transition: 0s;
+      @include bordered(
+                      $black,
+                      5,
+                      inset 0 0 0 5px var(--shadow)
+      );
 
-      &:hover,
       &_checked{
-        color: $white;
-
-        .personalization__nav-item__img{
-          opacity: 1;
-        }
+        --shadow: #{alpha($gold, .2)};
+      }
+      &_empty{
+        --shadow: #{alpha($gray, .2)};
       }
 
-      &__img{
+      &-img{
         display: block;
-        width: 42px;
-        opacity: .3;
+        width: 48px;
         image-rendering: pixelated;
-      }
-      &__text{
-        display: none;
-        position: absolute;
-        font-size: 12px;
-        width: 100px;
-        top: 54px;
-        left: calc((100px - 72px) / -2);
-        white-space: nowrap;
+
+        filter: saturate(0) brightness(100);
       }
     }
   }
