@@ -67,16 +67,18 @@
                       inset 0 0 0 5px var(--shadow)
       );
 
-      &_checked{
-        --shadow: #{alpha($gold, .2)};
-      }
       &_empty{
         --shadow: #{alpha($gray, .2)};
+      }
+      &_checked{
+        --background: #{alpha($gold-shadow, .3)};
+        --shadow: #{alpha($gold, .2)};
       }
 
       &-img{
         display: block;
         width: 48px;
+        pointer-events: none!important;
         image-rendering: pixelated;
 
         filter: saturate(0) brightness(100);
