@@ -6,6 +6,9 @@ document.addEventListener('click', (e) => {
     // Проверка, если клик осуществлён в другом месте
     if (!listTrigger) return -1;
 
+    // Отключаем другие события (переход по ссылке)
+    e.preventDefault();
+
     // Получаем класс, который у всех вкладок, которые мы будем менять
     let triggerClass = listTrigger.dataset.trigger,
         triggerClassReload = listTrigger.dataset.triggerReload;

@@ -413,6 +413,9 @@ document.addEventListener('click', (e) => {
     // Проверка, если клик осуществлён в другом месте
     if (!listTrigger) return -1;
 
+    // Отключаем другие события (переход по ссылке)
+    e.preventDefault();
+
     // Получаем класс, который у всех вкладок, которые мы будем менять
     let triggerClass = listTrigger.dataset.trigger,
         triggerClassReload = listTrigger.dataset.triggerReload;
@@ -442,7 +445,7 @@ const
 
 let
     // Глобальная переменная с СЕЛЕКТОРОМ элемента, который необходимо прокручивать
-    // Объявляется здесь, а значение назначается в обработчике
+    // Объявляется здесь, а значение присваивается в обработчике
     scrollTriggerArea;
 
 document.addEventListener('mousemove', (e) => {
@@ -452,12 +455,12 @@ document.addEventListener('mousemove', (e) => {
     // Проверка, если движение мыши совершено в другой области
     if (!scrollTrigger) return -1;
 
-    // Получаем СЕЛЕКТОР элемента из атрибута data-area, который необходимо будет прокручивать
-    scrollTriggerArea = document.querySelectorAll(scrollTrigger.dataset.area)[0];
+    // Получаем класс элемента из атрибута data-area, который необходимо будет прокручивать
+    scrollTriggerArea = document.getElementsByClassName(scrollTrigger.dataset.area)[0];
 
-    // Устанавливаем обработчик на "вход" мыши в область контейнера
-    scrollTrigger.onmouseenter = (e) =>{
-        // Отключаем скролл и устанавливаем внутренний отступ справа,
+    // Устанавливаем обработчик на "вход" курсора в область контейнера
+    scrollTrigger.onmouseenter = () =>{
+        // Отключаем прокрутку и устанавливаем внутренний отступ справа,
         // чтобы компенсировать его ширину
         page.style.cssText =
             'padding-right: 51px;' +
@@ -466,7 +469,7 @@ document.addEventListener('mousemove', (e) => {
     }
 
     // Устанавливаем обработчик на "выход" мыши из области контейнера
-    scrollTrigger.onmouseleave = (e) =>{
+    scrollTrigger.onmouseleave = () =>{
         // Обнуляем стили в разметке
         page.style.cssText = '';
     }
@@ -478,7 +481,7 @@ document.body.onwheel = (e) => {
     // таким образом осуществляется проверка наведён ли курсор
     // на контейнер triggerScroll
     if(page.style.overflow === 'hidden') {
-// Ставим цикл для осуществления плавной прокрутки
+        // Инициализируем цикл для осуществления плавной прокрутки
         // Прокрутка осуществляется на 150 пикселей
         for (
             let i = 0;
