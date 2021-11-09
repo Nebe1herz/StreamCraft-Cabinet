@@ -2,13 +2,21 @@
 // !!!!!!!!!!!!!! ОСТОРОЖНО, НИЖЕ ЛЮТЫЙ ГОВНОКОД !!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 let timerId = setTimeout(tick = () => {
+
     // Форматирование чисел на двузначный формат
-    const numberFormat = (value) => (value < 10 && value >= 0)
+    const getById = (id) => document.getElementById(id),
+        numberFormat = (value) => (value < 10 && value >= 0)
         ? `0${value}` : value;
+
+    // Проверка на наличие таймера на странице
+    // Чтобы не выполнялись все последующие запросы
+    // Если он на странице не предусмотрен
+    if(!getById('timerHour')) return -1;
+
     // Селекторы
-    let timerHour = document.getElementById('timerHour'),
-        timerMin = document.getElementById('timerMin'),
-        timerSec = document.getElementById('timerSec'),
+    let timerHour = getById('timerHour'),
+        timerMin = getById('timerMin'),
+        timerSec = getById('timerSec'),
         // Приведение к числовому значению ("+" при присовении)
         h = +timerHour.innerText,
         m = +timerMin.innerText,
@@ -21,6 +29,7 @@ let timerId = setTimeout(tick = () => {
         // Сбрасываем обратно до 60 минут
         m = 60;
     }
+
     // Если секунды === 0
     if (s < 1) {
         // Минусуем одну минуту
@@ -28,6 +37,7 @@ let timerId = setTimeout(tick = () => {
         // Сбрасываем обратно до 60 секунд
         s = 60;
     }
+
     // Минусуем одну секунду
     timerSec.innerText = numberFormat(--s);
 
@@ -39,4 +49,5 @@ let timerId = setTimeout(tick = () => {
 
     // Повторный вызов функции для зацикливания таймера
     timerId = setTimeout(tick, 1000); // (*)
+
 }, 1000);
