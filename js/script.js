@@ -187,7 +187,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Реализация тултипов
+// Реализация тултипов (всплывающих подсказок)
 
 // Элементу, на который хотим повесить тултип добавляем класс tooltip-trigger
 
@@ -197,6 +197,9 @@ document.addEventListener('keydown', (e) => {
 
 // Обработчик на документе, отслеживающий наведение курсором мыши на любой элемент
 document.addEventListener('mouseover', (e) =>{
+    // Если наведение не на tooltip-trigger, то завершение скрипта
+    if(!e.target.classList.contains('tooltip-trigger')) return -1;
+
     let // Получаем контейнер тултипа
         tooltip = document.getElementsByClassName('tooltip')[0],
 
@@ -204,11 +207,8 @@ document.addEventListener('mouseover', (e) =>{
         // e.target - это элемент, на который наведён курсор мыши
         // Проверка на контейнер/дочерний элемент
         item = (e.target.classList.contains('tooltip-trigger'))
-        ? e.target
-        : e.target.closest('.tooltip-trigger');
-
-    // Если наведение не на tooltip-trigger, то завершение скрипта
-    if(!item.classList.contains('tooltip-trigger')) return false;
+            ? e.target
+                 : e.target.closest('.tooltip-trigger');
 
     // Функция для замены содержания элементов тултипа на указанное в tooltip-trigger
     const replaceText = (selector, value) => {
@@ -223,7 +223,7 @@ document.addEventListener('mouseover', (e) =>{
             item.style.display = 'none';
 
             // Сбарсываем переменную
-            return false;
+            return -1;
         }
 
         // Иначе проставляем display block
