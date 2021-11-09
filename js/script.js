@@ -512,7 +512,7 @@ const itemEnchant = () => document.getElementsByClassName('buy-item__enchant')[0
 // - ratings.html
 //
 // Вешаем обработчик на документ
-document.getElementsByClassName('ratings-nav')[0].onclick = (e) => {
+document.addEventListener('click', (e) =>{
     // Проверяем, осуществлён ли клик по вкладке на экране с рейтингами
     // Иначе останавливаем функцию
     if(!e.target.classList.contains('ratings-nav__item')) return false;
@@ -534,7 +534,7 @@ document.getElementsByClassName('ratings-nav')[0].onclick = (e) => {
     // Добавляем класс checked контейнеру с содержимым вкладки
     // Который нам необходимо открыть
     document.querySelectorAll(`.${classTab}[data-rating="${rating}"]`)[0].classList.add(`${classTab}_checked`)
-};
+});
 
 // Обработчик завершения загрузки DOM
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -555,7 +555,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // Проверка на пропуск элемента
         if(tableRow[i].dataset.type !== 'skip') {
             // Голова скина
-            tableRow[i].children[1].children[0].setAttribute('src', `images/heads/head-${randomNum(1, 12)}.png`)
+            tableRow[i].children[1].children[0].setAttribute('src', `images/heads/head-${randomNum(1, 12)}.png`);
 
             // Никнейм
             tableRow[i].children[1].childNodes[2].textContent = nicknameArray[randomNum(0,nicknameArray.length - 1)];
