@@ -1,66 +1,112 @@
 .add-balance{
-  width: 1300px;
-  margin: auto;
-  padding: 15px 0 25px;
+  text-align: center;
+
+  .modal-area{
+    width: 1300px;
+    margin: 35px auto;
+    padding: 5px 0;
+
+    &__heading{
+      font-size: 60px;
+    }
+  }
 
   // Список вариантов пополнения
   &__list{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
 
-    margin: 35px 0 0;
     min-height: 420px;
     list-style: none;
 
     // Карточка пополнения
     &-item{
-      --background: #{alpha($green, .3)};
-      --gradient: #{alpha($green, .5)};
+      --background: #{alpha($green, .4)};
+      --gradient: #{alpha($green, .6)};
+      --value: 10px;
+      --value-reverse: -10px;
 
       display: grid;
       grid-template-rows: auto 1fr auto;
-      align-items: center;
 
       background:
               var(--background)
-              radial-gradient(
-                              #{var(--gradient)} 0%,
-                              transparent 50%
+              linear-gradient(
+                              135deg,
+                              #{var(--gradient)},
+                              transparent
               ) center;
       ;
-      background-size: 150% 100%;
-      padding: 25px 10px 10px;
+      background-size: 100% 100%;
+      padding: 25px;
       height: 100%;
-      @include bordered(var(--background));
+      text-transform: initial;
+      box-shadow:
+              0 0 var(--blur) $white,
 
+              inset
+              var(--value)
+              var(--value)
+              alpha($white, .3),
+
+              inset
+              var(--value-reverse)
+              var(--value-reverse)
+              alpha($black, .3);
+
+      &::before{
+        box-shadow: 0 0 0 var(--value) $white;
+        top: -25px;
+      }
+
+      &:hover{
+        --blur: 60px;
+        z-index: 1;
+      }
+
+      // Модификатор цветовой стилистики
       &_style{
         &-gold{
-          --background: #{alpha($gold, .3)};
+          --background: #{alpha($gold, .5)};
           --gradient: #{alpha($gold, .8)};
         }
         &-purple{
-          --background: #{alpha($light-purple, .3)};
+          --background: #{alpha($light-purple, .5)};
           --gradient: #{alpha($light-purple, .8)};
         }
       }
 
       // Выделение текста
       &__mark{
-        display: inline-block;
-        font-size: 24px;
-        padding: 10px;
-      }
-      small{
+        --background: #{alpha($black, .6)};
+        --text-shadow-size: 5px;
+
         display: block;
-        margin: 5px 0 0;
-        font-size: 16px;
+        background: var(--background);
+        line-height: 28px;
+        font-size: 32px;
+        padding: 0 10px;
+        @include bordered(var(--background));
+
+        &_other{
+          .text{
+            font-size: 24px;
+            line-height: 36px!important;
+          }
+        }
       }
 
-      &:hover{
-        .btn{
-          --blur: 65px;
-        }
+      .text{
+        display: block;
+        line-height: 42px;
+      }
+
+      small{
+        --text-shadow-size: 3px;
+
+        display: inline-block;
+        font-size: 24px;
       }
     }
 
@@ -71,8 +117,8 @@
 
   &__icon{
     display: block;
-    width: 160px;
-    height: 160px;
+    width: 192px;
+    height: 192px;
     margin: auto;
     image-rendering: pixelated;
   }
