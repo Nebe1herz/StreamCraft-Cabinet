@@ -60,6 +60,37 @@
         top: -25px;
       }
 
+      // Для тестирования эффектов, отключено
+      &::after{
+        //content: '';
+
+        display: block;
+        position: absolute;
+        background:
+                linear-gradient(
+                                90deg,
+                                alpha($white, .4) 0 100%
+                ) no-repeat -500px 0;
+        background-size: 200px 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: testAnim 6s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      // Тестовая анимация
+      @keyframes testAnim{
+        0%, 85%{
+          background-position-x: -500px;
+        }
+        100%{
+          background-position-x: 500px;
+        }
+      }
+
       &:hover{
         --blur: 60px;
         z-index: 1;
@@ -68,12 +99,12 @@
       // Модификатор цветовой стилистики
       &_style{
         &-gold{
-          --background: #{alpha($gold, .5)};
-          --gradient: #{alpha($gold, .8)};
+          --background: #{alpha($gold, .6)};
+          --gradient: #{$gold};
         }
         &-purple{
-          --background: #{alpha($light-purple, .5)};
-          --gradient: #{alpha($light-purple, .8)};
+          --background: #{alpha($light-purple, .4)};
+          --gradient: #{$light-purple};
         }
       }
 
