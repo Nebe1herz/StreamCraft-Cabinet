@@ -33,28 +33,31 @@
   text-transform: uppercase;
   text-align: center;
 
-  // Псевдоэлемент-обводка для hover-эффекта
-  &::before{
-    content:'';
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: -10px;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: top .15s ease-in-out;
-    box-shadow:
-            var(--value) 0 var(--outline-color),
-            var(--value-reverse) 0 var(--outline-color),
-            0 var(--value) var(--outline-color),
-            0 var(--value-reverse) var(--outline-color);
-    z-index: 1;
+  &, &-hover{
+    // Псевдоэлемент-обводка для hover-эффекта
+    &::before{
+      content:'';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: -10px;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: top .15s ease-in-out;
+      box-shadow:
+              var(--value) 0 var(--outline-color),
+              var(--value-reverse) 0 var(--outline-color),
+              0 var(--value) var(--outline-color),
+              0 var(--value-reverse) var(--outline-color);
+      z-index: 1;
+    }
   }
 
   // Инициализация hover-эффекта
-  &:not(&_disabled):hover{
+  &:not(&_disabled):hover,
+  &-hover:hover{
     &::before{
       opacity: 1;
       top: 0;
