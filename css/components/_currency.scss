@@ -2,7 +2,7 @@
   --size: 28px;
 
   display: inline-block;
-  background: url('#{$url}icon/balance-rubles.png') no-repeat center;
+  background: url('#{$url}icon/balance-rubles.gif') no-repeat center;
   background-size: contain;
   width: var(--size);
   height: var(--size);
@@ -10,7 +10,7 @@
   vertical-align: top;
 
   &_coin{
-    background-image: url('#{$url}icon/balance-coins.png');
+    background-image: url('#{$url}icon/balance-coins.gif');
   }
 
   // Центрирование по-вертикали иконки с валютой
@@ -31,6 +31,9 @@
     }
     &-32{
       --size: 32px;
+    }
+    &-36{
+      --size: 36px;
     }
     &-42{
       --size: 42px;
