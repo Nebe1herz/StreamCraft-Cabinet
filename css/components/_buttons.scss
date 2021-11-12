@@ -3,14 +3,9 @@
   @include btn-var-init(transparent, transparent);
   --color: #{$white};
   --text-shadow: #{$white-shadow};
-  --outline-color: #{$white};
-  --value: 5px;
-  --value-reverse: -5px;
   --blur: 0;
 
   // Основное
-  position: relative;
-  display: inline-block;
   padding: 15px 35px;
   cursor: pointer;
   border: none;
@@ -34,6 +29,13 @@
   text-align: center;
 
   &, &-hover{
+    --value: 5px;
+    --value-reverse: -5px;
+    --outline-color: #{$white};
+
+    position: relative;
+    display: inline-block;
+
     // Псевдоэлемент-обводка для hover-эффекта
     &::before{
       content:'';
