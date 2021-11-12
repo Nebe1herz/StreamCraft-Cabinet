@@ -3,7 +3,6 @@
   grid-template-columns: auto 1fr auto;
   background: alpha($black, .3);
   height: 36px;
-  margin: 20px 0 0;
   @include bordered(alpha($black, .3), 5);
 
   // Список с элементами навигации
