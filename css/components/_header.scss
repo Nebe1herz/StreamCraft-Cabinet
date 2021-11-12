@@ -20,62 +20,48 @@
   // Сетка списка навигации в шапке
   &-list{
     display: grid;
-    grid-template-columns: auto auto 1fr auto auto auto;
-    grid-column-gap: 35px;
-    align-items: center;
+    grid-template-columns: auto 1fr auto;
 
     padding: var(--padding) 0 5px;
     list-style: none;
 
   }
 
+  &-section{
+    --border: #{alpha($white, .15)};
+
+    font-size: 0;
+    @include bordered(var(--border));
+    white-space: nowrap;
+  }
+
   // Элемент навигации в шапке
   &-item{
-    --background: transparent;
-    --shadow: var(--background);
+    display: inline-block;
+    background: alpha($black, .3);
+    line-height: 28px;
+    font-size: 20px;
+    padding: 5px 15px;
 
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 10px;
-    align-items: center;
-
-    background: var(--background);
-    line-height: 20px;
-    font-size: 16px;
-    padding: 0 10px 0 0;
-    @include bordered(var(--shadow));
-
-    // Эффект наведения
-    &:not(.btn-hover):hover{
-      & > .text{
-        opacity: .5;
-      }
+    &:not(:first-child){
+      margin-left: 5px;
+      box-shadow: -5px 0 var(--border);
     }
 
-    // Модификатор
-    &_outline{
-      --background: transparent;
-      --shadow: #{$white};
-
-      grid-template-columns: auto;
-      line-height: 36px;
-      font-size: 20px;
-      height: 38px;
-      padding: 0 20px;
-
-      &:not(:hover){
-        text-shadow: 3px 3px $white-shadow;
-      }
-      &:hover{
-        background: $white;
-        color: $dark-gray;
-      }
+    // Эффект наведения
+    &:not(:hover){
+      text-shadow: 3px 3px $white-shadow;
+    }
+    &:hover{
+      //background: $white;
+      //color: $dark-gray;
     }
 
     // Превью элемента
     &__img{
-      height: 48px;
+      height: 28px;
       image-rendering: pixelated;
+      vertical-align: top;
     }
   }
 }

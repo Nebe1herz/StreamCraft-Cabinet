@@ -22,29 +22,28 @@
         <div class="wrapper">
             <ul class="header-list">
                 <!-- Назад в главное меню -->
-                <li>
+                <li class="header-section">
                     <a href="index.html"
-                       class="header-item
+                       class="btn-hover
+                              header-item
                               header-item_outline
                               tooltip-trigger"
                        data-title="Назад"
                     >
                         Назад
                     </a>
-                </li>
-                <!-- Корзина -->
-                <li>
+
+                    <!-- Корзина -->
                     <a href="cart.html"
-                       class="header-item
+                       class="btn-hover
+                              header-item
                               tooltip-trigger"
-                       data-title="Корзина"
+                       data-title="Мои покупки"
                     >
                         <img src="images/icon/cart.png"
                              class="header-item__img" alt>
-                        <span class="text text_style-white">
-                            Корзина
-                            <br>
-                            <span class="text text_style-gray">Пусто</span>
+                        <span class="text text_style-gray">
+                            Мои покупки
                         </span>
                     </a>
                 </li>
@@ -54,51 +53,44 @@
 
                 </li>
 
-                <!-- Баланс РУБЛЕЙ -->
-                <li>
+                <li class="header-section">
+                    <!-- Баланс РУБЛЕЙ -->
                     <a href="index.html"
-                       class="header-item
+                       class="btn-hover
+                              header-item
                               modal-trigger
                               tooltip-trigger"
                        data-title="Пополнить баланс"
                        data-modal-name="add-balance"
                     >
-                        <i class="currency currency_size-48"></i>
-                        <span class="text text_style-white">
-                            Баланс
-                            <br>
-                            <span class="text text_style-green">100 рублей</span>
-                        </span>
+                        <i class="currency currency_size-28"></i>
+                        <span class="text text_style-green">0 РУБ.</span>
                     </a>
-                </li>
-                <!-- Баланс КОИНОВ -->
-                <li>
+
+                    <!-- Баланс КОИНОВ -->
                     <a href="index.html"
-                       class="header-item
+                       class="btn-hover
+                              header-item
                               modal-trigger
                               tooltip-trigger"
                        data-title="Обменять коины"
                        data-modal-name="coins-exchange"
                     >
-                        <i class="currency currency_coin currency_size-48"></i>
-                        <span class="text text_style-white">
-                            Баланс
-                            <br>
-                            <span class="text text_style-gold">100 коинов</span>
-                        </span>
+                        <i class="currency currency_coin currency_size-28"></i>
+                        <span class="text text_style-gold">7 890</span>
+                    </a>
+
+                    <!-- Мой профиль -->
+                    <a href="profile.html"
+                       class="btn-hover
+                              header-item
+                              header-item_outline
+                              tooltip-trigger"
+                       data-title="Мой профиль"
+                    >
+                        Мой профиль
                     </a>
                 </li>
-
-                <!-- Мой профиль --><li>
-                <a href="profile.html"
-                   class="header-item
-                          header-item_outline
-                          tooltip-trigger"
-                   data-title="Мой профиль"
-                >
-                    Мой профиль
-                </a>
-            </li>
             </ul>
             <div class="nav">
                 <a href="profile.html"
