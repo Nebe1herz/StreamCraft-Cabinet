@@ -1,4 +1,6 @@
 .header{
+  --padding: 25px;
+
   position: relative;
   width: 100%;
   color: $white;
@@ -16,7 +18,7 @@
     grid-template-rows: 28px;
     grid-column-gap: 25px;
 
-    padding: 15px 0 20px ;
+    padding: var(--padding) 0 0;
     list-style: none;
 
     // Элемент списка
