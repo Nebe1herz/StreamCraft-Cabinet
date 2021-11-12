@@ -21,89 +21,84 @@
     <div class="header">
         <div class="wrapper">
             <ul class="header-list">
-                <!-- Кнопка, ведущая на главный экран меню с полной навигацией -->
+                <!-- Назад в главное меню -->
                 <li>
                     <a href="index.html"
-                       class="btn
-                              header-list__item"
+                       class="header-item
+                              header-item_outline
+                              tooltip-trigger"
+                       data-title="Назад"
                     >
-                        <img src="images/icon/menu.png" alt
-                             class="header-list__item-icon">
-                        В главное меню
+                        Назад
                     </a>
                 </li>
-                <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
+                <!-- Корзина -->
                 <li>
                     <a href="cart.html"
-                       class="btn
-                              header-list__item
-                              header-list__cart"
-                       data-modal-name="modal.coins-exchange"
+                       class="header-item
+                              tooltip-trigger"
+                       data-title="Корзина"
                     >
-                        <img src="images/icon/cart.png" alt
-                             class="header-list__item-icon">
-                        Корзина
-                        <span class="header-list__cart--counter">(15)</span>
+                        <img src="images/icon/cart.png"
+                             class="header-item__img" alt>
+                        <span class="text text_style-white">
+                            Корзина
+                            <br>
+                            <span class="text text_style-gray">Пусто</span>
+                        </span>
                     </a>
                 </li>
-                <!-- Разделитель -->
-                <li></li>
-                <!-- Баланс рублей -->
+
+                <!-- Элемент-заполнитель -->
                 <li>
-                    <a href="#"
-                       class="btn
-                              header-list__item
-                              modal-trigger"
+
+                </li>
+
+                <!-- Баланс РУБЛЕЙ -->
+                <li>
+                    <a href="index.html"
+                       class="header-item
+                              modal-trigger
+                              tooltip-trigger"
+                       data-title="Пополнить баланс"
                        data-modal-name="add-balance"
                     >
-                        <i class="currency
-                                  currency_size-48
-                                  header-list__item-icon"
-                        ></i>
-                        114 руб.
-                        <span class="btn btn_success btn_hover-disabled">+</span>
+                        <i class="currency currency_size-48"></i>
+                        <span class="text text_style-white">
+                            Баланс
+                            <br>
+                            <span class="text text_style-green">100 рублей</span>
+                        </span>
                     </a>
                 </li>
-                <!-- Баланс коинов -->
+                <!-- Баланс КОИНОВ -->
                 <li>
-                    <a href="#"
-                       class="btn
-                              header-list__item
-                              modal-trigger"
+                    <a href="index.html"
+                       class="header-item
+                              modal-trigger
+                              tooltip-trigger"
+                       data-title="Обменять коины"
                        data-modal-name="coins-exchange"
                     >
-                        <i class="currency
-                                  currency_coin
-                                  currency_size-48
-                                  header-list__item-icon"
-                        ></i>
-                        3 280
-                        <span class="btn btn_success btn_hover-disabled">+</span>
+                        <i class="currency currency_coin currency_size-48"></i>
+                        <span class="text text_style-white">
+                            Баланс
+                            <br>
+                            <span class="text text_style-gold">100 коинов</span>
+                        </span>
                     </a>
                 </li>
-                <!-- Аватар, ник и группа пользователь -->
-                <li>
-                    <a href="profile.html"
-                       class="btn
-                              header-list__item
-                              header-list__user
-                              tooltip-trigger"
-                       data-title="Профиль Nebelherz"
-                       data-row="
-                           <span class=dark-gray>Привилегия:</span>
-                           <span class=light-purple>DELUXE</span>
-                           <br>
-                           <span class=dark-gray>Боевой пропуск:</span>
-                           <span class=green>5 уровень</span>
-                           "
-                       data-meta="Кликните, чтобы открыть"
-                    >
-                        <img src="images/heads/head-3.png" alt
-                             class="header-list__item-icon">
-                        <span class="text text_style-white">Nebelherz</span>
-                        <span class="text text_style-gray">игрок</span>
-                    </a>
-                </li>
+
+                <!-- Мой профиль --><li>
+                <a href="profile.html"
+                   class="header-item
+                          header-item_outline
+                          tooltip-trigger"
+                   data-title="Мой профиль"
+                >
+                    Мой профиль
+                </a>
+            </li>
             </ul>
             <div class="nav">
                 <a href="profile.html"

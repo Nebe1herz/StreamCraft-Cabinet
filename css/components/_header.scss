@@ -1,5 +1,5 @@
 .header{
-  --padding: 25px;
+  --padding: 15px;
 
   position: relative;
   width: 100%;
@@ -8,55 +8,74 @@
   left: 0;
   z-index: 10;
 
+  *{
+    font-family: MinecraftTitle, sans-serif;
+  }
+
+  // Контейнер раздела
   .wrapper{
     max-width: 100%;
   }
 
+  // Сетка списка навигации в шапке
   &-list{
     display: grid;
-    grid-template-columns: auto auto 1fr repeat(3, auto);
-    grid-template-rows: 28px;
-    grid-column-gap: 25px;
+    grid-template-columns: auto auto 1fr auto auto auto;
+    grid-column-gap: 35px;
+    align-items: center;
 
-    padding: var(--padding) 0 0;
+    padding: var(--padding) 0 5px;
     list-style: none;
 
-    // Элемент списка
-    &__item{
-      --background: #{alpha($black, .7)};
+  }
 
-      display: grid;
-      grid-template-columns: auto auto auto;
-      align-items: center;
-      grid-gap: 5px;
+  // Элемент навигации в шапке
+  &-item{
+    --background: transparent;
+    --shadow: var(--background);
 
-      position: relative;
-      line-height: 28px;
-      font-size: 18px;
-      padding: 0;
-      @include bordered(var(--background));
-      text-transform: initial;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    align-items: center;
 
-      // Иконка у кнопки
-      &-icon{
-        position: relative;
-        height: 48px;
-        margin: -10px 0;
-        image-rendering: pixelated;
-        pointer-events: none;
-        z-index: 1;
+    background: var(--background);
+    line-height: 20px;
+    font-size: 16px;
+    padding: 0 10px 0 0;
+    @include bordered(var(--shadow));
+
+    // Эффект наведения
+    &:not(.btn-hover):hover{
+      & > .text{
+        opacity: .5;
       }
-      .btn{
-        position: relative;
-        line-height: 28px;
-        font-size: 24px;
-        height: 28px;
-        width: 28px;
-        padding: 0;
-        margin: 0 0 0 8px;
-        text-shadow: 0 0;
-        z-index: 1;
+    }
+
+    // Модификатор
+    &_outline{
+      --background: transparent;
+      --shadow: #{$white};
+
+      grid-template-columns: auto;
+      line-height: 36px;
+      font-size: 20px;
+      height: 38px;
+      padding: 0 20px;
+
+      &:not(:hover){
+        text-shadow: 3px 3px $white-shadow;
       }
+      &:hover{
+        background: $white;
+        color: $dark-gray;
+      }
+    }
+
+    // Превью элемента
+    &__img{
+      height: 48px;
+      image-rendering: pixelated;
     }
   }
 }
