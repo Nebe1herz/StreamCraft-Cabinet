@@ -45,7 +45,6 @@
 
   // Последняя строчка // data-meta
   &__meta{
-    width: 320px;
     color: $blue;
     text-shadow: 2px 2px $blue-shadow;
   }
@@ -125,6 +124,16 @@
     border: none;
     height: 0;
     margin: 8px 0;
+  }
+
+  // Аватар (голова) игрока
+  &-avatar{
+    display: inline-block;
+    background: url('#{$url}heads/head-3.png') no-repeat center bottom;
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+    vertical-align: top;
   }
 
   // Инициализация модификаторов со всей палитрой
