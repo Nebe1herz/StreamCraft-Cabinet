@@ -52,7 +52,7 @@
     display: inline-block;
     background: var(--background);
     line-height: 32px;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px 15px;
 
     &:not(:first-child){
@@ -63,6 +63,7 @@
     // Превью элемента
     &__img{
       height: 32px;
+      margin: 0 5px 0 0;
       image-rendering: pixelated;
       vertical-align: top;
     }

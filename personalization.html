@@ -28,7 +28,8 @@
                               header-item
                               header-item_outline
                               tooltip-trigger"
-                       data-title="Назад"
+                       data-title="Вернуться назад"
+                       data-meta="Кликни сюда!"
                     >
                         <img src="images/icon/menu.png"
                              class="header-item__img" alt>
@@ -41,6 +42,9 @@
                               header-item
                               tooltip-trigger"
                        data-title="Мои покупки"
+                       data-row="
+                                 <span class=dark-gray>Здесь пока ничего нет</span>
+                       "
                     >
                         <img src="images/icon/cart.png"
                              class="header-item__img" alt>
@@ -51,12 +55,13 @@
                 </li>
 
                 <li class="header-section header-section_alt">
-                    <a href="index.html"
+                    <a href="battle-pass__index.html"
                        class="btn-hover
                               header-item
                               header-item_outline
                               tooltip-trigger"
                        data-title="Боевой пропуск"
+                       data-meta="Кликни сюда!"
                     >
                         <img src="images/icon/stream-pass.png"
                              class="header-item__img" alt>
@@ -73,12 +78,20 @@
 
                 <li class="header-section">
                     <!-- Баланс РУБЛЕЙ -->
-                    <a href="index.html"
-                       class="btn-hover
+                    <a class="btn-hover
                               header-item
                               modal-trigger
                               tooltip-trigger"
                        data-title="Пополнить баланс"
+                       data-row="
+                                 На балансе
+                                 <span class=green>
+                                    0
+                                    <i class='currency currency_size-24'></i>
+                                 </span>
+                                 рублей
+                       "
+                       data-meta="Кликни сюда!"
                        data-modal-name="add-balance"
                     >
                         <i class="currency currency_size-32"></i>
@@ -86,12 +99,20 @@
                     </a>
 
                     <!-- Баланс КОИНОВ -->
-                    <a href="index.html"
-                       class="btn-hover
+                    <a class="btn-hover
                               header-item
                               modal-trigger
                               tooltip-trigger"
-                       data-title="Обменять коины"
+                       data-title="Обменник коинов"
+                       data-row="
+                                 На счету
+                                 <span class=gold>
+                                    7 890
+                                    <i class='currency currency_coin currency_size-24'></i>
+                                 </span>
+                                 коинов
+                       "
+                       data-meta="Кликни сюда!"
                        data-modal-name="coins-exchange"
                     >
                         <i class="currency currency_coin currency_size-32"></i>
@@ -105,6 +126,15 @@
                               header-item_outline
                               tooltip-trigger"
                        data-title="Мой профиль"
+                       data-row="
+                                 <span class=dark-gray>Аккаунт:</span>
+                                 <i class='tooltip-avatar'></i>
+                                 Nebelherz
+                                 <br>
+                                 <span class=dark-gray>Игровой статус:</span>
+                                 <span class=gold>LEGEND</span>
+                       "
+                       data-meta="Кликни сюда!"
                     >
                         <img src="images/icon/profile.png"
                              class="header-item__img" alt>
