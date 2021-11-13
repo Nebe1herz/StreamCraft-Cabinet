@@ -21,92 +21,116 @@
     <div class="header">
         <div class="wrapper">
             <ul class="header-list">
-                <!-- Кнопка, ведущая на главный экран меню с полной навигацией -->
-                <li>
+                <!-- Назад в главное меню -->
+                <li class="header-section">
                     <a href="index.html"
-                       class="btn
-                              header-list__item"
+                       class="btn-hover
+                              header-item
+                              tooltip-trigger"
+                       data-title="Вернуться назад"
+                       data-meta="Кликни сюда!"
                     >
-                        <img src="images/icon/menu.png" alt
-                             class="header-list__item-icon">
-                        В главное меню
+                        <img src="images/icon/menu.png"
+                             class="header-item__img" alt>
+                        Назад
                     </a>
-                </li>
-                <!-- Кнопка корзины товар, выведение счетчика товаров в корзине -->
-                <li>
+
+                    <!-- Корзина -->
                     <a href="cart.html"
-                       class="btn
-                              header-list__item
-                              header-list__cart"
-                       data-modal-name="modal.coins-exchange"
+                       class="btn-hover
+                              header-item
+                              tooltip-trigger"
+                       data-title="Мои покупки"
+                       data-row="
+                                 <span class=dark-gray>Здесь пока ничего нет</span>
+                       "
                     >
-                        <img src="images/icon/cart.png" alt
-                             class="header-list__item-icon">
-                        Корзина
-                        <span class="header-list__cart--counter">(15)</span>
+                        <img src="images/icon/cart.png"
+                             class="header-item__img" alt>
+                        <span class="text text_style-gray">
+                            Мои покупки
+                        </span>
                     </a>
                 </li>
-                <!-- Разделитель -->
-                <li></li>
-                <!-- Баланс рублей -->
+
+                <!-- Элемент-заполнитель -->
                 <li>
-                    <a href="#"
-                       class="btn
-                              header-list__item
-                              modal-trigger"
+
+                </li>
+
+                <li class="header-section">
+                    <!-- Баланс РУБЛЕЙ -->
+                    <a class="btn-hover
+                              header-item
+                              modal-trigger
+                              tooltip-trigger"
+                       data-title="Пополнить баланс"
+                       data-row="
+                                 На балансе
+                                 <span class=green>
+                                    0
+                                    <i class='currency currency_size-24'></i>
+                                 </span>
+                                 рублей
+                       "
+                       data-meta="Кликни сюда!"
                        data-modal-name="add-balance"
                     >
-                        <img src="images/icon/balance-rubles.png" alt
-                             class="header-list__item-icon">
-                        114 рублей
+                        <i class="currency currency_size-32"></i>
+                        <span class="text text_style-green">0 РУБ.</span>
                     </a>
-                </li>
-                <!-- Баланс коинов -->
-                <li>
-                    <a href="#"
-                       class="btn
-                              header-list__item
-                              modal-trigger"
+
+                    <!-- Баланс КОИНОВ -->
+                    <a class="btn-hover
+                              header-item
+                              modal-trigger
+                              tooltip-trigger"
+                       data-title="Обменник коинов"
+                       data-row="
+                                 На счету
+                                 <span class=gold>
+                                    7 890
+                                    <i class='currency currency_coin currency_size-24'></i>
+                                 </span>
+                                 коинов
+                       "
+                       data-meta="Кликни сюда!"
                        data-modal-name="coins-exchange"
                     >
-                        <img src="images/icon/balance-coins.png" alt
-                             class="header-list__item-icon">
-                        3 280 коинов
+                        <i class="currency currency_coin currency_size-32"></i>
+                        <span class="text text_style-gold">7 890</span>
                     </a>
-                </li>
-                <!-- Аватар, ник и группа пользователь -->
-                <li>
+
+                    <!-- Мой профиль -->
                     <a href="profile.html"
-                       class="btn
-                              header-list__item
-                              header-list__user
+                       class="btn-hover
+                              header-item
                               tooltip-trigger"
-                       data-title="Профиль Nebelherz"
+                       data-title="Мой профиль"
                        data-row="
-                            Ваша группа:
-                            <span class=gold>Premium</span>
-                            <br>
-                            Боевой пропуск:
-                            <span class=green>5 уровень</span>
-                            "
-                       data-meta="Кликните, чтобы открыть"
+                                 <span class=dark-gray>Аккаунт:</span>
+                                 <i class='tooltip-avatar'></i>
+                                 Nebelherz
+                                 <br>
+                                 <span class=dark-gray>Игровой статус:</span>
+                                 <span class=light-purple>Deluxe</span>
+                       "
+                       data-meta="Кликни сюда!"
                     >
-                        <img src="images/heads/head-3.png" alt
-                             class="header-list__user-avatar">
-                        <span class="header-list__user-nickname">Nebelherz</span>
-                        <span class="header-list__user-group">ИГРОК</span>
+                        <img src="images/icon/profile.png"
+                             class="header-item__img" alt>
+                        Мой профиль
                     </a>
                 </li>
             </ul>
-
             <div class="nav">
                 <a href="kits.html"
                    class="btn
                           nav-item
                           nav-item_role-control
                           tooltip-trigger"
-                   data-title="<span class=gray>Назад:</span> <span class=aqua>Наборы ресурсов</span>"
-                   data-row="<span class=gold>Нажмите <span class=yellow>Q</span> или <span class=yellow>кликните</span> для перехода</span>"
+                   data-title="<span class=gray>Ранее:</span> <span class=aqua>Наборы ресурсов</span>"
+                   data-row="Нажми <span class=aqua>Q</span> или <span class=aqua>кликни</span>"
                 >
                     <i class="nav-icon nav-icon_arrow-left"></i>
                     Q
@@ -120,7 +144,7 @@
                                   tooltip-trigger"
                            data-title="<span class=green>Магазин блоков</span>"
                            data-row="<span class=gold>Покупайте</span> все необходимые ресурсы в два клика за <i class='currency currency_size-24'></i>"
-                           data-meta="Кликните для перехода"
+                           data-meta="Кликни сюда!"
                         >
                             Магазин блоков
                         </a>
@@ -136,7 +160,7 @@
                                     <br>
                                     <span class=green>Воплотите мечту в реальность!</span>
                                     "
-                           data-meta="Кликните для перехода"
+                           data-meta="Кликни сюда!"
                         >
                             Игровые статусы
                         </a>
@@ -148,7 +172,7 @@
                                   tooltip-trigger"
                            data-title="<span class=light-purple>Кейсы</span>"
                            data-row="Испытайте свою удачу и получите особо ценные награды!"
-                           data-meta="Кликните для перехода"
+                           data-meta="Кликни сюда!"
                         >
                             Кейсы
                         </a>
@@ -160,7 +184,7 @@
                                   tooltip-trigger"
                            data-title="Наборы ресурсов"
                            data-row="Воплотите свои самые смелые фантазии в жизнь;)"
-                           data-meta="Кликните для перехода"
+                           data-meta="Кликни сюда!"
                         >
                             Наборы ресурсов
                         </a>
@@ -171,8 +195,8 @@
                           nav-item
                           nav-item_role-control
                           tooltip-trigger"
-                   data-title="<span class=gray>Вперёд:</span> <span class=gold>Игровые статусы</span>"
-                   data-row="<span class=gold>Нажмите <span class=yellow>E</span> или <span class=yellow>кликните</span> для перехода</span>"
+                   data-title="<span class=gray>Далее:</span> <span class=gold>Игровые статусы</span>"
+                   data-row="Нажми <span class=aqua>E</span> или <span class=aqua>кликни</span>"
                 >
                     E
                     <i class="nav-icon nav-icon_arrow-right"></i>
@@ -207,7 +231,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -225,7 +249,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -243,7 +267,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -261,7 +285,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -279,7 +303,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -297,7 +321,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -349,7 +373,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -362,7 +386,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -375,7 +399,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -388,7 +412,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -401,7 +425,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -414,7 +438,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -427,7 +451,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -440,7 +464,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -453,7 +477,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -466,7 +490,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -479,7 +503,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -492,7 +516,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -505,7 +529,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -518,7 +542,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -531,7 +555,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -544,7 +568,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -557,7 +581,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -570,7 +594,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -583,7 +607,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -596,7 +620,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -609,7 +633,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -622,7 +646,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -635,7 +659,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -648,7 +672,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -661,7 +685,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -674,7 +698,7 @@
                                     1 <i class="currency currency_size-20"></i> за 128 шт.
                                 </p>
                                 <span class="btn btn_success btn_hover-disabled">
-                                    Покупка
+                                    Купить
                                 </span>
                             </a>
                         </li>
@@ -687,7 +711,7 @@
         <div class="sidebar-feed__section">
             <h3 class="sidebar-feed__section-heading">
                 Уведомлений
-                <span class="sidebar-feed__section-heading__count">17</span>
+                <span class="text text_style-aqua">17</span>
             </h3>
             <div class="sidebar-feed__notice-status
                         sidebar-feed__notice-status_unread">
@@ -700,9 +724,11 @@
             <ul class="sidebar-feed__section-list
                        sidebar-feed__section-list_hover-hide">
                 <li class="sidebar-feed__section-item">
-                    <a href="#"
-                       class="btn
-                              sidebar-feed__notice-item">
+                    <a class="btn
+                              sidebar-feed__notice-item
+                              modal-trigger"
+                       data-modal-name="notify-list"
+                    >
                         Не следует, однако забывать, что новая модель позволяет...
                         <span class="sidebar-feed__notice-meta">
                             Получено 17 июля, 18:44
@@ -710,10 +736,12 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#"
-                       class="btn
+                    <a class="btn
                               sidebar-feed__notice-item
-                              sidebar-feed__notice-item_role-primary">
+                              sidebar-feed__notice-item_role-primary
+                              modal-trigger"
+                       data-modal-name="notify-list"
+                    >
                         Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
                         <span class="sidebar-feed__notice-meta">
                              Получено 13 июля, 23:05
@@ -721,10 +749,12 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#"
-                       class="btn
+                    <a class="btn
                               sidebar-feed__notice-item
-                              sidebar-feed__notice-item_role-warning">
+                              sidebar-feed__notice-item_role-warning
+                              modal-trigger"
+                       data-modal-name="notify-list"
+                    >
                         Идейные соображения высшего порядка, а также рамки и место...
                         <span class="sidebar-feed__notice-meta">
                             Получено 13 июля, 23:05
@@ -732,10 +762,12 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#"
-                       class="btn
+                    <a class="btn
                               sidebar-feed__notice-item
-                              sidebar-feed__notice-item_role-danger">
+                              sidebar-feed__notice-item_role-danger
+                              modal-trigger"
+                       data-modal-name="notify-list"
+                    >
                         Требуют от нас анализа позиций, занимаемых участниками в...
                         <span class="sidebar-feed__notice-meta">
                             Получено 07 июля, 12:54
@@ -743,10 +775,12 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#"
-                       class="btn
+                    <a class="btn
                               sidebar-feed__notice-item
-                              sidebar-feed__notice-item_role-success">
+                              sidebar-feed__notice-item_role-success
+                              modal-trigger"
+                       data-modal-name="notify-list"
+                    >
                         Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
                         <span class="sidebar-feed__notice-meta">
                             Получено 04 июля, 16:33
@@ -754,10 +788,12 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#"
-                       class="btn
+                    <a class="btn
                               sidebar-feed__notice-item
-                              sidebar-feed__notice-item_role-more">
+                              sidebar-feed__notice-item_role-more
+                              modal-trigger"
+                       data-modal-name="notify-list"
+                    >
                         Предыдущие уведомления
                     </a>
                 </li>
@@ -766,41 +802,47 @@
         <div class="sidebar-feed__section">
             <h3 class="sidebar-feed__section-heading">
                 Друзей
-                <span class="sidebar-feed__section-heading__count">256</span>
+                <span class="text text_style-aqua">256</span>
             </h3>
             <ul class="sidebar-feed__section-list">
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item
-                                       sidebar-feed__friend-item_near">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_near
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-11.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">DarthSidi0us</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">Teme4chka</h4>
                             <p class="sidebar-feed__friend-item__user-status">10 блоков от вас</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item
-                                       sidebar-feed__friend-item_near">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_near
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-12.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">Mine03</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">_Malina1703_</h4>
                             <p class="sidebar-feed__friend-item__user-status">56 блоков от вас</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item
-                                       sidebar-feed__friend-item_near">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_near
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-9.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -812,50 +854,58 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item
-                                       sidebar-feed__friend-item_online">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_online
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-2.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">QueenOfPeace</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">ImmortalLove</h4>
                             <p class="sidebar-feed__friend-item__user-status">В сети</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item
-                                       sidebar-feed__friend-item_online">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_online
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-3.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">IBath</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">xAgare</h4>
                             <p class="sidebar-feed__friend-item__user-status">В сети</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item
-                                       sidebar-feed__friend-item_online">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_online
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-5.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">noremac09</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">TROJ</h4>
                             <p class="sidebar-feed__friend-item__user-status">В сети</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-4.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -867,34 +917,40 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-6.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">Evaer_cool12</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">krabuik</h4>
                             <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-7.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
                         </div>
                         <div class="sidebar-feed__friend-item__user">
-                            <h4 class="sidebar-feed__friend-item__user-nickname">Mle4niy_kill_bioy</h4>
+                            <h4 class="sidebar-feed__friend-item__user-nickname">YFoxTest2</h4>
                             <p class="sidebar-feed__friend-item__user-status">Не в сети</p>
                         </div>
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-8.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -906,8 +962,10 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-9.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -919,8 +977,10 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-12.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -932,8 +992,10 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-11.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -945,8 +1007,10 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-10.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -958,8 +1022,10 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-4.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
@@ -971,8 +1037,10 @@
                     </a>
                 </li>
                 <li class="sidebar-feed__section-item">
-                    <a href="#" class="btn
-                                       sidebar-feed__friend-item">
+                    <a href="profile_someone.html"
+                       class="btn
+                              sidebar-feed__friend-item
+                    ">
                         <div class="sidebar-feed__friend-item__avatar">
                             <img src="images/heads/head-5.png" alt
                                  class="sidebar-feed__friend-item__avatar-image">
