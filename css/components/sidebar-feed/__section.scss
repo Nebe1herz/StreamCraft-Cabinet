@@ -6,6 +6,8 @@
 
   // Заголовок
   &-heading{
+    --text-shadow-size: 4px;
+
     font-family: MinecraftTitle, sans-serif;
     line-height: 1.2;
     font-size: 28px;
@@ -14,12 +16,6 @@
     padding: 0 25px;
     text-shadow: 4px 4px $white-shadow;
     transition: .15s ease-in-out;
-
-    &__count{
-      font-family: inherit;
-      color: $gray;
-      text-shadow: 4px 4px $gray-shadow;
-    }
   }
 
   &-list{
