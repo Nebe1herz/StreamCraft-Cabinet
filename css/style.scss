@@ -82,8 +82,12 @@
 // Рейтинги игроков
 'pages/ratings',
 
-  // Аукцион
+// Корзина
+'pages/cart',
+
+// Аукцион
 'pages/auction',
+
 // Боевой пропуск
 'pages/battle-pass',
 
@@ -101,19 +105,24 @@
 'modal/cases',
 // Просмотр и покупка донат-наборов
 'modal/kits',
+
 // Покупка предмета в магазине блоков
 'modal/buy-item',
 // Подтверждение действия
 'modal/confirm',
+// Список уведомлений
+'modal/notify',
 
 // Пополнение баланса
 'modal/add-balance',
 // Обмен коинов
 'modal/coins-exchange',
+
 // Раздел аукциона
 'modal/auction-trade',
 // Прогресс достижений
 'modal/achievements-progress',
+
 // Покупка боевого пропуска
 'modal/battle-pass__buy',
 
