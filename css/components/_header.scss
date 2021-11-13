@@ -8,6 +8,7 @@
   left: 0;
   z-index: 10;
 
+  // Инициализация шрифта
   *{
     font-family: MinecraftTitle, sans-serif;
   }
@@ -19,28 +20,39 @@
 
   // Сетка списка навигации в шапке
   &-list{
+
     display: grid;
     grid-template-columns: auto 1fr auto;
+    grid-gap: 15px;
 
     padding: var(--padding) 0 5px;
     list-style: none;
 
+    &_alt {
+      grid-template-columns: auto auto 1fr auto;
+    }
   }
 
   &-section{
     --border: #{alpha($white, .15)};
+    --background: #{alpha($black, .3)};
 
     font-size: 0;
     @include bordered(var(--border));
     white-space: nowrap;
+
+    &_alt{
+      --border: #{$gold};
+      --background: #{alpha($dark-red, .7)};
+    }
   }
 
   // Элемент навигации в шапке
   &-item{
     display: inline-block;
-    background: alpha($black, .3);
-    line-height: 28px;
-    font-size: 20px;
+    background: var(--background);
+    line-height: 32px;
+    font-size: 18px;
     padding: 5px 15px;
 
     &:not(:first-child){
@@ -48,18 +60,9 @@
       box-shadow: -5px 0 var(--border);
     }
 
-    // Эффект наведения
-    &:not(:hover){
-      text-shadow: 3px 3px $white-shadow;
-    }
-    &:hover{
-      //background: $white;
-      //color: $dark-gray;
-    }
-
     // Превью элемента
     &__img{
-      height: 28px;
+      height: 32px;
       image-rendering: pixelated;
       vertical-align: top;
     }
