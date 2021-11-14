@@ -1,0 +1,61 @@
+.alert{
+  // Стилизация
+  --background: #{$white-shadow};
+
+  // Позиционирование
+  display: block;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  width: 100%;
+  padding: 10px 160px 10px 55px;
+  pointer-events: none;
+  z-index: 9998;
+
+  // tooltip-trigger предназначен JS-обработчику
+  // для отображения тултипа и компонента, имеющего этот класс
+  &-trigger{
+    // У всех внутренних элементов отключить события мыши
+    *{
+      pointer-events: none;
+    }
+  }
+
+  // Модификаторы
+  &_primary{
+    --background: #{$blue}
+  }
+  &_success{
+    --background: #{$green};
+  }
+  &_danger{
+    --background: #{$dark-red}
+  }
+  &_warning{
+    --background: #{$gold}
+  }
+  &_info{
+    --background: #{$aqua}
+  }
+  &_sale{
+    --background: #{$yellow};
+  }
+  &_secondary{
+    --background: #{$light-purple}
+  }
+
+  // Контейнер
+  &-content{
+    display: grid;
+    align-items: center;
+
+    background: var(--background);
+    padding: 10px;
+    opacity: .9;
+    @include bordered(
+                    var(--background),
+                    10,
+                    0 0 35px 15px var(--background)
+    );
+  }
+}
