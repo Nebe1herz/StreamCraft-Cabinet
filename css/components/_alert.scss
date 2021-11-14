@@ -31,7 +31,7 @@
   &-trigger{
     // У всех внутренних элементов отключить события мыши
     *{
-      pointer-events: none;
+      pointer-events: none!important;
     }
   }
 
