@@ -17,14 +17,14 @@
 
   // Заголовок h1
   &-heading{
-    --text-shadow-size: 6px;
-
     font-family: MinecraftTitle, sans-serif;
-    font-size: 54px;
-    color: #fff;
+    font-size: var(--font-size);
     line-height: 1;
+    color: $white;
     text-shadow:
-            var(--text-shadow-size) var(--text-shadow-size) $white-shadow;
+            var(--text-shadow-size)
+            var(--text-shadow-size)
+            $white-shadow;
 
     // Модификатор для выравнивания текста по центру
     &_align-center{
