@@ -1,13 +1,6 @@
 .stats{
   padding: 50px 0;
 
-  // Заголовок экрана
-  &-heading{
-    font-size: 36px;
-    color: $white;
-    text-shadow: 4px 4px $white-shadow;
-  }
-
   // Раздел со статистикой
   &__area{
     --background: #{alpha($black, .5)};
