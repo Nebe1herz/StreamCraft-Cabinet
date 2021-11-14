@@ -1,0 +1,19 @@
+.cart{
+  // Основное содержание
+  &-content{
+    background: alpha($black, .5);
+    margin: 35px 0 0;
+    @include bordered(alpha($black, .5), 10);
+  }
+
+  // Раздел
+  &-section{
+    padding: 25px 35px;
+    margin: 0 -10px;
+    height: 200px;
+
+    &:not(:first-child){
+      border-top: 5px solid alpha($white, .1);
+    }
+  }
+}
