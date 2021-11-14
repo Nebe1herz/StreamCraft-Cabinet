@@ -1,19 +1,102 @@
 .cart{
-  // Основное содержание
-  &-content{
-    background: alpha($black, .5);
-    margin: 35px 0 0;
-    @include bordered(alpha($black, .5), 10);
+  // Содержание раздела
+  &-section{
+    margin: 25px 0 45px;
+
   }
 
-  // Раздел
-  &-section{
-    padding: 25px 35px;
-    margin: 0 -10px;
-    height: 200px;
+  // Заголовок
+  &-heading{
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    grid-gap: 15px;
 
-    &:not(:first-child){
-      border-top: 5px solid alpha($white, .1);
+    //background: alpha($black, .3);
+    //padding: 5px 5px 5px 15px;
+    //@include bordered(alpha($black, .3));
+  }
+
+  // Список с карточками
+  &-list{
+    // Сетка списка
+    --template: repeat(10, 1fr);
+    // Высота карточки
+    --card-size: 100%;
+    // Размер отступов в карточками
+    --padding: 10px 0;
+    // Размер изображения
+    --img-size: 64px;
+    // Размер текста у счетчика количества
+    --font-size: 28px;
+    // Размер тени у текста
+    --text-shadow-size: 4px;
+
+    display: grid;
+    grid-template-columns: var(--template);
+    grid-gap: 15px;
+
+    margin: 20px 0 0;
+    list-style: none;
+
+    &_xl{
+      --template: repeat(5, 1fr);
+      --card-size: 250px;
+      --padding: 25px 0 35px;
+      --img-size: 160px;
+      --font-size: 42px;
+      --text-shadow-size: 6px;
+    }
+  }
+
+  // Карточка предмета в корзине
+  &-item{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: end;
+    grid-gap: 15px;
+
+    background: alpha($black, .5);
+    padding: var(--padding);
+    font-size: calc(var(--font-size) / 2);
+    height: var(--card-size);
+    text-align: center;
+    @include bordered(alpha($black, .5));
+
+    //
+    &_disabled{
+      pointer-events: none;
+    }
+
+    // Контейнер с превью
+    &__preview{
+      position: relative;
+      width: var(--img-size);
+      margin: auto;
+    }
+
+    // Изображение предмета
+    &__img{
+      display: block;
+      width: 100%;
+      image-rendering: pixelated;
+
+      &-case{
+        margin: 0 0 -25px;
+      }
+    }
+
+    // Количество предметов
+    &__counter{
+      position: absolute;
+      font-size: var(--font-size);
+      right: 0;
+      bottom: -5px;
+    }
+
+    &>.text{
+      --text-shadow-size: 3px;
     }
   }
 }
