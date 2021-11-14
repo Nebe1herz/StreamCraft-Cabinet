@@ -35,5 +35,10 @@
     &-nowrap{
       white-space: nowrap
     }
+
+    // Отключение text-shadow
+    &-noshadow{
+      --text-shadow-size: 0;
+    }
   }
 }
