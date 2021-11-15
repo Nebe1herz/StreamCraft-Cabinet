@@ -3,8 +3,7 @@
 
   &-grid{
     display: grid;
-    grid-template-columns: 1fr 55%;
-    grid-gap: 15px;
+    grid-template-columns: 1fr 60%;
   }
 
   // Область кастомизации персонажа
@@ -28,17 +27,18 @@
 
     // Внутренний список
     &__list{
+      --background: #{alpha($black, .7)};
+
       display: grid;
-      grid-template-columns: repeat(10, auto);
+      grid-template-columns: repeat(auto-fit, 78px);
       justify-content: center;
       align-items: center;
       grid-gap: 15px;
 
-      background: #{alpha($black, .5)};
-      width: 881px;
-      margin: auto;
-      padding: 5px;
-      @include bordered(alpha($black, .5));
+      padding: 0 0 5px;
+      box-shadow:
+              inset 0 -5px alpha($white, .3),
+              0 5px $dark-gray;
       text-align: center;
       list-style: none;
 
@@ -52,10 +52,10 @@
       }
     }
 
-    // Элемент навигацииr
+    // Элемент навигации
     &__item{
-      --background: #{alpha($black, .3)};
-      --shadow: #{alpha($blue, .2)};
+      //--background: #{alpha($black, .3)};
+      //--shadow: #{alpha($blue, .2)};
 
       display: block;
       position: relative;
@@ -68,11 +68,11 @@
       );
 
       &_empty{
-        --shadow: #{alpha($gray, .2)};
+        //--shadow: #{alpha($gray, .2)};
       }
       &_checked{
         --background: #{alpha($gold-shadow, .3)};
-        --shadow: #{alpha($gold, .2)};
+        //--shadow: #{alpha($gold, .2)};
       }
 
       &-img{
@@ -88,11 +88,16 @@
 
   // Окно с галереей персонализации
   &-gallery{
+    --background: #{alpha($black, .7)};
+
     display: grid;
     grid-template-rows: auto 1fr;
     grid-gap: 15px;
 
     position: relative;
+    background: var(--background);
+    padding: 35px 15px;
+    @include bordered(var(--background), 10);
     z-index: 1;
   }
 
@@ -109,28 +114,34 @@
   // Список
   &-list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+
+    margin-top: 5px;
     list-style: none;
+
+    &:not(:last-of-type){
+      margin-bottom: 35px;
+    }
   }
 
   // Карточки элементов персонализации в галлерее
   &-item{
-    --background: #{alpha($black, .7)};
+    --background: #{alpha($black, .5)};
     --inset-shadow: #{alpha($white, .1)};
-    //--inset-shadow: #{transparent};
+    --gradient: var(--inset-shadow);
     --shadow: var(--background);
 
     position: relative;
     background:
             var(--background)
             radial-gradient(
-                            #{var(--inset-shadow)},
+                            #{var(--gradient)},
                             transparent 65%
             ) center;
     padding: 0;
     width: 100%;
-    height: 210px;
+    height: 170px;
     @include bordered(
                     var(--shadow),
                     5,
@@ -139,10 +150,11 @@
 
     // Состояния карточки элемента персонализации
     &_purchased{
-      --inset-shadow: #{alpha($blue, .2)};
+      --inset-shadow: #{alpha($blue, .4)};
     }
     &_checked{
-      --inset-shadow: #{alpha($gold, .2)};
+      --gradient: #{alpha($gold, .4)};
+      --inset-shadow: #{$gold};
     }
 
     // Контейнер для централизации картинки элемента персонализации
@@ -151,7 +163,7 @@
       align-items: center;
 
       position: absolute;
-      padding: 35px;
+      padding: 20px;
       height: 100%;
       width: 100%;
       top: 0;
