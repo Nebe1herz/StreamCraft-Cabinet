@@ -543,7 +543,7 @@ document.body.onclick = (e) => {
     }
 };
 // Вешаем обработчик на документ
-document.getElementsByClassName('profile-settings')[0].addEventListener('click', (e) =>{
+document.addEventListener('click', (e) =>{
     let
         // Для сокращения записи объявляем item
         item = e.target,
