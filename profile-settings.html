@@ -236,13 +236,142 @@
             </div>
         </div>
     </div>
-    <div class="page">
+    <div class="page profile-settings">
         <div class="wrapper">
             <!-- Заголовок -->
             <h1 class="page-heading page-heading_align-center">
                 Параметры профиля
             </h1>
-            <!-- -->
+            <!-- Список настроек -->
+            <ul class="profile-settings__list">
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Личные сообщения"
+                    data-row="Кто может мне отправлять личные сообщения?<hr>"
+                    data-meta="<span class=green>> ВСЕ ИГРОКИ</span>"
+                    data-checked
+                >
+                    Кто мне может отправлять личные сообщения
+                    <span class="btn">Только друзья</span>
+                    <span class="btn btn_success">Все игроки</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Заявки в друзья"
+                    data-row="Кто может мне отправлять заявки в друзья?<hr>"
+                    data-meta="<span class=green>> ДРУЗЬЯ ДРУЗЕЙ</span>"
+                    data-checked
+                >
+                    Кто может мне отправлять заявку в друзья
+                    <span class="btn btn_success">Друзья друзей</span>
+                    <span class="btn">Все игроки</span>
+                </li>
+            </ul>
+            <!---->
+            <ul class="profile-settings__list">
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления гильдии"
+                    data-row="Получение уведомлений и приглашений от гильдии<hr>"
+                    data-meta="<span class=green>> ВКЛЮЧЕНО</span>"
+                >
+                    Получение уведомлений и приглашений от гильдии
+                    <span class="btn">Выключено</span>
+                    <span class="btn btn_success">Включено</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления о входе"
+                    data-row="Получение уведомлений при входе друзей на сервер<hr>"
+                    data-meta="<span class=red>> ВЫКЛЮЧЕНО</span>"
+                >
+                    Получение уведомлений при входе друзей на сервер
+                    <span class="btn btn_danger">Выключено</span>
+                    <span class="btn">Включено</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления о входе"
+                    data-row="Получение уведомлений о начале прямой трансляции<hr>"
+                    data-meta="<span class=red>> ВЫКЛЮЧЕНО</span>"
+                >
+                    Получение уведомлений о начале прямой трансляции
+                    <span class="btn btn_danger">Выключено</span>
+                    <span class="btn">Включено</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления гильдии"
+                    data-row="Получение уведомлений и приглашений от гильдии<hr>"
+                    data-meta="<span class=green>> ВКЛЮЧЕНО</span>"
+                >
+                    Уведомления и приглашений от гильдии
+                    <span class="btn">Выключено</span>
+                    <span class="btn btn_success">Включено</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления гильдии"
+                    data-row="Получение уведомлений и приглашений от гильдии<hr>"
+                    data-meta="<span class=green>> ВКЛЮЧЕНО</span>"
+                >
+                    Приглашения и уведомления от гильдии
+                    <span class="btn">Выключено</span>
+                    <span class="btn btn_success">Включено</span>
+                </li>
+            </ul>
+            <ul class="profile-settings__list">
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления гильдии"
+                    data-row="Получение уведомлений и приглашений от гильдии<hr>"
+                    data-meta="<span class=green>> ВКЛЮЧЕНО</span>"
+                >
+                    Получение уведомлений и приглашений от гильдии
+                    <span class="btn">Выключено</span>
+                    <span class="btn btn_success">Включено</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления о входе"
+                    data-row="Получение уведомлений при входе друзей на сервер<hr>"
+                    data-meta="<span class=red>> ВЫКЛЮЧЕНО</span>"
+                >
+                    Получение уведомлений при входе друзей на сервер
+                    <span class="btn btn_danger">Выключено</span>
+                    <span class="btn">Включено</span>
+                </li>
+                <li class="profile-settings__item
+                           tooltip-trigger
+                           btn-hover"
+                    data-title="Уведомления о входе"
+                    data-row="Получение уведомлений о начале прямой трансляции<hr>"
+                    data-meta="<span class=red>> ВЫКЛЮЧЕНО</span"
+                >
+                    Получение уведомлений о начале прямой трансляции
+                    <span class="btn btn_danger">Выключено</span>
+                    <span class="btn">Включено</span>
+                </li>
+            </ul>
+            <!-- Возврат параметров до заводских -->
+            <div class="text_style-center">
+                <a href="profile-settings.html"
+                   class="btn btn_danger tooltip-trigger"
+                   data-title="<span class=red>Сбросить параметры</span>"
+                   data-row="Вернуть значение для параметров по-умолчанию"
+                >
+                    Сбросить параметры
+                </a>
+            </div>
         </div>
     </div>
     <div class="sidebar-feed">

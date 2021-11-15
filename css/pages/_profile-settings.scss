@@ -1,0 +1,39 @@
+.profile-settings{
+  padding: 75px 0;
+
+  // Список
+  &__list{
+    margin: 35px auto 50px;
+    list-style: none;
+  }
+
+  // Параметр в настройках профиля
+  &__item{
+    --background: #{alpha($black, .5)};
+
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    grid-gap: 15px;
+
+    background: var(--background);
+    font-size: 20px;
+    color: $gray;
+    margin: 0 0 15px;
+    padding: 10px 25px;
+    cursor: pointer;
+    @include bordered(var(--background));
+
+    // Кнопка переключения
+    .btn{
+      padding: 10px 15px;
+      pointer-events: none;
+      text-transform: initial;
+
+      &:not(.btn_success):not(.btn_danger):not(.btn_primary){
+        --color: #{$dark-gray};
+        --text-shadow: #{$dark-gray-shadow};
+      }
+    }
+  }
+}
