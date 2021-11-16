@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .personalization{
 
 
@@ -58,7 +60,6 @@
         width: 48px;
         margin: auto;
         pointer-events: none!important;
-        image-rendering: pixelated;
 
         filter: saturate(0) brightness(100);
       }
@@ -79,7 +80,6 @@
       display: block;
       top: 180px;
       margin: 0 0 0 -150px;
-      image-rendering: pixelated;
     }
   }
 
@@ -118,10 +118,14 @@
     }
   }
 
-  // Карточки элементов персонализации в галлерее
+  // Карточки элементов персонализации в галерее
   &-item{
+    --text-shadow-size: 3px;
     --inset-shadow: #{alpha($white, .1)};
     --gradient: var(--inset-shadow);
+
+    display: grid;
+    align-items: end;
 
     position: relative;
     background:
@@ -129,10 +133,13 @@
                             #{var(--gradient)},
                             transparent 75%
             ) center;
+    line-height: 32px;
+    font-size: 20px;
     padding: 5px;
     width: 100%;
     height: 200px;
     box-shadow: inset 0 0 0 5px var(--inset-shadow);
+    text-align: center;
 
     // Состояния карточки элемента персонализации
     &-purchased{
@@ -144,6 +151,14 @@
         --inset-shadow: #{$gold};
 
         pointer-events: none;
+
+        &::after{
+          content: 'Выбрано';
+          position: relative;
+          color: $gold;
+          line-height: 48px;
+          text-shadow: 3px 3px $gold-shadow;
+        }
       }
     }
 
@@ -165,6 +180,18 @@
         display: block;
         width: 100%;
       }
+    }
+
+    &__overlay{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      background: alpha($black, .5);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
     }
   }
 }
