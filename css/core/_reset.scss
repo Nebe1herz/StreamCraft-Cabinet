@@ -17,6 +17,7 @@ html{
 img{
   user-select: none;
   pointer-events: none;
+  image-rendering: pixelated;
 }
 a, a * {
   cursor: pointer !important;
