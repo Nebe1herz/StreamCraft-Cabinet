@@ -1,23 +1,5 @@
 .personalization{
-  padding: 25px 0;
 
-  &-grid{
-    display: grid;
-    grid-template-columns: 1fr 60%;
-  }
-
-  // Область кастомизации персонажа
-  &__character{
-    position: relative;
-
-    &-skin{
-      position: fixed;
-      display: block;
-      top: 150px;
-      left: -2%;
-      image-rendering: pixelated;
-    }
-  }
 
   // Навигация / Голова, тело, питомец, эффекты
   &-nav{
@@ -27,18 +9,12 @@
 
     // Внутренний список
     &__list{
-      --background: #{alpha($black, .7)};
-
       display: grid;
-      grid-template-columns: repeat(auto-fit, 78px);
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(79px, 1fr));
       align-items: center;
-      grid-gap: 15px;
 
-      padding: 0 0 5px;
       box-shadow:
-              inset 0 -5px alpha($white, .3),
-              0 5px $dark-gray;
+              0 5px alpha($white, .15);
       text-align: center;
       list-style: none;
 
@@ -52,32 +28,35 @@
       }
     }
 
-    // Элемент навигации
+    // Вкладка
     &__item{
-      //--background: #{alpha($black, .3)};
-      //--shadow: #{alpha($blue, .2)};
+      --background: #{alpha($black, .3)};
+      --checked-shadow: transparent;
+      --hover-shadow: transparent;
 
       display: block;
       position: relative;
       padding: 15px;
-      transition: 0s;
-      @include bordered(
-                      $black,
-                      5,
-                      inset 0 0 0 5px var(--shadow)
-      );
+      transition: .15s ease-in-out;
+      box-shadow:
+              0 5px 0 var(--hover-shadow),
+              0 10px 0 var(--checked-shadow),
+              0 35px 30px -25px var(--checked-shadow);
 
-      &_empty{
-        //--shadow: #{alpha($gray, .2)};
+      &:hover{
+        --hover-shadow: #{alpha($white, .2)};
       }
+
+      // Состояние активной вкладки
       &_checked{
-        --background: #{alpha($gold-shadow, .3)};
-        //--shadow: #{alpha($gold, .2)};
+        --checked-shadow: #{$gold};
       }
 
+      // Иконка вкладки
       &-img{
         display: block;
         width: 48px;
+        margin: auto;
         pointer-events: none!important;
         image-rendering: pixelated;
 
@@ -86,18 +65,28 @@
     }
   }
 
+  &-grid{
+    display: grid;
+    grid-template-columns: 1fr 50%;
+  }
+
+  // Область кастомизации персонажа
+  &__character{
+    position: relative;
+
+    &-skin{
+      position: fixed;
+      display: block;
+      top: 180px;
+      margin: 0 0 0 -150px;
+      image-rendering: pixelated;
+    }
+  }
+
   // Окно с галереей персонализации
   &-gallery{
-    --background: #{alpha($black, .7)};
-
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-gap: 15px;
-
     position: relative;
-    background: var(--background);
-    padding: 35px 15px;
-    @include bordered(var(--background), 10);
+    padding: 25px 0;
     z-index: 1;
   }
 
@@ -113,48 +102,49 @@
 
   // Список
   &-list{
+    --background: #{alpha($black, .9)};
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
 
-    margin-top: 5px;
+    background: var(--background);
+    margin: 25px 0 0;
+    @include bordered(var(--background));
     list-style: none;
 
     &:not(:last-of-type){
-      margin-bottom: 35px;
+      margin-bottom: 26px;
     }
   }
 
   // Карточки элементов персонализации в галлерее
   &-item{
-    --background: #{alpha($black, .5)};
     --inset-shadow: #{alpha($white, .1)};
     --gradient: var(--inset-shadow);
-    --shadow: var(--background);
 
     position: relative;
     background:
-            var(--background)
             radial-gradient(
                             #{var(--gradient)},
-                            transparent 65%
+                            transparent 75%
             ) center;
-    padding: 0;
+    padding: 5px;
     width: 100%;
-    height: 170px;
-    @include bordered(
-                    var(--shadow),
-                    5,
-                    #{inset 0 0 0 5px var(--inset-shadow)}
-    );
+    height: 200px;
+    box-shadow: inset 0 0 0 5px var(--inset-shadow);
 
     // Состояния карточки элемента персонализации
-    &_purchased{
+    &-purchased{
       --inset-shadow: #{alpha($blue, .4)};
-    }
-    &_checked{
-      --gradient: #{alpha($gold, .4)};
-      --inset-shadow: #{$gold};
+
+      // Модификатор активного состояния
+      &_checked{
+        --gradient: #{alpha($gold, .4)};
+        --inset-shadow: #{$gold};
+
+        pointer-events: none;
+      }
     }
 
     // Контейнер для централизации картинки элемента персонализации

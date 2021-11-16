@@ -246,15 +246,12 @@
                 data-trigger-reload="personalization-list"
             >
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Аватарка"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>7</span> из <span class=green>36</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/avatar.png"
                              class="personalization-nav__item-img"
@@ -262,16 +259,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
+                    <a class="personalization-nav__item
                               personalization-nav__item_checked
                               tooltip-trigger"
                        data-title="Головные уборы"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>7</span> из <span class=green>36</span>
-                           "
+                       <span class=dark-gray>Надета:</span>
+                       <span class=gold>Утиная шапочка</span>
+                       "
                     >
                         <img src="images/icon/hat.png"
                              class="personalization-nav__item-img"
@@ -279,16 +274,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
-                              personalization-nav__item_empty
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Маски"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>7</span> из <span class=green>36</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/mask.png"
                              class="personalization-nav__item-img"
@@ -296,16 +287,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
-                              personalization-nav__item_empty
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Ангелочек"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>12</span> из <span class=green>76</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/angel.png"
                              class="personalization-nav__item-img"
@@ -313,15 +300,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Тело и спина"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>12</span> из <span class=green>76</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/body.png"
                              class="personalization-nav__item-img"
@@ -329,15 +313,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Хвосты"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>7</span> из <span class=green>36</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/tail.png"
                              class="personalization-nav__item-img"
@@ -345,15 +326,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Питомцы"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>4</span> из <span class=green>12</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/pet.png"
                              class="personalization-nav__item-img"
@@ -361,36 +339,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
+                    <a class="personalization-nav__item
                               tooltip-trigger"
                        data-title="Эффекты"
                        data-row="
-                                Всего в коллекции
-                                <span class=green>9</span> из <span class=green>28</span>
-                           "
+                       <span class=dark-gray>Ничего не надето</span>
+                       "
                     >
                         <img src="images/icon/track.png"
-                             class="personalization-nav__item-img"
-                             alt>
-                    </a>
-                </li>
-                <li>
-                    <i class="personalization-nav__list-separator"></i>
-                </li>
-                <li>
-                    <a href="#"
-                       class="btn
-                              personalization-nav__item
-                              tooltip-trigger"
-                       data-title="Моя коллекция"
-                       data-row="
-                                Всего в коллекции
-                                <span class=green>45</span> из <span class=green>90</span>
-                           "
-                    >
-                        <img src="images/icon/collection.png"
                              class="personalization-nav__item-img"
                              alt>
                     </a>
@@ -398,15 +354,22 @@
             </ul>
         </div>
     </div>
-    <div class="page personalization">
+    <div class="page">
         <!---->
         <div class="wrapper">
             <!-- Основная сетка и контейнер страницы -->
             <div class="personalization-grid">
-
-                <br>
+                <!-- Рендер скина в 3D -->
+                <div class="personalization__character animate-list">
+                    <canvas class="personalization__character-skin" id="viewSkin3d"></canvas>
+                </div>
                 <!-- Раздел с выбором персоналищации -->
-                <div class="personalization-gallery">
+                <div class="personalization-gallery
+                            list-trigger
+                     "
+                     data-trigger="personalization-item-purchased"
+                     data-trigger-reload="personalization__character"
+                >
                     <!-- Первая коллекция -->
                     <h6 class="page-heading">
                         Головные уборы:
@@ -414,13 +377,12 @@
                     </h6>
                     <ul class="personalization-list">
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_purchased
+                                      personalization-item-purchased
                                       tooltip-trigger"
                                data-title="Шляпа пасечника"
-                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/1.png" alt>
@@ -428,13 +390,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_purchased
+                                      personalization-item-purchased
                                       tooltip-trigger"
                                data-title="Шапка-ушанка"
-                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/2.png" alt>
@@ -442,13 +403,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_checked
+                                      personalization-item-purchased
+                                      personalization-item-purchased_checked
                                       tooltip-trigger"
                                data-title="Утиная шапочка"
-                               data-row="<span class=gold>Предмет экипирован</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/3.png" alt>
@@ -456,13 +417,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_purchased
+                                      personalization-item-purchased
                                       tooltip-trigger"
                                data-title="Рыцарский шлем"
-                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/4.png" alt>
@@ -470,13 +430,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_purchased
+                                      personalization-item-purchased
                                       tooltip-trigger"
                                data-title="Красная шапка"
-                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/5.png" alt>
@@ -484,13 +443,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_purchased
+                                      personalization-item-purchased
                                       tooltip-trigger"
                                data-title="Строительная каска"
-                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/6.png" alt>
@@ -498,13 +456,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
-                                      personalization-item_purchased
+                                      personalization-item-purchased
                                       tooltip-trigger"
                                data-title="Шляпа лепрекона"
-                               data-row="<span class=dark-gray>Кликните, чтобы надеть</span>"
+                               data-meta="Надеть"
                             >
                                 <div class="personalization-item__preview">
                                     <img src="images/personalization/7.png" alt>
@@ -512,8 +469,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -522,9 +478,8 @@
                                         Стоимость:
                                         <span class=white>75</span>
                                         <span class='currency currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -533,8 +488,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -543,9 +497,8 @@
                                         Стоимость:
                                         <span class=white>65</span>
                                         <span class='currency currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -554,8 +507,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -564,9 +516,8 @@
                                         Стоимость:
                                         <span class=white>65</span>
                                         <span class='currency currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -575,8 +526,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -585,9 +535,8 @@
                                         Стоимость:
                                         <span class=white>50</span>
                                         <span class='currency currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -596,8 +545,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -606,9 +554,8 @@
                                         Стоимость:
                                         <span class=white>2 500</span>
                                         <span class='currency currency_coin currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -617,8 +564,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -627,9 +573,8 @@
                                         Стоимость:
                                         <span class=white>1 500</span>
                                         <span class='currency currency_coin currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -638,8 +583,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -648,9 +592,8 @@
                                         Стоимость:
                                         <span class=white>750</span>
                                         <span class='currency currency_coin currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -659,8 +602,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -669,9 +611,8 @@
                                         Стоимость:
                                         <span class=white>500</span>
                                         <span class='currency currency_coin currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -680,8 +621,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               class="btn
+                            <a class="btn
                                       personalization-item
                                       modal-trigger
                                       tooltip-trigger"
@@ -690,9 +630,8 @@
                                         Стоимость:
                                         <span class=white>150</span>
                                         <span class='currency currency_coin currency_size-24'></span>
-                                        <br>
-                                        <span class=dark-gray>Кликните для покупки</span>
-                               "
+                                        "
+                               data-meta="Подробнее"
                                data-modal-name="confirm_personalization"
                             >
                                 <div class="personalization-item__preview">
@@ -709,7 +648,8 @@
                     </h6>
                     <ul class="personalization-list">
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
+                               href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -730,7 +670,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -751,7 +691,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -772,7 +712,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -793,7 +733,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -814,7 +754,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -835,7 +775,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -856,7 +796,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -877,7 +817,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -898,7 +838,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -919,7 +859,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -940,7 +880,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -961,7 +901,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -982,7 +922,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -1003,7 +943,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="battle-pass__index.html"
                                class="btn
                                       personalization-item
                                       tooltip-trigger"
@@ -1026,8 +966,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- Рендер скина в 3D -->
-            <canvas class="personalization__character-skin" id="viewSkin3d"></canvas>
         </div>
     </div>
     <div class="sidebar-feed">
@@ -1394,8 +1332,8 @@
 <script>
     let FXAASkinViewer = new skinview3d.SkinViewer({
         canvas: document.getElementById("viewSkin3d"),
-        width: 1100,
-        height: 1375,
+        width: 900,
+        height: 1200,
         skin: "images/skin.png"
     });
 
