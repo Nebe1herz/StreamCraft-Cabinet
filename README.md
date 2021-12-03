@@ -44,4 +44,4 @@
 
 # О проекте
 
-Задизайнено и разработано by [Yurii Kaiser ](https://vk.com/id165434964) специально для [StreamCraft.net](https://streamcraft.net). <3
+Разработано и задизайнено by [Yurii Kaiser ](https://vk.com/id165434964) специально для [StreamCraft.net](https://streamcraft.net). <3
