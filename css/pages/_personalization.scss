@@ -38,7 +38,7 @@
 
       display: block;
       position: relative;
-      padding: 15px;
+      padding: 5px;
       transition: .15s ease-in-out;
       box-shadow:
               0 5px 0 var(--hover-shadow),
@@ -57,11 +57,9 @@
       // Иконка вкладки
       &-img{
         display: block;
-        width: 48px;
+        width: 64px;
         margin: auto;
         pointer-events: none!important;
-
-        filter: saturate(0) brightness(100);
       }
     }
   }
