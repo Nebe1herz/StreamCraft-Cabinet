@@ -86,6 +86,7 @@
     &__icon{
       width: calc(var(--card-size) - 10px);
       height: calc(var(--card-size) - 10px);
+      pointer-events: none!important;
       image-rendering: pixelated;
     }
     // Количество предмета
