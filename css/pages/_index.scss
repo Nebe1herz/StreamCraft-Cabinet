@@ -1,9 +1,16 @@
 .index{
+  --grid-group: repeat(6, 1fr);
+  --grid-footer: auto 1fr auto;
+
+  &_alt{
+    --grid-group: repeat(4, 180px);
+    --grid-footer: 320px 152px 320px;
+  }
 
   // Группа кнопок
   &-group{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: var(--grid-group);
     grid-template-rows: 276px;
     grid-gap: 32px 24px;
     padding: 35px 0 32px;
@@ -120,6 +127,7 @@
   // Футер
   &-footer{
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: var(--grid-footer);
+    justify-content: center;
   }
 }
