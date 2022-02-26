@@ -20,6 +20,8 @@
 
     // Заголовок раздела
     &-heading{
+      --text-shadow-size: 3px;
+
       font-size: 20px;
       color: $green;
       margin: 0 0 15px;

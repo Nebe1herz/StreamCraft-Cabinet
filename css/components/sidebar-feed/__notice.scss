@@ -70,7 +70,7 @@
   &-item{
     --background: #{alpha($white, .1)};
     --color: #{$white};
-    --text-shadow: #{$white-shadow};
+    --text-shadow: #{$none};
 
     display: block;
     position: relative;
@@ -91,23 +91,19 @@
       &-primary{
         --background: #{alpha($blue, .2)};
         --color: #{$aqua};
-        --text-shadow: #{$blue};
       }
       &-success{
         --background: #{alpha($green, .2)};
         --color: #{$green};
-        --text-shadow: #{$green-shadow};
       }
       &-danger{
         --background: #{alpha($red, .2)};
         --color: #{$red};
-        --text-shadow: #{$red-shadow};
       }
 
       &-warning{
         --background: #{alpha($gold, .2)};
         --color: #{$gold};
-        --text-shadow: #{$gold-shadow};
       }
       // Кнопка "Показать все уведомления"
       &-more{
