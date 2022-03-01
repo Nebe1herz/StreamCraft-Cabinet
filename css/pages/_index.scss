@@ -61,7 +61,7 @@
         }
         // Кнопка выхода с сервера
         &-exit{
-          --background: #{alpha($red-shadow, .8)};
+          --background: #{alpha($red-shadow, .5)};
         }
       }
 
