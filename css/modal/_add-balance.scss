@@ -172,8 +172,9 @@
     border: none;
     background: none;
     font-size: 18px;
+    color: var(--white);
     padding: 15px 50px;
-    outline: none;
     @include bordered($dark-gray);
+    outline: none;
   }
 }
