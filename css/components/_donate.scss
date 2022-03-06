@@ -110,6 +110,7 @@
       font-size: 24px;
       line-height: 1.2;
       color: var(--color);
+      min-height: 58px;
       padding: 0 10px;
       text-shadow: 4px 4px alpha($black, .6);
     }
@@ -136,10 +137,17 @@
       &-text{
         display: block;
         font-family: MinecraftTitle, sans-serif;
-        color: var(--color);
+        color: var(--gray);
         font-size: 18px;
         margin: 0 0 5px;
         text-shadow: 0 0;
+
+        // Модификатор
+        &_disabled{
+          color: var(--dark-gray);
+          line-height: 26px;
+          margin: 0;
+        }
       }
 
       // Зачеркнутая цена (для отображения разницы при скидке)
