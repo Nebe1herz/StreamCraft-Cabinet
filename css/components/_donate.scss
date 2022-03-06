@@ -65,6 +65,15 @@
         --border: #{$gold};
         --color: #{$gold};
       }
+      &-gold-alt{
+        --color: #{$gold};
+      }
+      &-gray{
+        --color: #{$gray};
+      }
+      &-yellow{
+        --color: #{$yellow};
+      }
     }
 
     // Плашка для отображения скидки или специального предложения
