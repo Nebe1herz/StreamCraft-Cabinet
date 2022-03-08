@@ -1,10 +1,14 @@
 .index{
-  --grid-group: repeat(6, 1fr);
-  --grid-footer: auto 1fr auto;
+  --grid-group: repeat(5, 180px);
+  --grid-footer: 320px 356px 320px;
 
-  &_alt{
+  &_grid-4{
     --grid-group: repeat(4, 180px);
     --grid-footer: 320px 152px 320px;
+  }
+  &_grid-6{
+    --grid-group: repeat(6, 1fr);
+    --grid-footer: auto 1fr auto;
   }
 
   // Группа кнопок
