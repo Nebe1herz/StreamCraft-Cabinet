@@ -50,6 +50,10 @@
       --blackout: #{alpha(darken($dark-red, 28), .8)};
       --border: #{alpha($red, .4)};
     }
+    &-yellow{
+      --blackout: #{alpha($yellow-shadow, .8)};
+      --border: #{alpha($yellow, .6)};
+    }
   }
 
   // Кнопка закрытия
