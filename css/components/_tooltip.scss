@@ -43,6 +43,11 @@
     max-width: 320px;
   }
 
+  // Изображения
+  img{
+    width: 100%;
+  }
+
   // Последняя строчка // data-meta
   &__meta{
     color: $blue;
