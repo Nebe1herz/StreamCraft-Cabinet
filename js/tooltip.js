@@ -33,7 +33,7 @@ document.addEventListener('mouseover', (e) =>{
             // Чтобы в тексте не выводилось "undefined"
             item.style.display = 'none';
 
-            // Сбарсываем переменную
+            // Сбрасываем переменную
             return -1;
         }
 
@@ -59,14 +59,17 @@ document.addEventListener('mouseover', (e) =>{
 
     // Перемещение тултипа за курсором мышимышью
     item.addEventListener('mousemove', (event) =>{
-        let // Ширина тултипа
-            tooltipWidth = tooltip.offsetWidth,
+        // Размеры тултипа
+        let tooltipWidth = tooltip.offsetWidth,
+            tooltipHeight = tooltip.offsetHeight;
 
-            // Координаты
-            y = event.clientY,
-
-            // Проверка на выход за пределы окна
-            x = ((document.body.offsetWidth - event.clientX) > 350)
+        // Проверка на выход за пределы окна
+        // По вертикали
+        let y = ((event.clientY + tooltipHeight) < document.body.offsetHeight)
+                ? event.clientY
+                : event.clientY - (tooltipHeight);
+        // По горизонтали
+        let x = ((document.body.offsetWidth - event.clientX) > 350)
                 ? event.clientX + 15
                 : event.clientX - (tooltipWidth + 15);
 

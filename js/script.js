@@ -374,13 +374,18 @@ document.addEventListener('mouseover', (e) =>{
 
     // Перемещение тултипа за курсором мышимышью
     item.addEventListener('mousemove', (event) =>{
-        let // Ширина тултипа
+        let 
+            // Ширина тултипа
             tooltipWidth = tooltip.offsetWidth,
-
-            // Координаты
-            y = event.clientY,
+            tooltipHeight = tooltip.offsetHeight,
 
             // Проверка на выход за пределы окна
+            // По вертикали
+            y = ((event.clientY + tooltipHeight) < document.body.offsetHeight)
+                ? event.clientY
+                : event.clientY - (tooltipHeight),
+
+            // По горизонтали
             x = ((document.body.offsetWidth - event.clientX) > 350)
                 ? event.clientX + 15
                 : event.clientX - (tooltipWidth + 15);
