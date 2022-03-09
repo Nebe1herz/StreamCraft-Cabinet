@@ -8,6 +8,26 @@
     text-shadow: 3px 3px $white-shadow;
   }
 
+  &__help-tip{
+    --background: #{alpha($white, .1)};
+
+    display: block;
+    position: absolute;
+    background: var(--background);
+    width: 48px;
+    height: 48px;
+    top: 32px;
+    right: 10px;
+    padding: 2px;
+    @include bordered(var(--background));
+    z-index: 1;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   // Сетка
   &-contains{
     --card-size: 58px;
