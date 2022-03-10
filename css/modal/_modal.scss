@@ -149,24 +149,19 @@
 
     // Примечание, скидка
     &__notice{
-      --color-1: #{alpha($light-purple, .6)};
-      --color-2: #{alpha($light-purple, .4)};
+      --background: #{alpha($light-purple, .8)};
 
       display: block;
-      background:
-              linear-gradient(
-                              90deg,
-                              transparent 10%,
-                              var(--color-1) 35%,
-                              var(--color-2),
-                              var(--color-1) 65%,
-                              transparent 90%
-              );
+      background: var(--background);
       line-height: 32px;
       font-size: 20px;
       color: $white;
-      margin: 5px 0 0;
+      width: 50%;
+      margin: 5px auto 0;
       white-space: nowrap;
+      box-shadow:
+              10px 0 0 -5px var(--background),
+              -10px 0 0 -5px var(--background);
       text-shadow: 3px 3px $white-shadow;
       text-align: center;
 
@@ -177,13 +172,12 @@
 
       // Модификатор для отображения скидки
       &_sale{
-        --color-1: #{alpha($red, .6)};
-        --color-2: #{alpha($red, .4)};
+        --background: var(--red);
       }
       // Модификатор для отображения отсутствия кейсов
       &_empty{
-        --color-1: #{alpha($dark-gray, .6)};
-        --color-2: #{alpha($dark-gray, .4)};
+        --background: var(--gray-shadow);
+
         color: $gray;
         text-shadow: 3px 3px $gray-shadow;
       }
