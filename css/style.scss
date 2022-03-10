@@ -33,6 +33,10 @@
 'components/animate-list',
 // Компоненты полосы прокрутки
 'components/scroll',
+// Отображение стандартного GUI
+'components/window',
+// Отображение набора ресурсов
+'components/inventory',
 // Промо-компонент
 'components/promo',
 // Уведомления
@@ -92,8 +96,6 @@
 // Общая стилизация модальных окон
 'modal/modal',
 
-// Отображение набора ресурсов
-'modal/inventory',
 // Покупка донат-группы
 'modal/privilege',
 // Покупка и открытие кейсов
