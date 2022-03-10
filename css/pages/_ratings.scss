@@ -150,7 +150,6 @@
       margin: 15px 0 0;
       @include bordered(var(--shadow));
       text-shadow: 3px 3px $gray-shadow;
-      text-transform: initial;
       text-align: left;
 
       &_type{

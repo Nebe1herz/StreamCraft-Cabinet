@@ -29,7 +29,6 @@
     height: 100%;
     padding: 25px 0;
     @include bordered(var(--border), 8);
-    text-transform: initial;
     text-align: center;
 
     // Отключен

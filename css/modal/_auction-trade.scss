@@ -58,7 +58,6 @@
     line-height: 46px;
     padding: 0 15px;
     margin: 0 -15px!important;
-    text-transform: initial;
     white-space: nowrap;
     text-align: left;
   }
@@ -139,7 +138,6 @@
         padding: 10px 0;
         margin: 0;
         font-size: 18px;
-        text-transform: initial;
 
         &:not(.btn_success){
           --background: #{alpha($white, .05)};

@@ -28,7 +28,6 @@
     .btn{
       padding: 10px 15px;
       pointer-events: none;
-      text-transform: initial;
 
       &:not(.btn_success):not(.btn_danger):not(.btn_primary){
         --color: #{$dark-gray};

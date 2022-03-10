@@ -279,7 +279,6 @@
       background: var(--background);
       padding: 5px 15px;
       @include bordered(var(--background));
-      text-transform: initial;
       text-align: left;
 
       // Превью достижения
