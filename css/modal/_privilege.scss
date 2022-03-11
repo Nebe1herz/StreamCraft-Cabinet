@@ -100,7 +100,7 @@
       background-size: contain;
       width: 48px;
       height: 48px;
-      margin: auto;
+      margin: 0 auto 5px;
       image-rendering: pixelated;
     }
 
@@ -115,7 +115,7 @@
     //
     &-about{
       font-size: 13px;
-      color: $dark-gray;
+      color: var(--gray-700);
       text-shadow: 2px 2px $dark-gray-shadow;
     }
   }
