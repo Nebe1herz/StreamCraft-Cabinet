@@ -1,9 +1,9 @@
 // Реализация со всеми тенями стиля стандартного GUI
 .window{
-	--background: var(--gray-200);
-	--border: var(--gray-900);
 	--light: var(--white);
+	--background: var(--gray-200);
 	--shadow: var(--gray-600);
+	--border: var(--gray-900);
 
 	// Основные стили
 	background: var(--background);
@@ -36,10 +36,13 @@
 				// Нижняя граница
 			inset 0 -4px var(--border), // Черный контур
 			inset 0 -12px var(--shadow) // Тень
-;
+	;
 
 	// Модификатор недоступного состояния
 	&_disabled{
-
+		--light: var(--gray-400);
+		--background: var(--gray-600);
+		--shadow: var(--gray-700);
+		--border: var(--gray-900);
 	}
 }
