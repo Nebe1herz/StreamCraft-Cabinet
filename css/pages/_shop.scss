@@ -3,7 +3,7 @@
   // Фильтры магазина блоков
   &__filters{
     display: grid;
-    grid-template-columns: auto auto 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     list-style: none;
     margin: 0 0 35px;
@@ -16,10 +16,14 @@
 
     // Кнопка
     .btn{
+      display: grid;
+      grid-template-columns: auto 1fr;
+
       font-size: 16px;
+      width: 100%;
       padding: 15px 25px;
-      z-index: 2;
       text-align: left;
+      z-index: 2;
 
       // При наведении на кнопку или на выпадающий список
       // Отображать выпадающий список
@@ -30,7 +34,7 @@
 
         .btn{
           opacity: 1;
-          line-height: 1;
+          line-height: .5;
           pointer-events: all;
         }
       }
