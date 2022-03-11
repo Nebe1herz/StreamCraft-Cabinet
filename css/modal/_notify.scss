@@ -1,0 +1,19 @@
+.notify{
+	&-modal{
+		width: 810px;
+
+		&__item{
+			margin: 20px 0 0;
+		}
+	}
+	&-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		grid-gap: 25px;
+
+		img{
+			width: 100%;
+		}
+	}
+}
