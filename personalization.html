@@ -364,18 +364,19 @@
                     <canvas class="personalization__character-skin" id="viewSkin3d"></canvas>
                 </div>
                 <!-- Раздел с выбором персоналищации -->
-                <div class="personalization-gallery
-                            list-trigger
-                     "
-                     data-trigger="personalization-item-purchased"
-                     data-trigger-reload="personalization__character"
-                >
+                <div class="personalization-gallery">
                     <!-- Первая коллекция -->
                     <h6 class="page-heading">
                         Головные уборы:
                         <span class="text text_style-green">7 из 16</span>
                     </h6>
-                    <ul class="personalization-list animate-list">
+                    <ul class="personalization-list
+                               animate-list
+                               list-trigger
+                        "
+                        data-trigger="personalization-item-purchased"
+                        data-trigger-reload="personalization__character"
+                    >
                         <!-- Купленные -->
                         <li>
                             <a class="btn-hover
