@@ -1,14 +1,35 @@
 .battle-pass{
-  padding: 0!important;
+  padding: 25px 0!important;
 
   //
-  &-content{
+  &__content{
     --background: #{alpha($black, .5)};
 
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px 15px;
+
     background: var(--background);
-    height: 350px;
-    margin: 15px 0 35px;
+    margin: 25px 0;
+    padding: 15px;
     @include bordered(var(--background), 10);
+  }
+
+  &__progress{
+    display: block;
+    border: 5px solid var(--gray-400);
+    height: 60px;
+    padding: 5px;
+    box-shadow: 5px 5px $gray-shadow;
+
+    &::before{
+      content:'';
+      display: block;
+      background: $gold;
+      width: 74%;
+      height: 100%;
+      box-shadow: 5px 5px $gold-shadow;
+    }
   }
 
   &__awards{
