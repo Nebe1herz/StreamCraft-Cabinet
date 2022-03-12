@@ -28,11 +28,12 @@
 
               alpha($black, .8)
               linear-gradient(
-                              0,
-                              transparent,
-                              alpha($gold, .1)
+                              90deg,
+                              alpha($gold, .2) 40%,
+                              alpha($green, .2) 60%
               );
       background-size: 1280px, auto;
+      padding-right: 100px!important;
       image-rendering: pixelated;
     }
   }
