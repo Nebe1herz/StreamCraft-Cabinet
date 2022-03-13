@@ -1,10 +1,77 @@
 <div class="modal modal_style-gold">
-    <div class="wrapper wrapper_modal">
+    <div class="wrapper wrapper_modal battle-pass__buy">
         <div class="modal-area modal-area_windowed">
             <div class="modal-area__section">
-                <h2 class="modal-area__heading">
-                    Покупка боевого пропуска
-                </h2>
+                <div class="battle-pass__buy-title">
+                    <h1 class="modal-area__heading">
+                        ЧТО ДАЁТ STREAM PASS?
+                    </h1>
+                </div>
+                <ul class="battle-pass__buy-features">
+                    <li class="battle-pass__buy-features__item">
+                        <div class="text text_style-gray">
+                            <div class="text text_style-gold">
+                                Краткий заголовок
+                            </div>
+                            Более подробное описание со всеми тонкостями, приколами и точками интереса
+                        </div>
+                    </li>
+                    <li class="battle-pass__buy-features__item">
+                        <div class="text text_style-gray">
+                            <div class="text text_style-gold">
+                                Более длинный заголовок
+                            </div>
+                            Описание, что даёт данная возможность, какие от неё плюшки
+                        </div>
+                    </li>
+                    <li class="battle-pass__buy-features__item">
+                        <div class="text text_style-gray">
+                            <div class="text text_style-gold">
+                                Тоже ещё один заголовок
+                            </div>
+                            Описание возможности с её ключевыми сильными и слабыми сторонами
+                        </div>
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <!-- Кнопка покупки на 30 дней -->
+                <a href="#"
+                   class="btn
+                          btn_success
+                          btn_purchase
+                          btn_purchase_column
+                          modal-trigger
+                ">
+                    <span class="btn_purchase-section">
+                        Купить на
+                        <span class="btn-mark">30 дней</span>
+                    </span>
+                    <span class="btn_purchase-section">
+                        Цена: 350 <i class="currency currency_offset"></i>
+                    </span>
+                </a>
+                <!-- Кнопка покупки на 90 дней со скидкой -->
+                <a href="#"
+                   class="btn
+                          btn_warning
+                          btn_purchase
+                          btn_purchase_column
+                          modal-trigger"
+                   data-modal-name="error-balance"
+                >
+                    <span class="btn_purchase-section">
+                        Купить на
+                        <span class="btn-mark">весь сезон</span>
+                    </span>
+                    <span class="btn_purchase-section">
+                        <span class="btn-strike">1050 <i class="currency currency_offset"></i></span>
+                        750 <i class="currency currency_offset"></i>
+                    </span>
+                    <span class="btn_purchase__sale">
+                        <span class="btn_purchase__sale-text">Выгоднее на 300 руб.</span>
+                    </span>
+                </a>
             </div>
         </div>
     </div>
