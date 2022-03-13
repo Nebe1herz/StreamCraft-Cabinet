@@ -1,0 +1,16 @@
+&__progress{
+	display: block;
+	border: 5px solid var(--gray-400);
+	height: 60px;
+	padding: 5px;
+	box-shadow: 5px 5px $gray-shadow;
+
+	&::before{
+		content:'';
+		display: block;
+		background: $gold;
+		width: 74%;
+		height: 100%;
+		box-shadow: 5px 5px $gold-shadow;
+	}
+}
