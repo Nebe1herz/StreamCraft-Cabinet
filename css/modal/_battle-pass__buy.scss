@@ -1,0 +1,77 @@
+.battle-pass__buy{
+	padding-top: 256px;
+
+	&-title{
+		position: relative;
+		padding: 15px 0;
+		z-index: 1;
+
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			background: url("#{$url}icon/battle-pass-alt.png") no-repeat center;
+			background-size: 100%;
+			margin: auto;
+			width: 702px;
+			height: 702px;
+			left: 0;
+			right: 0;
+			bottom: -200px;
+			animation: 4s battle-pass__fly ease-in-out infinite both;
+			image-rendering: pixelated;
+			will-change: transform;
+		}
+
+		@keyframes battle-pass__fly{
+			0%, 100%{
+				transform: translateY(-25px);
+			}
+			50%{
+				transform: translateY(25px);
+			}
+		}
+
+		.modal-area__heading{
+			display: inline-block;
+			position: relative;
+			background: $dark-red;
+			padding: 10px 25px;
+			@include bordered($gold, 5);
+			z-index: 1;
+		}
+	}
+
+	&-features{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 25px;
+
+		position: relative;
+		margin: 25px 0 0;
+		list-style: none;
+		z-index: 2;
+
+		&__item{
+			//--background: #{alpha($gold, .1)};
+			--background: #{alpha(#1f1500, .95)};
+
+			background: var(--background);
+			line-height: 1.5;
+			font-size: 18px;
+			padding: 15px;
+			@include bordered(var(--background), 10);
+
+			&::before{
+				content: '';
+				display: block;
+				background: url("#{$url}gui/check_gold.png") no-repeat center;
+				background-size: contain;
+				width: 80px;
+				height: 80px;
+				margin: 0 auto 10px;
+				image-rendering: pixelated;
+			}
+		}
+	}
+}
