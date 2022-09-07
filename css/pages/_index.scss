@@ -1,24 +1,40 @@
 .index{
-  --grid-group: repeat(5, 180px);
   --grid-footer: 320px 356px 320px;
 
   &_grid-4{
-    --grid-group: repeat(4, 180px);
     --grid-footer: 320px 152px 320px;
   }
-  &_grid-6{
-    --grid-group: repeat(6, 1fr);
+  &_grid-5{
     --grid-footer: auto 1fr auto;
+  }
+  &_grid-6{
+    --grid-footer: auto 1fr auto;
+  }
+
+  .wrapper{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 35px;
   }
 
   // Группа кнопок
   &-group{
     display: grid;
-    grid-template-columns: var(--grid-group);
+    grid-template-columns: repeat(5, 180px);
     grid-template-rows: 276px;
-    grid-gap: 24px;
-    margin: 35px 0 24px;
     justify-content: center;
+    grid-gap: 24px;
+
+    &_grid-4{
+      grid-template-columns: repeat(4, 180px);
+    }
+    &_grid-5{
+      grid-template-columns: repeat(5, 180px);
+    }
+    &_grid-6{
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     // Кнопка в меню
     &__btn{
@@ -33,6 +49,7 @@
       align-items: start;
       grid-gap: 25px;
 
+      position: relative;
       line-height: 1.5;
       font-size: 18px;
       padding: 45px 15px;
@@ -67,7 +84,9 @@
         }
         // Кнопка выхода с сервера
         &-exit{
-          --background: #{alpha($red-shadow, .5)};
+          //--background: #{alpha($red-shadow, .5)};
+          --color: var(--red);
+          --text-shadow: var(--red-shadow);
         }
       }
 
@@ -103,6 +122,28 @@
         }
       }
 
+      // Мерцающий сплэщ
+      &-splash{
+        position: absolute;
+        font-size: 20px;
+        color: var(--yellow);
+        top: 10px;
+        left: -45px;
+        transform: rotate(-30deg);
+        transform-origin: center center;
+        animation: index-group__btn-splash 1s ease-in-out infinite;
+        text-shadow: 3px 3px var(--yellow-shadow);
+
+        @keyframes index-group__btn-splash{
+          0%, 100%{
+            transform: rotate(-30deg) scale(1);
+          }
+          50%{
+            transform: rotate(-30deg) scale(1.5);
+          }
+        }
+      }
+
       // Иконка в кнопке
       &-icon{
         display: block;
@@ -133,7 +174,8 @@
   // Футер
   &-footer{
     display: grid;
-    grid-template-columns: var(--grid-footer);
+    grid-template-columns: repeat(2, 384px);
     justify-content: center;
+    grid-gap: 25px;
   }
 }
