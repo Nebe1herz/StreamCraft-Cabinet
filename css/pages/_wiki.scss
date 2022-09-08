@@ -1,47 +1,105 @@
 .wiki{
 
+	&-container{
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		align-items: start;
 
+		margin: 45px 0 90px;
+	}
 
+	&-preview{
+		display: grid;
+		align-content: start;
+		align-items: start;
+		justify-content: center;
+		justify-items: center;
+		grid-gap: 15px;
 
+		&__icon{
+			width: 256px;
+			height: 256px;
+		}
 
+		&__heading{
+			--text-shadow-size: 4px;
 
+			line-height: 1.3;
+			font-size: 32px;
+			text-align: center;
+		}
+	}
 
+	&-content{
+		--background: #{transparentize($black, .3)};
 
+		display: grid;
+		grid-gap: 15px;
 
+		background: var(--background);
+		font-size: 21px;
+		padding: 25px;
+		@include bordered(var(--background), 20);
 
+		&__heading{
+			font-size: 24px;
+			color: var(--aqua);
 
+			&:not(:first-of-type){
+				margin-top: 25px;
+			}
+		}
 
+		&__paragraph{
+			--text-shadow-size: 0;
 
+			line-height: 1.5;
+			font-size: 18px;
+			color: gray;
+		}
 
+		&__link{
+			--background: #{transparentize($black, .3)};
 
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-gap: 10px;
 
+			background: var(--background);
+			line-height: 24px;
+			font-size: 16px;
+			padding: 15px;
+			text-align: left;
+			@include bordered(var(--background));
 
+			& > .text{
+				--color: var(--gray);
+				--text-shadow: var(--gray-shadow);
+			}
+		}
+	}
 
+	&-related{
+		display: grid;
+		grid-gap: 20px;
 
+		margin-top: 25px;
+		padding: 0 0 50px;
+		list-style: none;
 
+		&__card{
+			--background: #{transparentize($black, .3)};
 
+			display: grid;
+			grid-template-columns: auto 1fr;
+			align-items: center;
+			grid-gap: 10px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			background: var(--background);
+			font-size: 20px;
+			padding: 15px 25px;
+			text-align: left;
+			@include bordered(var(--background));
+		}
+	}
 }
