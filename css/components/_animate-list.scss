@@ -1,26 +1,30 @@
 .animate-list{
-
-  @keyframes opacity-show{
-    0%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-    }
-  }
-
   & > *{
-    --delay: 1.5s;
+    --delay: 2s;
+
     animation:
             opacity-show
             .3s
             ease-out
             var(--delay)
             both;
+    transform-origin: center;
+    will-change: transform, opacity;
 
     @for $i from 1 to 50 {
       &:nth-of-type(#{$i}){
-        --delay: #{$i * 30}ms;
+        --delay: #{$i * 40}ms;
+      }
+    }
+
+    @keyframes opacity-show{
+      0%{
+        transform: scale(0);
+        //opacity: 0;
+      }
+      100%{
+        transform: scale(1);
+        //opacity: 1;
       }
     }
   }
