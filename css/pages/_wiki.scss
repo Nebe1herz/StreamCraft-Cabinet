@@ -98,8 +98,8 @@
 			background: var(--background);
 			font-size: 20px;
 			padding: 15px 25px;
-			text-align: left;
 			@include bordered(var(--background));
+			text-align: left;
 		}
 	}
 }
