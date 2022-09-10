@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<!-- Standard Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+	<!-- Site Properities -->
+	<title>SC | Внутриигровая вики</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<!--<link rel="icon" type="image/png" href="favicon.ico" />-->
+
+	<!-- Scripts -->
+	<!--Здесь пока ничего нет-->
+</head>
+<body class="overlay-checked">
+<div class="overlay">
+	<div class="header">
+		<div class="wrapper">
+			<ul class="header-list">
+				<!-- Назад в главное меню -->
+				<li class="header-section">
+					<a href="worlds.html"
+					   class="btn-hover
+                              header-item
+                              tooltip-trigger"
+					   data-title="Вернуться к игре"
+					>
+						<img src="images/icon/menu.png"
+							 class="header-item__img" alt>
+						Назад
+					</a>
+
+					<!-- Корзина -->
+					<a href="cart.html"
+					   class="btn-hover
+                              header-item
+                              tooltip-trigger"
+					   data-title="Мои покупки"
+					   data-row="
+                                 <span class=dark-gray>Здесь пока ничего нет</span>
+                       "
+					>
+						<img src="images/icon/cart.png"
+							 class="header-item__img" alt>
+						<span class="text text_style-gray">
+                            Мои покупки
+                        </span>
+					</a>
+				</li>
+
+				<!-- Элемент-заполнитель -->
+				<li>
+
+				</li>
+
+				<li class="header-section">
+					<!-- Баланс РУБЛЕЙ -->
+					<a class="btn-hover
+                              header-item
+                              modal-trigger
+                              tooltip-trigger"
+					   data-title="Пополнить баланс"
+					   data-row="
+                                 На балансе
+                                 <span class=green>
+                                    0
+                                    <i class='currency currency_size-24'></i>
+                                 </span>
+                                 рублей
+                       "
+					   data-meta="Кликни сюда!"
+					   data-modal-name="add-balance"
+					>
+						<i class="currency currency_size-32"></i>
+						<span class="text text_style-green">0 РУБ.</span>
+					</a>
+
+					<!-- Баланс КОИНОВ -->
+					<a class="btn-hover
+                              header-item
+                              modal-trigger
+                              tooltip-trigger"
+					   data-title="Обменник коинов"
+					   data-row="
+                                 На счету
+                                 <span class=gold>
+                                    7 890
+                                    <i class='currency currency_coin currency_size-24'></i>
+                                 </span>
+                                 коинов
+                       "
+					   data-meta="Кликни сюда!"
+					   data-modal-name="coins-exchange"
+					>
+						<i class="currency currency_coin currency_size-32"></i>
+						<span class="text text_style-gold">7 890</span>
+					</a>
+
+					<!-- Баланс САМОЦВЕТОВ -->
+					<a href="wiki_page-gem.html"
+                       class="btn-hover
+                              header-item
+                              tooltip-trigger"
+                       data-title="<span class=light-purple>Самоцветы за онлайн</span>"
+                       data-row="
+                                 На балансе
+                                 <span class=light-purple>
+                                    0
+                                    <i class='currency currency_gem currency_size-24'></i>
+                                 </span>
+                                 самоцветов
+                       "
+                       data-meta="Подробнее (кликни)"
+                    >
+                        <i class="currency currency_gem currency_size-32"></i>
+                        <span class="text text_style-light-purple">0</span>
+                    </a>
+
+					<!-- Мой профиль -->
+					<a href="profile.html"
+					   class="btn-hover
+                              header-item
+                              tooltip-trigger"
+					   data-title="Мой профиль"
+					   data-row="
+                                 <span class=dark-gray>Аккаунт:</span>
+                                 <i class='tooltip-avatar'></i>
+                                 Nebelherz
+                                 <br>
+                                 <span class=dark-gray>Игровой статус:</span>
+                                 <span class=light-purple>Deluxe</span>
+                       "
+					   data-meta="Кликни сюда!"
+					>
+						<img src="images/icon/profile.png"
+							 class="header-item__img" alt>
+						Мой профиль
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="page wiki">
+		<div class="wrapper">
+			<h1 class="page-heading page-heading_align-center">
+				Подсказка
+			</h1>
+			<div class="wiki-container">
+				<div class="wiki-preview animate-list">
+					<img src="images/wiki/infernal-ore.png"
+						 class="wiki-preview__icon"
+						 width="256"
+						 height="256"
+						 alt>
+					<h2 class="wiki-preview__heading">
+						<span class="text text_style-red">Инфернальная руда</span>
+					</h2>
+				</div>
+				<div class="wiki-content">
+					<h3 class="wiki-content__heading">
+						Что это?
+					</h3>
+					<p class="wiki-content__paragraph">
+						<!-- TODO --><span class="text text_style-red">Инфернальная руда</span> - это первое второе пятое десятое двадцатое тридцатое пятидесятое семидесятое девяносто девятое сто восемьдесят второе
+					</p>
+					<h3 class="wiki-content__heading">
+						Для чего нужно?
+					</h3>
+					<a href="wiki.html"
+					   class="btn
+					   		  wiki-content__link
+					   		  tooltip-trigger"
+					   data-title="<span class=gold>Инфернальный самоцвет</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/wiki/infernal-gem.gif"
+							 width="24"
+							 height="24"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-gold">
+								Инфернальный самоцвет
+							</span>
+							- нужно переплавить <span class="text text_style-red">инфернальную руду</span> в печке (обычной или из любого мода)
+						</span>
+					</a>
+					<h3 class="wiki-content__heading">
+						Как получить?
+					</h3>
+					<p class="wiki-content__paragraph">
+						<span class="text text_style-red">Инфернальная руда</span> - генерируется в
+						<span class="text text_style-red">Нижнем мире</span>
+						около бедрока, диапазон высоты
+						<span class="text text_style-dark-gray">Y: 0-35</span>
+						и
+						<span class="text text_style-dark-gray">Y: 220-255</span>.
+						В одной жиле может быть 1-2 единицы руды.
+					</p>
+				</div>
+			</div>
+			<h3 class="page-heading page-heading_align-center">
+				Может быть полезно
+			</h3>
+			<ul class="wiki-related animate-list">
+				<li>
+					<a href="wiki_page-infernal-key-card.html"
+					   class="btn
+					   		  wiki-related__card
+					   		  tooltip-trigger"
+					   data-title="<span class=gold>Инфернальная ключ-карта</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/wiki/infernal-key-card.gif"
+							 width="48"
+							 height="48"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-gold">
+								Инфернальная ключ-карта
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="wiki_page-key-card.html"
+					   class="btn
+					   		  wiki-related__card
+					   		  tooltip-trigger"
+					   data-title="<span class=green>Ключ-карта</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/wiki/key-card.gif"
+							 width="48"
+							 height="48"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-green">
+								Ключ-карта
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="wiki_page-infernal-gem.html"
+					   class="btn
+					   		  wiki-related__card
+					   		  tooltip-trigger"
+					   data-title="<span class=gold>Инфернальный самоцвет</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/wiki/infernal-gem.gif"
+							 width="48"
+							 height="48"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-gold">
+								Инфернальный самоцвет
+							</span>
+						</span>
+					</a>
+				</li><!--
+				<li>
+					<a href="wiki_page-infernal-ore.html"
+					   class="btn
+					   		  wiki-related__card
+					   		  tooltip-trigger"
+					   data-title="<span class=red>Инфернальная руда</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/wiki/infernal-ore.png"
+							 width="48"
+							 height="48"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-red">
+								Инфернальная руда
+							</span>
+						</span>
+					</a>
+				</li>-->
+				<li>
+					<a href="wiki_page-gem.html"
+					   class="btn
+					   		  wiki-related__card
+					   		  tooltip-trigger"
+					   data-title="<span class=light-purple>Самоцвет</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/icon/balance-gem.gif"
+							 width="48"
+							 height="48"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-light-purple">
+								Самоцвет
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="wiki_page-world-progress.html"
+					   class="btn
+					   		  wiki-related__card
+					   		  tooltip-trigger"
+					   data-title="<span class=light-purple>Мировой прогресс</span>"
+					   data-meta="Подробнее (кликни)"
+					>
+						<img src="images/icon/world-progress.gif"
+							 width="48"
+							 height="48"
+							 alt
+						>
+						<span class="text">
+							<span class="text text_style-light-purple">
+								Мировой прогресс
+							</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="sidebar-feed">
+		<div class="sidebar-feed__section">
+			<h3 class="sidebar-feed__section-heading">
+				Уведомлений
+				<span class="text text_style-aqua">17</span>
+			</h3>
+			<div class="sidebar-feed__notice-status
+                        sidebar-feed__notice-status_unread">
+				<div class="sidebar-feed__notice-status__icon">
+                    <span class="sidebar-feed__notice-status__counter">
+                        17
+                    </span>
+				</div>
+			</div>
+			<ul class="sidebar-feed__section-list
+                       sidebar-feed__section-list_hover-hide">
+				<li class="sidebar-feed__section-item">
+					<a class="btn
+                              sidebar-feed__notice-item
+                              modal-trigger"
+					   data-modal-name="notify-list"
+					>
+						Не следует, однако забывать, что новая модель позволяет...
+						<span class="sidebar-feed__notice-meta">
+                            Получено 17 июля, 18:44
+                        </span>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-primary
+                              modal-trigger"
+					   data-modal-name="notify-list"
+					>
+						Не следует, однако забывать, что постоянное анализ позиций, занимаемых участниками
+						<span class="sidebar-feed__notice-meta">
+                             Получено 13 июля, 23:05
+                        </span>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-warning
+                              modal-trigger"
+					   data-modal-name="notify-list"
+					>
+						Идейные соображения высшего порядка, а также рамки и место...
+						<span class="sidebar-feed__notice-meta">
+                            Получено 13 июля, 23:05
+                        </span>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-danger
+                              modal-trigger"
+					   data-modal-name="notify-list"
+					>
+						Требуют от нас анализа позиций, занимаемых участниками в...
+						<span class="sidebar-feed__notice-meta">
+                            Получено 07 июля, 12:54
+                        </span>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-success
+                              modal-trigger"
+					   data-modal-name="notify-list"
+					>
+						Требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач
+						<span class="sidebar-feed__notice-meta">
+                            Получено 04 июля, 16:33
+                        </span>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a class="btn
+                              sidebar-feed__notice-item
+                              sidebar-feed__notice-item_role-more
+                              modal-trigger"
+					   data-modal-name="notify-list"
+					>
+						Предыдущие уведомления
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="sidebar-feed__section">
+			<h3 class="sidebar-feed__section-heading">
+				Друзей
+				<span class="text text_style-aqua">256</span>
+			</h3>
+			<ul class="sidebar-feed__section-list">
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_near
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-11.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">Teme4chka</h4>
+							<p class="sidebar-feed__friend-item__user-status">10 блоков от вас</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_near
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-12.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">_Malina1703_</h4>
+							<p class="sidebar-feed__friend-item__user-status">56 блоков от вас</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_near
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-9.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">xxxDark12xxx</h4>
+							<p class="sidebar-feed__friend-item__user-status">102 блока от вас</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_online
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-2.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">ImmortalLove</h4>
+							<p class="sidebar-feed__friend-item__user-status">В сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_online
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-3.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">xAgare</h4>
+							<p class="sidebar-feed__friend-item__user-status">В сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                              sidebar-feed__friend-item_online
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-5.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">TROJ</h4>
+							<p class="sidebar-feed__friend-item__user-status">В сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-4.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">JoyereKnester</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-6.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">krabuik</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-7.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">YFoxTest2</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-8.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">No4naya_Nyasha</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-9.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">Azazzzinys</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-12.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">KillerMoj</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-11.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">Likeaboss</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-10.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">vonderlol</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-4.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">Alexsasha93</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+				<li class="sidebar-feed__section-item">
+					<a href="profile_someone.html"
+					   class="btn
+                              sidebar-feed__friend-item
+                    ">
+						<div class="sidebar-feed__friend-item__avatar">
+							<img src="images/heads/head-5.png" alt
+								 class="sidebar-feed__friend-item__avatar-image">
+						</div>
+						<div class="sidebar-feed__friend-item__user">
+							<h4 class="sidebar-feed__friend-item__user-nickname">geraosfrrr</h4>
+							<p class="sidebar-feed__friend-item__user-status">Не в сети</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="modal">
+	<!-- Содержание модального окна, динамически подгружаемое через JS -->
+</div>
+<div class="tooltip" style="display: none">
+	<div class="tooltip__content">
+		<h3 class="tooltip__title">Заголовок</h3>
+		<p class="tooltip__row">Описание</p>
+		<p class="tooltip__meta">Модификация</p>
+	</div>
+</div>
+<script src="js/script.min.js"></script>
+</body>
+</html>
