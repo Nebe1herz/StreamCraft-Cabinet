@@ -133,6 +133,7 @@
         transform-origin: center center;
         animation: index-group__btn-splash 1s ease-in-out infinite;
         text-shadow: 3px 3px var(--yellow-shadow);
+        z-index: 2;
 
         @keyframes index-group__btn-splash{
           0%, 100%{
