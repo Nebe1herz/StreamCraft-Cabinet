@@ -23,7 +23,7 @@
             <ul class="header-list">
                 <!-- Назад в главное меню -->
                 <li class="header-section">
-                    <a href="index.html"
+                    <a href="index_alt-6.html"
                        class="btn-hover
                               header-item
                               tooltip-trigger"
@@ -100,6 +100,26 @@
                         <span class="text text_style-gold">7 890</span>
                     </a>
 
+                    <!-- Баланс САМОЦВЕТОВ -->
+                    <a href="wiki_page-gem.html"
+                       class="btn-hover
+                              header-item
+                              tooltip-trigger"
+                       data-title="<span class=light-purple>Самоцветы за онлайн</span>"
+                       data-row="
+                                 На балансе
+                                 <span class=light-purple>
+                                    0
+                                    <i class='currency currency_gem currency_size-24'></i>
+                                 </span>
+                                 самоцветов
+                       "
+                       data-meta="Подробнее (кликни)"
+                    >
+                        <i class="currency currency_gem currency_size-32"></i>
+                        <span class="text text_style-light-purple">0</span>
+                    </a>
+
                     <!-- Мой профиль -->
                     <a href="profile.html"
                        class="btn-hover
@@ -124,33 +144,40 @@
             </ul>
         </div>
     </div>
-    <div class="page index index_grid-6">
+    <div class="page index">
         <div class="wrapper">
             <!-- Заголовок -->
             <h1 class="page-heading page-heading_align-center">
                 Меню
             </h1>
             <!-- Основная группа -->
-            <div class="index-group index-group_grid-6">
-                <!-- Мой профиль -->
-                <a href="profile.html"
+            <div class="index-group">
+                <!-- Мировая прогрессия -->
+                <a href="worlds.html"
                    class="btn
                           index-group__btn
                           tooltip-trigger"
-                   data-title="Мой профиль"
+                   data-title="Мировой прогресс <span class=light-purple>68%</span>"
                    data-row="
-                             <span class=dark-gray>Аккаунт:</span>
-                             <i class='tooltip-avatar'></i>
-                             Nebelherz
+                             <span class=dark-gray>Уровень:</span>
+                             <span class=green>Обычный мир</span>
                              <br>
-                             <span class=dark-gray>Игровой статус:</span>
-                             <span class=light-purple>Deluxe</span>
+                             <span class=dark-gray>Завершено целей:</span>
+                             <span class=gold>1 из 3</span>
                            "
                    data-meta="Кликни сюда!"
                 >
-                    <img src="images/heads/head-3.png" alt
-                         class="index-group__btn-icon index-group__btn-icon_smoothed">
-                    Мой<br>профиль
+                    <span class="index-group__btn-splash">
+                        Новый раздел!
+                    </span>
+                    <img src="images/icon/world-progress.gif" alt
+                         class="index-group__btn-icon">
+                    <span>
+                        Мировой<br>прогресс
+                        <span class="text text_style-light-purple">
+                            68%
+                        </span>
+                    </span>
                 </a>
                 <!-- Боевой пропуск -->
                 <a href="battle-pass__index.html"
@@ -225,19 +252,6 @@
                          class="index-group__btn-icon">
                     Достижения
                 </a>
-                <!-- Рейтинги -->
-                <a href="stats.html"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=green>Статистика</span>"
-                   data-row="Время в игре, поставлено или создано блоков - <span class=gold>всё здесь</span>!"
-                   data-meta="Кликни сюда!"
-                >
-                    <img src="images/icon/stats.png" alt
-                         class="index-group__btn-icon">
-                    Статистика
-                </a>
                 <!-- Настройки -->
                 <a href="index.html"
                    class="btn
@@ -251,6 +265,8 @@
                          class="index-group__btn-icon">
                     Настройки
                 </a>
+            </div>
+            <div class="index-group index-group_grid-4">
                 <!-- Магазин блоков -->
                 <a href="shop.html"
                    class="btn
@@ -307,32 +323,6 @@
                     <img src="images/icon/kits.png" alt
                          class="index-group__btn-icon">
                     Наборы ресурсов
-                </a>
-                <!-- Аукцион -->
-                <a href="auction-index.html"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=light-purple>Торговый аукцион</span>"
-                   data-row="<span class=gold>Покупайте</span> или <span class=green>продавайте</span> интересующие товары за <i class='currency currency_coin currency_size-24'></i>"
-                   data-meta="Кликни сюда!"
-                >
-                    <img src="images/icon/auction.png" alt
-                         class="index-group__btn-icon">
-                    Аукцион
-                </a>
-                <!-- Варпы -->
-                <a href="warp.html"
-                   class="btn
-                          index-group__btn
-                          tooltip-trigger"
-                   data-title="<span class=green>Список варпов</span>"
-                   data-row="<span class=light-purple>Самые популярные</span> варпы на сервере от других игроков"
-                   data-meta="Кликни сюда!"
-                >
-                    <img src="images/icon/warps.png" alt
-                         class="index-group__btn-icon">
-                    Варпы
                 </a>
             </div>
             <!-- Футер -->
